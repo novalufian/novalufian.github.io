@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="trigger">poup</button>
+    <div id="popupDMP" data-popup="hidden" class="popupIn">
+        <div id="popup-overlay"></div>
+        <div class="popupDMP-container">
+            <div class="select-form">
+                <input type="checkbox" value="abc">
+                <p>abc</p>
+            </div>
+
+            <div class="select-form">
+                <input type="checkbox" value="def">
+                <p>def</p>
+            </div>
+
+            <div class="select-form">
+                <input type="checkbox" value="ghi">
+                <p>ghi</p>
+            </div>
+
+            <button id="submit-data">submit</button>
+        </div>
+    </div>  
+    
+    
+    <style>
+        #trigger{
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+        }
+        #popupDMP.popupIn{
+            opacity: 1;
+            top: 0;
+            display: block;
+            animation: overlayIn .8s forwards;
+        }
+
+        div#popup-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        #popupDMP.popupOut{
+            opacity: 1;
+            top: 0;
+            display: block;
+            animation: overlayOut .8s forwards;
+        }
+        #popupDMP{
+            transition: all .1s ease-in-out;
+            position: fixed;
+            opacity: 1;
+            display: none;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0, 0);
+        }
+
+        .popupDMP-container{
+            width: 60%;
+            opacity: 0;
+            min-height:50vh;
+            background: #e2e2e2;
+            border-radius: 2px;
+            margin: 25vh 20% 0;
+            transition: all .1s ease-in-out;
+        }
+
+        #popupDMP.popupIn .popupDMP-container{
+            animation: bounce .25s forwards;
+        }
+
+        #popupDMP.popupOut .popupDMP-container{
+            animation: bounceOut .25s forwards;
+        }
+
+        .select-form {
+            display: inline-block;
+            margin: 10px;
+            background: rgb(255, 156, 156);
+            position: relative;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .select-form.active{
+            background: red;
+        }
+
+        .select-form input{
+            float : left;
+            line-height: 14px;
+            display: none;
+        }
+
+        .select-form p{
+            float : left;
+            line-height: 14px;
+            margin: 0;
+            vertical-align: middle;
+        }
+
+
+
+        @keyframes bounce{
+            0%{
+                transform: scale(.1);
+                opacity: 0;
+            }
+
+            100%{
+                transform: scale(1);
+                opacity: 1;
+            }
+
+        }
+
+        @keyframes bounceOut{
+            0%{
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100%{
+                transform: scale(.1);
+                opacity: 0;
+            }
+
+        }
+
+        @keyframes overlayIn{
+            0%{
+                background: rgba(0,0,0, 0);
+            }
+
+            100%{
+                background: rgba(0,0,0, .5);
+            }
+        }
+
+        @keyframes overlayOut{
+            0%{
+                background: rgba(0,0,0, .5);
+            }
+
+            100%{
+                background: rgba(0,0,0, 0);
+            }
+        }
+    </style>
+
+    <script>
+        var btnpop = document.getElementById("trigger");
+        var dmpPopup = document.getElementById("popupDMP");
+        var dmpPopupOverlay = document.getElementById("popup-overlay");
+        var dmpPopupSubmit = document.getElementById("submit-data");
+        btnpop.addEventListener("click", showpopup);
+        dmpPopupOverlay.addEventListener("click", showpopup);
+        dmpPopupSubmit.addEventListener("click", submitData);
+
+        function showpopup(){
+            var getDatapopup = dmpPopup.getAttribute("data-popup");
+            if(getDatapopup == "hidden"){
+                dmpPopup.classList.add("popupIn");
+                dmpPopup.setAttribute("data-popup", "popupIn");
+            }else{
+                dmpPopup.classList.remove("popupIn");
+                dmpPopup.classList.add("popupOut");
+                dmpPopup.setAttribute("data-popup", "hidden");
+                setTimeout(function(){
+                    dmpPopup.classList.remove("popupOut");
+                },500)
+            }
+           
+        }
+
+        var listCat = document.querySelectorAll(".popupDMP-container .select-form");
+        listCat.forEach(function(v, i){
+	        v.addEventListener("click", pickThisCat);
+        })
+
+        function pickThisCat(){
+            var ck = this.querySelector("input");
+            ck.checked = !ck.checked;
+            if(ck.checked){
+                this.classList.add("active");
+            }else{
+                this.classList.remove("active");
+            }
+        }
+
+        function submitData(){
+            var text = "";
+            var init = true;
+            for (var i = 0; i < listCat.length; i++) {
+                if (listCat[i].querySelector("input").checked) {
+                    if (init) {
+                        text +=listCat[i].querySelector("input").value;
+                        init = false;
+                    }else{
+                        text = text +","+listCat[i].querySelector("input").value;
+                    }
+                }
+            }
+
+            console.log(text);
+        }
+    </script>
+
+</body>
+</html>
