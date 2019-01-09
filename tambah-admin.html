@@ -22,7 +22,6 @@
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
 </head>
 <body>
-    
     <!-- Right Panel -->
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
@@ -210,60 +209,60 @@
                         <div class="col-lg-9">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Input Data</strong> Tahanan
+                                    <strong>Input Data</strong> Pegawai
                                 </div>
                                 <div class="card-body card-block">
                                     <form action="#" method="post" enctype="multipart/form-data" class="form-horizontal">
                                         
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="text-input" class=" form-control-label">Nomor </label>
+                                                <label for="text-input" class=" form-control-label">Nip Pegawai</label>
                                             </div>
-                                            <div class="col-12 col-md-9">
-                                                <input type="text" id="text-input" name="nomor_tahanan" placeholder="contoh : 198503302003121002" class="form-control">
+                                            <div class="col-12 col-md-6">
+                                                <input type="text" id="text-input" name="nip_pegawai" placeholder="contoh : 198503302003121002" class="form-control">
                                                 <small class="form-text text-muted">*data tidak boleh kosong</small>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">cari data pegawai <span class="ti-search"></span></button>
+                                                <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"> -->
+                                                <!-- Cari pegawai
+                                                <span class="ti-search"></span> -->
+                                                <!-- </button> -->
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="text-input" class=" form-control-label">Nama Tahanan</label>
+                                                <label for="text-input" class=" form-control-label">Nama Pegawai</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <input type="text" id="text-input" name="nama_tahanan" placeholder="Nama lengkap tahanan" class="form-control">
+                                                <input type="text" id="text-input" name="nama_pegawai" placeholder="Nama lengkap pegawai" class="form-control">
                                                 <small class="form-text text-muted">*data tidak boleh kosong</small>
                                             </div>
                                         </div>
                                         <div class="row form-group">
-                                            <div class="col col-md-3"><label for="email-input" class=" form-control-label">Kejahatan</label></div>
+                                            <div class="col col-md-3"><label for="email-input" class=" form-control-label">Username</label></div>
                                             <div class="col-12 col-md-9">
-                                                <input type="email" id="email-input" name="Jabatan" placeholder="Kejahatan" class="form-control">
-                                                <small class="help-block form-text">*data tidak boleh kosong</small>
+                                                <input type="email" id="email-input" name="Jabatan" placeholder="Usernaem harus unik" class="form-control">
+                                                <small class="help-block form-text">*sistem cek avail / not</small>
                                             </div>
                                         </div>
                                         <div class="row form-group">
-                                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Alamat</label></div>
+                                            <div class="col col-md-3"><label for="email-input" class=" form-control-label">Password</label></div>
                                             <div class="col-12 col-md-9">
-                                                <textarea name="alamat_pegawai" id="textarea-input" rows="9" placeholder="Alamat lengkap tahanan" class="form-control"></textarea>
+                                                <input type="email" id="email-input" name="Jabatan" placeholder="Password baru" class="form-control">
                                             </div>
                                         </div>
                                         <div class="row form-group">
-                                            <div class="col col-md-3"><label class=" form-control-label">Jenis Kelamin</label></div>
-                                            <div class="col col-md-9">
-                                                <div class="form-check-inline form-check">
-                                                    <label for="inline-radio1" class="form-check-label ">
-                                                        <input type="radio" id="inline-radio1" name="inline-radios" value="option1" class="form-check-input">Laki - laki
-                                                    </label>
-                                                    <label for="inline-radio2" class="form-check-label ">
-                                                        <input type="radio" id="inline-radio2" name="inline-radios" value="option2" class="form-check-input">Perempuan
-                                                    </label>
-                                                    
-                                                </div>
+                                            <div class="col col-md-3"><label for="email-input" class=" form-control-label">Re:Password</label></div>
+                                            <div class="col-12 col-md-9">
+                                                <input type="email" id="email-input" name="Jabatan" placeholder="Masukkan ulang password" class="form-control">
                                             </div>
                                         </div>
                                         
+                                        
                                         <div class="row">
                                             <div class="col-md-7">
-                                                <a href="data-napi.html" class="btn btn-warning">kembali</a>
+                                                <a href="admin-login.html" class="btn btn-warning">kembali</a>
                                             </div>
                                             <div class="col-md-5">
                                                 <button type="reset" class="btn btn-default">Reset Data</button>
@@ -276,9 +275,8 @@
                         </div>
                         <div class="col-md-3">
                             <div class="card">
-                                <img src="https://bdn-data.s3.amazonaws.com/uploads/2016/04/10052441_H17476352-600x744.jpg" alt="">
-                                <button type="file" class="btn btn-danger">upload foto</button>
-                                <input type="file" class="btn">
+                                <img src="http://2.bp.blogspot.com/-8oK6T_HfmoY/UcMv7FA2UII/AAAAAAAAB_k/SdbSr6zcxss/s1600/beckham-pns2.jpg" alt="">
+                                <button class="btn btn-danger">upload foto</button>
                             </div>
                         </div>
                     </div>
@@ -290,6 +288,136 @@
             <!-- Footer -->
             
             <!-- /.site-footer -->
+            <!-- Modal -->
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Search data pegawai</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row form-group">
+                                <div class="col col-md-12">
+                                    <div class="input-group">
+                                        <input type="text" id="input1-group2" name="input1-group2" placeholder="Masukkan nip / nama pegawai ..." class="form-control">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-primary">
+                                            <i class="fa fa-search"></i> Search
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table ">
+                                <thead>
+                                    <tr>
+                                        <th class="serial">#</th>
+                                        <th class="avatar">Avatar</th>
+                                        <th>NIP</th>
+                                        <th>Nama</th>
+                                        <th>Sub Bagian</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="serial">1.</td>
+                                        <td class="avatar">
+                                            <div class="round-img">
+                                                <a href="#"><img class="rounded-circle" src="images/avatar/1.jpg" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td><span class="count">198503302003121002</span></td>
+                                        <td> Nama pegawai</td>
+                                        <td>  <span class="name">Tata usaha</span> </td>
+                                        <td>
+                                            <button class="btn btn-success">
+                                            pilih
+                                            <span class="ti-plus"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="serial">2.</td>
+                                        <td class="avatar">
+                                            <div class="round-img">
+                                                <a href="#"><img class="rounded-circle" src="images/avatar/2.jpg" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td><span class="count">198503302003121002</span></td>
+                                        <td> Nama pegawai</td>
+                                        <td>  <span class="name">KPLP</span> </td>
+                                        <td>
+                                            <button class="btn btn-success">
+                                            pilih
+                                            <span class="ti-plus"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="serial">3.</td>
+                                        <td class="avatar">
+                                            <div class="round-img">
+                                                <a href="#"><img class="rounded-circle" src="images/avatar/3.jpg" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td><span class="count">198503302003121002</span></td>
+                                        <td> Nama pegawai</td>
+                                        <td>  <span class="name">Registrasi</span> </td>
+                                        <td>
+                                            <button class="btn btn-success">
+                                            pilih
+                                            <span class="ti-plus"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="serial">4.</td>
+                                        <td class="avatar">
+                                            <div class="round-img">
+                                                <a href="#"><img class="rounded-circle" src="images/avatar/4.jpg" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td><span class="count">198503302003121002</span></td>
+                                        <td> Nama pegawai</td>
+                                        <td>  <span class="name">Pliklinik</span> </td>
+                                        <td>
+                                            <button class="btn btn-success">
+                                            pilih
+                                            <span class="ti-plus"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class=" pb-0">
+                                        <td class="serial">5.</td>
+                                        <td class="avatar pb-0">
+                                            <div class="round-img">
+                                                <a href="#"><img class="rounded-circle" src="images/avatar/6.jpg" alt=""></a>
+                                            </div>
+                                        </td>
+                                        <td><span class="count">198503302003121002</span></td>
+                                        <td> Nama pegawai</td>
+                                        <td>  <span class="name">Johnny Stephens</span> </td>
+                                        <td>
+                                            <button class="btn btn-success">
+                                            pilih
+                                            <span class="ti-plus"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /#right-panel -->
         <!-- Scripts -->
