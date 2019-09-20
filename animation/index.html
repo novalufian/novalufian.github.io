@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://d.kapanlaginetwork.com/banner/preview/2018/12/15/ahay/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Document</title>
+	<link href="./index_files/css" rel="stylesheet"> 
+
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		.preloader{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100vh;
+			background: #212121;
+			position: fixed;
+			top: 0;
+			transition: all .5s ease;
+		}
+		
+		#img-header{
+			display: block;
+			width:  10%;
+			text-align: center;
+			/*margin: 10% auto;*/
+		}
+
+		#img-header svg{
+			width: 100%;
+			display: block;
+			height: 20%;
+			margin-bottom: 10px;
+		}
+
+		.preloader #img-header .logo-text {
+			display: none;
+			opacity: 0;
+			margin-left: -100px;
+			margin-top: 12.5px;
+			margin-bottom: 12.5px;
+			transition: all 1s ease;
+		}
+
+		#img-header svg .path-logo{
+			/*stroke-dashoffset: 100;*/
+			stroke-width : 15;
+		}
+
+		#img-header.dash svg .path-logo{
+			animation: dash 1.75s linear infinite;
+			stroke-dasharray: 800;
+			fill-opacity: 0;
+		}
+
+		#img-header.linear svg .path-logo{
+			animation: linear 1.75s linear forwards;
+			stroke-dasharray: 2000;
+			stroke-dashoffset: 2000;
+			fill-opacity: 0;
+		}
+
+
+		.loading-text{
+			font-family: 'Fredoka One', cursive;
+			color: #fff;
+			font-size: 16px;
+			position: relative;
+			width: 65px;
+			margin: 0 auto;
+			transition: all 1s ease;
+		}
+		.loading-text.active::after{
+			content: ".";
+			position: absolute;
+			width: 25px;
+			height: 100%;
+			right: -25px;
+			top: 0;
+			text-align: left;
+			animation: loading 1s linear infinite;
+		}
+
+		@keyframes dash {
+			to {
+				stroke-dashoffset: 1600;
+				fill-opacity: 1;
+			}
+		}
+
+		@keyframes linear {
+			to {
+				stroke-dashoffset: 0;
+				fill-opacity: 1;
+			}
+		}
+
+		@keyframes loading {
+			0% {
+				content: ". ";
+			}
+
+			25%{
+				content: ". .";
+			}
+
+			75%{
+				content: ". . .";
+			}
+			100%{
+				content: " ";
+			}
+		}
+
+		.preloader.finished{
+			height: 60px;
+			justify-content: flex-start;
+			background: white;
+			white-space: nowrap;
+		}
+
+		.preloader.finished #img-header svg{
+			margin :5px 0;
+			display: inline-block;
+		}
+
+		.preloader.finished #img-header .logo-text.active {
+			display: inline-block;
+			height: 25px;
+			margin: 12.5px 0;
+			opacity: 1;
+		}
+
+		.preloader.finished #img-header{
+			width: 40px;
+			margin-left: 10px;
+		}
+
+		.preloader.finished .loading-text{
+			display: none;
+		}
+
+		.preloader.finished #img-header svg .path-logo{
+			stroke-width : 0;
+		}
+
+		.btn{
+			position: fixed;
+			bottom: 50px;
+			right: 50px;
+			font-family: 'Fredoka One', cursive;
+			color: lime;
+			border: none;
+			background: transparent;
+			font-size: 20px;
+			cursor: pointer;
+			z-index: 99;
+		}
+
+	</style>
+</head>
+<body cz-shortcut-listen="true">
+	<div class="preloader" id="preloader-wrapper">
+		<div id="img-header" class="dash">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="640" height="640">
+					<path class="path-logo" d="M295.93 339.66C241.7 316.16 213.67 261.47 211.86 175.59C210.06 89.71 166.21 42.7 80.33 34.57C80.33 129.48 80.33 240.68 80.33 368.14C80.33 495.6 152.2 574.7 295.93 605.43L295.93 339.66Z" id="b3vlrDmT2" opacity="1" fill="#00ad7f" fill-opacity="1" stroke="#ffffff"></path>
+					<path class="path-logo" d="M358.45 339.66C412.68 316.16 440.71 261.47 442.52 175.59C444.32 89.71 488.17 42.7 574.05 34.57C574.05 129.48 574.05 240.68 574.05 368.14C574.05 495.6 502.18 574.7 358.45 605.43L358.45 339.66Z" id="aBEW3kOA" opacity="1" fill="#474143" fill-opacity="1" stroke="#ffffff"></path>
+					<path class="path-logo" d="M386.79 227.79C386.79 260.35 360.35 286.78 327.8 286.78C295.25 286.78 268.81 260.35 268.81 227.79C268.81 195.24 295.25 168.81 327.8 168.81C360.35 168.81 386.79 195.24 386.79 227.79Z" id="lwaid8tCS" opacity="1" fill="#00ad7f" fill-opacity="1" stroke="#ffffff"></path>
+			</svg>
+			<img src="./index_files/logo-text.png" class="logo-text" id="logo-text-after" alt="">
+			<p class="loading-text active" id="loading-text-bellow">Loading</p>
+
+		</div>
+		
+		<button class="btn" id="btn-skip">skip animation</button>
+		
+	</div>
+
+	<script>
+		var skip = document.getElementById("btn-skip");
+
+		skip.addEventListener("click", skipanimation)
+		function skipanimation() {
+			var w = document.getElementById("logo-text-after");
+			var x = document.getElementById("img-header");
+			var y = document.getElementById("loading-text-bellow");
+			var z = document.getElementById("preloader-wrapper");
+			
+			x.classList.remove("dash");
+			x.classList.add("linear");
+
+			y.style.opacity = 0;
+			setTimeout(function () {
+				y.remove();
+				z.classList.add("finished");
+				w.classList.add("active");
+			}, 1500)
+
+		}
+	</script>
+
+</body></html>
