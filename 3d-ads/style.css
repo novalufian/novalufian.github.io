@@ -1,0 +1,164 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: arial;
+}
+
+#btn-expand{
+    height: 45px;
+    border: none;
+    position: fixed;
+    z-index: 2;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    box-sizing: border-box;
+    padding: 10px;
+    background: orange;
+    border-radius: 100px;
+}
+
+#btn-expand img{
+	position: relative;
+	width: 100%;
+}
+
+#bg-img{
+	width: 100%;
+	position: relative;
+}
+
+#aside-section{
+	position: fixed;
+	top: 0;
+	right: -100%;
+	bottom: 0;
+	width: 300px;
+	background: #fff;
+	z-index: 10;
+	overflow-y: scroll;
+	display: block;
+	transition: all .5s ease;
+}
+
+#aside-section.active{
+	right: 0;
+}
+
+#aside-overay{
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+	height: 100vh;
+	right: -100%;
+	background: transparent;
+}
+
+#aside-overay.active{
+	background: #00000050;
+	right: 0;
+}
+
+#aside-section .header{
+	display: block;
+	background: #896AEA;
+	width: 100%;
+	height: 50px;
+	position: relative;
+}
+#aside-section .header p{
+	position: relative;
+	color: #fff;
+	display: block;
+	font-size: 20px;
+	line-height: 20px;
+	padding-top: 15px;
+	text-align: center;
+}
+
+#aside-section .header-button{
+	display: block;
+	width: 100%;
+	border: solid 1px #896AEA;
+	box-sizing: border-box;
+}
+
+#aside-section .btn-primary{
+	border: solid 2px #896AEA;
+	display: block;
+	min-width: 100px;
+	height: 40px;
+	padding: 0 20px;
+	border-radius: 10px;
+	background: #896AEA80;
+	color: #000;
+	margin: 25px auto; 
+	font-size: 16px;
+}
+
+.no-border{
+	border: none !important;
+}
+
+#aside-section .section-title{
+	background: #ececec;
+	display: block;
+	width: 100%;
+	height: 40px;
+}
+#aside-section .section-title p{
+	display: block;
+	padding: 10px;
+	text-align: left;
+}
+
+#aside-section .article-list ul,
+#aside-section .article-list{
+	display: block;
+	width: 100%;
+}
+
+#aside-section .article-list ul li{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	border-bottom: solid 1px #ececec;
+}
+
+#aside-section .article-list ul li span.category{
+	display: inline-block;
+	position: relative;
+	color: #d8d8d8;
+	border: solid 1px #ececec;
+	border-radius: 5px;
+	padding: 2.5px 7.5px;
+	margin: 2.5px 0;
+	
+}
+#aside-section .article-list ul li a{
+	display: block;
+	margin-top: 5px;
+	text-decoration: none;
+	color: #000;
+}
+
+ul.follow-tag li {
+    display: flex !important;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button.btn-follow {
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #66e2d5;
+}

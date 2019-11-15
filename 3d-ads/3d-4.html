@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        #bg-img{
+            position: relative;
+            width: 100%;
+        }
+
+        div#spin-wrapper {
+            position: fixed;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            transition: all .5s ease;
+            background: transparent;
+        }
+        div#spin-wrapper.active{
+            height: 100vh;
+            background-image: url(assets/BG.jpg);
+            background-size: cover;
+        }
+
+        #wrapper-small.hidden{
+            bottom: -120%;
+        }
+
+        .carousel_wrapper_big,
+        .carousel_wrapper {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            margin: 0 auto;
+            transition: all .5s ease;
+        }
+        div#spin-wrapper.active .carousel_wrapper_big{
+            top: calc((100vh - 450px ) / 2 );
+        }
+        .carousel_wrapper_big{
+            perspective: 1500px;
+            top: 50vh;
+            height: 100vh;
+            perspective-origin: 50% 30%;
+            transform: scale(.9);
+        }
+
+        .carousel_wrapper {
+            perspective: 1000px;
+        }
+
+        #big-carousel{
+            transition: all .5s ease;
+        }
+
+        #small-carousel {
+            transition: all .5s ease;
+        }
+
+        #big-carousel.active{
+            margin-top: 0px;
+        }
+
+        .carousel {
+            display: block;
+            width: 100%;
+            height: 100px;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            transition: all 3s ease;
+        }
+
+        .slide-big{
+            width: 250px;
+            height: 400px;
+            left: calc(100% * 15 / 100);
+            background-image: url(assets/Slide-Besar.jpg);
+        }
+        .slide-big img{
+            filter: drop-shadow(5px 5px 10px #22222240);
+            transform-style: preserve-3d;
+            transform: translate3d(0px, 0px, 25px);
+            position: relative;
+        }
+
+        span.ornamen {
+            position: relative;
+            float: left;
+        }
+
+        span.ornamen:after {
+            content: "";
+            position: absolute;
+            top: 60px;
+            left: 25px;
+            width: 50px;
+            height: 50px;
+            filter: drop-shadow(2px 4px 10px #22222240);
+            background-image: url(assets/l-6-watermark-orange.png);
+            background-size: 50px;
+            transform-style: preserve-3d;
+            transform: translate3d(0px, 0px, 35px) rotate(5deg);
+            animation: rotateAnimation .5s infinite;
+        }
+
+        span.ornamen:before {
+            content: "";
+            position: absolute;
+            bottom: 60px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            filter: drop-shadow(2px 4px 10px #22222240);
+            background-image: url(assets/ornamen2.png);
+            background-size: 60px;
+            z-index: 10;
+            background-repeat: no-repeat;
+            transform-style: preserve-3d;
+            transform: translate3d(0px, 0px, 35px) rotate(5deg);
+            animation: rotateAnimation .5s infinite;
+        }
+
+        @keyframes rotateAnimation{
+            0%{
+                transform: translate3d(0px, 0px, 35px) rotate(5deg);
+            }
+            50%{
+                transform: translate3d(0px, 0px, 35px) rotate(-5deg);
+            }
+            100%{
+                transform: translate3d(0px, 0px, 35px) rotate(5deg);
+            }
+        }
+
+        .slide-small{
+            height: 70px;
+            width: 125px;
+            left: 32.5%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+        }
+
+        img#img-close {
+            position: absolute;
+            right: 10px;
+            top: -40px;
+            width: 30px;
+            transition: all .5s ease;
+        }
+
+        img#img-close.active {
+            top: 10px;
+        }
+
+
+        @keyframes rotate {
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            .slide-big{
+                width: 250px;
+                height: 400px;
+                left: calc(100% * 11 / 100);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>content hanyalah gambar tidak bisa diclick"</h1>
+    <div id="mboh"></div>
+    <img id="bg-img" src="bg.jpg" alt="">
+    <!-- <img id="bg-img" src="https://via.placeholder.com/360x1400/ececec/ececec" alt=""> -->
+    <div id="spin-wrapper">
+        
+        <img src="https://cdns.klimg.com/d.kapanlaginetwork.com/banner/asset/img/close-black-circle.png" id="img-close" alt="">
+        <div class="carousel_wrapper" id="wrapper-small">
+            <div class="carousel" id="small-carousel">
+               
+            </div>
+        </div>
+        <div class="carousel_wrapper_big" id="wrapper-big">
+            <div class="carousel" id="big-carousel">
+               
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        var canScrollSpiner = true;
+        var scrollTopSpiner = 0;
+
+        var expandstatus = false;
+        var rotateState = 0;
+        var rotateValue = 0;
+        var stateMove = false;
+
+        var closeImg = document.querySelector("#img-close");
+        var spinwrapper = document.querySelector("#spin-wrapper");
+        var wrappersmall = document.querySelector("#wrapper-small");
+        var carouselbig = document.querySelector("#big-carousel");
+        var carouselsmall = document.querySelector("#small-carousel");
+        var previousWindowInnerheight = window.innerHeight;
+
+        var slides ;
+        var slidesbig ;
+
+        var touchPos_start = 0;
+        var touchPos_start_Y = 0;
+        var touchPos_end = 0;
+        var touchPos_end_Y = 0;
+        var spinnerLength = 5;
+
+        var arrayList = [
+            ["assets/s1.png", "assets/1.png", "https://www.dummy.com"],
+            ["assets/s2.png", "assets/2.png", "https://www.dummy.com"],
+            ["assets/s3.png", "assets/3.png", "https://www.dummy.com"],
+            ["assets/s4.png", "assets/4.png", "https://www.dummy.com"],
+            ["assets/s5.png", "assets/5.png", "https://www.dummy.com"]
+        ];
+
+        init();
+
+        function init() {
+            for (var i = 0; i < spinnerLength; i++) {
+                // create small element
+                var createDivSmall = document.createElement("div");
+                createDivSmall.setAttribute("class", "slide slide-small");
+                createDivSmall.setAttribute("data-index", i);
+
+                var createimgSmall = document.createElement("img");
+                createimgSmall.setAttribute("src", arrayList[i][0]);
+
+                createDivSmall.appendChild(createimgSmall);
+                carouselsmall.appendChild(createDivSmall);
+
+                var createDivBig = document.createElement("div");
+                createDivBig.setAttribute("class", "slide slide-big");
+                createDivBig.setAttribute("data-index", i);
+                createDivBig.setAttribute("data-lp", arrayList[i][2]);
+
+                var createimgBig = document.createElement("img");
+                createimgBig.setAttribute("src", arrayList[i][1]);
+                
+                if (i !== 0) {
+                    var span = document.createElement("span");
+                    span.setAttribute("class", "ornamen");
+                    span.appendChild(createimgBig)
+                    createDivBig.appendChild(span);
+                }else{
+                    createDivBig.appendChild(createimgBig);
+                }
+
+                carouselbig.appendChild(createDivBig);
+
+            }
+            
+            slides = document.querySelectorAll(".slide-small");
+            slidesbig = document.querySelectorAll(".slide-big");
+            generateEvent();
+        }
+
+
+        function generateEvent() {
+            setTimeout(function () {
+                    carouselsmall.classList.add("active");
+            }, 100)
+            
+            slides.forEach(function (el, index) {
+               el.style = `transform : rotateY(${index * 360 / slides.length }deg) translateZ(${slides.length * 20 }px)`;
+               el.addEventListener("click", expandSpiner);
+               initTouchEvent(el);
+               rotateValue = 360 / slides.length;
+            }) 
+
+            slidesbig.forEach(function (el, index) {
+               el.style = `transform : rotateY(${index * 360 / slides.length }deg) translateZ(${slides.length * 40 }px)`;
+               el.addEventListener("click", goToLapndingPage);
+               initTouchEvent(el);
+            })
+
+            closeImg.addEventListener("click", function () {
+                collapseSpiner();
+            })
+        }
+
+        function goToLapndingPage() {
+            var el = this;
+            var lp = el.getAttribute("data-lp");
+            window.open(lp, "_blank");
+        }
+
+        function expandSpiner() {
+            previousWindowInnerheight = window.innerHeight;
+            var index = parseInt(this.getAttribute("data-index"));
+
+
+            if (!expandstatus) {
+                var clone = rotateState;
+                disableScroll(true);
+                expandstatus = true;
+                spinwrapper.classList.add("active");
+                wrappersmall.classList.add("hidden");
+                closeImg.classList.add("active");
+                carouselsmall.style.transform = `rotateY(360deg)`;
+                carouselbig.style.transform = `rotateY(${clone }deg)`;
+                setTimeout(function () {
+                    spinwrapper.style = 'top: 0px; bottom : unset;';
+                }, 600);
+            }
+        }
+
+        function collapseSpiner() {
+            if (expandstatus) {
+                var clone = rotateState;
+                expandstatus = false;
+                disableScroll(false);
+                spinwrapper.classList.remove("active");
+                wrappersmall.classList.remove("hidden");
+                closeImg.classList.remove("active");
+                closeImg.style.top = "";
+                carouselbig.style.transform = `rotateY(360deg)`;
+                carouselsmall.style.transform = `rotateY(${clone}deg)`;
+                spinwrapper.style = 'top: unset; bottom : 0px;';
+            }  
+        }
+
+        function initTouchEvent(el) {
+            el.addEventListener('touchstart',eventTouchStart, false);
+            el.addEventListener('touchmove', eventTouchMove, false);
+            el.addEventListener('touchend',eventTouchEnd, false);
+        }
+
+        function eventTouchStart(event) {
+            var touch = event.targetTouches[0];
+            touchPos_start = touch.pageX;
+            touchPos_start_Y = touch.pageY;
+        }
+
+        function eventTouchMove(event) {
+            var el = this;
+            var parentEl = el.parentElement;
+            var rotatelength = (parentEl.getAttribute("id") == "small-carousel") ? 50 : 200;
+            var rotateDivide = (parentEl.getAttribute("id") == "small-carousel") ? 2 : 5;
+            var index = parseInt(el.getAttribute("data-index"));
+            var touch = event.targetTouches[0];
+
+            if (event.targetTouches.length == 1) {
+
+                stateMove = true;
+
+                var touch = event.targetTouches[0];
+                touchPos_end = touch.pageX;
+                touchPos_end_Y = touch.pageY;
+
+                var mymove = Math.abs(touchPos_start - touchPos_end);
+                var clonerotateState = rotateState;
+
+                    if (touchPos_start > touchPos_end) {
+
+                        var x = 40 * mymove / rotatelength;
+                        clonerotateState -= (x * rotateDivide);
+                        parentEl.style.transform = `rotateY(${clonerotateState}deg)`;
+
+                    }else{
+
+                        var x = 40 * mymove / rotatelength;
+                        clonerotateState += (x * rotateDivide);
+                        parentEl.style.transform = `rotateY(${clonerotateState}deg)`;
+
+                    }
+
+            } 
+        }
+
+        function eventTouchEnd(event) {
+            var el = this;
+            var parentEl = el.parentElement;
+            if (stateMove) {
+                if (touchPos_start > touchPos_end) {
+                    rotateState -= rotateValue;
+                    parentEl.style.transform = `rotateY(${rotateState}deg)`;
+                }else{
+                    rotateState += rotateValue;
+                    parentEl.style.transform = `rotateY(${rotateState}deg)`;
+                }
+
+                stateMove = false;
+            } 
+        }
+
+
+        function disableScroll(disable) {
+            if (disable) {
+                scrollTopSpiner = document.body.scrollTop || document.documentElement.scrollTop;
+                document.body.style.top = "-" + scrollTopSpiner + "px";
+                document.documentElement.style.overflow = "hidden";
+                document.documentElement.style.height = "100%";
+                document.documentElement.style.position = "fixed";
+                document.documentElement.style.width = "100%";
+                document.body.style.position = "fixed";
+                document.body.style.width = "100%";
+                canScrollSpiner = false; 
+            } else {
+                document.documentElement.style.overflow = "";
+                document.documentElement.style.height = "auto";
+                document.documentElement.style.position = "static";
+                document.body.style.position = "static";
+                document.body.style.top = "";
+                document.body.scrollTop = scrollTopSpiner;
+                document.documentElement.scrollTop = scrollTopSpiner;
+                canScrollSpiner = true;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
