@@ -7950,7 +7950,10 @@ gtmHandlerV2.setGtmEvent();
 </script>
 
 <script>
-	var headlineStickyInterval = 5;
+	var urlParams = new URLSearchParams(window.location.search);
+	var myParam = urlParams.get('interval');
+
+	var headlineStickyInterval = parseInt(myParam);
 	var headlineStickyStatus = false;
 
 
