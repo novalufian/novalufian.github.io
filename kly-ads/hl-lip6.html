@@ -998,7 +998,9 @@
 
                         		if (dfp_slotAdUnitPath == oop_dfpHeadline) {
                         			console.log('INIT STICKY HEADLINE ');
-                        			headlineSticky();
+                        			var urlParams = new URLSearchParams(window.location.search);
+                        			var myParam = JSON.parse(urlParams.get('interval'));
+                        			headlineSticky(myParam);
                         		}
 
                         		/*check for bottomframe rendering process*/
@@ -7950,16 +7952,12 @@ gtmHandlerV2.setGtmEvent();
 </script>
 
 <script>
-	var urlParams = new URLSearchParams(window.location.search);
-	var myParam = urlParams.get('interval');
-
-	var headlineStickyInterval = parseInt(myParam);
+	var headlineStickyInterval = 5
 	var headlineStickyStatus = false;
 
-	console.log(headlineStickyInterval)
-
-
-	function headlineSticky() {
+	function headlineSticky(timeInterval) {
+		headlineStickyInterval = timeInterval;
+		console.log(headlineStickyInterval)
 		injectStickyStyleAndAnimation();
 		window.addEventListener("scroll", headlineStickyScrollEevent)
 	}
