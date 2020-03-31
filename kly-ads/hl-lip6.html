@@ -7956,7 +7956,9 @@ gtmHandlerV2.setGtmEvent();
 	var headlineStickyStatus = false;
 
 	function headlineSticky(timeInterval) {
-		headlineStickyInterval = timeInterval;
+		if (timeInterval != null) {
+			headlineStickyInterval = timeInterval;
+		}
 		console.log(headlineStickyInterval)
 		injectStickyStyleAndAnimation();
 		window.addEventListener("scroll", headlineStickyScrollEevent)

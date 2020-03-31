@@ -863,6 +863,13 @@ div#exposer-ad-dfp-exposer-slot2 {
                             /*check if native ads creative was delivered*/
                             if (dfp_slotDelivered == 'block') {
 
+                                if (dfp_slotAdUnitPath == oop_dfpHeadline) {
+                                    console.log('INIT STICKY HEADLINE ');
+                                    var urlParams = new URLSearchParams(window.location.search);
+                                    var myParam = JSON.parse(urlParams.get('interval'));
+                                    headlineSticky(myParam);
+                                }
+                                
                                 if (dfp_slotAdUnitPath == oopTopFrameAdUnit) {
                                     var LockScroll = {
                                         status: false,
@@ -4619,6 +4626,85 @@ window.addEventListener('DOMContentLoaded', function() {
         mobile.final();
     }
 </script>
+
+<script>
+    var headlineStickyInterval = 5
+    var headlineStickyStatus = false;
+
+    function headlineSticky(timeInterval) {
+        if (timeInterval != null) {
+            headlineStickyInterval = timeInterval;
+        }
+        console.log(headlineStickyInterval)
+        injectStickyStyleAndAnimation();
+        window.addEventListener("scroll", headlineStickyScrollEevent)
+    }
+
+    function headlineStickyScrollEevent() {
+        var dfpHL = document.getElementById("div-gpt-ad-fimela-hl");
+        var menubar = document.querySelector(".layout__nav-content");
+        var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (scrollTOP >= dfpHL.offsetTop ) {
+            if (!headlineStickyStatus) {
+                dfpHL.classList.add("hl-active-sticky");
+                dfpHL.style = '';
+                removeStickyHeadline(dfpHL, true);
+                headlineStickyStatus = true;
+            }else{
+                if (menubar.classList.contains("layout__nav-content--no-hanging")) {
+                    dfpHL.classList.remove("hl-navbar-hanging");
+                }else{
+                    dfpHL.classList.add("hl-navbar-hanging");
+                }
+            }
+        }else{
+            if (headlineStickyStatus) {
+                dfpHL.classList.remove("hl-active-sticky");
+                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                removeStickyHeadline(dfpHL, false);
+            }
+        }
+    }
+
+    function removeStickyHeadline(dfpHL, status) {
+        var _interval = setInterval(function () {
+            if (headlineStickyInterval <= 0) {
+                dfpHL.classList.remove("hl-active-sticky");
+                dfpHL.style.margin = "10px 0";
+                clearInterval(_interval);
+                window.removeEventListener("scroll", headlineStickyScrollEevent);
+            }else{
+                headlineStickyInterval--;
+            }
+        }, 1000)
+
+        if (!status) {
+            clearInterval(_interval);
+        }
+    }
+
+    function injectStickyStyleAndAnimation() {
+        var _style = document.createElement("style");
+        _style.textContent = `
+        .hl-active-sticky {
+            position: fixed;
+            top: 0;
+            z-index: 9999;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            transition : all .5s ease;
+        }
+
+        .hl-navbar-hanging{
+            margin-top : 50px !important;
+        }
+        `;
+        document.head.appendChild(_style)
+    }
+</script>
+
 </body>
 
 </html>
