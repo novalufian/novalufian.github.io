@@ -7985,6 +7985,7 @@ gtmHandlerV2.setGtmEvent();
 		}else{
 			if (headlineStickyStatus) {
 				dfpHL.classList.remove("hl-active-sticky");
+				dfpHL.classList.remove("hl-navbar-hanging");
 				window.removeEventListener("scroll", headlineStickyScrollEevent);
 				removeStickyHeadline(dfpHL, false);
 			}
