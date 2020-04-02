@@ -16,11 +16,12 @@
 <img id="ads-img" src="https://via.placeholder.com/800" alt="">
 
 <script>
-	var _parent = window.frameElement.parentElement;
+	var _iframe = window.frameElement;
+	var _parent = _iframe.parentElement;
 	var _img = _parent.querySelector("img");
 	var _adsImg = document.getElementById("ads-img");
 
-	_parent.style = `
+	_iframe.style = `
 	width :  ${ _parent.clientWidth }px;
 	height :  ${ _parent.clientWidth }px;
 	`;
