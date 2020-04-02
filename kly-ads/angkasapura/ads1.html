@@ -1,4 +1,9 @@
 <style>
+	body{
+		margin: 0;
+		padding: 0;
+	}
+
 	img{
 		width: 100%;
 		height: 100%;
@@ -15,12 +20,16 @@
 	var _img = _parent.querySelector("img");
 	var _adsImg = document.getElementById("ads-img");
 
+	_parent.style = `
+	width :  ${ _parent.clientWidth }px;
+	height :  ${ _parent.clientWidth }px;
+	`;
 	_img.style.display = 'none';
 
 	_adsImg.addEventListener("click", openlandingPage);
 
 	function openlandingPage() {
-		window.open("_blank", "kapanrabi.com")
+		window.open("kapanrabi.com", "_blank" )
 	}
 
 
