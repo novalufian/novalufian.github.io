@@ -4690,16 +4690,21 @@ window.addEventListener('DOMContentLoaded', function() {
         _style.textContent = `
         .hl-active-sticky {
             position: fixed;
-            top: 0;
+            top: -100%;
             z-index: 9999;
             left: 50%;
             transform: translateX(-50%);
             margin: 0;
             transition : all .5s ease;
+            animation: hl-slide-down .5s forwards;
         }
 
         .hl-navbar-hanging{
             margin-top : 50px !important;
+        }
+
+        @keyframes hl-slid-down{
+            to{top : 0px;}
         }
         `;
         document.head.appendChild(_style)
