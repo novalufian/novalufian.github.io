@@ -863,7 +863,7 @@ div#exposer-ad-dfp-exposer-slot2 {
                             /*check if native ads creative was delivered*/
                             if (dfp_slotDelivered == 'block') {
 
-                                if (dfp_slotAdUnitPath == oop_dfpHeadline) {
+                                if (dfp_slotAdUnitPath == headlineAdUnit) {
                                     console.log('INIT STICKY HEADLINE ');
                                     var urlParams = new URLSearchParams(window.location.search);
                                     var myParam = JSON.parse(urlParams.get('interval'));
@@ -4644,8 +4644,8 @@ window.addEventListener('DOMContentLoaded', function() {
         var dfpHL = document.getElementById("div-gpt-ad-fimela-hl");
         var menubar = document.querySelector(".layout__nav-content");
         var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
-
-        if (scrollTOP >= dfpHL.offsetTop ) {
+        var hlTop = dfpHL.offsetTop + parseInt(document.body.style.marginTop.split("px")[0]);
+        if (scrollTOP >= hlTop) {
             if (!headlineStickyStatus) {
                 dfpHL.classList.add("hl-active-sticky");
                 dfpHL.style = '';

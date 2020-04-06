@@ -1635,8 +1635,8 @@ window.addEventListener("load", function() {
         var dfpHL = document.getElementById("div-gpt-ad-bola-hl");
         var menubar = document.querySelector(".layout__nav-content");
         var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
-
-        if (scrollTOP >= dfpHL.offsetTop ) {
+        var hlTop = dfpHL.offsetTop + parseInt(document.body.style.marginTop.split("px")[0]);
+        if (scrollTOP >= hlTop) {
             if (!headlineStickyStatus) {
                 dfpHL.classList.add("hl-active-sticky");
                 dfpHL.style = '';
@@ -1688,7 +1688,7 @@ window.addEventListener("load", function() {
             margin-top : 50px !important;
         }
 
-        @keyframes hl-slid-down{
+        @keyframes hlSlideDown{
             0%{top : -100px;}
             100%{top : 0px;}
         }

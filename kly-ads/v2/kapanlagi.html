@@ -2119,8 +2119,8 @@ document.body.appendChild(gptMKapanlagiStyle);
 		var dfpHL = document.getElementById("div-gpt-ad-kapanlagi-hl");
 		var menubar = document.querySelector(".layout__nav-content");
 		var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
-
-		if (scrollTOP >= dfpHL.offsetTop ) {
+		var hlTop = dfpHL.offsetTop + parseInt(document.body.style.marginTop.split("px")[0]);
+		if (scrollTOP >= hlTop) {
 			if (!headlineStickyStatus) {
 				dfpHL.classList.add("hl-active-sticky");
 				dfpHL.style = '';
