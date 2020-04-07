@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://api.merdeka.com/covid19/gateway/ -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Covid19 Indonesia 2020">
+<meta name="author" content="@ferdhie">
+<title>COVID19 INDONESIA</title>
+<style>
+html,body{ font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+h1 { font-size: 26px; font-weight:400; text-align: center; }
+body { font-size:20px; text-align: center; color: #333; }
+article { display: block; text-align: left; width: 650px; margin: 0 auto; min-width:300px; max-width:100% }
+a { color: #dc8100; text-decoration: none; }
+a:hover { color: red; }
+ul,li { list-style: none; margin: 0; padding: 0;}
+li {display: inline-block; text-align: center; margin-bottom: 1em; flex: 0 0 25%; max-width: 25%; }
+ul {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: stretch;}
+li h2 {font-size:14px; font-weight: normal; line-height: 1; margin: 0;}
+li p {margin: 0; font-size: 32px; line-height: 1; padding:0; }
+small {margin: 0; font-size: 14px;}
+td,th {font-size: 14px; padding: 10px; text-align: center; }
+td {text-align: right;}
+td:first-child {text-align: left;}
+thead tr { background-color: #fff; border-bottom: 1px solid #ddd;}
+table {
+    background-color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+}
+@media (max-width: 480px) {
+    li { flex: 0 0 50%; max-width: 50%; }
+}
+.bar {width: 100%; height:3px; background-color: #f0f0f0; margin: 10px auto 0;}
+.bar-content {height:3px; background-color: #33C3F0;}
+footer p { font-size:14px; font-style: italic; }
+footer { border-top: 1px solid #ddd; margin-top: 20px; }
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.selengkapnya{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color:#d90738;
+    font-size: 16px;
+}
+</style>
+<style>
+svg.chart{display:block; margin-left: -15px;}
+.chart-bg{fill:#fff;opacity:.5}
+.chart-box{fill:#fff;opacity:1}
+.chart-tick line{display:none;stroke:#ddd;stroke-width:1;stroke-dasharray:5,5}
+.chart text{display:none;font-family:Helvetica,Arial,Verdana,sans-serif;font-size:12px;fill:#666}
+.axisX text{text-anchor:middle}
+.xAngle text{text-anchor:start}
+.axisY text{text-anchor:end}
+.chart circle{stroke-width:2px;stroke:#eee}
+.chart .line{fill:none;stroke-width:3}
+.chart .fill{stroke-width:0}
+.valShow text,.pie text{fill:#fed;opacity:.8;font-size:10px}
+.pie text{font-size:15px}
+.chartInfo g{display:none}
+.chartInfo .textBg{fill:#000;opacity:.9}
+.chartInfo text{text-anchor:middle;fill:#887}
+.chartInfo g rect:nth-child(even){fill:#eee;opacity:.8;stroke:#eed;stroke-width:1}
+.pieBg{fill:#eee}
+</style>
+
+<script>
+    window.kly = {};
+    window.kly.gtm = {};
+</script>
+</head>
+<body>
+<article id="widget-content">
+    <h1>COVID 19 INDONESIA</h1>
+    <ul>
+        <li>
+            <div class="chart-konfirmasi">
+               
+<svg viewBox="0 0 480 250" class="chart">
+  <rect width="480" height="250" class="chart-bg"></rect>
+  <rect x="60" y="9" width="411" height="216" class="chart-box"></rect>
+  <g class="chart-tick axisX" transform="translate(60,225)">
+    <g transform="translate(0)"><line y2="-216"></line><text y="3" dy=".71em">0</text></g>
+    <g transform="translate(24.17648)"><line y2="-216"></line><text y="3" dy=".71em">2</text></g>
+    <g transform="translate(48.35296)"><line y2="-216"></line><text y="3" dy=".71em">4</text></g>
+    <g transform="translate(72.52944)"><line y2="-216"></line><text y="3" dy=".71em">6</text></g>
+    <g transform="translate(96.70592)"><line y2="-216"></line><text y="3" dy=".71em">8</text></g>
+    <g transform="translate(120.8824)"><line y2="-216"></line><text y="3" dy=".71em">10</text></g>
+    <g transform="translate(145.05888)"><line y2="-216"></line><text y="3" dy=".71em">12</text></g>
+    <g transform="translate(169.23536)"><line y2="-216"></line><text y="3" dy=".71em">14</text></g>
+    <g transform="translate(193.41184)"><line y2="-216"></line><text y="3" dy=".71em">16</text></g>
+    <g transform="translate(217.58832)"><line y2="-216"></line><text y="3" dy=".71em">18</text></g>
+    <g transform="translate(241.7648)"><line y2="-216"></line><text y="3" dy=".71em">20</text></g>
+    <g transform="translate(265.94128)"><line y2="-216"></line><text y="3" dy=".71em">22</text></g>
+    <g transform="translate(290.11776)"><line y2="-216"></line><text y="3" dy=".71em">24</text></g>
+    <g transform="translate(314.29424)"><line y2="-216"></line><text y="3" dy=".71em">26</text></g>
+    <g transform="translate(338.47072)"><line y2="-216"></line><text y="3" dy=".71em">28</text></g>
+    <g transform="translate(362.6472)"><line y2="-216"></line><text y="3" dy=".71em">30</text></g>
+    <g transform="translate(386.82368)"><line y2="-216"></line><text y="3" dy=".71em">32</text></g>
+    <g transform="translate(411.00016)"><line y2="-216"></line><text y="3" dy=".71em">34</text></g>
+  </g>
+  <g class="chart-tick axisY" transform="translate(60,9)">
+    <g transform="translate(0,0)"><line x2="411"></line><text x="-3" dy=".32em">200</text></g>
+    <g transform="translate(0,43.2)"><line x2="411"></line><text x="-3" dy=".32em">160</text></g>
+    <g transform="translate(0,86.4)"><line x2="411"></line><text x="-3" dy=".32em">120</text></g>
+    <g transform="translate(0,129.6)"><line x2="411"></line><text x="-3" dy=".32em">80</text></g>
+    <g transform="translate(0,172.8)"><line x2="411"></line><text x="-3" dy=".32em">40</text></g>
+    <g transform="translate(0,216)"><line x2="411"></line></g>
+  </g>
+  <!-- the chart -->
+  <g transform="translate(60,9)">
+    <g fill="#d9534f">
+      <path d="M0,213.84 12.08824,216 24.17648,216 36.26472,216 48.35296,213.84 60.4412,216 72.52944,213.84 84.61768,201.96 96.70592,207.36 108.79416,208.44 120.8824,216 132.97064,178.2 145.05888,186.84 157.14712,193.32 169.23536,197.64 181.3236,174.96 193.41184,156.6 205.50008,128.52 217.58832,150.12 229.67656,128.52 241.7648,146.88 253.85304,145.8 265.94128,101.52 278.02952,102.6 290.11776,104.76 302.206,50.76 314.29424,98.28 326.38248,75.6 338.47072,76.68 350.55896,92.88 362.6472,55.08 374.73544,93.96 386.82368,4.32 398.91192,101.52 411.00016,20.52" class="line" stroke="#d9534f"></path>
+    </g>
+  </g>
+  <g class="chartInfo" transform="translate(60,9)">
+    <g><rect x="-6.04412" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="-6.04412" width="12.08824" height="37"></rect><text><tspan x="0" dy="15">0</tspan><tspan x="0" dy="15" fill="#d9534f">2</tspan></text></g>
+    <g><rect x="6.04412" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="6.04412" width="12.08824" height="37"></rect><text><tspan x="12.08824" dy="15">1</tspan><tspan x="12.08824" dy="15" fill="#d9534f">0</tspan></text></g>
+    <g><rect x="18.13235" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="18.13235" width="12.08824" height="37"></rect><text><tspan x="24.17648" dy="15">2</tspan><tspan x="24.17648" dy="15" fill="#d9534f">0</tspan></text></g>
+    <g><rect x="30.22059" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="30.22059" width="12.08824" height="37"></rect><text><tspan x="36.26472" dy="15">3</tspan><tspan x="36.26472" dy="15" fill="#d9534f">0</tspan></text></g>
+    <g><rect x="42.30882" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="42.30882" width="12.08824" height="37"></rect><text><tspan x="48.35296" dy="15">4</tspan><tspan x="48.35296" dy="15" fill="#d9534f">2</tspan></text></g>
+    <g><rect x="54.39706" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="54.39706" width="12.08824" height="37"></rect><text><tspan x="60.4412" dy="15">5</tspan><tspan x="60.4412" dy="15" fill="#d9534f">0</tspan></text></g>
+    <g><rect x="66.48529" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="66.48529" width="12.08824" height="37"></rect><text><tspan x="72.52944" dy="15">6</tspan><tspan x="72.52944" dy="15" fill="#d9534f">2</tspan></text></g>
+    <g><rect x="78.57353" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="78.57353" width="12.08824" height="37"></rect><text><tspan x="84.61768" dy="15">7</tspan><tspan x="84.61768" dy="15" fill="#d9534f">13</tspan></text></g>
+    <g><rect x="90.66176" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="90.66176" width="12.08824" height="37"></rect><text><tspan x="96.70592" dy="15">8</tspan><tspan x="96.70592" dy="15" fill="#d9534f">8</tspan></text></g>
+    <g><rect x="102.75" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="102.75" width="12.08824" height="37"></rect><text><tspan x="108.79416" dy="15">9</tspan><tspan x="108.79416" dy="15" fill="#d9534f">7</tspan></text></g>
+    <g><rect x="114.83824" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="114.83824" width="12.08824" height="37"></rect><text><tspan x="120.8824" dy="15">10</tspan><tspan x="120.8824" dy="15" fill="#d9534f">0</tspan></text></g>
+    <g><rect x="126.92647" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="126.92647" width="12.08824" height="37"></rect><text><tspan x="132.97064" dy="15">11</tspan><tspan x="132.97064" dy="15" fill="#d9534f">35</tspan></text></g>
+    <g><rect x="139.01471" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="139.01471" width="12.08824" height="37"></rect><text><tspan x="145.05888" dy="15">12</tspan><tspan x="145.05888" dy="15" fill="#d9534f">27</tspan></text></g>
+    <g><rect x="151.10294" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="151.10294" width="12.08824" height="37"></rect><text><tspan x="157.14712" dy="15">13</tspan><tspan x="157.14712" dy="15" fill="#d9534f">21</tspan></text></g>
+    <g><rect x="163.19118" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="163.19118" width="12.08824" height="37"></rect><text><tspan x="169.23536" dy="15">14</tspan><tspan x="169.23536" dy="15" fill="#d9534f">17</tspan></text></g>
+    <g><rect x="175.27941" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="175.27941" width="12.08824" height="37"></rect><text><tspan x="181.3236" dy="15">15</tspan><tspan x="181.3236" dy="15" fill="#d9534f">38</tspan></text></g>
+    <g><rect x="187.36765" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="187.36765" width="12.08824" height="37"></rect><text><tspan x="193.41184" dy="15">16</tspan><tspan x="193.41184" dy="15" fill="#d9534f">55</tspan></text></g>
+    <g><rect x="199.45588" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="199.45588" width="12.08824" height="37"></rect><text><tspan x="205.50008" dy="15">17</tspan><tspan x="205.50008" dy="15" fill="#d9534f">81</tspan></text></g>
+    <g><rect x="211.54412" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="211.54412" width="12.08824" height="37"></rect><text><tspan x="217.58832" dy="15">18</tspan><tspan x="217.58832" dy="15" fill="#d9534f">61</tspan></text></g>
+    <g><rect x="223.63235" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="223.63235" width="12.08824" height="37"></rect><text><tspan x="229.67656" dy="15">19</tspan><tspan x="229.67656" dy="15" fill="#d9534f">81</tspan></text></g>
+    <g><rect x="235.72059" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="235.72059" width="12.08824" height="37"></rect><text><tspan x="241.7648" dy="15">20</tspan><tspan x="241.7648" dy="15" fill="#d9534f">64</tspan></text></g>
+    <g><rect x="247.80882" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="247.80882" width="12.08824" height="37"></rect><text><tspan x="253.85304" dy="15">21</tspan><tspan x="253.85304" dy="15" fill="#d9534f">65</tspan></text></g>
+    <g><rect x="259.89706" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="259.89706" width="12.08824" height="37"></rect><text><tspan x="265.94128" dy="15">22</tspan><tspan x="265.94128" dy="15" fill="#d9534f">106</tspan></text></g>
+    <g><rect x="271.98529" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="271.98529" width="12.08824" height="37"></rect><text><tspan x="278.02952" dy="15">23</tspan><tspan x="278.02952" dy="15" fill="#d9534f">105</tspan></text></g>
+    <g><rect x="284.07353" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="284.07353" width="12.08824" height="37"></rect><text><tspan x="290.11776" dy="15">24</tspan><tspan x="290.11776" dy="15" fill="#d9534f">103</tspan></text></g>
+    <g><rect x="296.16176" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="296.16176" width="12.08824" height="37"></rect><text><tspan x="302.206" dy="15">25</tspan><tspan x="302.206" dy="15" fill="#d9534f">153</tspan></text></g>
+    <g><rect x="308.25" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="308.25" width="12.08824" height="37"></rect><text><tspan x="314.29424" dy="15">26</tspan><tspan x="314.29424" dy="15" fill="#d9534f">109</tspan></text></g>
+    <g><rect x="320.33824" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="320.33824" width="12.08824" height="37"></rect><text><tspan x="326.38248" dy="15">27</tspan><tspan x="326.38248" dy="15" fill="#d9534f">130</tspan></text></g>
+    <g><rect x="332.42647" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="332.42647" width="12.08824" height="37"></rect><text><tspan x="338.47072" dy="15">28</tspan><tspan x="338.47072" dy="15" fill="#d9534f">129</tspan></text></g>
+    <g><rect x="344.51471" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="344.51471" width="12.08824" height="37"></rect><text><tspan x="350.55896" dy="15">29</tspan><tspan x="350.55896" dy="15" fill="#d9534f">114</tspan></text></g>
+    <g><rect x="356.60294" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="356.60294" width="12.08824" height="37"></rect><text><tspan x="362.6472" dy="15">30</tspan><tspan x="362.6472" dy="15" fill="#d9534f">149</tspan></text></g>
+    <g><rect x="368.69118" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="368.69118" width="12.08824" height="37"></rect><text><tspan x="374.73544" dy="15">31</tspan><tspan x="374.73544" dy="15" fill="#d9534f">113</tspan></text></g>
+    <g><rect x="380.77941" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="380.77941" width="12.08824" height="37"></rect><text><tspan x="386.82368" dy="15">32</tspan><tspan x="386.82368" dy="15" fill="#d9534f">196</tspan></text></g>
+    <g><rect x="392.86765" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="392.86765" width="12.08824" height="37"></rect><text><tspan x="398.91192" dy="15">33</tspan><tspan x="398.91192" dy="15" fill="#d9534f">106</tspan></text></g>
+    <g><rect x="404.95588" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="404.95588" width="12.08824" height="37"></rect><text><tspan x="411.00016" dy="15">34</tspan><tspan x="411.00016" dy="15" fill="#d9534f">181</tspan></text></g>
+  </g>
+</svg>
+
+            </div>
+            <h2>TERKONFIRMASI</h2>
+            <p>2273</p>
+            <small>+181</small>
+        </li>
+        <li>
+            <div class="chart-dirawat">
+                
+<svg viewBox="0 0 480 250" class="chart">
+  <rect width="480" height="250" class="chart-bg"></rect>
+  <rect x="60" y="9" width="411" height="216" class="chart-box"></rect>
+  <g class="chart-tick axisX" transform="translate(60,225)">
+    <g transform="translate(0)"><line y2="-216"></line><text y="3" dy=".71em">0</text></g>
+    <g transform="translate(24.17648)"><line y2="-216"></line><text y="3" dy=".71em">2</text></g>
+    <g transform="translate(48.35296)"><line y2="-216"></line><text y="3" dy=".71em">4</text></g>
+    <g transform="translate(72.52944)"><line y2="-216"></line><text y="3" dy=".71em">6</text></g>
+    <g transform="translate(96.70592)"><line y2="-216"></line><text y="3" dy=".71em">8</text></g>
+    <g transform="translate(120.8824)"><line y2="-216"></line><text y="3" dy=".71em">10</text></g>
+    <g transform="translate(145.05888)"><line y2="-216"></line><text y="3" dy=".71em">12</text></g>
+    <g transform="translate(169.23536)"><line y2="-216"></line><text y="3" dy=".71em">14</text></g>
+    <g transform="translate(193.41184)"><line y2="-216"></line><text y="3" dy=".71em">16</text></g>
+    <g transform="translate(217.58832)"><line y2="-216"></line><text y="3" dy=".71em">18</text></g>
+    <g transform="translate(241.7648)"><line y2="-216"></line><text y="3" dy=".71em">20</text></g>
+    <g transform="translate(265.94128)"><line y2="-216"></line><text y="3" dy=".71em">22</text></g>
+    <g transform="translate(290.11776)"><line y2="-216"></line><text y="3" dy=".71em">24</text></g>
+    <g transform="translate(314.29424)"><line y2="-216"></line><text y="3" dy=".71em">26</text></g>
+    <g transform="translate(338.47072)"><line y2="-216"></line><text y="3" dy=".71em">28</text></g>
+    <g transform="translate(362.6472)"><line y2="-216"></line><text y="3" dy=".71em">30</text></g>
+    <g transform="translate(386.82368)"><line y2="-216"></line><text y="3" dy=".71em">32</text></g>
+    <g transform="translate(411.00016)"><line y2="-216"></line><text y="3" dy=".71em">34</text></g>
+  </g>
+  <g class="chart-tick axisY" transform="translate(60,9)">
+    <g transform="translate(0,0)"><line x2="411"></line><text x="-3" dy=".32em">200</text></g>
+    <g transform="translate(0,43.2)"><line x2="411"></line><text x="-3" dy=".32em">160</text></g>
+    <g transform="translate(0,86.4)"><line x2="411"></line><text x="-3" dy=".32em">120</text></g>
+    <g transform="translate(0,129.6)"><line x2="411"></line><text x="-3" dy=".32em">80</text></g>
+    <g transform="translate(0,172.8)"><line x2="411"></line><text x="-3" dy=".32em">40</text></g>
+    <g transform="translate(0,216)"><line x2="411"></line></g>
+  </g>
+  <!-- the chart -->
+  <g transform="translate(60,9)">
+    <g fill="#f0ad4e">
+      <path d="M0,216 12.08824,216 24.17648,216 36.26472,216 48.35296,213.84 60.4412,216 72.52944,213.84 84.61768,201.96 96.70592,209.52 108.79416,209.52 120.8824,216 132.97064,181.44 145.05888,194.4 157.14712,193.32 169.23536,197.64 181.3236,176.04 193.41184,173.88 205.50008,139.32 217.58832,159.84 229.67656,138.24 241.7648,167.4 253.85304,147.96 265.94128,108 278.02952,106.92 290.11776,130.68 302.206,72.36 314.29424,128.52 326.38248,93.96 338.47072,97.2 350.55896,114.48 362.6472,101.52 374.73544,117.72 386.82368,39.96 398.91192,129.6 411.00016,43.2" class="line" stroke="#f0ad4e"></path>
+    </g>
+  </g>
+  <g class="chartInfo" transform="translate(60,9)">
+    <g><rect x="-6.04412" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="-6.04412" width="12.08824" height="37"></rect><text><tspan x="0" dy="15">0</tspan><tspan x="0" dy="15" fill="#f0ad4e">0</tspan></text></g>
+    <g><rect x="6.04412" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="6.04412" width="12.08824" height="37"></rect><text><tspan x="12.08824" dy="15">1</tspan><tspan x="12.08824" dy="15" fill="#f0ad4e">0</tspan></text></g>
+    <g><rect x="18.13235" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="18.13235" width="12.08824" height="37"></rect><text><tspan x="24.17648" dy="15">2</tspan><tspan x="24.17648" dy="15" fill="#f0ad4e">0</tspan></text></g>
+    <g><rect x="30.22059" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="30.22059" width="12.08824" height="37"></rect><text><tspan x="36.26472" dy="15">3</tspan><tspan x="36.26472" dy="15" fill="#f0ad4e">0</tspan></text></g>
+    <g><rect x="42.30882" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="42.30882" width="12.08824" height="37"></rect><text><tspan x="48.35296" dy="15">4</tspan><tspan x="48.35296" dy="15" fill="#f0ad4e">2</tspan></text></g>
+    <g><rect x="54.39706" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="54.39706" width="12.08824" height="37"></rect><text><tspan x="60.4412" dy="15">5</tspan><tspan x="60.4412" dy="15" fill="#f0ad4e">0</tspan></text></g>
+    <g><rect x="66.48529" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="66.48529" width="12.08824" height="37"></rect><text><tspan x="72.52944" dy="15">6</tspan><tspan x="72.52944" dy="15" fill="#f0ad4e">2</tspan></text></g>
+    <g><rect x="78.57353" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="78.57353" width="12.08824" height="37"></rect><text><tspan x="84.61768" dy="15">7</tspan><tspan x="84.61768" dy="15" fill="#f0ad4e">13</tspan></text></g>
+    <g><rect x="90.66176" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="90.66176" width="12.08824" height="37"></rect><text><tspan x="96.70592" dy="15">8</tspan><tspan x="96.70592" dy="15" fill="#f0ad4e">6</tspan></text></g>
+    <g><rect x="102.75" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="102.75" width="12.08824" height="37"></rect><text><tspan x="108.79416" dy="15">9</tspan><tspan x="108.79416" dy="15" fill="#f0ad4e">6</tspan></text></g>
+    <g><rect x="114.83824" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="114.83824" width="12.08824" height="37"></rect><text><tspan x="120.8824" dy="15">10</tspan><tspan x="120.8824" dy="15" fill="#f0ad4e">0</tspan></text></g>
+    <g><rect x="126.92647" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="126.92647" width="12.08824" height="37"></rect><text><tspan x="132.97064" dy="15">11</tspan><tspan x="132.97064" dy="15" fill="#f0ad4e">32</tspan></text></g>
+    <g><rect x="139.01471" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="139.01471" width="12.08824" height="37"></rect><text><tspan x="145.05888" dy="15">12</tspan><tspan x="145.05888" dy="15" fill="#f0ad4e">20</tspan></text></g>
+    <g><rect x="151.10294" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="151.10294" width="12.08824" height="37"></rect><text><tspan x="157.14712" dy="15">13</tspan><tspan x="157.14712" dy="15" fill="#f0ad4e">21</tspan></text></g>
+    <g><rect x="163.19118" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="163.19118" width="12.08824" height="37"></rect><text><tspan x="169.23536" dy="15">14</tspan><tspan x="169.23536" dy="15" fill="#f0ad4e">17</tspan></text></g>
+    <g><rect x="175.27941" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="175.27941" width="12.08824" height="37"></rect><text><tspan x="181.3236" dy="15">15</tspan><tspan x="181.3236" dy="15" fill="#f0ad4e">37</tspan></text></g>
+    <g><rect x="187.36765" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="187.36765" width="12.08824" height="37"></rect><text><tspan x="193.41184" dy="15">16</tspan><tspan x="193.41184" dy="15" fill="#f0ad4e">39</tspan></text></g>
+    <g><rect x="199.45588" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="199.45588" width="12.08824" height="37"></rect><text><tspan x="205.50008" dy="15">17</tspan><tspan x="205.50008" dy="15" fill="#f0ad4e">71</tspan></text></g>
+    <g><rect x="211.54412" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="211.54412" width="12.08824" height="37"></rect><text><tspan x="217.58832" dy="15">18</tspan><tspan x="217.58832" dy="15" fill="#f0ad4e">52</tspan></text></g>
+    <g><rect x="223.63235" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="223.63235" width="12.08824" height="37"></rect><text><tspan x="229.67656" dy="15">19</tspan><tspan x="229.67656" dy="15" fill="#f0ad4e">72</tspan></text></g>
+    <g><rect x="235.72059" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="235.72059" width="12.08824" height="37"></rect><text><tspan x="241.7648" dy="15">20</tspan><tspan x="241.7648" dy="15" fill="#f0ad4e">45</tspan></text></g>
+    <g><rect x="247.80882" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="247.80882" width="12.08824" height="37"></rect><text><tspan x="253.85304" dy="15">21</tspan><tspan x="253.85304" dy="15" fill="#f0ad4e">63</tspan></text></g>
+    <g><rect x="259.89706" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="259.89706" width="12.08824" height="37"></rect><text><tspan x="265.94128" dy="15">22</tspan><tspan x="265.94128" dy="15" fill="#f0ad4e">100</tspan></text></g>
+    <g><rect x="271.98529" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="271.98529" width="12.08824" height="37"></rect><text><tspan x="278.02952" dy="15">23</tspan><tspan x="278.02952" dy="15" fill="#f0ad4e">101</tspan></text></g>
+    <g><rect x="284.07353" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="284.07353" width="12.08824" height="37"></rect><text><tspan x="290.11776" dy="15">24</tspan><tspan x="290.11776" dy="15" fill="#f0ad4e">79</tspan></text></g>
+    <g><rect x="296.16176" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="296.16176" width="12.08824" height="37"></rect><text><tspan x="302.206" dy="15">25</tspan><tspan x="302.206" dy="15" fill="#f0ad4e">133</tspan></text></g>
+    <g><rect x="308.25" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="308.25" width="12.08824" height="37"></rect><text><tspan x="314.29424" dy="15">26</tspan><tspan x="314.29424" dy="15" fill="#f0ad4e">81</tspan></text></g>
+    <g><rect x="320.33824" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="320.33824" width="12.08824" height="37"></rect><text><tspan x="326.38248" dy="15">27</tspan><tspan x="326.38248" dy="15" fill="#f0ad4e">113</tspan></text></g>
+    <g><rect x="332.42647" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="332.42647" width="12.08824" height="37"></rect><text><tspan x="338.47072" dy="15">28</tspan><tspan x="338.47072" dy="15" fill="#f0ad4e">110</tspan></text></g>
+    <g><rect x="344.51471" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="344.51471" width="12.08824" height="37"></rect><text><tspan x="350.55896" dy="15">29</tspan><tspan x="350.55896" dy="15" fill="#f0ad4e">94</tspan></text></g>
+    <g><rect x="356.60294" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="356.60294" width="12.08824" height="37"></rect><text><tspan x="362.6472" dy="15">30</tspan><tspan x="362.6472" dy="15" fill="#f0ad4e">106</tspan></text></g>
+    <g><rect x="368.69118" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="368.69118" width="12.08824" height="37"></rect><text><tspan x="374.73544" dy="15">31</tspan><tspan x="374.73544" dy="15" fill="#f0ad4e">91</tspan></text></g>
+    <g><rect x="380.77941" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="380.77941" width="12.08824" height="37"></rect><text><tspan x="386.82368" dy="15">32</tspan><tspan x="386.82368" dy="15" fill="#f0ad4e">163</tspan></text></g>
+    <g><rect x="392.86765" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="392.86765" width="12.08824" height="37"></rect><text><tspan x="398.91192" dy="15">33</tspan><tspan x="398.91192" dy="15" fill="#f0ad4e">80</tspan></text></g>
+    <g><rect x="404.95588" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="404.95588" width="12.08824" height="37"></rect><text><tspan x="411.00016" dy="15">34</tspan><tspan x="411.00016" dy="15" fill="#f0ad4e">160</tspan></text></g>
+  </g>
+</svg>
+
+            </div>
+            <h2>PERAWATAN</h2>
+            <p>1911</p>
+        </li>
+        <li>
+            <div class="chart-sembuh">
+                
+<svg viewBox="0 0 480 250" class="chart">
+  <rect width="480" height="250" class="chart-bg"></rect>
+  <rect x="60" y="9" width="411" height="216" class="chart-box"></rect>
+  <g class="chart-tick axisX" transform="translate(60,225)">
+    <g transform="translate(0)"><line y2="-216"></line><text y="3" dy=".71em">0</text></g>
+    <g transform="translate(24.17648)"><line y2="-216"></line><text y="3" dy=".71em">2</text></g>
+    <g transform="translate(48.35296)"><line y2="-216"></line><text y="3" dy=".71em">4</text></g>
+    <g transform="translate(72.52944)"><line y2="-216"></line><text y="3" dy=".71em">6</text></g>
+    <g transform="translate(96.70592)"><line y2="-216"></line><text y="3" dy=".71em">8</text></g>
+    <g transform="translate(120.8824)"><line y2="-216"></line><text y="3" dy=".71em">10</text></g>
+    <g transform="translate(145.05888)"><line y2="-216"></line><text y="3" dy=".71em">12</text></g>
+    <g transform="translate(169.23536)"><line y2="-216"></line><text y="3" dy=".71em">14</text></g>
+    <g transform="translate(193.41184)"><line y2="-216"></line><text y="3" dy=".71em">16</text></g>
+    <g transform="translate(217.58832)"><line y2="-216"></line><text y="3" dy=".71em">18</text></g>
+    <g transform="translate(241.7648)"><line y2="-216"></line><text y="3" dy=".71em">20</text></g>
+    <g transform="translate(265.94128)"><line y2="-216"></line><text y="3" dy=".71em">22</text></g>
+    <g transform="translate(290.11776)"><line y2="-216"></line><text y="3" dy=".71em">24</text></g>
+    <g transform="translate(314.29424)"><line y2="-216"></line><text y="3" dy=".71em">26</text></g>
+    <g transform="translate(338.47072)"><line y2="-216"></line><text y="3" dy=".71em">28</text></g>
+    <g transform="translate(362.6472)"><line y2="-216"></line><text y="3" dy=".71em">30</text></g>
+    <g transform="translate(386.82368)"><line y2="-216"></line><text y="3" dy=".71em">32</text></g>
+    <g transform="translate(411.00016)"><line y2="-216"></line><text y="3" dy=".71em">34</text></g>
+  </g>
+  <g class="chart-tick axisY" transform="translate(60,9)">
+    <g transform="translate(0,0)"><line x2="411"></line><text x="-3" dy=".32em">24</text></g>
+    <g transform="translate(0,54)"><line x2="411"></line><text x="-3" dy=".32em">18</text></g>
+    <g transform="translate(0,108)"><line x2="411"></line><text x="-3" dy=".32em">12</text></g>
+    <g transform="translate(0,162)"><line x2="411"></line><text x="-3" dy=".32em">6</text></g>
+    <g transform="translate(0,216)"><line x2="411"></line></g>
+  </g>
+  <!-- the chart -->
+  <g transform="translate(60,9)">
+    <g fill="#5cb85c">
+      <path d="M0,216 12.08824,216 24.17648,216 36.26472,216 48.35296,216 60.4412,216 72.52944,216 84.61768,216 96.70592,198 108.79416,216 120.8824,216 132.97064,216 145.05888,162 157.14712,216 169.23536,216 181.3236,207 193.41184,198 205.50008,180 217.58832,198 229.67656,189 241.7648,135 253.85304,207 265.94128,216 278.02952,207 290.11776,180 302.206,117 314.29424,99 326.38248,171 338.47072,117 350.55896,162 362.6472,18 374.73544,135 386.82368,18 398.91192,72 411.00016,90" class="line" stroke="#5cb85c"></path>
+    </g>
+  </g>
+  <g class="chartInfo" transform="translate(60,9)">
+    <g><rect x="-6.04412" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="-6.04412" width="12.08824" height="37"></rect><text><tspan x="0" dy="15">0</tspan><tspan x="0" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="6.04412" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="6.04412" width="12.08824" height="37"></rect><text><tspan x="12.08824" dy="15">1</tspan><tspan x="12.08824" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="18.13235" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="18.13235" width="12.08824" height="37"></rect><text><tspan x="24.17648" dy="15">2</tspan><tspan x="24.17648" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="30.22059" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="30.22059" width="12.08824" height="37"></rect><text><tspan x="36.26472" dy="15">3</tspan><tspan x="36.26472" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="42.30882" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="42.30882" width="12.08824" height="37"></rect><text><tspan x="48.35296" dy="15">4</tspan><tspan x="48.35296" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="54.39706" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="54.39706" width="12.08824" height="37"></rect><text><tspan x="60.4412" dy="15">5</tspan><tspan x="60.4412" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="66.48529" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="66.48529" width="12.08824" height="37"></rect><text><tspan x="72.52944" dy="15">6</tspan><tspan x="72.52944" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="78.57353" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="78.57353" width="12.08824" height="37"></rect><text><tspan x="84.61768" dy="15">7</tspan><tspan x="84.61768" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="90.66176" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="90.66176" width="12.08824" height="37"></rect><text><tspan x="96.70592" dy="15">8</tspan><tspan x="96.70592" dy="15" fill="#5cb85c">2</tspan></text></g>
+    <g><rect x="102.75" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="102.75" width="12.08824" height="37"></rect><text><tspan x="108.79416" dy="15">9</tspan><tspan x="108.79416" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="114.83824" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="114.83824" width="12.08824" height="37"></rect><text><tspan x="120.8824" dy="15">10</tspan><tspan x="120.8824" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="126.92647" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="126.92647" width="12.08824" height="37"></rect><text><tspan x="132.97064" dy="15">11</tspan><tspan x="132.97064" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="139.01471" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="139.01471" width="12.08824" height="37"></rect><text><tspan x="145.05888" dy="15">12</tspan><tspan x="145.05888" dy="15" fill="#5cb85c">6</tspan></text></g>
+    <g><rect x="151.10294" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="151.10294" width="12.08824" height="37"></rect><text><tspan x="157.14712" dy="15">13</tspan><tspan x="157.14712" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="163.19118" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="163.19118" width="12.08824" height="37"></rect><text><tspan x="169.23536" dy="15">14</tspan><tspan x="169.23536" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="175.27941" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="175.27941" width="12.08824" height="37"></rect><text><tspan x="181.3236" dy="15">15</tspan><tspan x="181.3236" dy="15" fill="#5cb85c">1</tspan></text></g>
+    <g><rect x="187.36765" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="187.36765" width="12.08824" height="37"></rect><text><tspan x="193.41184" dy="15">16</tspan><tspan x="193.41184" dy="15" fill="#5cb85c">2</tspan></text></g>
+    <g><rect x="199.45588" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="199.45588" width="12.08824" height="37"></rect><text><tspan x="205.50008" dy="15">17</tspan><tspan x="205.50008" dy="15" fill="#5cb85c">4</tspan></text></g>
+    <g><rect x="211.54412" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="211.54412" width="12.08824" height="37"></rect><text><tspan x="217.58832" dy="15">18</tspan><tspan x="217.58832" dy="15" fill="#5cb85c">2</tspan></text></g>
+    <g><rect x="223.63235" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="223.63235" width="12.08824" height="37"></rect><text><tspan x="229.67656" dy="15">19</tspan><tspan x="229.67656" dy="15" fill="#5cb85c">3</tspan></text></g>
+    <g><rect x="235.72059" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="235.72059" width="12.08824" height="37"></rect><text><tspan x="241.7648" dy="15">20</tspan><tspan x="241.7648" dy="15" fill="#5cb85c">9</tspan></text></g>
+    <g><rect x="247.80882" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="247.80882" width="12.08824" height="37"></rect><text><tspan x="253.85304" dy="15">21</tspan><tspan x="253.85304" dy="15" fill="#5cb85c">1</tspan></text></g>
+    <g><rect x="259.89706" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="259.89706" width="12.08824" height="37"></rect><text><tspan x="265.94128" dy="15">22</tspan><tspan x="265.94128" dy="15" fill="#5cb85c">0</tspan></text></g>
+    <g><rect x="271.98529" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="271.98529" width="12.08824" height="37"></rect><text><tspan x="278.02952" dy="15">23</tspan><tspan x="278.02952" dy="15" fill="#5cb85c">1</tspan></text></g>
+    <g><rect x="284.07353" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="284.07353" width="12.08824" height="37"></rect><text><tspan x="290.11776" dy="15">24</tspan><tspan x="290.11776" dy="15" fill="#5cb85c">4</tspan></text></g>
+    <g><rect x="296.16176" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="296.16176" width="12.08824" height="37"></rect><text><tspan x="302.206" dy="15">25</tspan><tspan x="302.206" dy="15" fill="#5cb85c">11</tspan></text></g>
+    <g><rect x="308.25" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="308.25" width="12.08824" height="37"></rect><text><tspan x="314.29424" dy="15">26</tspan><tspan x="314.29424" dy="15" fill="#5cb85c">13</tspan></text></g>
+    <g><rect x="320.33824" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="320.33824" width="12.08824" height="37"></rect><text><tspan x="326.38248" dy="15">27</tspan><tspan x="326.38248" dy="15" fill="#5cb85c">5</tspan></text></g>
+    <g><rect x="332.42647" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="332.42647" width="12.08824" height="37"></rect><text><tspan x="338.47072" dy="15">28</tspan><tspan x="338.47072" dy="15" fill="#5cb85c">11</tspan></text></g>
+    <g><rect x="344.51471" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="344.51471" width="12.08824" height="37"></rect><text><tspan x="350.55896" dy="15">29</tspan><tspan x="350.55896" dy="15" fill="#5cb85c">6</tspan></text></g>
+    <g><rect x="356.60294" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="356.60294" width="12.08824" height="37"></rect><text><tspan x="362.6472" dy="15">30</tspan><tspan x="362.6472" dy="15" fill="#5cb85c">22</tspan></text></g>
+    <g><rect x="368.69118" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="368.69118" width="12.08824" height="37"></rect><text><tspan x="374.73544" dy="15">31</tspan><tspan x="374.73544" dy="15" fill="#5cb85c">9</tspan></text></g>
+    <g><rect x="380.77941" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="380.77941" width="12.08824" height="37"></rect><text><tspan x="386.82368" dy="15">32</tspan><tspan x="386.82368" dy="15" fill="#5cb85c">22</tspan></text></g>
+    <g><rect x="392.86765" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="392.86765" width="12.08824" height="37"></rect><text><tspan x="398.91192" dy="15">33</tspan><tspan x="398.91192" dy="15" fill="#5cb85c">16</tspan></text></g>
+    <g><rect x="404.95588" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="404.95588" width="12.08824" height="37"></rect><text><tspan x="411.00016" dy="15">34</tspan><tspan x="411.00016" dy="15" fill="#5cb85c">14</tspan></text></g>
+  </g>
+</svg>
+
+            </div>
+            <h2>SEMBUH</h2>
+            <p>164</p>
+        </li>
+        <li>
+            <div class="chart-meninggal">
+                
+<svg viewBox="0 0 480 250" class="chart">
+  <rect width="480" height="250" class="chart-bg"></rect>
+  <rect x="60" y="9" width="411" height="216" class="chart-box"></rect>
+  <g class="chart-tick axisX" transform="translate(60,225)">
+    <g transform="translate(0)"><line y2="-216"></line><text y="3" dy=".71em">0</text></g>
+    <g transform="translate(24.17648)"><line y2="-216"></line><text y="3" dy=".71em">2</text></g>
+    <g transform="translate(48.35296)"><line y2="-216"></line><text y="3" dy=".71em">4</text></g>
+    <g transform="translate(72.52944)"><line y2="-216"></line><text y="3" dy=".71em">6</text></g>
+    <g transform="translate(96.70592)"><line y2="-216"></line><text y="3" dy=".71em">8</text></g>
+    <g transform="translate(120.8824)"><line y2="-216"></line><text y="3" dy=".71em">10</text></g>
+    <g transform="translate(145.05888)"><line y2="-216"></line><text y="3" dy=".71em">12</text></g>
+    <g transform="translate(169.23536)"><line y2="-216"></line><text y="3" dy=".71em">14</text></g>
+    <g transform="translate(193.41184)"><line y2="-216"></line><text y="3" dy=".71em">16</text></g>
+    <g transform="translate(217.58832)"><line y2="-216"></line><text y="3" dy=".71em">18</text></g>
+    <g transform="translate(241.7648)"><line y2="-216"></line><text y="3" dy=".71em">20</text></g>
+    <g transform="translate(265.94128)"><line y2="-216"></line><text y="3" dy=".71em">22</text></g>
+    <g transform="translate(290.11776)"><line y2="-216"></line><text y="3" dy=".71em">24</text></g>
+    <g transform="translate(314.29424)"><line y2="-216"></line><text y="3" dy=".71em">26</text></g>
+    <g transform="translate(338.47072)"><line y2="-216"></line><text y="3" dy=".71em">28</text></g>
+    <g transform="translate(362.6472)"><line y2="-216"></line><text y="3" dy=".71em">30</text></g>
+    <g transform="translate(386.82368)"><line y2="-216"></line><text y="3" dy=".71em">32</text></g>
+    <g transform="translate(411.00016)"><line y2="-216"></line><text y="3" dy=".71em">34</text></g>
+  </g>
+  <g class="chart-tick axisY" transform="translate(60,9)">
+    <g transform="translate(0,0)"><line x2="411"></line><text x="-3" dy=".32em">24</text></g>
+    <g transform="translate(0,54)"><line x2="411"></line><text x="-3" dy=".32em">18</text></g>
+    <g transform="translate(0,108)"><line x2="411"></line><text x="-3" dy=".32em">12</text></g>
+    <g transform="translate(0,162)"><line x2="411"></line><text x="-3" dy=".32em">6</text></g>
+    <g transform="translate(0,216)"><line x2="411"></line></g>
+  </g>
+  <!-- the chart -->
+  <g transform="translate(60,9)">
+    <g fill="#ce1797">
+      <path d="M0,216 12.08824,216 24.17648,216 36.26472,216 48.35296,216 60.4412,216 72.52944,216 84.61768,216 96.70592,216 108.79416,207 120.8824,216 132.97064,189 145.05888,207 157.14712,216 169.23536,216 181.3236,216 193.41184,90 205.50008,162 217.58832,153 229.67656,162 241.7648,126 253.85304,207 265.94128,162 278.02952,189 290.11776,36 302.206,135 314.29424,81 326.38248,108 338.47072,144 350.55896,90 362.6472,27 374.73544,99 386.82368,117 398.91192,126 411.00016,153" class="line" stroke="#ce1797"></path>
+    </g>
+  </g>
+  <g class="chartInfo" transform="translate(60,9)">
+    <g><rect x="-6.04412" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="-6.04412" width="12.08824" height="37"></rect><text><tspan x="0" dy="15">0</tspan><tspan x="0" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="6.04412" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="6.04412" width="12.08824" height="37"></rect><text><tspan x="12.08824" dy="15">1</tspan><tspan x="12.08824" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="18.13235" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="18.13235" width="12.08824" height="37"></rect><text><tspan x="24.17648" dy="15">2</tspan><tspan x="24.17648" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="30.22059" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="30.22059" width="12.08824" height="37"></rect><text><tspan x="36.26472" dy="15">3</tspan><tspan x="36.26472" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="42.30882" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="42.30882" width="12.08824" height="37"></rect><text><tspan x="48.35296" dy="15">4</tspan><tspan x="48.35296" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="54.39706" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="54.39706" width="12.08824" height="37"></rect><text><tspan x="60.4412" dy="15">5</tspan><tspan x="60.4412" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="66.48529" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="66.48529" width="12.08824" height="37"></rect><text><tspan x="72.52944" dy="15">6</tspan><tspan x="72.52944" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="78.57353" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="78.57353" width="12.08824" height="37"></rect><text><tspan x="84.61768" dy="15">7</tspan><tspan x="84.61768" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="90.66176" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="90.66176" width="12.08824" height="37"></rect><text><tspan x="96.70592" dy="15">8</tspan><tspan x="96.70592" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="102.75" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="102.75" width="12.08824" height="37"></rect><text><tspan x="108.79416" dy="15">9</tspan><tspan x="108.79416" dy="15" fill="#ce1797">1</tspan></text></g>
+    <g><rect x="114.83824" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="114.83824" width="12.08824" height="37"></rect><text><tspan x="120.8824" dy="15">10</tspan><tspan x="120.8824" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="126.92647" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="126.92647" width="12.08824" height="37"></rect><text><tspan x="132.97064" dy="15">11</tspan><tspan x="132.97064" dy="15" fill="#ce1797">3</tspan></text></g>
+    <g><rect x="139.01471" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="139.01471" width="12.08824" height="37"></rect><text><tspan x="145.05888" dy="15">12</tspan><tspan x="145.05888" dy="15" fill="#ce1797">1</tspan></text></g>
+    <g><rect x="151.10294" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="151.10294" width="12.08824" height="37"></rect><text><tspan x="157.14712" dy="15">13</tspan><tspan x="157.14712" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="163.19118" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="163.19118" width="12.08824" height="37"></rect><text><tspan x="169.23536" dy="15">14</tspan><tspan x="169.23536" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="175.27941" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="175.27941" width="12.08824" height="37"></rect><text><tspan x="181.3236" dy="15">15</tspan><tspan x="181.3236" dy="15" fill="#ce1797">0</tspan></text></g>
+    <g><rect x="187.36765" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="187.36765" width="12.08824" height="37"></rect><text><tspan x="193.41184" dy="15">16</tspan><tspan x="193.41184" dy="15" fill="#ce1797">14</tspan></text></g>
+    <g><rect x="199.45588" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="199.45588" width="12.08824" height="37"></rect><text><tspan x="205.50008" dy="15">17</tspan><tspan x="205.50008" dy="15" fill="#ce1797">6</tspan></text></g>
+    <g><rect x="211.54412" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="211.54412" width="12.08824" height="37"></rect><text><tspan x="217.58832" dy="15">18</tspan><tspan x="217.58832" dy="15" fill="#ce1797">7</tspan></text></g>
+    <g><rect x="223.63235" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="223.63235" width="12.08824" height="37"></rect><text><tspan x="229.67656" dy="15">19</tspan><tspan x="229.67656" dy="15" fill="#ce1797">6</tspan></text></g>
+    <g><rect x="235.72059" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="235.72059" width="12.08824" height="37"></rect><text><tspan x="241.7648" dy="15">20</tspan><tspan x="241.7648" dy="15" fill="#ce1797">10</tspan></text></g>
+    <g><rect x="247.80882" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="247.80882" width="12.08824" height="37"></rect><text><tspan x="253.85304" dy="15">21</tspan><tspan x="253.85304" dy="15" fill="#ce1797">1</tspan></text></g>
+    <g><rect x="259.89706" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="259.89706" width="12.08824" height="37"></rect><text><tspan x="265.94128" dy="15">22</tspan><tspan x="265.94128" dy="15" fill="#ce1797">6</tspan></text></g>
+    <g><rect x="271.98529" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="271.98529" width="12.08824" height="37"></rect><text><tspan x="278.02952" dy="15">23</tspan><tspan x="278.02952" dy="15" fill="#ce1797">3</tspan></text></g>
+    <g><rect x="284.07353" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="284.07353" width="12.08824" height="37"></rect><text><tspan x="290.11776" dy="15">24</tspan><tspan x="290.11776" dy="15" fill="#ce1797">20</tspan></text></g>
+    <g><rect x="296.16176" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="296.16176" width="12.08824" height="37"></rect><text><tspan x="302.206" dy="15">25</tspan><tspan x="302.206" dy="15" fill="#ce1797">9</tspan></text></g>
+    <g><rect x="308.25" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="308.25" width="12.08824" height="37"></rect><text><tspan x="314.29424" dy="15">26</tspan><tspan x="314.29424" dy="15" fill="#ce1797">15</tspan></text></g>
+    <g><rect x="320.33824" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="320.33824" width="12.08824" height="37"></rect><text><tspan x="326.38248" dy="15">27</tspan><tspan x="326.38248" dy="15" fill="#ce1797">12</tspan></text></g>
+    <g><rect x="332.42647" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="332.42647" width="12.08824" height="37"></rect><text><tspan x="338.47072" dy="15">28</tspan><tspan x="338.47072" dy="15" fill="#ce1797">8</tspan></text></g>
+    <g><rect x="344.51471" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="344.51471" width="12.08824" height="37"></rect><text><tspan x="350.55896" dy="15">29</tspan><tspan x="350.55896" dy="15" fill="#ce1797">14</tspan></text></g>
+    <g><rect x="356.60294" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="356.60294" width="12.08824" height="37"></rect><text><tspan x="362.6472" dy="15">30</tspan><tspan x="362.6472" dy="15" fill="#ce1797">21</tspan></text></g>
+    <g><rect x="368.69118" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="368.69118" width="12.08824" height="37"></rect><text><tspan x="374.73544" dy="15">31</tspan><tspan x="374.73544" dy="15" fill="#ce1797">13</tspan></text></g>
+    <g><rect x="380.77941" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="380.77941" width="12.08824" height="37"></rect><text><tspan x="386.82368" dy="15">32</tspan><tspan x="386.82368" dy="15" fill="#ce1797">11</tspan></text></g>
+    <g><rect x="392.86765" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="392.86765" width="12.08824" height="37"></rect><text><tspan x="398.91192" dy="15">33</tspan><tspan x="398.91192" dy="15" fill="#ce1797">10</tspan></text></g>
+    <g><rect x="404.95588" width="12.08824" height="216" fill="#000" opacity="0"></rect><rect x="404.95588" width="12.08824" height="37"></rect><text><tspan x="411.00016" dy="15">34</tspan><tspan x="411.00016" dy="15" fill="#ce1797">7</tspan></text></g>
+  </g>
+</svg>
+
+            </div>
+            <h2>MENINGGAL</h2>
+            <p>198</p>
+            <small>8.71%</small>
+        </li>
+    </ul>
+    <a class="selengkapnya" href="https://www.merdeka.com/virus-corona/data-kasus/" target="_parent">Data Selengkapnya &gt;&gt;</a>
+    <footer>
+        <p>
+            <a target="_blank" href="https://www.covid19.go.id/">COVID.GO.ID</a> @ 05 April 20 17:00
+        </p>
+    </footer>
+</article>
+<script src="./main-v2-mobile-detail.js"></script>
+<script>
+    $(document).ready(function(){
+        var docHeight = document.getElementById("widget-content").scrollHeight;
+        var message = {
+                    'source':"covid19-widget-gateway",
+                    'widgetCoronaHeight': docHeight,
+                }
+        parent.postMessage(message, "*");
+    });
+</script>
+
+
+</body></html>

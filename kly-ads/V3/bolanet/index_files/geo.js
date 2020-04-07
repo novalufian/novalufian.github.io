@@ -1,0 +1,4 @@
+function kliosGeoMe(e){var o="https://klios.co/geo?s=m.bola.net&lat="+e.coords.latitude+"&long="+e.coords.longitude;theXhr(o,function(){var e=new Date;e.setHours(e.getHours()+1),document.cookie="klios-geolocation-req=1;expires="+e.toGMTString()+";Path=/;Domain=bola.net"})}
+function theXhr(e,o){var t=window.XMLHttpRequest?new XMLHttpRequest:new ActiveXObject("Microsoft.XMLHTTP");t.onreadystatechange=function(){4==t.readyState&&o()},t.open("GET",e),t.send()}
+function getCake(e){var o,t,n,i=document.cookie.split(";");for(o=0;o<i.length;o++)
+if(t=i[o].substr(0,i[o].indexOf("=")),n=i[o].substr(i[o].indexOf("=")+1),t=t.replace(/^\s+|\s+$/g,""),t==e)return unescape(n);return!1}(function(){!getCake("klios-geolocation-req")&&navigator.geolocation&&navigator.geolocation.getCurrentPosition(kliosGeoMe)})();

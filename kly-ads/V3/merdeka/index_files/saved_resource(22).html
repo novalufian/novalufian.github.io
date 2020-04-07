@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://m.merdeka.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline"><script>
+
+var templateID = 'undefined';
+if (typeof parent.getTemplateID === "function") var templateID = parent.getTemplateID();
+
+if(templateID==='undefined')
+{
+    //console.log('templateID undefined, load OLD creative template ');
+
+
+    var campaign_creativeID = '5341775496_138308107710';
+        //console.log('macro LI + Creative : '+campaign_creativeID);
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    
+    var infeedConfID = topparentID.replace("infeed", "infeedConf");
+    
+    var infeedConf1219378485 = null;
+    var LPWrapper = "";
+    var domainSite = "";
+    var inf_Platform = ""; //default to mobile
+    if(parent.document.getElementById(infeedConfID)!=null)
+    {
+        var infeedConf1219378485 = parent.document.getElementById(infeedConfID).innerHTML;
+    }
+
+    if(infeedConf1219378485 != null)
+    {
+        try {
+            infeedConf1219378485 = JSON.parse(infeedConf1219378485);
+        } catch (exception) {
+            infeedConf1219378485 = null;
+        }
+        
+        if( infeedConf1219378485 === Object(infeedConf1219378485) )
+        {
+            //console.log('infeedConf1219378485 : ', infeedConf1219378485);
+        
+            if(infeedConf1219378485.domainSite) domainSite = infeedConf1219378485.domainSite;
+            if(infeedConf1219378485.wrapperPage){ 
+                  LPWrapper = infeedConf1219378485.wrapperPage;
+                  LPWrapper += '?utm_domain='+domainSite+'&utm_url=';
+            }
+            if(infeedConf1219378485.platform) inf_Platform = '_' + infeedConf1219378485.platform;
+            if(inf_Platform == '_mobile')  inf_Platform =''; //reset platform to default if request came from mobile
+            
+            //console.log(domainSite+'!='+extractDomain(LPWrapper));
+            //console.log('LPWrapper : '+LPWrapper);
+        }
+    }
+        
+    //override wrapper page if landing page not from infeed
+    var tagertUrl =  'https://plus.kapanlagi.com/tren-foto-makanan-yang-booming-di-instagram-flat-lay-paling-favorit-9f61ed.html';
+    var impressionTracker =  '';
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 18));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 19));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(7, 11));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(8, 11));
+    if( tagertUrl.substr(0, 7)=="http://"  && tagertUrl.substr(0, 18)!="http://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    if( tagertUrl.substr(0, 8)=="https://"  && tagertUrl.substr(0, 19)!="https://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    
+    
+    var noTracker = 'FALSE';
+    
+    if(noTracker=='TRUE'){
+       var creativeConf1219378485 = {        
+            landingpage : LPWrapper + 'https://plus.kapanlagi.com/tren-foto-makanan-yang-booming-di-instagram-flat-lay-paling-favorit-9f61ed.html',
+            articleText : "Jangan Cuma Asal Jepret, Foto Makanan Juga Ada Tekniknya Lho!",
+            imageUrl    : 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnlsirdhABGAEyCFttN_auMbhn&b2s=false',
+            articleLabel: 'Fotografi'
+        };
+    }else{
+        var creativeConf1219378485 = {        
+            landingpage : 'https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjssJstdna4sBpabKzkVCU9MmGxopktgNZsCnW_81f6JF5icM-lydqMGQfwI1P7IpVDJjeCFB1xSuVqP47rdlx_GiuzQTne-ar5msX4Ye6FicmgJ0Lllsz7lxBVGwCcH2x_PfdOjdJ9MeoBalf0o0CrfQ-YYIB9fQDGgthTTley66ggy325GDndcLiw2oNXybrH2GhEMHsUo-7bKdIu1XTrkP_as3hrVnRIy9SnDgCfvkuFwE_gTmNjWEEJ0j0nQgVXi2kwy0BGnS7BZHt1H-Z8QkA9xVXmQkc0X_%2526sai%253DAMfl-YT_Q95Fx8dHTw9Gula1b4ZZjkii5B3wRDRQ8d7EpJbFm_VA5krVpviD2AX8BWgCT-6Csu3SX9qXXoXvcY_D53zVc1dDctntwbWYMw71zL04N9FOF_CkjrkWCVCXMPbror_u%2526sig%253DCg0ArKJSzAU94-S5JCEoEAE%2526urlfix%253D1%2526adurl%253D' +  LPWrapper + 'https://plus.kapanlagi.com/tren-foto-makanan-yang-booming-di-instagram-flat-lay-paling-favorit-9f61ed.html',
+            articleText : "Jangan Cuma Asal Jepret, Foto Makanan Juga Ada Tekniknya Lho!",
+            imageUrl    : 'https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsvHimuZpjnZ0PnDB31DoSIgkOT0Y2djQyqoQKH8M8L_gMRtT-rIqE8K3SootLwGDU3Toh0CjbNxQq3MCo5e1RXUwYeDN30Y3WL9hqqNhD_jeFtxw48Gc2HGM9oZJ3WjrzVCkta4ZkucK5VYqg0H9-aCUW5YB7nqdY7yab4ZqScc-3W9bdgFXy8KlsRvX6_WZrnI0xq16_-WQSdMM8VfboPF-ySlKcPifiFqElqiQPXyow4Y1eEhI2F098Aio1jK3JOufU0J09WBx5HZT07NVOWGU5O8pgVMpdXzuTdd0GFs&sai=AMfl-YRAe6MPYw2nU4uMg8gTMF9ojbuBkpnAtfhEzLzNudQTnZXNWCvT30JMIMOP8YYe6NHsLorfXo9Yt9msxttWBIcJVFI3TthCBZQhOgRdkRSeqGZReGRmLCowbaS9Euq94wqN&sig=Cg0ArKJSzIzyqkUi-Vx4EAE&urlfix=1&adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnlsirdhABGAEyCFttN_auMbhn&b2s=false',
+            articleLabel: 'Fotografi'
+        };
+    } 
+        //console.log('creativeConf1219378485 : ', creativeConf1219378485);
+
+    var adsTemplate1219378485 = init_defaultCreative();
+    
+    //console.log("infeedConf1219378485 : "+infeedConf1219378485);
+    if(infeedConf1219378485 != null)
+    {
+        if(infeedConf1219378485.useCustomTemplate=="1"){
+           // console.log('use custom template');
+            var infeedTemplateID = topparentID.replace("infeed", "infeedTemplate") + inf_Platform;
+            //console.log('infeedTemplateID : '+infeedTemplateID);
+            if(parent.document.getElementById(infeedTemplateID)!=null)
+            {
+                var adsTemplate1219378485 = parent.document.getElementById(infeedTemplateID).innerHTML;
+                //console.log(adsTemplate1219378485);
+                for (key in creativeConf1219378485) {
+                    //console.log(key);
+                    adsTemplate1219378485 = adsTemplate1219378485.split("%%"+key+"%%").join(creativeConf1219378485[key]);
+                }
+               //console.log(adsTemplate1219378485);
+            }
+        }
+    }
+    
+    
+    /*Write ads*/
+    var node = parent.document.getElementById(currentID);
+    node.style.position = "absolute";
+    var creativeContainer = document.createElement('div');
+    creativeContainer.setAttribute('id', currentID+'-cont');
+    node.parentNode.insertBefore(creativeContainer, node);
+    
+    parent.document.getElementById(currentID+'-cont').innerHTML = adsTemplate1219378485;
+    
+    
+    
+    function extractDomain(i){var t;return t=i.indexOf("://")>-1?i.split("/")[2]:i.split("/")[0],t=t.split(":")[0],subdomain=t.split(".")[0],t=t.replace(subdomain+".","")}
+    function init_defaultCreative()
+    {
+
+        if(inf_Platform=='_desktop' || inf_Platform=='desktop')
+        {
+            var cssStyle = '' +
+            '<style>/*DESKTOP*/  .inf-cont { padding: 10px 5px; text-align: left  }  .inf-wrapper { padding: 0; min-height: 60px  }  .inf-img { margin: 0 0 5px 0;  }  .inf-img a { background-color: transparent; border-bottom: 0; padding: 0; overflow: hidden; display: block;  }  .inf-img a img { width: 100%;  }  .inf-text {}  .inf-text span { font: normal 12px arial; color: #a3a3a3; line-height: 25px;  }.inf-text div { font: bold 14px arial; margin: 0  }  .inf-text div a { font: bold 14px arial; padding: 0; text-decoration: none; background-color: transparent; color: #000; border: 0; font-weight: normal  }</style>';
+        }else{
+
+            var cssStyle = '' +
+            '<style>.inf-cont{padding:10px 5px;border-bottom:1px solid #ececec;text-align:left}.inf-wrapper{padding:0;min-height:60px}.inf-img{float:left;margin:0 10px 0 0}.inf-img a{background-color:transparent;border-bottom:0;padding:0}.inf-img a img{width:120px !important;}.inf-text{margin-left:130px}.inf-text span{font:normal 12px arial;color:#a3a3a3}.inf-text div{font:bold 15px arial;margin:0}.inf-text div a{font:bold 15px arial;padding:0;text-decoration:none;background-color:transparent;color:#000;border:0;font-weight:normal}</style>';
+        }     
+            var creative = cssStyle +  '<div class="inf-cont">' +  
+                '<div class="inf-wrapper">' + 
+                    '<div class="inf-img">' +
+                        '<a  rel="nofollow" href="'+creativeConf1219378485.landingpage+'"><img src="'+creativeConf1219378485.imageUrl+'" alt="'+creativeConf1219378485.articleText+'"></a>' + 
+                    '</div>' + 
+                    '<div class="inf-text">' +
+                        '<span>'+creativeConf1219378485.articleLabel+'</span>' +
+                        '<div>' +
+                            '<div><a  rel="nofollow" href="'+creativeConf1219378485.landingpage+'">'+creativeConf1219378485.articleText+'</a></div>' +
+                        '</div>' + 
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        
+        if(impressionTracker != '') creative += '<img src="' + impressionTracker  + '" style="display:none; visibility:hidden;" width="0" height="0" />'; 
+
+        return creative;
+    }
+    
+
+}else{
+    //console.log('templateID defined, load NEW creative template ');
+
+    var resParam1219378485 = {
+        "image" : "https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnlsirdhABGAEyCFttN_auMbhn&b2s=false",
+        "label" : "Fotografi",
+        "text"  : "Jangan Cuma Asal Jepret, Foto Makanan Juga Ada Tekniknya Lho!",
+        "desc"  : "Dari beberapa teknik hits ini, mana yang sudah kamu kuasai?",
+        "link"  : "https://plus.kapanlagi.com/tren-foto-makanan-yang-booming-di-instagram-flat-lay-paling-favorit-9f61ed.html", 
+        "target": "new_tab", 
+        "no_tracker"        : "FALSE",
+        "dfp_impr_tracker"  : "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsvHimuZpjnZ0PnDB31DoSIgkOT0Y2djQyqoQKH8M8L_gMRtT-rIqE8K3SootLwGDU3Toh0CjbNxQq3MCo5e1RXUwYeDN30Y3WL9hqqNhD_jeFtxw48Gc2HGM9oZJ3WjrzVCkta4ZkucK5VYqg0H9-aCUW5YB7nqdY7yab4ZqScc-3W9bdgFXy8KlsRvX6_WZrnI0xq16_-WQSdMM8VfboPF-ySlKcPifiFqElqiQPXyow4Y1eEhI2F098Aio1jK3JOufU0J09WBx5HZT07NVOWGU5O8pgVMpdXzuTdd0GFs&sai=AMfl-YRAe6MPYw2nU4uMg8gTMF9ojbuBkpnAtfhEzLzNudQTnZXNWCvT30JMIMOP8YYe6NHsLorfXo9Yt9msxttWBIcJVFI3TthCBZQhOgRdkRSeqGZReGRmLCowbaS9Euq94wqN&sig=Cg0ArKJSzIzyqkUi-Vx4EAE&urlfix=1&adurl=",
+        "dfp_click_tracker" : "https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjssJstdna4sBpabKzkVCU9MmGxopktgNZsCnW_81f6JF5icM-lydqMGQfwI1P7IpVDJjeCFB1xSuVqP47rdlx_GiuzQTne-ar5msX4Ye6FicmgJ0Lllsz7lxBVGwCcH2x_PfdOjdJ9MeoBalf0o0CrfQ-YYIB9fQDGgthTTley66ggy325GDndcLiw2oNXybrH2GhEMHsUo-7bKdIu1XTrkP_as3hrVnRIy9SnDgCfvkuFwE_gTmNjWEEJ0j0nQgVXi2kwy0BGnS7BZHt1H-Z8QkA9xVXmQkc0X_%2526sai%253DAMfl-YT_Q95Fx8dHTw9Gula1b4ZZjkii5B3wRDRQ8d7EpJbFm_VA5krVpviD2AX8BWgCT-6Csu3SX9qXXoXvcY_D53zVc1dDctntwbWYMw71zL04N9FOF_CkjrkWCVCXMPbror_u%2526sig%253DCg0ArKJSzAU94-S5JCEoEAE%2526urlfix%253D1%2526adurl%253D",
+        "3rd_impression_tracker" : "",
+        "3rd_click_tracker" : "",
+        "adunitID" : '/36504930/infeed.id/m.merdeka.com/dfp-natAds-3'
+    };
+    
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    var templateID = parent.getTemplateID();
+        //console.log('templateID : '+templateID );
+    parent.setResParam(topparentID, resParam1219378485);
+
+}
+</script>
+</div><div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB+SURBVBjTbZABDsAwCALxB/z/tVsL6EzmkqZEhleB/yrVe0F9FHi79BFVx4HPd9XpkJSRo7qfo92J9V/K9uxONknqpC5u2G9fvNdFkRgFcCqSX5OpflAkxarMgrE3CTOiufNW7A0GQZNmg4rPvTcY9lDXJsfaIF3yD8m8s/AAVcMGDy2NPlMAAAAASUVORK5CYII=&#39;) !important;"></div></body></html>

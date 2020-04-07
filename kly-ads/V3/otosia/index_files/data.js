@@ -1,0 +1,1 @@
+            var inAds_kln_json = []; /* get From Real Value */

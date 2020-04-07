@@ -1,0 +1,1 @@
+BrandSafetyNadoscallback_48606975({"c": ["gs_sport_misc", "gs_sport_soccer", "moat_unsafe", "gv_death_injury", "gs_event_euro_championship"], "r": 26183448399, "d": 0, "g": 0, "pcode": "thetradedeskvideo910663478306", "ct": 1})

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://m.merdeka.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline"><script>
+
+var templateID = 'undefined';
+if (typeof parent.getTemplateID === "function") var templateID = parent.getTemplateID();
+
+if(templateID==='undefined')
+{
+    //console.log('templateID undefined, load OLD creative template ');
+
+
+    var campaign_creativeID = '5335299104_138307548322';
+        //console.log('macro LI + Creative : '+campaign_creativeID);
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    
+    var infeedConfID = topparentID.replace("infeed", "infeedConf");
+    
+    var infeedConf1389625999 = null;
+    var LPWrapper = "";
+    var domainSite = "";
+    var inf_Platform = ""; //default to mobile
+    if(parent.document.getElementById(infeedConfID)!=null)
+    {
+        var infeedConf1389625999 = parent.document.getElementById(infeedConfID).innerHTML;
+    }
+
+    if(infeedConf1389625999 != null)
+    {
+        try {
+            infeedConf1389625999 = JSON.parse(infeedConf1389625999);
+        } catch (exception) {
+            infeedConf1389625999 = null;
+        }
+        
+        if( infeedConf1389625999 === Object(infeedConf1389625999) )
+        {
+            //console.log('infeedConf1389625999 : ', infeedConf1389625999);
+        
+            if(infeedConf1389625999.domainSite) domainSite = infeedConf1389625999.domainSite;
+            if(infeedConf1389625999.wrapperPage){ 
+                  LPWrapper = infeedConf1389625999.wrapperPage;
+                  LPWrapper += '?utm_domain='+domainSite+'&utm_url=';
+            }
+            if(infeedConf1389625999.platform) inf_Platform = '_' + infeedConf1389625999.platform;
+            if(inf_Platform == '_mobile')  inf_Platform =''; //reset platform to default if request came from mobile
+            
+            //console.log(domainSite+'!='+extractDomain(LPWrapper));
+            //console.log('LPWrapper : '+LPWrapper);
+        }
+    }
+        
+    //override wrapper page if landing page not from infeed
+    var tagertUrl =  'https://www.liputan6.com/tv/read/4211531/wow-omzet-ratusan-juta-pengusaha-carica-jemput-rezeki-bikin-sandiaga-melongo';
+    var impressionTracker =  '';
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 18));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 19));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(7, 11));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(8, 11));
+    if( tagertUrl.substr(0, 7)=="http://"  && tagertUrl.substr(0, 18)!="http://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    if( tagertUrl.substr(0, 8)=="https://"  && tagertUrl.substr(0, 19)!="https://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    
+    
+    var noTracker = 'FALSE';
+    
+    if(noTracker=='TRUE'){
+       var creativeConf1389625999 = {        
+            landingpage : LPWrapper + 'https://www.liputan6.com/tv/read/4211531/wow-omzet-ratusan-juta-pengusaha-carica-jemput-rezeki-bikin-sandiaga-melongo',
+            articleText : "Wow! Omzet Ratusan Juta Pengusaha Carica \'Jemput Rezeki\' Bikin Sandiaga Melongo",
+            imageUrl    : 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnmp_cTRABGAEyCMTMwDNnsXlR&b2s=false',
+            articleLabel: 'Tv'
+        };
+    }else{
+        var creativeConf1389625999 = {        
+            landingpage : 'https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsuGqb3NvPUqmK46NY15c-fn88JYy8lEC5l1LsqCWNYN0rHHzGUZAOxHCw14Y2K1C0X59Pp9vaMDhru_H4rT87O86V3NQSu9_sQNayKPY8UrcQSHs5syzL8OWkGXg_jDFHIe0zBmHzF87ELHJqMKHNUro9vEMlRDiQ8JOwG2AE69lAhhFDcxt2UWbukjIurverDmMWPw3FSwv8pG7cik-Z2eAdyY6s32KL8HLbHOyo0CiNrnYDEHgTZn14Fwhk2AbgT17ayvCpdnbKkbKEx3OSXm9exmde5o0U1l%2526sai%253DAMfl-YSP4AQWTxOn2vxuv-YTvJ7-zxnHLOIyWczWNQaPae6sbFjaSchFMmhDmrPrfSZuIx1AGGlHSq1dK3G9a_qKxPJ6pXrxsu62-fj_cD1-nQubGoHsjMCDcoc_AAzwxzrv5SnN%2526sig%253DCg0ArKJSzNdEYKqS0AFWEAE%2526urlfix%253D1%2526adurl%253D' +  LPWrapper + 'https://www.liputan6.com/tv/read/4211531/wow-omzet-ratusan-juta-pengusaha-carica-jemput-rezeki-bikin-sandiaga-melongo',
+            articleText : "Wow! Omzet Ratusan Juta Pengusaha Carica \'Jemput Rezeki\' Bikin Sandiaga Melongo",
+            imageUrl    : 'https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjssEgDz1i6ZyXJ73o1Pd5XM5Y65OwABvoCzccpYTYZhYcKhhm8FNUK4WeaGlO0qPeaZtj70UJSAJxM6pRWGS_SAR2-eBojSQ-76fS_G_ooxWcx14rPYRv-b7eSU3CnLKY1uLrXqPA8k1eYPeItNLIlnhL9ETerWu8rmqXnKcbpR1wt1jG__L87n__hgXiBNVg8Ceo7zMogeNAqIh5x0e171OuwDZJs-t9XOMXba_A5YaH8PlKP2k9fqdHmXG_BewUXuY0thcsrRdApXyiT37hsEaTm0ZAClfB2jHKFVqhDqt&sai=AMfl-YTbP4UmYtIgcH5SZCXBjCqZQU-SpXeguSL_uIhiZR_I7YdoQIAaouiQLsb-DEMua-HGv-eCYB_KUK4qT2XrRl1bhlgmJya9-XHAG0f4maSTXRWtrB90QN8aBsxa9iF121Fp&sig=Cg0ArKJSzDOZsca_RFcoEAE&urlfix=1&adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnmp_cTRABGAEyCMTMwDNnsXlR&b2s=false',
+            articleLabel: 'Tv'
+        };
+    } 
+        //console.log('creativeConf1389625999 : ', creativeConf1389625999);
+
+    var adsTemplate1389625999 = init_defaultCreative();
+    
+    //console.log("infeedConf1389625999 : "+infeedConf1389625999);
+    if(infeedConf1389625999 != null)
+    {
+        if(infeedConf1389625999.useCustomTemplate=="1"){
+           // console.log('use custom template');
+            var infeedTemplateID = topparentID.replace("infeed", "infeedTemplate") + inf_Platform;
+            //console.log('infeedTemplateID : '+infeedTemplateID);
+            if(parent.document.getElementById(infeedTemplateID)!=null)
+            {
+                var adsTemplate1389625999 = parent.document.getElementById(infeedTemplateID).innerHTML;
+                //console.log(adsTemplate1389625999);
+                for (key in creativeConf1389625999) {
+                    //console.log(key);
+                    adsTemplate1389625999 = adsTemplate1389625999.split("%%"+key+"%%").join(creativeConf1389625999[key]);
+                }
+               //console.log(adsTemplate1389625999);
+            }
+        }
+    }
+    
+    
+    /*Write ads*/
+    var node = parent.document.getElementById(currentID);
+    node.style.position = "absolute";
+    var creativeContainer = document.createElement('div');
+    creativeContainer.setAttribute('id', currentID+'-cont');
+    node.parentNode.insertBefore(creativeContainer, node);
+    
+    parent.document.getElementById(currentID+'-cont').innerHTML = adsTemplate1389625999;
+    
+    
+    
+    function extractDomain(i){var t;return t=i.indexOf("://")>-1?i.split("/")[2]:i.split("/")[0],t=t.split(":")[0],subdomain=t.split(".")[0],t=t.replace(subdomain+".","")}
+    function init_defaultCreative()
+    {
+
+        if(inf_Platform=='_desktop' || inf_Platform=='desktop')
+        {
+            var cssStyle = '' +
+            '<style>/*DESKTOP*/  .inf-cont { padding: 10px 5px; text-align: left  }  .inf-wrapper { padding: 0; min-height: 60px  }  .inf-img { margin: 0 0 5px 0;  }  .inf-img a { background-color: transparent; border-bottom: 0; padding: 0; overflow: hidden; display: block;  }  .inf-img a img { width: 100%;  }  .inf-text {}  .inf-text span { font: normal 12px arial; color: #a3a3a3; line-height: 25px;  }.inf-text div { font: bold 14px arial; margin: 0  }  .inf-text div a { font: bold 14px arial; padding: 0; text-decoration: none; background-color: transparent; color: #000; border: 0; font-weight: normal  }</style>';
+        }else{
+
+            var cssStyle = '' +
+            '<style>.inf-cont{padding:10px 5px;border-bottom:1px solid #ececec;text-align:left}.inf-wrapper{padding:0;min-height:60px}.inf-img{float:left;margin:0 10px 0 0}.inf-img a{background-color:transparent;border-bottom:0;padding:0}.inf-img a img{width:120px !important;}.inf-text{margin-left:130px}.inf-text span{font:normal 12px arial;color:#a3a3a3}.inf-text div{font:bold 15px arial;margin:0}.inf-text div a{font:bold 15px arial;padding:0;text-decoration:none;background-color:transparent;color:#000;border:0;font-weight:normal}</style>';
+        }     
+            var creative = cssStyle +  '<div class="inf-cont">' +  
+                '<div class="inf-wrapper">' + 
+                    '<div class="inf-img">' +
+                        '<a  rel="nofollow" href="'+creativeConf1389625999.landingpage+'"><img src="'+creativeConf1389625999.imageUrl+'" alt="'+creativeConf1389625999.articleText+'"></a>' + 
+                    '</div>' + 
+                    '<div class="inf-text">' +
+                        '<span>'+creativeConf1389625999.articleLabel+'</span>' +
+                        '<div>' +
+                            '<div><a  rel="nofollow" href="'+creativeConf1389625999.landingpage+'">'+creativeConf1389625999.articleText+'</a></div>' +
+                        '</div>' + 
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        
+        if(impressionTracker != '') creative += '<img src="' + impressionTracker  + '" style="display:none; visibility:hidden;" width="0" height="0" />'; 
+
+        return creative;
+    }
+    
+
+}else{
+    //console.log('templateID defined, load NEW creative template ');
+
+    var resParam1389625999 = {
+        "image" : "https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnmp_cTRABGAEyCMTMwDNnsXlR&b2s=false",
+        "label" : "Tv",
+        "text"  : "Wow! Omzet Ratusan Juta Pengusaha Carica \'Jemput Rezeki\' Bikin Sandiaga Melongo",
+        "desc"  : "Sandiaga pun menilai Anna sebagai sosok wanita mandiri, hebat dan mampu menciptakan lapangan kerja di daerahnya.",
+        "link"  : "https://www.liputan6.com/tv/read/4211531/wow-omzet-ratusan-juta-pengusaha-carica-jemput-rezeki-bikin-sandiaga-melongo", 
+        "target": "new_tab", 
+        "no_tracker"        : "FALSE",
+        "dfp_impr_tracker"  : "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjssEgDz1i6ZyXJ73o1Pd5XM5Y65OwABvoCzccpYTYZhYcKhhm8FNUK4WeaGlO0qPeaZtj70UJSAJxM6pRWGS_SAR2-eBojSQ-76fS_G_ooxWcx14rPYRv-b7eSU3CnLKY1uLrXqPA8k1eYPeItNLIlnhL9ETerWu8rmqXnKcbpR1wt1jG__L87n__hgXiBNVg8Ceo7zMogeNAqIh5x0e171OuwDZJs-t9XOMXba_A5YaH8PlKP2k9fqdHmXG_BewUXuY0thcsrRdApXyiT37hsEaTm0ZAClfB2jHKFVqhDqt&sai=AMfl-YTbP4UmYtIgcH5SZCXBjCqZQU-SpXeguSL_uIhiZR_I7YdoQIAaouiQLsb-DEMua-HGv-eCYB_KUK4qT2XrRl1bhlgmJya9-XHAG0f4maSTXRWtrB90QN8aBsxa9iF121Fp&sig=Cg0ArKJSzDOZsca_RFcoEAE&urlfix=1&adurl=",
+        "dfp_click_tracker" : "https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsuGqb3NvPUqmK46NY15c-fn88JYy8lEC5l1LsqCWNYN0rHHzGUZAOxHCw14Y2K1C0X59Pp9vaMDhru_H4rT87O86V3NQSu9_sQNayKPY8UrcQSHs5syzL8OWkGXg_jDFHIe0zBmHzF87ELHJqMKHNUro9vEMlRDiQ8JOwG2AE69lAhhFDcxt2UWbukjIurverDmMWPw3FSwv8pG7cik-Z2eAdyY6s32KL8HLbHOyo0CiNrnYDEHgTZn14Fwhk2AbgT17ayvCpdnbKkbKEx3OSXm9exmde5o0U1l%2526sai%253DAMfl-YSP4AQWTxOn2vxuv-YTvJ7-zxnHLOIyWczWNQaPae6sbFjaSchFMmhDmrPrfSZuIx1AGGlHSq1dK3G9a_qKxPJ6pXrxsu62-fj_cD1-nQubGoHsjMCDcoc_AAzwxzrv5SnN%2526sig%253DCg0ArKJSzNdEYKqS0AFWEAE%2526urlfix%253D1%2526adurl%253D",
+        "3rd_impression_tracker" : "",
+        "3rd_click_tracker" : "",
+        "adunitID" : '/36504930/infeed.id/m.merdeka.com/dfp-natAds-6'
+    };
+    
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    var templateID = parent.getTemplateID();
+        //console.log('templateID : '+templateID );
+    parent.setResParam(topparentID, resParam1389625999);
+
+}
+</script>
+</div><div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAACCSURBVBjTbZABDsAgCAPLD/r/105tC24ZJgqxHhXgP0qxEtRVgeeW3lLVVuBap9o3JCXkVH2frdXB+pXY7t1kO0ls6ss3rLeuLmqrZWXLzT0pBsy8yAdImUXaF2x7nFB4eW/f+SveEyRlQUdPsKzFZ4IBM717GvF/s2H8ScdJ/3edD3OcBiR6DnIgAAAAAElFTkSuQmCC&#39;) !important;"></div></body></html>

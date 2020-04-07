@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://m.kapanlagi.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./f(35).txt"></script><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><script data-jc="67" data-jc-version="r20200402">(function(){/*  Copyright The Closure Library Authors. SPDX-License-Identifier: Apache-2.0 */ 'use strict';var d=this||self;var e=(a=d)=>(a=a.performance)&&a.now?a.now():null;window.rumTick=a=>{{var b=window;const c=e(b);c&&(a={label:a,type:4,value:c},b=b.google_js_reporting_queue=b.google_js_reporting_queue||[],2048>b.length&&b.push(a))}};}).call(this);</script><script>window.rumTick&&rumTick('fb');</script><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline"><script>
+    
+    var currentID = this.frameElement.getAttribute("id"),
+        parentID = parent.document.getElementById(currentID).parentNode.getAttribute("id"),
+        topparentID = parent.document.getElementById(parentID).parentNode.getAttribute("id"),
+        slotNum = topparentID.substring((topparentID.length)-5, (topparentID.length)-4),
+        slotID = "dfp-recommend-"+slotNum,
+        checkingCounter = 0,
+        dfp_img = "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsvdhWBVkUES4dUFwUceXDzUKsa1oEEizHOXGxFmwLF1BSVjO30OCHccCSmGqHGv8iwMZ-wALp03D_vUB-osElGndu_-Pz8WtJAIgFVhpdBbB1nShUWKkDtaYgZdH0v5UwtGHbRJYzPw-1daQPkDJspzwOmkPCeyLVrGWlxjJZAFh3ElikK-oTq97_LCA7VvK3acrmhVrxzsnsXbULmUHHlKaoXnnupeyJaWi9eGTGWBsokZ3NKkgVHmA1MW8NA6TxF6ayokbdbtkb7dDQsNJPimpX-Swdt2MHrw3wE&sai=AMfl-YTrIq_AGLHdJh4f1w-8fWPb5kxAE_hh1jwnLLqCoDXiP0ejAaY64J0Qvg8pRDSHDIBx172MN0DTW7zk37R0SeiVsgqR0-mcerelNt8jDYWWepJ73iZcfaL19IpgALApzyGE-Q&sig=Cg0ArKJSzPRA5m0GyvHhEAE&urlfix=1&adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnlvu-LRABGAEyCNYeZeD2SsyZ&b2s=false",
+        dfp_label = "Sponsored",
+        dfp_text = "5 Makanan Penggugah Selera yang Bisa Temani Waktumu saat #DiRumahAja",
+        dfp_link = "https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjss1ubZXuZsrQHFrbKUi_5KmaKsVzJ7i6mosAgSz0OZqt3U_oW6ybaDSJN6_89aaC162FzDdpjG22zWNI27iMTq8kN_PmHRjSa7I5yIoT90NqQ6zAo0JkHhFg8S9nBwedZmjeCyc_DI8NPuvgtc6DO5F_aELoO9ili3eDlnxNElCJO1-OWWt789q7n9S5vR7I6gp24z0P89iUcJdfiAB4_FCQNJxStyFDEHex8S1bilRYz-vwWqK_Phlp1DI0QLuoFcypelq6b6gTsG0-NUu8hPARAoD6U0%2526sai%253DAMfl-YSOrXANe0hF1DYTsJfyEkHdSLY37tbaTSTP7EUHh5C7zO4O2m2WagMzFLoLmtkMnKdevAgSSbP7qA_3MF_4qYSNCwiMUGGuq-gU8UcJTS2NItNTINbxpPCfcjVFsZx1B8lspA%2526sig%253DCg0ArKJSzEnT5xOX2Hs8EAE%2526urlfix%253D1%2526adurl%253Dhttps://plus.kapanlagi.com/5-makanan-penggugah-selera-yang-bisa-temani-waktumu-saat-dirumahaja-463478.html";
+        
+        /*HIDE IFRAME*/
+        this.frameElement.style.display = "none";
+/*        
+    console.log("currentID : "+currentID);
+    console.log("parentID : "+parentID);
+    console.log("topparentID : "+topparentID);
+    console.log("slotNum : "+slotNum);
+    console.log("slotID : "+slotID);
+*/    
+    //checking slot div element availability. For desktop the element exist by ajax rendering
+    var check_slot_availability = setInterval(function(){ 
+        if( parent.document.getElementById(slotID) ){
+            render_recommendation();
+        }else{
+            console.log("element "+slotID+" not found, counter = "+checkingCounter);
+            if(checkingCounter>5) clearInterval( check_slot_availability );
+        }
+        checkingCounter++;
+    }, 1000);
+    
+    //start render ads by replacing the element attributes 
+    function render_recommendation()
+    {
+        clearInterval( check_slot_availability );
+        
+        //check for page type (homepage or else)
+        var pageType = document.location.pathname === "/" ? "home" : "";
+        console.log("pageType : "+pageType);
+        
+        //check for desktop or mobile
+        var isMobile = (parent.document.querySelector("meta[name='viewport']")) ? true : false;
+        console.log("isMobile : "+isMobile);
+        
+        var el_img = parent.document.getElementById(slotID+"-img"),
+            el_label = parent.document.getElementById(slotID+"-label"),
+            el_text = parent.document.getElementById(slotID+"-text");
+        
+        //replace image
+            var el_imgTag = el_img.getElementsByTagName('img');
+            if(el_imgTag) el_imgTag[0].setAttribute("src", dfp_img);
+        //replace link
+            el_img.setAttribute("href", dfp_link);
+            el_text.setAttribute("href", dfp_link);
+        //replace text
+            el_text.innerHTML = dfp_text;
+        //replace label
+            if(isMobile && el_label){
+                el_label.innerHTML = dfp_label;
+                //el_label.setAttribute("href", dfp_link);
+            }
+        
+        //tweak part for specific page
+            //image size on slot 2 & 3 Homepage desktop
+            if(pageType.toLowerCase() =='home' && !isMobile && (slotNum==2 || slotNum==3)){
+                if(el_imgTag){ 
+                     el_imgTag[0].removeAttribute("width");
+                     el_imgTag[0].style.marginLeft = "-35px";
+                }
+                el_img.style.width = "75px";
+                el_img.style.overflow = "hidden";
+            }
+
+    }
+    
+</script>
+</div><div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAACCSURBVBjTbZGLFYAwCAPDBtl/WgUSaH3ih6KBXgH4t2jL1RWx/jI9N4pUpLLuiVJH1hvyPNWI1o8azimdamvvcGWRrJEfbgx6XyImBuWQQ/t3HoakVI2hVBUu2Rz04qAdt2fGtfe5hKMPcVEEXHk6CLewalvtpQmO6eyEjg56TO/zAD7WBYYof6BSAAAAAElFTkSuQmCC&#39;) !important;"></div><script>window.google_rum_config=[[null,2,null,"CNeo6tO51egCFcAVtwAd7XQL4w"],[null,null,null,1]];window.google_measure_js_timing=true;window.google_timing_url='https://securepubads.g.doubleclick.net/pagead/js/rum.js';window._google_rum_ns_ = window._google_rum_ns_ || {};window._google_rum_ns_.rv={bdt:-1,bpp:-1,fdt:-1,idt:4255,dtd:-1,dt:1586232798255};</script><script data-jc="69" data-jc-version="r20200402">(function(){/*  Copyright The Closure Library Authors. SPDX-License-Identifier: Apache-2.0 */ 'use strict';var e=this||self,f=/^[\w+/_-]+[=]{0,2}$/,g=null;function h(a,b,d){a.addEventListener&&a.addEventListener(b,d,!1)};function k(a,b){this.b=a===l&&b||"";this.a=m}var m={},l={};var p=(a=e)=>(a=a.performance)&&a.now?a.now():null;var q=(a,b)=>{const d=p(b);d&&(a={label:a,type:4,value:d},b=b.google_js_reporting_queue=b.google_js_reporting_queue||[],2048>b.length&&b.push(a))};function r(a){a.setTimeout(()=>{if(a.google_timing_url){{var b=a.document;const n=b.createElement("script");var d=n,c=new k(l,a.google_timing_url);d.src=c instanceof k&&c.constructor===k&&c.a===m?c.b:"type_error:TrustedResourceUrl";if(null===g)b:{c=e.document;if((c=c.querySelector&&c.querySelector("script[nonce]"))&&(c=c.nonce||c.getAttribute("nonce"))&&f.test(c)){g=c;break b}g=""}(c=g)&&d.setAttribute("nonce",c);(b=b.getElementsByTagName("script")[0])&&b.parentNode&&b.parentNode.insertBefore(n,b)}}}, (a._google_rum_ns_=a._google_rum_ns_||{}).tt||0)};((a,b)=>{a!=a.top&&(h(a,"DOMContentLoaded",()=>{const d=b.body.onload;b.body.onload=c=>{q("ol",a);d&&d(c)}}),h(a,"load",()=>{r(a)}),q("lb",a))})(window,document);}).call(this);</script></body></html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://m.dream.co.id/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline"><script>
+
+var templateID = 'undefined';
+if (typeof parent.getTemplateID === "function") var templateID = parent.getTemplateID();
+
+if(templateID==='undefined')
+{
+    //console.log('templateID undefined, load OLD creative template ');
+
+
+    var campaign_creativeID = '5333738623_138307364479';
+        //console.log('macro LI + Creative : '+campaign_creativeID);
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    
+    var infeedConfID = topparentID.replace("infeed", "infeedConf");
+    
+    var infeedConf763521396 = null;
+    var LPWrapper = "";
+    var domainSite = "";
+    var inf_Platform = ""; //default to mobile
+    if(parent.document.getElementById(infeedConfID)!=null)
+    {
+        var infeedConf763521396 = parent.document.getElementById(infeedConfID).innerHTML;
+    }
+
+    if(infeedConf763521396 != null)
+    {
+        try {
+            infeedConf763521396 = JSON.parse(infeedConf763521396);
+        } catch (exception) {
+            infeedConf763521396 = null;
+        }
+        
+        if( infeedConf763521396 === Object(infeedConf763521396) )
+        {
+            //console.log('infeedConf763521396 : ', infeedConf763521396);
+        
+            if(infeedConf763521396.domainSite) domainSite = infeedConf763521396.domainSite;
+            if(infeedConf763521396.wrapperPage){ 
+                  LPWrapper = infeedConf763521396.wrapperPage;
+                  LPWrapper += '?utm_domain='+domainSite+'&utm_url=';
+            }
+            if(infeedConf763521396.platform) inf_Platform = '_' + infeedConf763521396.platform;
+            if(inf_Platform == '_mobile')  inf_Platform =''; //reset platform to default if request came from mobile
+            
+            //console.log(domainSite+'!='+extractDomain(LPWrapper));
+            //console.log('LPWrapper : '+LPWrapper);
+        }
+    }
+        
+    //override wrapper page if landing page not from infeed
+    var tagertUrl =  'https://www.fimela.com/lifestyle-relationship/read/4210532/sambut-hari-kesehatan-gigi-dan-mulut-sedunia-pepsodent-ajak-keluarga-sikat-gigi-malam-bersama';
+    var impressionTracker =  '';
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 18));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 19));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(7, 11));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(8, 11));
+    if( tagertUrl.substr(0, 7)=="http://"  && tagertUrl.substr(0, 18)!="http://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    if( tagertUrl.substr(0, 8)=="https://"  && tagertUrl.substr(0, 19)!="https://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    
+    
+    var noTracker = 'FALSE';
+    
+    if(noTracker=='TRUE'){
+       var creativeConf763521396 = {        
+            landingpage : LPWrapper + 'https://www.fimela.com/lifestyle-relationship/read/4210532/sambut-hari-kesehatan-gigi-dan-mulut-sedunia-pepsodent-ajak-keluarga-sikat-gigi-malam-bersama',
+            articleText : "Sambut Hari Kesehatan Gigi dan Mulut Sedunia, Pepsodent Ajak Keluarga Sikat Gigi Malam Bersama",
+            imageUrl    : 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn6rummwEQARgBMghiwP5JeVEoZA&b2s=false',
+            articleLabel: 'Healthy'
+        };
+    }else{
+        var creativeConf763521396 = {        
+            landingpage : 'https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjstpLAW3x7Fp8YPWSgzqvSYUJT0logl4CfLFIEXExdqsA5cYq-GqPJTqp8Aa6XPvBcxJg3INTT7EoFGMPCnBnua-pLpCA2asBXDV7uuhQIZ_r5dJfXebHEvmgDXepibP7F2MYCKcjwNsu_kTRrPiSgZN0iERSeTemaBLTTd9cj-gelpMZGlgaEEUMyRIMvmNIOFdU8Obqg9ykIVmn-NWCY7SXNiHBr2N0tbym7_RMm1OEwbh2TpqSGQB0BLLJNE8zwcjPlGs-e1g7dIJNDP9ipUt5dEYY4IbfWVZ5do6%2526sig%253DCg0ArKJSzOp16wwAIkHMEAE%2526urlfix%253D1%2526adurl%253D' +  LPWrapper + 'https://www.fimela.com/lifestyle-relationship/read/4210532/sambut-hari-kesehatan-gigi-dan-mulut-sedunia-pepsodent-ajak-keluarga-sikat-gigi-malam-bersama',
+            articleText : "Sambut Hari Kesehatan Gigi dan Mulut Sedunia, Pepsodent Ajak Keluarga Sikat Gigi Malam Bersama",
+            imageUrl    : 'https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsv96eIyNtVy4cjMMSdzAK_witgfPBtb_pwe6msuwV79rtEndcdFj3-99hsB_PhPpFIaGgykwq8DxnIoQClLbtdLxzatzpp0kDGAeN7M5_I21vFl9sqHfkaUX9reea9qN2YkjqN1Cravk7xGEgHfawxJCgaEbgfchQd6iAcgIVx19-A6uQB4VQzmdhOaJ9aeB0UAu-GHgUY9ljuLZIjBfP5HJJtPvVxQKf7wvqPZHRzadU8SxUvVvffwqgzHzuozjx749-_D5EHJye_cWiaHfpaIvyCVX0qk5y1EO0cHqXZioujy&sig=Cg0ArKJSzB4hB_l1QE1oEAE&urlfix=1&adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn6rummwEQARgBMghiwP5JeVEoZA&b2s=false',
+            articleLabel: 'Healthy'
+        };
+    } 
+        //console.log('creativeConf763521396 : ', creativeConf763521396);
+
+    var adsTemplate763521396 = init_defaultCreative();
+    
+    //console.log("infeedConf763521396 : "+infeedConf763521396);
+    if(infeedConf763521396 != null)
+    {
+        if(infeedConf763521396.useCustomTemplate=="1"){
+           // console.log('use custom template');
+            var infeedTemplateID = topparentID.replace("infeed", "infeedTemplate") + inf_Platform;
+            //console.log('infeedTemplateID : '+infeedTemplateID);
+            if(parent.document.getElementById(infeedTemplateID)!=null)
+            {
+                var adsTemplate763521396 = parent.document.getElementById(infeedTemplateID).innerHTML;
+                //console.log(adsTemplate763521396);
+                for (key in creativeConf763521396) {
+                    //console.log(key);
+                    adsTemplate763521396 = adsTemplate763521396.split("%%"+key+"%%").join(creativeConf763521396[key]);
+                }
+               //console.log(adsTemplate763521396);
+            }
+        }
+    }
+    
+    
+    /*Write ads*/
+    var node = parent.document.getElementById(currentID);
+    node.style.position = "absolute";
+    var creativeContainer = document.createElement('div');
+    creativeContainer.setAttribute('id', currentID+'-cont');
+    node.parentNode.insertBefore(creativeContainer, node);
+    
+    parent.document.getElementById(currentID+'-cont').innerHTML = adsTemplate763521396;
+    
+    
+    
+    function extractDomain(i){var t;return t=i.indexOf("://")>-1?i.split("/")[2]:i.split("/")[0],t=t.split(":")[0],subdomain=t.split(".")[0],t=t.replace(subdomain+".","")}
+    function init_defaultCreative()
+    {
+
+        if(inf_Platform=='_desktop' || inf_Platform=='desktop')
+        {
+            var cssStyle = '' +
+            '<style>/*DESKTOP*/  .inf-cont { padding: 10px 5px; text-align: left  }  .inf-wrapper { padding: 0; min-height: 60px  }  .inf-img { margin: 0 0 5px 0;  }  .inf-img a { background-color: transparent; border-bottom: 0; padding: 0; overflow: hidden; display: block;  }  .inf-img a img { width: 100%;  }  .inf-text {}  .inf-text span { font: normal 12px arial; color: #a3a3a3; line-height: 25px;  }.inf-text div { font: bold 14px arial; margin: 0  }  .inf-text div a { font: bold 14px arial; padding: 0; text-decoration: none; background-color: transparent; color: #000; border: 0; font-weight: normal  }</style>';
+        }else{
+
+            var cssStyle = '' +
+            '<style>.inf-cont{padding:10px 5px;border-bottom:1px solid #ececec;text-align:left}.inf-wrapper{padding:0;min-height:60px}.inf-img{float:left;margin:0 10px 0 0}.inf-img a{background-color:transparent;border-bottom:0;padding:0}.inf-img a img{width:120px !important;}.inf-text{margin-left:130px}.inf-text span{font:normal 12px arial;color:#a3a3a3}.inf-text div{font:bold 15px arial;margin:0}.inf-text div a{font:bold 15px arial;padding:0;text-decoration:none;background-color:transparent;color:#000;border:0;font-weight:normal}</style>';
+        }     
+            var creative = cssStyle +  '<div class="inf-cont">' +  
+                '<div class="inf-wrapper">' + 
+                    '<div class="inf-img">' +
+                        '<a  rel="nofollow" href="'+creativeConf763521396.landingpage+'"><img src="'+creativeConf763521396.imageUrl+'" alt="'+creativeConf763521396.articleText+'"></a>' + 
+                    '</div>' + 
+                    '<div class="inf-text">' +
+                        '<span>'+creativeConf763521396.articleLabel+'</span>' +
+                        '<div>' +
+                            '<div><a  rel="nofollow" href="'+creativeConf763521396.landingpage+'">'+creativeConf763521396.articleText+'</a></div>' +
+                        '</div>' + 
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        
+        if(impressionTracker != '') creative += '<img src="' + impressionTracker  + '" style="display:none; visibility:hidden;" width="0" height="0" />'; 
+
+        return creative;
+    }
+    
+
+}else{
+    //console.log('templateID defined, load NEW creative template ');
+
+    var resParam763521396 = {
+        "image" : "https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn6rummwEQARgBMghiwP5JeVEoZA&b2s=false",
+        "label" : "Healthy",
+        "text"  : "Sambut Hari Kesehatan Gigi dan Mulut Sedunia, Pepsodent Ajak Keluarga Sikat Gigi Malam Bersama",
+        "desc"  : "Pepsodent ajak kamu sambut Hari Kesehatan Gigi dan Mulut Sedunia.",
+        "link"  : "https://www.fimela.com/lifestyle-relationship/read/4210532/sambut-hari-kesehatan-gigi-dan-mulut-sedunia-pepsodent-ajak-keluarga-sikat-gigi-malam-bersama", 
+        "target": "new_tab", 
+        "no_tracker"        : "FALSE",
+        "dfp_impr_tracker"  : "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsv96eIyNtVy4cjMMSdzAK_witgfPBtb_pwe6msuwV79rtEndcdFj3-99hsB_PhPpFIaGgykwq8DxnIoQClLbtdLxzatzpp0kDGAeN7M5_I21vFl9sqHfkaUX9reea9qN2YkjqN1Cravk7xGEgHfawxJCgaEbgfchQd6iAcgIVx19-A6uQB4VQzmdhOaJ9aeB0UAu-GHgUY9ljuLZIjBfP5HJJtPvVxQKf7wvqPZHRzadU8SxUvVvffwqgzHzuozjx749-_D5EHJye_cWiaHfpaIvyCVX0qk5y1EO0cHqXZioujy&sig=Cg0ArKJSzB4hB_l1QE1oEAE&urlfix=1&adurl=",
+        "dfp_click_tracker" : "https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjstpLAW3x7Fp8YPWSgzqvSYUJT0logl4CfLFIEXExdqsA5cYq-GqPJTqp8Aa6XPvBcxJg3INTT7EoFGMPCnBnua-pLpCA2asBXDV7uuhQIZ_r5dJfXebHEvmgDXepibP7F2MYCKcjwNsu_kTRrPiSgZN0iERSeTemaBLTTd9cj-gelpMZGlgaEEUMyRIMvmNIOFdU8Obqg9ykIVmn-NWCY7SXNiHBr2N0tbym7_RMm1OEwbh2TpqSGQB0BLLJNE8zwcjPlGs-e1g7dIJNDP9ipUt5dEYY4IbfWVZ5do6%2526sig%253DCg0ArKJSzOp16wwAIkHMEAE%2526urlfix%253D1%2526adurl%253D",
+        "3rd_impression_tracker" : "",
+        "3rd_click_tracker" : "",
+        "adunitID" : '/36504930/infeed.id/m.dream.co.id/dfp-natAds-3'
+    };
+    
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    var templateID = parent.getTemplateID();
+        //console.log('templateID : '+templateID );
+    parent.setResParam(topparentID, resParam763521396);
+
+}
+</script>
+</div><div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB7SURBVBjTbZABDsAgDALpD/j/a6fFIiZrjLN6owTgv0q1Dut4O7BfuRfprgnU/fYuiEGr83v1pKBHm9HNbOsfJ1NSDd8w31wlihGnfnq4YwNpRbxnKJDGqoIXroJySd+ONKTJkd5XT4KTSyYIC+Ol4T20j52jPU7sfncfPikFoFvCpEsAAAAASUVORK5CYII=&#39;) !important;"></div></body></html>

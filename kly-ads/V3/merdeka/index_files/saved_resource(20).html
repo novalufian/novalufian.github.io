@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://m.merdeka.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline"><script>
+
+var templateID = 'undefined';
+if (typeof parent.getTemplateID === "function") var templateID = parent.getTemplateID();
+
+if(templateID==='undefined')
+{
+    //console.log('templateID undefined, load OLD creative template ');
+
+
+    var campaign_creativeID = '5334433378_138307099140';
+        //console.log('macro LI + Creative : '+campaign_creativeID);
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    
+    var infeedConfID = topparentID.replace("infeed", "infeedConf");
+    
+    var infeedConf143003138 = null;
+    var LPWrapper = "";
+    var domainSite = "";
+    var inf_Platform = ""; //default to mobile
+    if(parent.document.getElementById(infeedConfID)!=null)
+    {
+        var infeedConf143003138 = parent.document.getElementById(infeedConfID).innerHTML;
+    }
+
+    if(infeedConf143003138 != null)
+    {
+        try {
+            infeedConf143003138 = JSON.parse(infeedConf143003138);
+        } catch (exception) {
+            infeedConf143003138 = null;
+        }
+        
+        if( infeedConf143003138 === Object(infeedConf143003138) )
+        {
+            //console.log('infeedConf143003138 : ', infeedConf143003138);
+        
+            if(infeedConf143003138.domainSite) domainSite = infeedConf143003138.domainSite;
+            if(infeedConf143003138.wrapperPage){ 
+                  LPWrapper = infeedConf143003138.wrapperPage;
+                  LPWrapper += '?utm_domain='+domainSite+'&utm_url=';
+            }
+            if(infeedConf143003138.platform) inf_Platform = '_' + infeedConf143003138.platform;
+            if(inf_Platform == '_mobile')  inf_Platform =''; //reset platform to default if request came from mobile
+            
+            //console.log(domainSite+'!='+extractDomain(LPWrapper));
+            //console.log('LPWrapper : '+LPWrapper);
+        }
+    }
+        
+    //override wrapper page if landing page not from infeed
+    var tagertUrl =  'https://hot.liputan6.com/read/4211191/berbagai-cashback-dari-tokopedia-supaya-kamu-tenang-di-rumah';
+    var impressionTracker =  '';
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 18));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 19));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(7, 11));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(8, 11));
+    if( tagertUrl.substr(0, 7)=="http://"  && tagertUrl.substr(0, 18)!="http://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    if( tagertUrl.substr(0, 8)=="https://"  && tagertUrl.substr(0, 19)!="https://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    
+    
+    var noTracker = 'FALSE';
+    
+    if(noTracker=='TRUE'){
+       var creativeConf143003138 = {        
+            landingpage : LPWrapper + 'https://hot.liputan6.com/read/4211191/berbagai-cashback-dari-tokopedia-supaya-kamu-tenang-di-rumah',
+            articleText : "Deretan Cashback Menarik Tokopedia yang Bikin Kamu Tetap Tenang di Rumah",
+            imageUrl    : 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnmqmFsQEQARgBMggWyUVKIS7c1g&b2s=false',
+            articleLabel: 'Hot'
+        };
+    }else{
+        var creativeConf143003138 = {        
+            landingpage : 'https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsuGLyCu4zbCqcvwgjmd71jBJIG6MNuQdVi-g_Q3OTDG-ReML35mJyAFbdSmxEhI9KTNJN37S_8PvFIaRi1ty7JLeaMYpQlC2HAmcdTKWSxkUubUkO_fjVMjzGcxICiHoghOUSFSTBNslRosd-UQjM3OEMvty6GFdTKv4I-gwfYNF4WLkjyV_ezRHpJfIMFllFqiE1ZsS5ZZ8lkvTcNwKC8VwHrJbTlFDiPvh7VzPwC6QhDRj1wFXJfnlOb_7g3xUCGVdvr9Y-lLSG--zTHAKdNE2De1h1NKhptb%2526sai%253DAMfl-YT0xPqPPIRcoarRiscoOjyz4O1BuT-KXUA2jx757dYqSevotEkaNt68359JGj9m6CMApuCZR-N1ZZy5OGdUlcH8JsEonTtRqfaMYYa9M-5W0uEj1PhCDaj81KiZinaACoUs%2526sig%253DCg0ArKJSzBu9HytOCdI_EAE%2526urlfix%253D1%2526adurl%253D' +  LPWrapper + 'https://hot.liputan6.com/read/4211191/berbagai-cashback-dari-tokopedia-supaya-kamu-tenang-di-rumah',
+            articleText : "Deretan Cashback Menarik Tokopedia yang Bikin Kamu Tetap Tenang di Rumah",
+            imageUrl    : 'https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjstkzY6MyPiu-hIepWGt2bIudOH13hatDatG3fbq_3H2f-QNPxJMq9FKLe8htNU6NupyJqC3i4KPotk_oz4wY3piiUR0ZjtVC9Avr91Iyx0YTUY6kJnRhpVoQTGB5zdzM5qqxgLy4hvRLSOtH2ckdCi6lF4sP5FJ13-3BWq27KRBl7j6Coc3rkxBGU2KVk3Kjek5v9CVT7946WxWTynySJnLelUYk9fWcIPppifmOs7jikp7vCBAbZ3o7PQh9iFXKhNBd192ticjh-HCm5OAmKCGVuuEa4EvEdVFXeDqn1ib&sai=AMfl-YRn2h_jkiLk1kOB6DLrrRGzYWcK4TozaZaPoH3hJOyrw7smYZpwIMcQ9ztZ53HboYz0gL3R7_g8sm4J5T2fD6kH6SN1pCSFaU_P-fyN-5A7V4dSpCZrzOBTBZ-9SZYq__hQ&sig=Cg0ArKJSzO6m1lDNPEKoEAE&urlfix=1&adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnmqmFsQEQARgBMggWyUVKIS7c1g&b2s=false',
+            articleLabel: 'Hot'
+        };
+    } 
+        //console.log('creativeConf143003138 : ', creativeConf143003138);
+
+    var adsTemplate143003138 = init_defaultCreative();
+    
+    //console.log("infeedConf143003138 : "+infeedConf143003138);
+    if(infeedConf143003138 != null)
+    {
+        if(infeedConf143003138.useCustomTemplate=="1"){
+           // console.log('use custom template');
+            var infeedTemplateID = topparentID.replace("infeed", "infeedTemplate") + inf_Platform;
+            //console.log('infeedTemplateID : '+infeedTemplateID);
+            if(parent.document.getElementById(infeedTemplateID)!=null)
+            {
+                var adsTemplate143003138 = parent.document.getElementById(infeedTemplateID).innerHTML;
+                //console.log(adsTemplate143003138);
+                for (key in creativeConf143003138) {
+                    //console.log(key);
+                    adsTemplate143003138 = adsTemplate143003138.split("%%"+key+"%%").join(creativeConf143003138[key]);
+                }
+               //console.log(adsTemplate143003138);
+            }
+        }
+    }
+    
+    
+    /*Write ads*/
+    var node = parent.document.getElementById(currentID);
+    node.style.position = "absolute";
+    var creativeContainer = document.createElement('div');
+    creativeContainer.setAttribute('id', currentID+'-cont');
+    node.parentNode.insertBefore(creativeContainer, node);
+    
+    parent.document.getElementById(currentID+'-cont').innerHTML = adsTemplate143003138;
+    
+    
+    
+    function extractDomain(i){var t;return t=i.indexOf("://")>-1?i.split("/")[2]:i.split("/")[0],t=t.split(":")[0],subdomain=t.split(".")[0],t=t.replace(subdomain+".","")}
+    function init_defaultCreative()
+    {
+
+        if(inf_Platform=='_desktop' || inf_Platform=='desktop')
+        {
+            var cssStyle = '' +
+            '<style>/*DESKTOP*/  .inf-cont { padding: 10px 5px; text-align: left  }  .inf-wrapper { padding: 0; min-height: 60px  }  .inf-img { margin: 0 0 5px 0;  }  .inf-img a { background-color: transparent; border-bottom: 0; padding: 0; overflow: hidden; display: block;  }  .inf-img a img { width: 100%;  }  .inf-text {}  .inf-text span { font: normal 12px arial; color: #a3a3a3; line-height: 25px;  }.inf-text div { font: bold 14px arial; margin: 0  }  .inf-text div a { font: bold 14px arial; padding: 0; text-decoration: none; background-color: transparent; color: #000; border: 0; font-weight: normal  }</style>';
+        }else{
+
+            var cssStyle = '' +
+            '<style>.inf-cont{padding:10px 5px;border-bottom:1px solid #ececec;text-align:left}.inf-wrapper{padding:0;min-height:60px}.inf-img{float:left;margin:0 10px 0 0}.inf-img a{background-color:transparent;border-bottom:0;padding:0}.inf-img a img{width:120px !important;}.inf-text{margin-left:130px}.inf-text span{font:normal 12px arial;color:#a3a3a3}.inf-text div{font:bold 15px arial;margin:0}.inf-text div a{font:bold 15px arial;padding:0;text-decoration:none;background-color:transparent;color:#000;border:0;font-weight:normal}</style>';
+        }     
+            var creative = cssStyle +  '<div class="inf-cont">' +  
+                '<div class="inf-wrapper">' + 
+                    '<div class="inf-img">' +
+                        '<a  rel="nofollow" href="'+creativeConf143003138.landingpage+'"><img src="'+creativeConf143003138.imageUrl+'" alt="'+creativeConf143003138.articleText+'"></a>' + 
+                    '</div>' + 
+                    '<div class="inf-text">' +
+                        '<span>'+creativeConf143003138.articleLabel+'</span>' +
+                        '<div>' +
+                            '<div><a  rel="nofollow" href="'+creativeConf143003138.landingpage+'">'+creativeConf143003138.articleText+'</a></div>' +
+                        '</div>' + 
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        
+        if(impressionTracker != '') creative += '<img src="' + impressionTracker  + '" style="display:none; visibility:hidden;" width="0" height="0" />'; 
+
+        return creative;
+    }
+    
+
+}else{
+    //console.log('templateID defined, load NEW creative template ');
+
+    var resParam143003138 = {
+        "image" : "https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnmqmFsQEQARgBMggWyUVKIS7c1g&b2s=false",
+        "label" : "Hot",
+        "text"  : "Deretan Cashback Menarik Tokopedia yang Bikin Kamu Tetap Tenang di Rumah",
+        "desc"  : "Tokopedia menghadirkan beragam layanan dan produk yang kamu butuhkan, lengkap dengan voucher dan cashback menarik yang bikin menghemat pengeluaran.",
+        "link"  : "https://hot.liputan6.com/read/4211191/berbagai-cashback-dari-tokopedia-supaya-kamu-tenang-di-rumah", 
+        "target": "new_tab", 
+        "no_tracker"        : "FALSE",
+        "dfp_impr_tracker"  : "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjstkzY6MyPiu-hIepWGt2bIudOH13hatDatG3fbq_3H2f-QNPxJMq9FKLe8htNU6NupyJqC3i4KPotk_oz4wY3piiUR0ZjtVC9Avr91Iyx0YTUY6kJnRhpVoQTGB5zdzM5qqxgLy4hvRLSOtH2ckdCi6lF4sP5FJ13-3BWq27KRBl7j6Coc3rkxBGU2KVk3Kjek5v9CVT7946WxWTynySJnLelUYk9fWcIPppifmOs7jikp7vCBAbZ3o7PQh9iFXKhNBd192ticjh-HCm5OAmKCGVuuEa4EvEdVFXeDqn1ib&sai=AMfl-YRn2h_jkiLk1kOB6DLrrRGzYWcK4TozaZaPoH3hJOyrw7smYZpwIMcQ9ztZ53HboYz0gL3R7_g8sm4J5T2fD6kH6SN1pCSFaU_P-fyN-5A7V4dSpCZrzOBTBZ-9SZYq__hQ&sig=Cg0ArKJSzO6m1lDNPEKoEAE&urlfix=1&adurl=",
+        "dfp_click_tracker" : "https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsuGLyCu4zbCqcvwgjmd71jBJIG6MNuQdVi-g_Q3OTDG-ReML35mJyAFbdSmxEhI9KTNJN37S_8PvFIaRi1ty7JLeaMYpQlC2HAmcdTKWSxkUubUkO_fjVMjzGcxICiHoghOUSFSTBNslRosd-UQjM3OEMvty6GFdTKv4I-gwfYNF4WLkjyV_ezRHpJfIMFllFqiE1ZsS5ZZ8lkvTcNwKC8VwHrJbTlFDiPvh7VzPwC6QhDRj1wFXJfnlOb_7g3xUCGVdvr9Y-lLSG--zTHAKdNE2De1h1NKhptb%2526sai%253DAMfl-YT0xPqPPIRcoarRiscoOjyz4O1BuT-KXUA2jx757dYqSevotEkaNt68359JGj9m6CMApuCZR-N1ZZy5OGdUlcH8JsEonTtRqfaMYYa9M-5W0uEj1PhCDaj81KiZinaACoUs%2526sig%253DCg0ArKJSzBu9HytOCdI_EAE%2526urlfix%253D1%2526adurl%253D",
+        "3rd_impression_tracker" : "",
+        "3rd_click_tracker" : "",
+        "adunitID" : '/36504930/infeed.id/m.merdeka.com/dfp-natAds-1'
+    };
+    
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    var templateID = parent.getTemplateID();
+        //console.log('templateID : '+templateID );
+    parent.setResParam(topparentID, resParam143003138);
+
+}
+</script>
+</div><div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB9SURBVBjTbZABDsAwCALxB/z/tVsVrFtrk2ZGYFeBe0XV+4EYHZhT6nIXS4FxslsTkiXk7nruq9WOlauy9e9OFolrpX64Ib10pU2NGJKGclVylM7BpA1GSXnvIo0Q9iDZ8fhxyzleaQQ6Orw5r+bYoKPnvsPKI5tG2SQYrgdvRAYgTX3N2wAAAABJRU5ErkJggg==&#39;) !important;"></div></body></html>

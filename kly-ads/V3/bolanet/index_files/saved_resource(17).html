@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0019)https://m.bola.net/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline"><script>
+
+var templateID = 'undefined';
+if (typeof parent.getTemplateID === "function") var templateID = parent.getTemplateID();
+
+if(templateID==='undefined')
+{
+    //console.log('templateID undefined, load OLD creative template ');
+
+
+    var campaign_creativeID = '5334847101_138307235267';
+        //console.log('macro LI + Creative : '+campaign_creativeID);
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    
+    var infeedConfID = topparentID.replace("infeed", "infeedConf");
+    
+    var infeedConf188204939 = null;
+    var LPWrapper = "";
+    var domainSite = "";
+    var inf_Platform = ""; //default to mobile
+    if(parent.document.getElementById(infeedConfID)!=null)
+    {
+        var infeedConf188204939 = parent.document.getElementById(infeedConfID).innerHTML;
+    }
+
+    if(infeedConf188204939 != null)
+    {
+        try {
+            infeedConf188204939 = JSON.parse(infeedConf188204939);
+        } catch (exception) {
+            infeedConf188204939 = null;
+        }
+        
+        if( infeedConf188204939 === Object(infeedConf188204939) )
+        {
+            //console.log('infeedConf188204939 : ', infeedConf188204939);
+        
+            if(infeedConf188204939.domainSite) domainSite = infeedConf188204939.domainSite;
+            if(infeedConf188204939.wrapperPage){ 
+                  LPWrapper = infeedConf188204939.wrapperPage;
+                  LPWrapper += '?utm_domain='+domainSite+'&utm_url=';
+            }
+            if(infeedConf188204939.platform) inf_Platform = '_' + infeedConf188204939.platform;
+            if(inf_Platform == '_mobile')  inf_Platform =''; //reset platform to default if request came from mobile
+            
+            //console.log(domainSite+'!='+extractDomain(LPWrapper));
+            //console.log('LPWrapper : '+LPWrapper);
+        }
+    }
+        
+    //override wrapper page if landing page not from infeed
+    var tagertUrl =  'https://www.liputan6.com/bisnis/read/4211971/cek-jadwal-kegiatan-operasional-dan-layanan-publik-bi-selama-mitigasi-covid-19';
+    var impressionTracker =  '';
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 18));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 19));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(7, 11));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(8, 11));
+    if( tagertUrl.substr(0, 7)=="http://"  && tagertUrl.substr(0, 18)!="http://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    if( tagertUrl.substr(0, 8)=="https://"  && tagertUrl.substr(0, 19)!="https://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    
+    
+    var noTracker = 'FALSE';
+    
+    if(noTracker=='TRUE'){
+       var creativeConf188204939 = {        
+            landingpage : LPWrapper + 'https://www.liputan6.com/bisnis/read/4211971/cek-jadwal-kegiatan-operasional-dan-layanan-publik-bi-selama-mitigasi-covid-19',
+            articleText : "Mitigasi Covid-19, Bank Indonesia Ubah Jam Operasional",
+            imageUrl    : 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn2uXUCBABGAEyCKbhLLT2s6qe&b2s=false',
+            articleLabel: 'Bisnis'
+        };
+    }else{
+        var creativeConf188204939 = {        
+            landingpage : 'https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsvTa9XRrqTTKZq2IcenNVOA53LJV_LxpZdk1ac99uy_pvck1A7jfgs0qCa-TnLpBxX5GM7pEW8VGzuu1FUcmCehD7QuwawlLkYP8BP_8Sm6AUlRKwjxPHSK4AQPCl2YcQZJUPSwp_8NCyalDt3pRJRwXKE6Yfv7VJ07uytD89PJmKnG1vo5XPmkLmK55jdzcflu4jJhdokJ3qHFpN0e-Y_YJWP-0gWIaCuoVx6wBJ33unpJSqhMgQi7KuRazdt9I-_6Z-M9HqbxeVdNdjbkfaWE5yvhCSzRLA4%2526sig%253DCg0ArKJSzKNrtsgbZx6pEAE%2526urlfix%253D1%2526adurl%253D' +  LPWrapper + 'https://www.liputan6.com/bisnis/read/4211971/cek-jadwal-kegiatan-operasional-dan-layanan-publik-bi-selama-mitigasi-covid-19',
+            articleText : "Mitigasi Covid-19, Bank Indonesia Ubah Jam Operasional",
+            imageUrl    : 'https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjstjfmJ8tvPBwNzTOMVjhORpc0HGdgx020ykvzw2Ggbt58k3sZ5f6orJMYhIAjRDBOj0hU3Mz-RGaDWv9dMbfT56fiJVz6RKUqOtk3dnZ440daPWfAsjshykpd3vQMaNjnyo9L2v6wXJE8un9dyEMIl8P3IWyDuIsX9khZp7lE8IRcWvk7yuLxULe0-AsrtC8SZsHVL53B5uyLtf4e4dD_CZHzPsFIWToI5gtr9Cdz9aujhw7N2ouzr7Os8DDIghauUGKxXgMtVmtFZWufMmcCe7ceAYqMjsW7Ps643PH6Y&sig=Cg0ArKJSzEUbppKt_CVPEAE&urlfix=1&adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn2uXUCBABGAEyCKbhLLT2s6qe&b2s=false',
+            articleLabel: 'Bisnis'
+        };
+    } 
+        //console.log('creativeConf188204939 : ', creativeConf188204939);
+
+    var adsTemplate188204939 = init_defaultCreative();
+    
+    //console.log("infeedConf188204939 : "+infeedConf188204939);
+    if(infeedConf188204939 != null)
+    {
+        if(infeedConf188204939.useCustomTemplate=="1"){
+           // console.log('use custom template');
+            var infeedTemplateID = topparentID.replace("infeed", "infeedTemplate") + inf_Platform;
+            //console.log('infeedTemplateID : '+infeedTemplateID);
+            if(parent.document.getElementById(infeedTemplateID)!=null)
+            {
+                var adsTemplate188204939 = parent.document.getElementById(infeedTemplateID).innerHTML;
+                //console.log(adsTemplate188204939);
+                for (key in creativeConf188204939) {
+                    //console.log(key);
+                    adsTemplate188204939 = adsTemplate188204939.split("%%"+key+"%%").join(creativeConf188204939[key]);
+                }
+               //console.log(adsTemplate188204939);
+            }
+        }
+    }
+    
+    
+    /*Write ads*/
+    var node = parent.document.getElementById(currentID);
+    node.style.position = "absolute";
+    var creativeContainer = document.createElement('div');
+    creativeContainer.setAttribute('id', currentID+'-cont');
+    node.parentNode.insertBefore(creativeContainer, node);
+    
+    parent.document.getElementById(currentID+'-cont').innerHTML = adsTemplate188204939;
+    
+    
+    
+    function extractDomain(i){var t;return t=i.indexOf("://")>-1?i.split("/")[2]:i.split("/")[0],t=t.split(":")[0],subdomain=t.split(".")[0],t=t.replace(subdomain+".","")}
+    function init_defaultCreative()
+    {
+
+        if(inf_Platform=='_desktop' || inf_Platform=='desktop')
+        {
+            var cssStyle = '' +
+            '<style>/*DESKTOP*/  .inf-cont { padding: 10px 5px; text-align: left  }  .inf-wrapper { padding: 0; min-height: 60px  }  .inf-img { margin: 0 0 5px 0;  }  .inf-img a { background-color: transparent; border-bottom: 0; padding: 0; overflow: hidden; display: block;  }  .inf-img a img { width: 100%;  }  .inf-text {}  .inf-text span { font: normal 12px arial; color: #a3a3a3; line-height: 25px;  }.inf-text div { font: bold 14px arial; margin: 0  }  .inf-text div a { font: bold 14px arial; padding: 0; text-decoration: none; background-color: transparent; color: #000; border: 0; font-weight: normal  }</style>';
+        }else{
+
+            var cssStyle = '' +
+            '<style>.inf-cont{padding:10px 5px;border-bottom:1px solid #ececec;text-align:left}.inf-wrapper{padding:0;min-height:60px}.inf-img{float:left;margin:0 10px 0 0}.inf-img a{background-color:transparent;border-bottom:0;padding:0}.inf-img a img{width:120px !important;}.inf-text{margin-left:130px}.inf-text span{font:normal 12px arial;color:#a3a3a3}.inf-text div{font:bold 15px arial;margin:0}.inf-text div a{font:bold 15px arial;padding:0;text-decoration:none;background-color:transparent;color:#000;border:0;font-weight:normal}</style>';
+        }     
+            var creative = cssStyle +  '<div class="inf-cont">' +  
+                '<div class="inf-wrapper">' + 
+                    '<div class="inf-img">' +
+                        '<a  rel="nofollow" href="'+creativeConf188204939.landingpage+'"><img src="'+creativeConf188204939.imageUrl+'" alt="'+creativeConf188204939.articleText+'"></a>' + 
+                    '</div>' + 
+                    '<div class="inf-text">' +
+                        '<span>'+creativeConf188204939.articleLabel+'</span>' +
+                        '<div>' +
+                            '<div><a  rel="nofollow" href="'+creativeConf188204939.landingpage+'">'+creativeConf188204939.articleText+'</a></div>' +
+                        '</div>' + 
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        
+        if(impressionTracker != '') creative += '<img src="' + impressionTracker  + '" style="display:none; visibility:hidden;" width="0" height="0" />'; 
+
+        return creative;
+    }
+    
+
+}else{
+    //console.log('templateID defined, load NEW creative template ');
+
+    var resParam188204939 = {
+        "image" : "https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn2uXUCBABGAEyCKbhLLT2s6qe&b2s=false",
+        "label" : "Bisnis",
+        "text"  : "Mitigasi Covid-19, Bank Indonesia Ubah Jam Operasional",
+        "desc"  : "Bank Indonesia menetapkan penyesuaian jadwal kegiatan operasional dan layanan publik yang berlaku sejak 30 Maret-29 Mei 2020, masa status darurat yang ditetapkan oleh Pemerintah.",
+        "link"  : "https://www.liputan6.com/bisnis/read/4211971/cek-jadwal-kegiatan-operasional-dan-layanan-publik-bi-selama-mitigasi-covid-19", 
+        "target": "new_tab", 
+        "no_tracker"        : "FALSE",
+        "dfp_impr_tracker"  : "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjstjfmJ8tvPBwNzTOMVjhORpc0HGdgx020ykvzw2Ggbt58k3sZ5f6orJMYhIAjRDBOj0hU3Mz-RGaDWv9dMbfT56fiJVz6RKUqOtk3dnZ440daPWfAsjshykpd3vQMaNjnyo9L2v6wXJE8un9dyEMIl8P3IWyDuIsX9khZp7lE8IRcWvk7yuLxULe0-AsrtC8SZsHVL53B5uyLtf4e4dD_CZHzPsFIWToI5gtr9Cdz9aujhw7N2ouzr7Os8DDIghauUGKxXgMtVmtFZWufMmcCe7ceAYqMjsW7Ps643PH6Y&sig=Cg0ArKJSzEUbppKt_CVPEAE&urlfix=1&adurl=",
+        "dfp_click_tracker" : "https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsvTa9XRrqTTKZq2IcenNVOA53LJV_LxpZdk1ac99uy_pvck1A7jfgs0qCa-TnLpBxX5GM7pEW8VGzuu1FUcmCehD7QuwawlLkYP8BP_8Sm6AUlRKwjxPHSK4AQPCl2YcQZJUPSwp_8NCyalDt3pRJRwXKE6Yfv7VJ07uytD89PJmKnG1vo5XPmkLmK55jdzcflu4jJhdokJ3qHFpN0e-Y_YJWP-0gWIaCuoVx6wBJ33unpJSqhMgQi7KuRazdt9I-_6Z-M9HqbxeVdNdjbkfaWE5yvhCSzRLA4%2526sig%253DCg0ArKJSzKNrtsgbZx6pEAE%2526urlfix%253D1%2526adurl%253D",
+        "3rd_impression_tracker" : "",
+        "3rd_click_tracker" : "",
+        "adunitID" : '/36504930/infeed.id/m.bola.net/dfp-natAds-1'
+    };
+    
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    var templateID = parent.getTemplateID();
+        //console.log('templateID : '+templateID );
+    parent.setResParam(topparentID, resParam188204939);
+
+}
+</script>
+</div><div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAACBSURBVBjTbZEBDsAwCALpD/j/axcLqE1mtnamFE8H/MdRoJ7JAN5TgsTKSne0ltqZdJzVe59fx622t3X2DglSQSQrBGPuS6tvNFI5GgFyTwvqMe+9Ink2ugDTY+YDawcDTIXFLZJM8u3SXGsK0mnye4J9k3veGDVebzmnxf6XGJ4PqdYF/ro3vuAAAAAASUVORK5CYII=&#39;) !important;"></div></body></html>

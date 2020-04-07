@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://m.kapanlagi.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline"><script>
+
+var templateID = 'undefined';
+if (typeof parent.getTemplateID === "function") var templateID = parent.getTemplateID();
+
+if(templateID==='undefined')
+{
+    //console.log('templateID undefined, load OLD creative template ');
+
+
+    var campaign_creativeID = '5333379763_138307322062';
+        //console.log('macro LI + Creative : '+campaign_creativeID);
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    
+    var infeedConfID = topparentID.replace("infeed", "infeedConf");
+    
+    var infeedConf359414249 = null;
+    var LPWrapper = "";
+    var domainSite = "";
+    var inf_Platform = ""; //default to mobile
+    if(parent.document.getElementById(infeedConfID)!=null)
+    {
+        var infeedConf359414249 = parent.document.getElementById(infeedConfID).innerHTML;
+    }
+
+    if(infeedConf359414249 != null)
+    {
+        try {
+            infeedConf359414249 = JSON.parse(infeedConf359414249);
+        } catch (exception) {
+            infeedConf359414249 = null;
+        }
+        
+        if( infeedConf359414249 === Object(infeedConf359414249) )
+        {
+            //console.log('infeedConf359414249 : ', infeedConf359414249);
+        
+            if(infeedConf359414249.domainSite) domainSite = infeedConf359414249.domainSite;
+            if(infeedConf359414249.wrapperPage){ 
+                  LPWrapper = infeedConf359414249.wrapperPage;
+                  LPWrapper += '?utm_domain='+domainSite+'&utm_url=';
+            }
+            if(infeedConf359414249.platform) inf_Platform = '_' + infeedConf359414249.platform;
+            if(inf_Platform == '_mobile')  inf_Platform =''; //reset platform to default if request came from mobile
+            
+            //console.log(domainSite+'!='+extractDomain(LPWrapper));
+            //console.log('LPWrapper : '+LPWrapper);
+        }
+    }
+        
+    //override wrapper page if landing page not from infeed
+    var tagertUrl =  'https://www.fimela.com/beauty-health/read/4209895/tips-merawat-rambut-setelah-bleaching-agar-warnanya-tetap-indah-dan-tahan-lama';
+    var impressionTracker =  '';
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 18));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 19));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(7, 11));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(8, 11));
+    if( tagertUrl.substr(0, 7)=="http://"  && tagertUrl.substr(0, 18)!="http://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    if( tagertUrl.substr(0, 8)=="https://"  && tagertUrl.substr(0, 19)!="https://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    
+    
+    var noTracker = 'FALSE';
+    
+    if(noTracker=='TRUE'){
+       var creativeConf359414249 = {        
+            landingpage : LPWrapper + 'https://www.fimela.com/beauty-health/read/4209895/tips-merawat-rambut-setelah-bleaching-agar-warnanya-tetap-indah-dan-tahan-lama',
+            articleText : "Pengin Punya Rambut Bleaching yang Indah? Aplikasikan Trik Ini!",
+            imageUrl    : 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn6tqaZRABGAEyCJTwR5hvU2w9&b2s=false',
+            articleLabel: 'Daily Care'
+        };
+    }else{
+        var creativeConf359414249 = {        
+            landingpage : 'https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsuKt3PilhO8gem649fyZHlzzlBk9WjhTCpmydRozAxfzZJ8FPDE32BGe6BGk_U948rqidDeDGZWlSNYpN1T8QeGFjC1D_WPi_o4lVbp2emN4E4NIuo3WMPEro9XDPvLi0FH1KXim6huPd9y8RRcNitmJ5NhSBg6BvctiI6wG4Y3r0jn2pN_rYMccc47esnp7wWOJS7voYfHY-54zfqtqEQXCzFdbGASanseksR6IOXU3AdcUaUqRWBcY5IvW0PBBdRecfSHORw0PWIGC-kw0iM6uW6-zZVJBpeQKi3YHFKJBQ%2526sig%253DCg0ArKJSzOa8MuzmBRmREAE%2526urlfix%253D1%2526adurl%253D' +  LPWrapper + 'https://www.fimela.com/beauty-health/read/4209895/tips-merawat-rambut-setelah-bleaching-agar-warnanya-tetap-indah-dan-tahan-lama',
+            articleText : "Pengin Punya Rambut Bleaching yang Indah? Aplikasikan Trik Ini!",
+            imageUrl    : 'https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjst3p3cZ1nrQfp1hZ5uOFn9DgyOjABlG9KZdP3Zex-DZ1bEs-FPywH5xMUYWqiNjhb5nfALDy_cYMEJ8NDMec_RdFRLGa-ku6aF9gkd3IYIX6HAJApgM7iSACjv1hTmC4UF6fO7G6xRldO4312h-MCmryo_s7-1HQ-Qnbh74Q7li_M2gyqKCNKb4cqzDMvn87gsPd1s4HXUFM0SVBqHM4nQE0B2I58gmcYy0KRE7TGFJGxmF_tT8wjeDgarKZ_fS96FmbZqTqVTLSiU21A18TexsehQE-H3FApTXJq2ddFT2dUHn50LYeQ&sig=Cg0ArKJSzPdTiMaZmpcNEAE&urlfix=1&adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn6tqaZRABGAEyCJTwR5hvU2w9&b2s=false',
+            articleLabel: 'Daily Care'
+        };
+    } 
+        //console.log('creativeConf359414249 : ', creativeConf359414249);
+
+    var adsTemplate359414249 = init_defaultCreative();
+    
+    //console.log("infeedConf359414249 : "+infeedConf359414249);
+    if(infeedConf359414249 != null)
+    {
+        if(infeedConf359414249.useCustomTemplate=="1"){
+           // console.log('use custom template');
+            var infeedTemplateID = topparentID.replace("infeed", "infeedTemplate") + inf_Platform;
+            //console.log('infeedTemplateID : '+infeedTemplateID);
+            if(parent.document.getElementById(infeedTemplateID)!=null)
+            {
+                var adsTemplate359414249 = parent.document.getElementById(infeedTemplateID).innerHTML;
+                //console.log(adsTemplate359414249);
+                for (key in creativeConf359414249) {
+                    //console.log(key);
+                    adsTemplate359414249 = adsTemplate359414249.split("%%"+key+"%%").join(creativeConf359414249[key]);
+                }
+               //console.log(adsTemplate359414249);
+            }
+        }
+    }
+    
+    
+    /*Write ads*/
+    var node = parent.document.getElementById(currentID);
+    node.style.position = "absolute";
+    var creativeContainer = document.createElement('div');
+    creativeContainer.setAttribute('id', currentID+'-cont');
+    node.parentNode.insertBefore(creativeContainer, node);
+    
+    parent.document.getElementById(currentID+'-cont').innerHTML = adsTemplate359414249;
+    
+    
+    
+    function extractDomain(i){var t;return t=i.indexOf("://")>-1?i.split("/")[2]:i.split("/")[0],t=t.split(":")[0],subdomain=t.split(".")[0],t=t.replace(subdomain+".","")}
+    function init_defaultCreative()
+    {
+
+        if(inf_Platform=='_desktop' || inf_Platform=='desktop')
+        {
+            var cssStyle = '' +
+            '<style>/*DESKTOP*/  .inf-cont { padding: 10px 5px; text-align: left  }  .inf-wrapper { padding: 0; min-height: 60px  }  .inf-img { margin: 0 0 5px 0;  }  .inf-img a { background-color: transparent; border-bottom: 0; padding: 0; overflow: hidden; display: block;  }  .inf-img a img { width: 100%;  }  .inf-text {}  .inf-text span { font: normal 12px arial; color: #a3a3a3; line-height: 25px;  }.inf-text div { font: bold 14px arial; margin: 0  }  .inf-text div a { font: bold 14px arial; padding: 0; text-decoration: none; background-color: transparent; color: #000; border: 0; font-weight: normal  }</style>';
+        }else{
+
+            var cssStyle = '' +
+            '<style>.inf-cont{padding:10px 5px;border-bottom:1px solid #ececec;text-align:left}.inf-wrapper{padding:0;min-height:60px}.inf-img{float:left;margin:0 10px 0 0}.inf-img a{background-color:transparent;border-bottom:0;padding:0}.inf-img a img{width:120px !important;}.inf-text{margin-left:130px}.inf-text span{font:normal 12px arial;color:#a3a3a3}.inf-text div{font:bold 15px arial;margin:0}.inf-text div a{font:bold 15px arial;padding:0;text-decoration:none;background-color:transparent;color:#000;border:0;font-weight:normal}</style>';
+        }     
+            var creative = cssStyle +  '<div class="inf-cont">' +  
+                '<div class="inf-wrapper">' + 
+                    '<div class="inf-img">' +
+                        '<a  rel="nofollow" href="'+creativeConf359414249.landingpage+'"><img src="'+creativeConf359414249.imageUrl+'" alt="'+creativeConf359414249.articleText+'"></a>' + 
+                    '</div>' + 
+                    '<div class="inf-text">' +
+                        '<span>'+creativeConf359414249.articleLabel+'</span>' +
+                        '<div>' +
+                            '<div><a  rel="nofollow" href="'+creativeConf359414249.landingpage+'">'+creativeConf359414249.articleText+'</a></div>' +
+                        '</div>' + 
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        
+        if(impressionTracker != '') creative += '<img src="' + impressionTracker  + '" style="display:none; visibility:hidden;" width="0" height="0" />'; 
+
+        return creative;
+    }
+    
+
+}else{
+    //console.log('templateID defined, load NEW creative template ');
+
+    var resParam359414249 = {
+        "image" : "https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn6tqaZRABGAEyCJTwR5hvU2w9&b2s=false",
+        "label" : "Daily Care",
+        "text"  : "Pengin Punya Rambut Bleaching yang Indah? Aplikasikan Trik Ini!",
+        "desc"  : "Seperti apa sih perawatan yang tepat agar rambut bleaching tetap sehat? Tips berikut ini bisa kamu lakukan di rumah.",
+        "link"  : "https://www.fimela.com/beauty-health/read/4209895/tips-merawat-rambut-setelah-bleaching-agar-warnanya-tetap-indah-dan-tahan-lama", 
+        "target": "new_tab", 
+        "no_tracker"        : "FALSE",
+        "dfp_impr_tracker"  : "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjst3p3cZ1nrQfp1hZ5uOFn9DgyOjABlG9KZdP3Zex-DZ1bEs-FPywH5xMUYWqiNjhb5nfALDy_cYMEJ8NDMec_RdFRLGa-ku6aF9gkd3IYIX6HAJApgM7iSACjv1hTmC4UF6fO7G6xRldO4312h-MCmryo_s7-1HQ-Qnbh74Q7li_M2gyqKCNKb4cqzDMvn87gsPd1s4HXUFM0SVBqHM4nQE0B2I58gmcYy0KRE7TGFJGxmF_tT8wjeDgarKZ_fS96FmbZqTqVTLSiU21A18TexsehQE-H3FApTXJq2ddFT2dUHn50LYeQ&sig=Cg0ArKJSzPdTiMaZmpcNEAE&urlfix=1&adurl=",
+        "dfp_click_tracker" : "https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsuKt3PilhO8gem649fyZHlzzlBk9WjhTCpmydRozAxfzZJ8FPDE32BGe6BGk_U948rqidDeDGZWlSNYpN1T8QeGFjC1D_WPi_o4lVbp2emN4E4NIuo3WMPEro9XDPvLi0FH1KXim6huPd9y8RRcNitmJ5NhSBg6BvctiI6wG4Y3r0jn2pN_rYMccc47esnp7wWOJS7voYfHY-54zfqtqEQXCzFdbGASanseksR6IOXU3AdcUaUqRWBcY5IvW0PBBdRecfSHORw0PWIGC-kw0iM6uW6-zZVJBpeQKi3YHFKJBQ%2526sig%253DCg0ArKJSzOa8MuzmBRmREAE%2526urlfix%253D1%2526adurl%253D",
+        "3rd_impression_tracker" : "",
+        "3rd_click_tracker" : "",
+        "adunitID" : '/36504930/infeed.id/m.kapanlagi.com/dfp-natAds-6'
+    };
+    
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    var templateID = parent.getTemplateID();
+        //console.log('templateID : '+templateID );
+    parent.setResParam(topparentID, resParam359414249);
+
+}
+</script>
+</div><div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB7SURBVBjTbVBBDsAwCKI/4P+vbSqgHuoWOyYlCPCvo0JeIYA15Xs4qBjTfRaPdB/U81Lc7NZeqJ1E2U5Wcfsu7w0R9nNbwgyd9DB7ummEHGxP9izBnw2il+V2Kn3gYG+pMPxnshMLnXdoSXHnnQiPL02C2lcXJsFk874v/vAFYDlxsV0AAAAASUVORK5CYII=&#39;) !important;"></div></body></html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://m.merdeka.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline"><script>
+
+var templateID = 'undefined';
+if (typeof parent.getTemplateID === "function") var templateID = parent.getTemplateID();
+
+if(templateID==='undefined')
+{
+    //console.log('templateID undefined, load OLD creative template ');
+
+
+    var campaign_creativeID = '5333735009_138306950088';
+        //console.log('macro LI + Creative : '+campaign_creativeID);
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    
+    var infeedConfID = topparentID.replace("infeed", "infeedConf");
+    
+    var infeedConf419556179 = null;
+    var LPWrapper = "";
+    var domainSite = "";
+    var inf_Platform = ""; //default to mobile
+    if(parent.document.getElementById(infeedConfID)!=null)
+    {
+        var infeedConf419556179 = parent.document.getElementById(infeedConfID).innerHTML;
+    }
+
+    if(infeedConf419556179 != null)
+    {
+        try {
+            infeedConf419556179 = JSON.parse(infeedConf419556179);
+        } catch (exception) {
+            infeedConf419556179 = null;
+        }
+        
+        if( infeedConf419556179 === Object(infeedConf419556179) )
+        {
+            //console.log('infeedConf419556179 : ', infeedConf419556179);
+        
+            if(infeedConf419556179.domainSite) domainSite = infeedConf419556179.domainSite;
+            if(infeedConf419556179.wrapperPage){ 
+                  LPWrapper = infeedConf419556179.wrapperPage;
+                  LPWrapper += '?utm_domain='+domainSite+'&utm_url=';
+            }
+            if(infeedConf419556179.platform) inf_Platform = '_' + infeedConf419556179.platform;
+            if(inf_Platform == '_mobile')  inf_Platform =''; //reset platform to default if request came from mobile
+            
+            //console.log(domainSite+'!='+extractDomain(LPWrapper));
+            //console.log('LPWrapper : '+LPWrapper);
+        }
+    }
+        
+    //override wrapper page if landing page not from infeed
+    var tagertUrl =  'https://www.bola.com/moto-gp/read/4209419/duo-rider-motogp-jadi-saksi-kemunculan-teknologi-y-connect-dari-yamaha';
+    var impressionTracker =  '';
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 18));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 19));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(7, 11));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(8, 11));
+    if( tagertUrl.substr(0, 7)=="http://"  && tagertUrl.substr(0, 18)!="http://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    if( tagertUrl.substr(0, 8)=="https://"  && tagertUrl.substr(0, 19)!="https://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    
+    
+    var noTracker = 'FALSE';
+    
+    if(noTracker=='TRUE'){
+       var creativeConf419556179 = {        
+            landingpage : LPWrapper + 'https://www.bola.com/moto-gp/read/4209419/duo-rider-motogp-jadi-saksi-kemunculan-teknologi-y-connect-dari-yamaha',
+            articleText : "Yamaha Luncurkan Teknologi Y-Connect",
+            imageUrl    : 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn6p6WwQEQARgBMgg4JeU6y_WENg&b2s=false',
+            articleLabel: 'Sport'
+        };
+    }else{
+        var creativeConf419556179 = {        
+            landingpage : 'https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsuw3WlB1PABTYWMywzxeoCcjThz9Gtgve95rU-nm3GzhZHWh6Tm6dJL4Q36ZFK0gqOdf-6tR9tL02bi5K3T_KKCqn8JTfNyEsyifsZcJrzBv0HGaP71iA-KkSkuMUfM9dEen1I9ZqHMAnaxuW0Vr2WMPpnVOS3jh2xUONugDgbFED2uWW00LqguoXzOi42SVtGDoC1KA_81W47LX7iVWcM-EwWucalsFSRXLV_PjRYFPWhb3XjPFtuYnr28JB-2ArtGTPmd7qivtX1LY58CuM_be5fu4AgdHsYk%2526sai%253DAMfl-YSD0jFfy4tQAauB9rIzlxP2xZXRBD6vaSW4GC437sbJMrU41OwEIv3vkXHQ4rmUyQBLf3FDhJzULZD1v9hBGP_wDhqJR30hnEWSoXSLYC2V732cV1lS5nfGmrUqkrhpsdxG%2526sig%253DCg0ArKJSzASMXBXAlAAkEAE%2526urlfix%253D1%2526adurl%253D' +  LPWrapper + 'https://www.bola.com/moto-gp/read/4209419/duo-rider-motogp-jadi-saksi-kemunculan-teknologi-y-connect-dari-yamaha',
+            articleText : "Yamaha Luncurkan Teknologi Y-Connect",
+            imageUrl    : 'https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjssSxhJcdzLdnxaV-aqxv1cOX9Al_7-aTURx7lil5CmSoYoCBZRsj61c8KE_bGXWtkmOCqzbDw-T0efGiZsfJRDEY-oJOg5iYA3LUPbz9SOZmtASQC2rbcPaRe8NOYdxhfVr66eMJzHgfiyH71jqxiGbZJTKoEhtVhQtFlSxGYCHNpXzXivCJVhcB0WPAUIjd0JP-lo6Q31kR7czlzwdvQINlSpzYG3Kam4iq7R28iOFJ9T5_9IbLgeJIdvMpnvY-SWTC88eS1_nKu_2NTOqq0yq_2S4INUTj18-2OqDbyqb&sai=AMfl-YRKyfKi3iD4-rRbHO9xwJL84o6ZtzZPOsArWYfyGv8u32Rkwg4-Cmlw-a1cpPSKWvIjpCg9NnghJKjah8l7dxdlYrsSA_iRcB4skB4aooM3t5QpxHepbcKmhjaSuk5DblNk&sig=Cg0ArKJSzIKERS-2k0fyEAE&urlfix=1&adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn6p6WwQEQARgBMgg4JeU6y_WENg&b2s=false',
+            articleLabel: 'Sport'
+        };
+    } 
+        //console.log('creativeConf419556179 : ', creativeConf419556179);
+
+    var adsTemplate419556179 = init_defaultCreative();
+    
+    //console.log("infeedConf419556179 : "+infeedConf419556179);
+    if(infeedConf419556179 != null)
+    {
+        if(infeedConf419556179.useCustomTemplate=="1"){
+           // console.log('use custom template');
+            var infeedTemplateID = topparentID.replace("infeed", "infeedTemplate") + inf_Platform;
+            //console.log('infeedTemplateID : '+infeedTemplateID);
+            if(parent.document.getElementById(infeedTemplateID)!=null)
+            {
+                var adsTemplate419556179 = parent.document.getElementById(infeedTemplateID).innerHTML;
+                //console.log(adsTemplate419556179);
+                for (key in creativeConf419556179) {
+                    //console.log(key);
+                    adsTemplate419556179 = adsTemplate419556179.split("%%"+key+"%%").join(creativeConf419556179[key]);
+                }
+               //console.log(adsTemplate419556179);
+            }
+        }
+    }
+    
+    
+    /*Write ads*/
+    var node = parent.document.getElementById(currentID);
+    node.style.position = "absolute";
+    var creativeContainer = document.createElement('div');
+    creativeContainer.setAttribute('id', currentID+'-cont');
+    node.parentNode.insertBefore(creativeContainer, node);
+    
+    parent.document.getElementById(currentID+'-cont').innerHTML = adsTemplate419556179;
+    
+    
+    
+    function extractDomain(i){var t;return t=i.indexOf("://")>-1?i.split("/")[2]:i.split("/")[0],t=t.split(":")[0],subdomain=t.split(".")[0],t=t.replace(subdomain+".","")}
+    function init_defaultCreative()
+    {
+
+        if(inf_Platform=='_desktop' || inf_Platform=='desktop')
+        {
+            var cssStyle = '' +
+            '<style>/*DESKTOP*/  .inf-cont { padding: 10px 5px; text-align: left  }  .inf-wrapper { padding: 0; min-height: 60px  }  .inf-img { margin: 0 0 5px 0;  }  .inf-img a { background-color: transparent; border-bottom: 0; padding: 0; overflow: hidden; display: block;  }  .inf-img a img { width: 100%;  }  .inf-text {}  .inf-text span { font: normal 12px arial; color: #a3a3a3; line-height: 25px;  }.inf-text div { font: bold 14px arial; margin: 0  }  .inf-text div a { font: bold 14px arial; padding: 0; text-decoration: none; background-color: transparent; color: #000; border: 0; font-weight: normal  }</style>';
+        }else{
+
+            var cssStyle = '' +
+            '<style>.inf-cont{padding:10px 5px;border-bottom:1px solid #ececec;text-align:left}.inf-wrapper{padding:0;min-height:60px}.inf-img{float:left;margin:0 10px 0 0}.inf-img a{background-color:transparent;border-bottom:0;padding:0}.inf-img a img{width:120px !important;}.inf-text{margin-left:130px}.inf-text span{font:normal 12px arial;color:#a3a3a3}.inf-text div{font:bold 15px arial;margin:0}.inf-text div a{font:bold 15px arial;padding:0;text-decoration:none;background-color:transparent;color:#000;border:0;font-weight:normal}</style>';
+        }     
+            var creative = cssStyle +  '<div class="inf-cont">' +  
+                '<div class="inf-wrapper">' + 
+                    '<div class="inf-img">' +
+                        '<a  rel="nofollow" href="'+creativeConf419556179.landingpage+'"><img src="'+creativeConf419556179.imageUrl+'" alt="'+creativeConf419556179.articleText+'"></a>' + 
+                    '</div>' + 
+                    '<div class="inf-text">' +
+                        '<span>'+creativeConf419556179.articleLabel+'</span>' +
+                        '<div>' +
+                            '<div><a  rel="nofollow" href="'+creativeConf419556179.landingpage+'">'+creativeConf419556179.articleText+'</a></div>' +
+                        '</div>' + 
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        
+        if(impressionTracker != '') creative += '<img src="' + impressionTracker  + '" style="display:none; visibility:hidden;" width="0" height="0" />'; 
+
+        return creative;
+    }
+    
+
+}else{
+    //console.log('templateID defined, load NEW creative template ');
+
+    var resParam419556179 = {
+        "image" : "https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn6p6WwQEQARgBMgg4JeU6y_WENg&b2s=false",
+        "label" : "Sport",
+        "text"  : "Yamaha Luncurkan Teknologi Y-Connect",
+        "desc"  : "PT Yamaha Indonesia Motor Manufacturing (YIMM) resmi menghadirkan All New Nmax 155 Connected/ABS yang dilengkapi dengan teknologi Y-Connect (Yamaha Motorcycle Connect).",
+        "link"  : "https://www.bola.com/moto-gp/read/4209419/duo-rider-motogp-jadi-saksi-kemunculan-teknologi-y-connect-dari-yamaha", 
+        "target": "new_tab", 
+        "no_tracker"        : "FALSE",
+        "dfp_impr_tracker"  : "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjssSxhJcdzLdnxaV-aqxv1cOX9Al_7-aTURx7lil5CmSoYoCBZRsj61c8KE_bGXWtkmOCqzbDw-T0efGiZsfJRDEY-oJOg5iYA3LUPbz9SOZmtASQC2rbcPaRe8NOYdxhfVr66eMJzHgfiyH71jqxiGbZJTKoEhtVhQtFlSxGYCHNpXzXivCJVhcB0WPAUIjd0JP-lo6Q31kR7czlzwdvQINlSpzYG3Kam4iq7R28iOFJ9T5_9IbLgeJIdvMpnvY-SWTC88eS1_nKu_2NTOqq0yq_2S4INUTj18-2OqDbyqb&sai=AMfl-YRKyfKi3iD4-rRbHO9xwJL84o6ZtzZPOsArWYfyGv8u32Rkwg4-Cmlw-a1cpPSKWvIjpCg9NnghJKjah8l7dxdlYrsSA_iRcB4skB4aooM3t5QpxHepbcKmhjaSuk5DblNk&sig=Cg0ArKJSzIKERS-2k0fyEAE&urlfix=1&adurl=",
+        "dfp_click_tracker" : "https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsuw3WlB1PABTYWMywzxeoCcjThz9Gtgve95rU-nm3GzhZHWh6Tm6dJL4Q36ZFK0gqOdf-6tR9tL02bi5K3T_KKCqn8JTfNyEsyifsZcJrzBv0HGaP71iA-KkSkuMUfM9dEen1I9ZqHMAnaxuW0Vr2WMPpnVOS3jh2xUONugDgbFED2uWW00LqguoXzOi42SVtGDoC1KA_81W47LX7iVWcM-EwWucalsFSRXLV_PjRYFPWhb3XjPFtuYnr28JB-2ArtGTPmd7qivtX1LY58CuM_be5fu4AgdHsYk%2526sai%253DAMfl-YSD0jFfy4tQAauB9rIzlxP2xZXRBD6vaSW4GC437sbJMrU41OwEIv3vkXHQ4rmUyQBLf3FDhJzULZD1v9hBGP_wDhqJR30hnEWSoXSLYC2V732cV1lS5nfGmrUqkrhpsdxG%2526sig%253DCg0ArKJSzASMXBXAlAAkEAE%2526urlfix%253D1%2526adurl%253D",
+        "3rd_impression_tracker" : "",
+        "3rd_click_tracker" : "",
+        "adunitID" : '/36504930/infeed.id/m.merdeka.com/dfp-natAds-2'
+    };
+    
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    var templateID = parent.getTemplateID();
+        //console.log('templateID : '+templateID );
+    parent.setResParam(topparentID, resParam419556179);
+
+}
+</script>
+</div><div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB/SURBVBjTbVCJDQAhCMMNuv+0p/QRk8NEIdRSWvUfi7GTWqMqdBe6XK2DqHG6Oh0ABOJW6fsK2rT6RW7NDrOUOA7ro7uEF47YplTSalj3hpyuNGjchJJ6emX48sdXieivZzRRLo4tPYNPHJRkbjsdtG7PjhtCvtxRjqkkPu73A6cTBnOhuRadAAAAAElFTkSuQmCC&#39;) !important;"></div></body></html>

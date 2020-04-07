@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://m.dream.co.id/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <!--<base target="_parent">--><base href="." target="_parent">
+ 	<meta http-equiv="content-type" content="text/html">
+ 	<meta name="author" content="KLNmalang">
+ 
+ 	<title>Safe Frame</title>
+ 
+ <style>
+@font-face {
+ font-family: "MetropolisBold";
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bold-webfont.eot");
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bold-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bold-webfont.woff") format("woff"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bold-webfont.ttf") format("truetype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bold-webfont.svg#metropolisbold") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: "MetropolisBold_italic";
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bolditalic-webfont.eot");
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bolditalic-webfont.woff") format("woff"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bolditalic-webfont.ttf") format("truetype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bolditalic-webfont.svg#metropolisbold_italic") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: "MetropolisRegular";
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regular-webfont.eot");
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regular-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regular-webfont.woff") format("woff"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regular-webfont.ttf") format("truetype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regular-webfont.svg#metropolisregular") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: "MetropolisRegular_italic";
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regularitalic-webfont.eot");
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regularitalic-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regularitalic-webfont.woff") format("woff"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regularitalic-webfont.ttf") format("truetype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regularitalic-webfont.svg#metropolisregular_italic") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: "MetropolisSemibold";
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibold-webfont.eot");
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibold-webfont.woff") format("woff"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibold-webfont.ttf") format("truetype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibold-webfont.svg#metropolissemi_bold") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: "MetropolisSemibold_italic";
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibolditalic-webfont.eot");
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibolditalic-webfont.woff") format("woff"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibolditalic-webfont.ttf") format("truetype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibolditalic-webfont.svg#metropolissemi_bold_italic") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+*, *::after, *::before {
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+}
+* {
+ -webkit-tap-highlight-color: transparent;
+}
+
+#inf-outstream-container,
+.inf-cont {
+ width:100%;
+ max-width:100%;
+}
+
+a{
+	text-decoration:none;
+ 	outlined:none;
+ 	color:#000;
+ 	transition:0.5s ease;
+}
+
+.item {
+	width: 100%;
+ max-width: 100%;
+}
+
+.item .image {
+ margin: 0;
+ padding: 0;
+ width: 100%;
+}
+
+.item .image a {
+ display: block;
+ position: relative;
+ width: 100%;
+} 
+
+.item .image a > img {
+ width: 100%;
+ object-fit:cover;
+ border-radius: 4px;
+}
+
+.item .image a > div.img {
+	padding-top: 66.2337%;
+ width: 100%;
+ -webkit-border-radius: 4px;
+ border-radius: 4px;
+ background-size: cover!important;
+}
+
+.item .description {
+ padding-top:15px;
+}
+
+.description .link-kategori {
+	font-size: 11px;
+	font-family:"MetropolisSemibold";
+ 	letter-spacing:1px;
+ 	color:#d85388;
+ margin-bottom:10px;
+ 	display:block;
+ 	line-height:1em;
+ 	text-transform:uppercase;
+ 	white-space: nowrap;
+ 	text-overflow: ellipsis;
+ 	overflow: hidden;
+}
+p {
+	margin: 0;
+ line-height: 1.5em;
+}
+.description p {
+	height: 48px;
+ overflow: hidden;
+ font-family: "MetropolisSemibold";
+ font-size: 15px;
+}
+</style> 
+ </head>
+ 
+ <body style="padding: 0;margin: 0; overflow: hidden; width: 100%;" class="inf-undefined" id="inf-slot-2">
+ 
+ <div id="inf-outstream-container">
+ 
+ <div class="inf-cont">
+ <div class="item full-width" style="max-width: 492px;">
+ <div class="image">
+ <a href="https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjssjKJcInRuRev4QORt7Pp62rp_b5vSvFtZpFr3G_PJn4pTt7Xxq0M_0yodmY8NUXzWd0Wp69CldKkRxS9kNzK7pJosYkhANP59S7M_SmrpjowQ7vvK_ibWBInx86sfsLJ1s9rd2qUYOlOYB8c7geCPB2Wy-NywPdcX8r4o1tC_0YWzMiT4YbQA0oSz0pIsdC2H3-IQ4KEQP0-1IisBWV-KHRygjtyFDWDgWmU7gHZVMELCEDe5jxM8SVGoftufLOTLh9dUlKU53ItWMI_N8cJnNlpHHX26p07ZGWOsb%2526sig%253DCg0ArKJSzEShrRGoK6MDEAE%2526urlfix%253D1%2526adurl%253Dhttps://plus.kapanlagi.com/dirumahlebihbaik-yuk-putusin-rantai-covid-19-mulai-dari-diri-sendiri-161243.html" target="_blank">
+ <div class="img" style="background: url(https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjssIY89mAiyA-pQGAh7buBU_CGq4ZqHrxcBb-aQHyckibOyzW5FOAL9cO_gwdC6YiVyhPiWuF2U2N73aP6HPlmrE_O1rjhv37CeFBt69AKa4IOWNJPxpz1nxDyufDQVmakuaGoTQW8CWvNFJa2k7z9HAzuL9sKcbQtaL2J01dSgZGzp4O6Cvhxc7G2NtbYUpVLoMGxJO5Q3dU34tBovYzk8tqpdhiSWImam_bLdzWoW-9SBYIvBXN7n035gsVjN1-NrfnvYPv8XHH2-iI1lAipj4XRQDZfNM9nslQECNp9GuWQOm&amp;sig=Cg0ArKJSzJWRVRqvGP4hEAE&amp;urlfix=1&amp;adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn2rurSxABGAEyCPRu2XSHoVrO&amp;b2s=false) 50% 50% no-repeat; max-width: 100%;"></div>
+ </a>
+ </div>
+ <div class="description">
+ <a href="https://m.dream.co.id/infeed/" class="link link-kategori">Lfestyle</a>
+ <p><a href="https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjssjKJcInRuRev4QORt7Pp62rp_b5vSvFtZpFr3G_PJn4pTt7Xxq0M_0yodmY8NUXzWd0Wp69CldKkRxS9kNzK7pJosYkhANP59S7M_SmrpjowQ7vvK_ibWBInx86sfsLJ1s9rd2qUYOlOYB8c7geCPB2Wy-NywPdcX8r4o1tC_0YWzMiT4YbQA0oSz0pIsdC2H3-IQ4KEQP0-1IisBWV-KHRygjtyFDWDgWmU7gHZVMELCEDe5jxM8SVGoftufLOTLh9dUlKU53ItWMI_N8cJnNlpHHX26p07ZGWOsb%2526sig%253DCg0ArKJSzEShrRGoK6MDEAE%2526urlfix%253D1%2526adurl%253Dhttps://plus.kapanlagi.com/dirumahlebihbaik-yuk-putusin-rantai-covid-19-mulai-dari-diri-sendiri-161243.html" target="_blank">#DiRumahLebihBaik, Yuk Terus Konsisten Bantu Cegah Penyebaran COVID-19!</a></p>
+ </div>
+ </div>
+</div> 
+ <div style="clear: both; height: 0;"></div>
+ </div>
+ 
+ 
+ 
+ <script>
+ /* Start Global targetting tags */
+ if(typeof parent.window.kly !== 'undefined')
+ {
+ var tags = parent.window.kly.gtm.tag.replace(/[^A-Za-z0-9|\- ]/ig,"").trim().split("|").map(item => item.trim().toLowerCase().replace(/ /g,'-'));
+ }
+ if(typeof parent.window.kmklabs !== 'undefined')
+ {
+ var tags = parent.window.kmklabs.gtm.tag.replace(/[^A-Za-z0-9|\- ]/ig,"").trim().split("|").map(item => item.trim().toLowerCase().replace(/ /g,'-'));
+ }
+ 
+ if( tags )
+ {
+ for( var i in tags )
+ {
+ if( tags[i] )
+ {
+ document.body.classList.add(tags[i]); 
+ }
+ }
+ } 
+ /* End Global targetting tags */
+ </script>
+ 
+</body></html>

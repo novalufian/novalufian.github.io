@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0019)https://m.bola.net/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline"><script>
+
+var templateID = 'undefined';
+if (typeof parent.getTemplateID === "function") var templateID = parent.getTemplateID();
+
+if(templateID==='undefined')
+{
+    //console.log('templateID undefined, load OLD creative template ');
+
+
+    var campaign_creativeID = '5331769194_138306853962';
+        //console.log('macro LI + Creative : '+campaign_creativeID);
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    
+    var infeedConfID = topparentID.replace("infeed", "infeedConf");
+    
+    var infeedConf2042521224 = null;
+    var LPWrapper = "";
+    var domainSite = "";
+    var inf_Platform = ""; //default to mobile
+    if(parent.document.getElementById(infeedConfID)!=null)
+    {
+        var infeedConf2042521224 = parent.document.getElementById(infeedConfID).innerHTML;
+    }
+
+    if(infeedConf2042521224 != null)
+    {
+        try {
+            infeedConf2042521224 = JSON.parse(infeedConf2042521224);
+        } catch (exception) {
+            infeedConf2042521224 = null;
+        }
+        
+        if( infeedConf2042521224 === Object(infeedConf2042521224) )
+        {
+            //console.log('infeedConf2042521224 : ', infeedConf2042521224);
+        
+            if(infeedConf2042521224.domainSite) domainSite = infeedConf2042521224.domainSite;
+            if(infeedConf2042521224.wrapperPage){ 
+                  LPWrapper = infeedConf2042521224.wrapperPage;
+                  LPWrapper += '?utm_domain='+domainSite+'&utm_url=';
+            }
+            if(infeedConf2042521224.platform) inf_Platform = '_' + infeedConf2042521224.platform;
+            if(inf_Platform == '_mobile')  inf_Platform =''; //reset platform to default if request came from mobile
+            
+            //console.log(domainSite+'!='+extractDomain(LPWrapper));
+            //console.log('LPWrapper : '+LPWrapper);
+        }
+    }
+        
+    //override wrapper page if landing page not from infeed
+    var tagertUrl =  'https://www.bola.net/otomotif/gandeng-valentino-rossi-dan-maverick-vinales-yamaha-akhirnya-launching-aplikasi-y-connect-plus-harga.html?1584944566';
+    var impressionTracker =  '';
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 18));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 19));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(7, 11));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(8, 11));
+    if( tagertUrl.substr(0, 7)=="http://"  && tagertUrl.substr(0, 18)!="http://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    if( tagertUrl.substr(0, 8)=="https://"  && tagertUrl.substr(0, 19)!="https://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    
+    
+    var noTracker = 'FALSE';
+    
+    if(noTracker=='TRUE'){
+       var creativeConf2042521224 = {        
+            landingpage : LPWrapper + 'https://www.bola.net/otomotif/gandeng-valentino-rossi-dan-maverick-vinales-yamaha-akhirnya-launching-aplikasi-y-connect-plus-harga.html?1584944566',
+            articleText : "Hadirkan Valentino Rossi dan Maverick Vinales, Yamaha Rilis Aplikasi Y-Connect",
+            imageUrl    : 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnqtbaZRABGAEyCFUHrVuenFSU&b2s=false',
+            articleLabel: 'Otomotif'
+        };
+    }else{
+        var creativeConf2042521224 = {        
+            landingpage : 'https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjstc1dSaxnkF-YhyNkgi66rZdf8NVDlc4D6fJs1dAn0UH30EPbgTcOvsEAx98MIJWcnwXvn-WcwmYiyy7resggOcLnyEGNt80JXym8-Slb853-3wplGjwY_DrWu_G7gQFbtde42PWFVRzaowqJ3dtsYLG_c8cYKoGC95hD83eb9ELKke9TTqHDUKeL4Ccx8rZyldy2ZNmdUrZRPP7fW_QRjBLwcwzufYV8u0Y3o-1a--BxT7-YEuJlfPDdYOl8zxhyEVfPsF0bNUrzzLz5bz7g_NqRGReW2R0BA%2526sig%253DCg0ArKJSzIUyVvxNm_w0EAE%2526urlfix%253D1%2526adurl%253D' +  LPWrapper + 'https://www.bola.net/otomotif/gandeng-valentino-rossi-dan-maverick-vinales-yamaha-akhirnya-launching-aplikasi-y-connect-plus-harga.html?1584944566',
+            articleText : "Hadirkan Valentino Rossi dan Maverick Vinales, Yamaha Rilis Aplikasi Y-Connect",
+            imageUrl    : 'https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsswmDC6nT-GxoOGuFyqZtRCuwa7_ojrGU_7LAgsSa3L7-iHw31WuLflHbMquJVGM-7dFhIbAkPO-1GucJcpa5-4Hzy-618O7L_VquB7ECi6LSeIi0uObk4J0kaxHtHKQ6jorvmEvfHA6kJJnJrQKHCSu1cks-Rm7-fO1oEvODs9jPfU5fw18l8mNwtuo5zQTMsAXOexZqUaqAjhWvXr3bzl-V77n07JWBRPeLA7zVk_svfdHHqslxigqQPuw6HveeQCefpzEIl9Qg8Rl1-1qs7tgJMwEyKuxNy5ZiY8C60&sig=Cg0ArKJSzEvQ9HKkg7hCEAE&urlfix=1&adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnqtbaZRABGAEyCFUHrVuenFSU&b2s=false',
+            articleLabel: 'Otomotif'
+        };
+    } 
+        //console.log('creativeConf2042521224 : ', creativeConf2042521224);
+
+    var adsTemplate2042521224 = init_defaultCreative();
+    
+    //console.log("infeedConf2042521224 : "+infeedConf2042521224);
+    if(infeedConf2042521224 != null)
+    {
+        if(infeedConf2042521224.useCustomTemplate=="1"){
+           // console.log('use custom template');
+            var infeedTemplateID = topparentID.replace("infeed", "infeedTemplate") + inf_Platform;
+            //console.log('infeedTemplateID : '+infeedTemplateID);
+            if(parent.document.getElementById(infeedTemplateID)!=null)
+            {
+                var adsTemplate2042521224 = parent.document.getElementById(infeedTemplateID).innerHTML;
+                //console.log(adsTemplate2042521224);
+                for (key in creativeConf2042521224) {
+                    //console.log(key);
+                    adsTemplate2042521224 = adsTemplate2042521224.split("%%"+key+"%%").join(creativeConf2042521224[key]);
+                }
+               //console.log(adsTemplate2042521224);
+            }
+        }
+    }
+    
+    
+    /*Write ads*/
+    var node = parent.document.getElementById(currentID);
+    node.style.position = "absolute";
+    var creativeContainer = document.createElement('div');
+    creativeContainer.setAttribute('id', currentID+'-cont');
+    node.parentNode.insertBefore(creativeContainer, node);
+    
+    parent.document.getElementById(currentID+'-cont').innerHTML = adsTemplate2042521224;
+    
+    
+    
+    function extractDomain(i){var t;return t=i.indexOf("://")>-1?i.split("/")[2]:i.split("/")[0],t=t.split(":")[0],subdomain=t.split(".")[0],t=t.replace(subdomain+".","")}
+    function init_defaultCreative()
+    {
+
+        if(inf_Platform=='_desktop' || inf_Platform=='desktop')
+        {
+            var cssStyle = '' +
+            '<style>/*DESKTOP*/  .inf-cont { padding: 10px 5px; text-align: left  }  .inf-wrapper { padding: 0; min-height: 60px  }  .inf-img { margin: 0 0 5px 0;  }  .inf-img a { background-color: transparent; border-bottom: 0; padding: 0; overflow: hidden; display: block;  }  .inf-img a img { width: 100%;  }  .inf-text {}  .inf-text span { font: normal 12px arial; color: #a3a3a3; line-height: 25px;  }.inf-text div { font: bold 14px arial; margin: 0  }  .inf-text div a { font: bold 14px arial; padding: 0; text-decoration: none; background-color: transparent; color: #000; border: 0; font-weight: normal  }</style>';
+        }else{
+
+            var cssStyle = '' +
+            '<style>.inf-cont{padding:10px 5px;border-bottom:1px solid #ececec;text-align:left}.inf-wrapper{padding:0;min-height:60px}.inf-img{float:left;margin:0 10px 0 0}.inf-img a{background-color:transparent;border-bottom:0;padding:0}.inf-img a img{width:120px !important;}.inf-text{margin-left:130px}.inf-text span{font:normal 12px arial;color:#a3a3a3}.inf-text div{font:bold 15px arial;margin:0}.inf-text div a{font:bold 15px arial;padding:0;text-decoration:none;background-color:transparent;color:#000;border:0;font-weight:normal}</style>';
+        }     
+            var creative = cssStyle +  '<div class="inf-cont">' +  
+                '<div class="inf-wrapper">' + 
+                    '<div class="inf-img">' +
+                        '<a  rel="nofollow" href="'+creativeConf2042521224.landingpage+'"><img src="'+creativeConf2042521224.imageUrl+'" alt="'+creativeConf2042521224.articleText+'"></a>' + 
+                    '</div>' + 
+                    '<div class="inf-text">' +
+                        '<span>'+creativeConf2042521224.articleLabel+'</span>' +
+                        '<div>' +
+                            '<div><a  rel="nofollow" href="'+creativeConf2042521224.landingpage+'">'+creativeConf2042521224.articleText+'</a></div>' +
+                        '</div>' + 
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        
+        if(impressionTracker != '') creative += '<img src="' + impressionTracker  + '" style="display:none; visibility:hidden;" width="0" height="0" />'; 
+
+        return creative;
+    }
+    
+
+}else{
+    //console.log('templateID defined, load NEW creative template ');
+
+    var resParam2042521224 = {
+        "image" : "https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnqtbaZRABGAEyCFUHrVuenFSU&b2s=false",
+        "label" : "Otomotif",
+        "text"  : "Hadirkan Valentino Rossi dan Maverick Vinales, Yamaha Rilis Aplikasi Y-Connect",
+        "desc"  : "Aplikasi Y-Connect merupakan inovasi Yamaha yang membuat pengendara dapat terkoneksi dengan All New Nmax 155 Connected/ABS.",
+        "link"  : "https://www.bola.net/otomotif/gandeng-valentino-rossi-dan-maverick-vinales-yamaha-akhirnya-launching-aplikasi-y-connect-plus-harga.html?1584944566", 
+        "target": "new_tab", 
+        "no_tracker"        : "FALSE",
+        "dfp_impr_tracker"  : "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsswmDC6nT-GxoOGuFyqZtRCuwa7_ojrGU_7LAgsSa3L7-iHw31WuLflHbMquJVGM-7dFhIbAkPO-1GucJcpa5-4Hzy-618O7L_VquB7ECi6LSeIi0uObk4J0kaxHtHKQ6jorvmEvfHA6kJJnJrQKHCSu1cks-Rm7-fO1oEvODs9jPfU5fw18l8mNwtuo5zQTMsAXOexZqUaqAjhWvXr3bzl-V77n07JWBRPeLA7zVk_svfdHHqslxigqQPuw6HveeQCefpzEIl9Qg8Rl1-1qs7tgJMwEyKuxNy5ZiY8C60&sig=Cg0ArKJSzEvQ9HKkg7hCEAE&urlfix=1&adurl=",
+        "dfp_click_tracker" : "https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjstc1dSaxnkF-YhyNkgi66rZdf8NVDlc4D6fJs1dAn0UH30EPbgTcOvsEAx98MIJWcnwXvn-WcwmYiyy7resggOcLnyEGNt80JXym8-Slb853-3wplGjwY_DrWu_G7gQFbtde42PWFVRzaowqJ3dtsYLG_c8cYKoGC95hD83eb9ELKke9TTqHDUKeL4Ccx8rZyldy2ZNmdUrZRPP7fW_QRjBLwcwzufYV8u0Y3o-1a--BxT7-YEuJlfPDdYOl8zxhyEVfPsF0bNUrzzLz5bz7g_NqRGReW2R0BA%2526sig%253DCg0ArKJSzIUyVvxNm_w0EAE%2526urlfix%253D1%2526adurl%253D",
+        "3rd_impression_tracker" : "",
+        "3rd_click_tracker" : "",
+        "adunitID" : '/36504930/infeed.id/m.bola.net/dfp-natAds-2'
+    };
+    
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    var templateID = parent.getTemplateID();
+        //console.log('templateID : '+templateID );
+    parent.setResParam(topparentID, resParam2042521224);
+
+}
+</script>
+</div><div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB7SURBVBjTbZCBEcAgCANhg+w/bStJQGtR7qR8QzTiP5KxTkeF6kIHV7mIRdbu6u0AiFqYyn0yO21NctLW7LSynHQAh2/alZkwik4ubumS7imUhHGxNWXud/uwqrJ9f7z4XmhxnC+YHJTm0BxsZOjy4Ny09eT1ZZzk9sMD4VEFTwqqPVYAAAAASUVORK5CYII=&#39;) !important;"></div></body></html>

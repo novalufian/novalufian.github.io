@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://m.kapanlagi.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline"><script>
+
+var templateID = 'undefined';
+if (typeof parent.getTemplateID === "function") var templateID = parent.getTemplateID();
+
+if(templateID==='undefined')
+{
+    //console.log('templateID undefined, load OLD creative template ');
+
+
+    var campaign_creativeID = '5333736616_138307364302';
+        //console.log('macro LI + Creative : '+campaign_creativeID);
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    
+    var infeedConfID = topparentID.replace("infeed", "infeedConf");
+    
+    var infeedConf765750862 = null;
+    var LPWrapper = "";
+    var domainSite = "";
+    var inf_Platform = ""; //default to mobile
+    if(parent.document.getElementById(infeedConfID)!=null)
+    {
+        var infeedConf765750862 = parent.document.getElementById(infeedConfID).innerHTML;
+    }
+
+    if(infeedConf765750862 != null)
+    {
+        try {
+            infeedConf765750862 = JSON.parse(infeedConf765750862);
+        } catch (exception) {
+            infeedConf765750862 = null;
+        }
+        
+        if( infeedConf765750862 === Object(infeedConf765750862) )
+        {
+            //console.log('infeedConf765750862 : ', infeedConf765750862);
+        
+            if(infeedConf765750862.domainSite) domainSite = infeedConf765750862.domainSite;
+            if(infeedConf765750862.wrapperPage){ 
+                  LPWrapper = infeedConf765750862.wrapperPage;
+                  LPWrapper += '?utm_domain='+domainSite+'&utm_url=';
+            }
+            if(infeedConf765750862.platform) inf_Platform = '_' + infeedConf765750862.platform;
+            if(inf_Platform == '_mobile')  inf_Platform =''; //reset platform to default if request came from mobile
+            
+            //console.log(domainSite+'!='+extractDomain(LPWrapper));
+            //console.log('LPWrapper : '+LPWrapper);
+        }
+    }
+        
+    //override wrapper page if landing page not from infeed
+    var tagertUrl =  'https://plus.kapanlagi.com/sikatgigimalam-serentak-jadi-puncak-perayaan-hari-kesehatan-gigi-dan-mulut-sedunia-gimana-keseruannya-f5d131.html';
+    var impressionTracker =  '';
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 18));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 19));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(7, 11));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(8, 11));
+    if( tagertUrl.substr(0, 7)=="http://"  && tagertUrl.substr(0, 18)!="http://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    if( tagertUrl.substr(0, 8)=="https://"  && tagertUrl.substr(0, 19)!="https://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    
+    
+    var noTracker = 'FALSE';
+    
+    if(noTracker=='TRUE'){
+       var creativeConf765750862 = {        
+            landingpage : LPWrapper + 'https://plus.kapanlagi.com/sikatgigimalam-serentak-jadi-puncak-perayaan-hari-kesehatan-gigi-dan-mulut-sedunia-gimana-keseruannya-f5d131.html',
+            articleText : "#SikatGigiMalam Serentak Jadi Puncak Perayaan Hari Kesehatan Gigi dan Mulut Sedunia, Gimana Serunya?",
+            imageUrl    : 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn6rvXiwEQARgBMgjWGuEQ9tw41Q&b2s=false',
+            articleLabel: 'Healthy'
+        };
+    }else{
+        var creativeConf765750862 = {        
+            landingpage : 'https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsufdvCgxGuXgDtcCP5faDzUCSINlveFSKX04vS42Sf8TKlhxSB6YBueQq3laLlyYVHLkHtz5_V2I6zZS4BEJ7xo2vUtDKFbTI0vfVayTOuBSmsHZj3L5L-MrW8SFoMYmjONg-J_gl6ijsxe6zU5-olmBrv6JcCkI1u8afJiZYuFez5tjrASHCh9pL8rMWIJKWEnPEa8teVOFGSGuZR3X4CPAZVIH9KVGWhfgCpuuyaBm1_tEbv-VEkqudh6OEo70Tb8Tw1DL3JQXYYJoUvcOk1ELOzeZmdCuy7I1kjvWQAJYg%2526sig%253DCg0ArKJSzEXK63flhlbUEAE%2526urlfix%253D1%2526adurl%253D' +  LPWrapper + 'https://plus.kapanlagi.com/sikatgigimalam-serentak-jadi-puncak-perayaan-hari-kesehatan-gigi-dan-mulut-sedunia-gimana-keseruannya-f5d131.html',
+            articleText : "#SikatGigiMalam Serentak Jadi Puncak Perayaan Hari Kesehatan Gigi dan Mulut Sedunia, Gimana Serunya?",
+            imageUrl    : 'https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjssdvVm3WKyK_QQx_j8q8Xz80wn7zPTDWpoybCG5Hj57wQc-H1Gm0ZYKjGb5Sgb0fQIn9JofIZoLgba-BAkHbeC76nryGI6wFjtW-ep9P_BG3ArE0rctvoGRrnE_KUGMoCVvQTIIKHuXmO0xPA4F0jUCxCJsq0_IsYTiiCmZuQt2XaYHxt5AWJYAo7R_eylrd5tE5HcL3k-Dg2tyFyPDXkq2q7fHqFgfaF28OPw3fzhClLjfhVuCIXUAd5DXWx11Y_q9Uq9C453kAgb3IQn9SmzVZ0lc8gJIztfRaVQ3VMXLJrQMActYDA&sig=Cg0ArKJSzDi8d_dnZLTyEAE&urlfix=1&adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn6rvXiwEQARgBMgjWGuEQ9tw41Q&b2s=false',
+            articleLabel: 'Healthy'
+        };
+    } 
+        //console.log('creativeConf765750862 : ', creativeConf765750862);
+
+    var adsTemplate765750862 = init_defaultCreative();
+    
+    //console.log("infeedConf765750862 : "+infeedConf765750862);
+    if(infeedConf765750862 != null)
+    {
+        if(infeedConf765750862.useCustomTemplate=="1"){
+           // console.log('use custom template');
+            var infeedTemplateID = topparentID.replace("infeed", "infeedTemplate") + inf_Platform;
+            //console.log('infeedTemplateID : '+infeedTemplateID);
+            if(parent.document.getElementById(infeedTemplateID)!=null)
+            {
+                var adsTemplate765750862 = parent.document.getElementById(infeedTemplateID).innerHTML;
+                //console.log(adsTemplate765750862);
+                for (key in creativeConf765750862) {
+                    //console.log(key);
+                    adsTemplate765750862 = adsTemplate765750862.split("%%"+key+"%%").join(creativeConf765750862[key]);
+                }
+               //console.log(adsTemplate765750862);
+            }
+        }
+    }
+    
+    
+    /*Write ads*/
+    var node = parent.document.getElementById(currentID);
+    node.style.position = "absolute";
+    var creativeContainer = document.createElement('div');
+    creativeContainer.setAttribute('id', currentID+'-cont');
+    node.parentNode.insertBefore(creativeContainer, node);
+    
+    parent.document.getElementById(currentID+'-cont').innerHTML = adsTemplate765750862;
+    
+    
+    
+    function extractDomain(i){var t;return t=i.indexOf("://")>-1?i.split("/")[2]:i.split("/")[0],t=t.split(":")[0],subdomain=t.split(".")[0],t=t.replace(subdomain+".","")}
+    function init_defaultCreative()
+    {
+
+        if(inf_Platform=='_desktop' || inf_Platform=='desktop')
+        {
+            var cssStyle = '' +
+            '<style>/*DESKTOP*/  .inf-cont { padding: 10px 5px; text-align: left  }  .inf-wrapper { padding: 0; min-height: 60px  }  .inf-img { margin: 0 0 5px 0;  }  .inf-img a { background-color: transparent; border-bottom: 0; padding: 0; overflow: hidden; display: block;  }  .inf-img a img { width: 100%;  }  .inf-text {}  .inf-text span { font: normal 12px arial; color: #a3a3a3; line-height: 25px;  }.inf-text div { font: bold 14px arial; margin: 0  }  .inf-text div a { font: bold 14px arial; padding: 0; text-decoration: none; background-color: transparent; color: #000; border: 0; font-weight: normal  }</style>';
+        }else{
+
+            var cssStyle = '' +
+            '<style>.inf-cont{padding:10px 5px;border-bottom:1px solid #ececec;text-align:left}.inf-wrapper{padding:0;min-height:60px}.inf-img{float:left;margin:0 10px 0 0}.inf-img a{background-color:transparent;border-bottom:0;padding:0}.inf-img a img{width:120px !important;}.inf-text{margin-left:130px}.inf-text span{font:normal 12px arial;color:#a3a3a3}.inf-text div{font:bold 15px arial;margin:0}.inf-text div a{font:bold 15px arial;padding:0;text-decoration:none;background-color:transparent;color:#000;border:0;font-weight:normal}</style>';
+        }     
+            var creative = cssStyle +  '<div class="inf-cont">' +  
+                '<div class="inf-wrapper">' + 
+                    '<div class="inf-img">' +
+                        '<a  rel="nofollow" href="'+creativeConf765750862.landingpage+'"><img src="'+creativeConf765750862.imageUrl+'" alt="'+creativeConf765750862.articleText+'"></a>' + 
+                    '</div>' + 
+                    '<div class="inf-text">' +
+                        '<span>'+creativeConf765750862.articleLabel+'</span>' +
+                        '<div>' +
+                            '<div><a  rel="nofollow" href="'+creativeConf765750862.landingpage+'">'+creativeConf765750862.articleText+'</a></div>' +
+                        '</div>' + 
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        
+        if(impressionTracker != '') creative += '<img src="' + impressionTracker  + '" style="display:none; visibility:hidden;" width="0" height="0" />'; 
+
+        return creative;
+    }
+    
+
+}else{
+    //console.log('templateID defined, load NEW creative template ');
+
+    var resParam765750862 = {
+        "image" : "https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn6rvXiwEQARgBMgjWGuEQ9tw41Q&b2s=false",
+        "label" : "Healthy",
+        "text"  : "#SikatGigiMalam Serentak Jadi Puncak Perayaan Hari Kesehatan Gigi dan Mulut Sedunia, Gimana Serunya?",
+        "desc"  : "Intip keseruan perayaan Hari Kesehatan Gigi dan Mulut Sedunia yuk!",
+        "link"  : "https://plus.kapanlagi.com/sikatgigimalam-serentak-jadi-puncak-perayaan-hari-kesehatan-gigi-dan-mulut-sedunia-gimana-keseruannya-f5d131.html", 
+        "target": "new_tab", 
+        "no_tracker"        : "FALSE",
+        "dfp_impr_tracker"  : "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjssdvVm3WKyK_QQx_j8q8Xz80wn7zPTDWpoybCG5Hj57wQc-H1Gm0ZYKjGb5Sgb0fQIn9JofIZoLgba-BAkHbeC76nryGI6wFjtW-ep9P_BG3ArE0rctvoGRrnE_KUGMoCVvQTIIKHuXmO0xPA4F0jUCxCJsq0_IsYTiiCmZuQt2XaYHxt5AWJYAo7R_eylrd5tE5HcL3k-Dg2tyFyPDXkq2q7fHqFgfaF28OPw3fzhClLjfhVuCIXUAd5DXWx11Y_q9Uq9C453kAgb3IQn9SmzVZ0lc8gJIztfRaVQ3VMXLJrQMActYDA&sig=Cg0ArKJSzDi8d_dnZLTyEAE&urlfix=1&adurl=",
+        "dfp_click_tracker" : "https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsufdvCgxGuXgDtcCP5faDzUCSINlveFSKX04vS42Sf8TKlhxSB6YBueQq3laLlyYVHLkHtz5_V2I6zZS4BEJ7xo2vUtDKFbTI0vfVayTOuBSmsHZj3L5L-MrW8SFoMYmjONg-J_gl6ijsxe6zU5-olmBrv6JcCkI1u8afJiZYuFez5tjrASHCh9pL8rMWIJKWEnPEa8teVOFGSGuZR3X4CPAZVIH9KVGWhfgCpuuyaBm1_tEbv-VEkqudh6OEo70Tb8Tw1DL3JQXYYJoUvcOk1ELOzeZmdCuy7I1kjvWQAJYg%2526sig%253DCg0ArKJSzEXK63flhlbUEAE%2526urlfix%253D1%2526adurl%253D",
+        "3rd_impression_tracker" : "",
+        "3rd_click_tracker" : "",
+        "adunitID" : '/36504930/infeed.id/m.kapanlagi.com/dfp-natAds-2'
+    };
+    
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    var templateID = parent.getTemplateID();
+        //console.log('templateID : '+templateID );
+    parent.setResParam(topparentID, resParam765750862);
+
+}
+</script>
+</div><div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB5SURBVBjTbZEBDoBQCELpBtz/tC1EPrWs2ewbPgn4j2sCe08FUKd8Lp5KHSf7qT7S+VQ5l2J3R7uqkKyySSrY3GJPiXSriSKwdLS9pNNLc1mGeyesQV+MsyyL1PoYgWw5ZvhNexf98kzS/Pq9Fi41m2Mm9L/0d5qGG/lpBXEngtBgAAAAAElFTkSuQmCC&#39;) !important;"></div></body></html>

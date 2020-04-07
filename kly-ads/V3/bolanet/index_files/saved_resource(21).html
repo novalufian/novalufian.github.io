@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0019)https://m.bola.net/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline"><script>
+
+var templateID = 'undefined';
+if (typeof parent.getTemplateID === "function") var templateID = parent.getTemplateID();
+
+if(templateID==='undefined')
+{
+    //console.log('templateID undefined, load OLD creative template ');
+
+
+    var campaign_creativeID = '5340841425_138308006118';
+        //console.log('macro LI + Creative : '+campaign_creativeID);
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    
+    var infeedConfID = topparentID.replace("infeed", "infeedConf");
+    
+    var infeedConf230117878 = null;
+    var LPWrapper = "";
+    var domainSite = "";
+    var inf_Platform = ""; //default to mobile
+    if(parent.document.getElementById(infeedConfID)!=null)
+    {
+        var infeedConf230117878 = parent.document.getElementById(infeedConfID).innerHTML;
+    }
+
+    if(infeedConf230117878 != null)
+    {
+        try {
+            infeedConf230117878 = JSON.parse(infeedConf230117878);
+        } catch (exception) {
+            infeedConf230117878 = null;
+        }
+        
+        if( infeedConf230117878 === Object(infeedConf230117878) )
+        {
+            //console.log('infeedConf230117878 : ', infeedConf230117878);
+        
+            if(infeedConf230117878.domainSite) domainSite = infeedConf230117878.domainSite;
+            if(infeedConf230117878.wrapperPage){ 
+                  LPWrapper = infeedConf230117878.wrapperPage;
+                  LPWrapper += '?utm_domain='+domainSite+'&utm_url=';
+            }
+            if(infeedConf230117878.platform) inf_Platform = '_' + infeedConf230117878.platform;
+            if(inf_Platform == '_mobile')  inf_Platform =''; //reset platform to default if request came from mobile
+            
+            //console.log(domainSite+'!='+extractDomain(LPWrapper));
+            //console.log('LPWrapper : '+LPWrapper);
+        }
+    }
+        
+    //override wrapper page if landing page not from infeed
+    var tagertUrl =  'https://plus.kapanlagi.com/evolusi-kamera-handphone-dari-vga-ke-108mp-kamu-sudah-di-level-yang-mana-c2b819.html';
+    var impressionTracker =  '';
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 18));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 19));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(7, 11));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(8, 11));
+    if( tagertUrl.substr(0, 7)=="http://"  && tagertUrl.substr(0, 18)!="http://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    if( tagertUrl.substr(0, 8)=="https://"  && tagertUrl.substr(0, 19)!="https://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    
+    
+    var noTracker = 'FALSE';
+    
+    if(noTracker=='TRUE'){
+       var creativeConf230117878 = {        
+            landingpage : LPWrapper + 'https://plus.kapanlagi.com/evolusi-kamera-handphone-dari-vga-ke-108mp-kamu-sudah-di-level-yang-mana-c2b819.html',
+            articleText : "Perkembangan Kamera Handphone dari Masa ke Masa, Bisa Tebak yang Paling Awal?",
+            imageUrl    : 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn5rad6QEQARgBMgjSn7MVgrG0Bw&b2s=false',
+            articleLabel: 'Gadget'
+        };
+    }else{
+        var creativeConf230117878 = {        
+            landingpage : 'https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsvSbNnagvH2Dv5r1N09e6yEW1nksnmyha_UhVpEisKG1IorDBReeABmV2NQfqA_9DpM3Gp_o4-JWv7YBaP2B87dXFQggERbCozEZxhV3Y-lNnYUNtB5Chb0zZdGVnmnkyP6lZk_JdH86IlSIz-sfDtIcLIcKMuKPyDaBXcJeeSPGnq4SSUTXK_L58pQYwBc-Q2euQyXoU1sTuwLBCQLfx7K3HKOCP1bsgKF6wlWLBwTmE29PvrxT5zp1Z-GUVrrqMXTsRvccJNkYAddxPwmQ15T2sVHDmegg1o%2526sig%253DCg0ArKJSzGo8ueMdCBPpEAE%2526urlfix%253D1%2526adurl%253D' +  LPWrapper + 'https://plus.kapanlagi.com/evolusi-kamera-handphone-dari-vga-ke-108mp-kamu-sudah-di-level-yang-mana-c2b819.html',
+            articleText : "Perkembangan Kamera Handphone dari Masa ke Masa, Bisa Tebak yang Paling Awal?",
+            imageUrl    : 'https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjss2GhyGpX2giQf3laz0Cna0x6CqaI6p9d3pDLHbGWXcapIgWov8TIG9mNGfkXttQpO1ncGdAg--gn-dOpLuiwqUMgkYmXkz69zhcB87x4a5JtMVXsq684qCIUiBzpvZUg14m1k1H6MfOaRoqosauKIeUeoTMHtN0y_WMSwfcq4pnzQXCkEC6Qf5wn5lntAOjy92OIwZWKWlCJol5OB9jBuOziVnapi187HmuwE0hKf6ucKORpu2wP5e0XfCj7xyPZFpy7fzywz0p_7JQ8ZAD5zFSQwGcTZDRzEt8XayY1A&sig=Cg0ArKJSzOb1bVbvmLefEAE&urlfix=1&adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn5rad6QEQARgBMgjSn7MVgrG0Bw&b2s=false',
+            articleLabel: 'Gadget'
+        };
+    } 
+        //console.log('creativeConf230117878 : ', creativeConf230117878);
+
+    var adsTemplate230117878 = init_defaultCreative();
+    
+    //console.log("infeedConf230117878 : "+infeedConf230117878);
+    if(infeedConf230117878 != null)
+    {
+        if(infeedConf230117878.useCustomTemplate=="1"){
+           // console.log('use custom template');
+            var infeedTemplateID = topparentID.replace("infeed", "infeedTemplate") + inf_Platform;
+            //console.log('infeedTemplateID : '+infeedTemplateID);
+            if(parent.document.getElementById(infeedTemplateID)!=null)
+            {
+                var adsTemplate230117878 = parent.document.getElementById(infeedTemplateID).innerHTML;
+                //console.log(adsTemplate230117878);
+                for (key in creativeConf230117878) {
+                    //console.log(key);
+                    adsTemplate230117878 = adsTemplate230117878.split("%%"+key+"%%").join(creativeConf230117878[key]);
+                }
+               //console.log(adsTemplate230117878);
+            }
+        }
+    }
+    
+    
+    /*Write ads*/
+    var node = parent.document.getElementById(currentID);
+    node.style.position = "absolute";
+    var creativeContainer = document.createElement('div');
+    creativeContainer.setAttribute('id', currentID+'-cont');
+    node.parentNode.insertBefore(creativeContainer, node);
+    
+    parent.document.getElementById(currentID+'-cont').innerHTML = adsTemplate230117878;
+    
+    
+    
+    function extractDomain(i){var t;return t=i.indexOf("://")>-1?i.split("/")[2]:i.split("/")[0],t=t.split(":")[0],subdomain=t.split(".")[0],t=t.replace(subdomain+".","")}
+    function init_defaultCreative()
+    {
+
+        if(inf_Platform=='_desktop' || inf_Platform=='desktop')
+        {
+            var cssStyle = '' +
+            '<style>/*DESKTOP*/  .inf-cont { padding: 10px 5px; text-align: left  }  .inf-wrapper { padding: 0; min-height: 60px  }  .inf-img { margin: 0 0 5px 0;  }  .inf-img a { background-color: transparent; border-bottom: 0; padding: 0; overflow: hidden; display: block;  }  .inf-img a img { width: 100%;  }  .inf-text {}  .inf-text span { font: normal 12px arial; color: #a3a3a3; line-height: 25px;  }.inf-text div { font: bold 14px arial; margin: 0  }  .inf-text div a { font: bold 14px arial; padding: 0; text-decoration: none; background-color: transparent; color: #000; border: 0; font-weight: normal  }</style>';
+        }else{
+
+            var cssStyle = '' +
+            '<style>.inf-cont{padding:10px 5px;border-bottom:1px solid #ececec;text-align:left}.inf-wrapper{padding:0;min-height:60px}.inf-img{float:left;margin:0 10px 0 0}.inf-img a{background-color:transparent;border-bottom:0;padding:0}.inf-img a img{width:120px !important;}.inf-text{margin-left:130px}.inf-text span{font:normal 12px arial;color:#a3a3a3}.inf-text div{font:bold 15px arial;margin:0}.inf-text div a{font:bold 15px arial;padding:0;text-decoration:none;background-color:transparent;color:#000;border:0;font-weight:normal}</style>';
+        }     
+            var creative = cssStyle +  '<div class="inf-cont">' +  
+                '<div class="inf-wrapper">' + 
+                    '<div class="inf-img">' +
+                        '<a  rel="nofollow" href="'+creativeConf230117878.landingpage+'"><img src="'+creativeConf230117878.imageUrl+'" alt="'+creativeConf230117878.articleText+'"></a>' + 
+                    '</div>' + 
+                    '<div class="inf-text">' +
+                        '<span>'+creativeConf230117878.articleLabel+'</span>' +
+                        '<div>' +
+                            '<div><a  rel="nofollow" href="'+creativeConf230117878.landingpage+'">'+creativeConf230117878.articleText+'</a></div>' +
+                        '</div>' + 
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        
+        if(impressionTracker != '') creative += '<img src="' + impressionTracker  + '" style="display:none; visibility:hidden;" width="0" height="0" />'; 
+
+        return creative;
+    }
+    
+
+}else{
+    //console.log('templateID defined, load NEW creative template ');
+
+    var resParam230117878 = {
+        "image" : "https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDn5rad6QEQARgBMgjSn7MVgrG0Bw&b2s=false",
+        "label" : "Gadget",
+        "text"  : "Perkembangan Kamera Handphone dari Masa ke Masa, Bisa Tebak yang Paling Awal?",
+        "desc"  : "Yuk, flashback evolusi kamera handphone dari masa ke masa dulu, kamu sekarang sudah ada di level yang mana nih? ",
+        "link"  : "https://plus.kapanlagi.com/evolusi-kamera-handphone-dari-vga-ke-108mp-kamu-sudah-di-level-yang-mana-c2b819.html", 
+        "target": "new_tab", 
+        "no_tracker"        : "FALSE",
+        "dfp_impr_tracker"  : "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjss2GhyGpX2giQf3laz0Cna0x6CqaI6p9d3pDLHbGWXcapIgWov8TIG9mNGfkXttQpO1ncGdAg--gn-dOpLuiwqUMgkYmXkz69zhcB87x4a5JtMVXsq684qCIUiBzpvZUg14m1k1H6MfOaRoqosauKIeUeoTMHtN0y_WMSwfcq4pnzQXCkEC6Qf5wn5lntAOjy92OIwZWKWlCJol5OB9jBuOziVnapi187HmuwE0hKf6ucKORpu2wP5e0XfCj7xyPZFpy7fzywz0p_7JQ8ZAD5zFSQwGcTZDRzEt8XayY1A&sig=Cg0ArKJSzOb1bVbvmLefEAE&urlfix=1&adurl=",
+        "dfp_click_tracker" : "https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsvSbNnagvH2Dv5r1N09e6yEW1nksnmyha_UhVpEisKG1IorDBReeABmV2NQfqA_9DpM3Gp_o4-JWv7YBaP2B87dXFQggERbCozEZxhV3Y-lNnYUNtB5Chb0zZdGVnmnkyP6lZk_JdH86IlSIz-sfDtIcLIcKMuKPyDaBXcJeeSPGnq4SSUTXK_L58pQYwBc-Q2euQyXoU1sTuwLBCQLfx7K3HKOCP1bsgKF6wlWLBwTmE29PvrxT5zp1Z-GUVrrqMXTsRvccJNkYAddxPwmQ15T2sVHDmegg1o%2526sig%253DCg0ArKJSzGo8ueMdCBPpEAE%2526urlfix%253D1%2526adurl%253D",
+        "3rd_impression_tracker" : "",
+        "3rd_click_tracker" : "",
+        "adunitID" : '/36504930/infeed.id/m.bola.net/dfp-natAds-5'
+    };
+    
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    var templateID = parent.getTemplateID();
+        //console.log('templateID : '+templateID );
+    parent.setResParam(topparentID, resParam230117878);
+
+}
+</script>
+</div><div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB+SURBVBjTbZAJDoBACAPLD/r/1xqgVDBu1oM41FmA/xW9EKitCmB9ZW7SVaDZ4l01RKNTmQ4/cbL1A2XbxD1l4sVM3d4Ykzbv7LHN5BZpHu9Bk16RnNdsyMsssNK3yEym6IHjOvPc1bOmME74TJCusOatE8fNloJ0PEGZN/wAZ2AFz2ScPo4AAAAASUVORK5CYII=&#39;) !important;"></div></body></html>

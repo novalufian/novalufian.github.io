@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://m.merdeka.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline"><script>
+
+var templateID = 'undefined';
+if (typeof parent.getTemplateID === "function") var templateID = parent.getTemplateID();
+
+if(templateID==='undefined')
+{
+    //console.log('templateID undefined, load OLD creative template ');
+
+
+    var campaign_creativeID = '5340246131_138308206924';
+        //console.log('macro LI + Creative : '+campaign_creativeID);
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    
+    var infeedConfID = topparentID.replace("infeed", "infeedConf");
+    
+    var infeedConf1287798032 = null;
+    var LPWrapper = "";
+    var domainSite = "";
+    var inf_Platform = ""; //default to mobile
+    if(parent.document.getElementById(infeedConfID)!=null)
+    {
+        var infeedConf1287798032 = parent.document.getElementById(infeedConfID).innerHTML;
+    }
+
+    if(infeedConf1287798032 != null)
+    {
+        try {
+            infeedConf1287798032 = JSON.parse(infeedConf1287798032);
+        } catch (exception) {
+            infeedConf1287798032 = null;
+        }
+        
+        if( infeedConf1287798032 === Object(infeedConf1287798032) )
+        {
+            //console.log('infeedConf1287798032 : ', infeedConf1287798032);
+        
+            if(infeedConf1287798032.domainSite) domainSite = infeedConf1287798032.domainSite;
+            if(infeedConf1287798032.wrapperPage){ 
+                  LPWrapper = infeedConf1287798032.wrapperPage;
+                  LPWrapper += '?utm_domain='+domainSite+'&utm_url=';
+            }
+            if(infeedConf1287798032.platform) inf_Platform = '_' + infeedConf1287798032.platform;
+            if(inf_Platform == '_mobile')  inf_Platform =''; //reset platform to default if request came from mobile
+            
+            //console.log(domainSite+'!='+extractDomain(LPWrapper));
+            //console.log('LPWrapper : '+LPWrapper);
+        }
+    }
+        
+    //override wrapper page if landing page not from infeed
+    var tagertUrl =  'https://d.infeed.id/article/5-kebaikan-buah-jambu-yang-jarang-disadari-salah-satunya-bisa-cegah-covid-19-4545.html';
+    var impressionTracker =  '';
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 18));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(0, 19));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(7, 11));
+    //console.log( "cek targetUrl = " + tagertUrl.substr(8, 11));
+    if( tagertUrl.substr(0, 7)=="http://"  && tagertUrl.substr(0, 18)!="http://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    if( tagertUrl.substr(0, 8)=="https://"  && tagertUrl.substr(0, 19)!="https://d.infeed.id" ){
+        LPWrapper  = "";
+    }
+    
+    
+    var noTracker = 'FALSE';
+    
+    if(noTracker=='TRUE'){
+       var creativeConf1287798032 = {        
+            landingpage : LPWrapper + 'https://d.infeed.id/article/5-kebaikan-buah-jambu-yang-jarang-disadari-salah-satunya-bisa-cegah-covid-19-4545.html',
+            articleText : "5 Kebaikan Buah Jambu, Bisa Cegah Covid-19 Juga Lho",
+            imageUrl    : 'https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnpuS9OBABGAEyCB3Aa4l3SWw7&b2s=false',
+            articleLabel: 'Healthy'
+        };
+    }else{
+        var creativeConf1287798032 = {        
+            landingpage : 'https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsv8OkXmV59vC0j6EYbE1zFGyF2l_YKGhCmKqxhS7O0hHUCk10wIjvjfCF6S4apdih41yXEwWDJZmbWo3M0T2nm6tVw_hi3e-pUFwCRGNNQkxGuFiF5hVyWrVvalQdZsgy5znDp3mO7c0swaMw7o5WK3M94b3cSC1EOqUq4QjTjj1VUF8Q8jin12YZKqRRKM37bhnLbW_D7vNxwON1tUgRWjmq7ZeXuSoKfpYSij8rWNm0YrhfoKKmnHZQreawuo3vqobN9WSqwWPCWcvsdhI1CKGVL1K4MjqLCz%2526sai%253DAMfl-YQ-iq0YDycXyglR8SLEzWUGfFCgo8FWlO3sV-cH588AdCushm-P_TMJ1kJ69Ner-rIP1i8x25kbsV9vGFzcn362xki-4BVXrSO932DaiHX7ISzJx6fqIvYckXsXJl8vvAtz%2526sig%253DCg0ArKJSzNIOZVV6xVlfEAE%2526urlfix%253D1%2526adurl%253D' +  LPWrapper + 'https://d.infeed.id/article/5-kebaikan-buah-jambu-yang-jarang-disadari-salah-satunya-bisa-cegah-covid-19-4545.html',
+            articleText : "5 Kebaikan Buah Jambu, Bisa Cegah Covid-19 Juga Lho",
+            imageUrl    : 'https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsu1RYn0UrwgQYNa0O-Kp-CfMEVRbgEVhtYVtpGHq901kGvB_htIbhfEM4ZE7GDs0fzyaCYXrGgWNxbvIdv-Yq-HqoYdQ2uyFVdje9r_MOSg0joXOHnWQQWFU5jNPgNepD6DNrh6j_hec6oWub1rIXY2Sf77Mq_uNpQP07WDPX974QTS11I62ypj2G6cQ7fYudkezBbDXXpnS1PHjj5B9NhaHbW3GuJ2F9Z9yYcl5bmsBGYhmzYGq_aFl9zfToGPOHcRq-LmyBm1JQrRkJ847cUHtDkLdbTRmlJdIa7p-aSc&sai=AMfl-YRhcTf3Gzfq05Jm9k4_hPR-qJ0wkpHNfbjOj6yl5CkaUB-KKolb-XPiMm1btqw-iAldVs0ieJoYClWJWPMHDqdbFzYLMqd_4tIVqsRLDWjGmU2MWJ2fSRnc-QHQSC9phLof&sig=Cg0ArKJSzFH2UHzyRP8bEAE&urlfix=1&adurl=https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnpuS9OBABGAEyCB3Aa4l3SWw7&b2s=false',
+            articleLabel: 'Healthy'
+        };
+    } 
+        //console.log('creativeConf1287798032 : ', creativeConf1287798032);
+
+    var adsTemplate1287798032 = init_defaultCreative();
+    
+    //console.log("infeedConf1287798032 : "+infeedConf1287798032);
+    if(infeedConf1287798032 != null)
+    {
+        if(infeedConf1287798032.useCustomTemplate=="1"){
+           // console.log('use custom template');
+            var infeedTemplateID = topparentID.replace("infeed", "infeedTemplate") + inf_Platform;
+            //console.log('infeedTemplateID : '+infeedTemplateID);
+            if(parent.document.getElementById(infeedTemplateID)!=null)
+            {
+                var adsTemplate1287798032 = parent.document.getElementById(infeedTemplateID).innerHTML;
+                //console.log(adsTemplate1287798032);
+                for (key in creativeConf1287798032) {
+                    //console.log(key);
+                    adsTemplate1287798032 = adsTemplate1287798032.split("%%"+key+"%%").join(creativeConf1287798032[key]);
+                }
+               //console.log(adsTemplate1287798032);
+            }
+        }
+    }
+    
+    
+    /*Write ads*/
+    var node = parent.document.getElementById(currentID);
+    node.style.position = "absolute";
+    var creativeContainer = document.createElement('div');
+    creativeContainer.setAttribute('id', currentID+'-cont');
+    node.parentNode.insertBefore(creativeContainer, node);
+    
+    parent.document.getElementById(currentID+'-cont').innerHTML = adsTemplate1287798032;
+    
+    
+    
+    function extractDomain(i){var t;return t=i.indexOf("://")>-1?i.split("/")[2]:i.split("/")[0],t=t.split(":")[0],subdomain=t.split(".")[0],t=t.replace(subdomain+".","")}
+    function init_defaultCreative()
+    {
+
+        if(inf_Platform=='_desktop' || inf_Platform=='desktop')
+        {
+            var cssStyle = '' +
+            '<style>/*DESKTOP*/  .inf-cont { padding: 10px 5px; text-align: left  }  .inf-wrapper { padding: 0; min-height: 60px  }  .inf-img { margin: 0 0 5px 0;  }  .inf-img a { background-color: transparent; border-bottom: 0; padding: 0; overflow: hidden; display: block;  }  .inf-img a img { width: 100%;  }  .inf-text {}  .inf-text span { font: normal 12px arial; color: #a3a3a3; line-height: 25px;  }.inf-text div { font: bold 14px arial; margin: 0  }  .inf-text div a { font: bold 14px arial; padding: 0; text-decoration: none; background-color: transparent; color: #000; border: 0; font-weight: normal  }</style>';
+        }else{
+
+            var cssStyle = '' +
+            '<style>.inf-cont{padding:10px 5px;border-bottom:1px solid #ececec;text-align:left}.inf-wrapper{padding:0;min-height:60px}.inf-img{float:left;margin:0 10px 0 0}.inf-img a{background-color:transparent;border-bottom:0;padding:0}.inf-img a img{width:120px !important;}.inf-text{margin-left:130px}.inf-text span{font:normal 12px arial;color:#a3a3a3}.inf-text div{font:bold 15px arial;margin:0}.inf-text div a{font:bold 15px arial;padding:0;text-decoration:none;background-color:transparent;color:#000;border:0;font-weight:normal}</style>';
+        }     
+            var creative = cssStyle +  '<div class="inf-cont">' +  
+                '<div class="inf-wrapper">' + 
+                    '<div class="inf-img">' +
+                        '<a  rel="nofollow" href="'+creativeConf1287798032.landingpage+'"><img src="'+creativeConf1287798032.imageUrl+'" alt="'+creativeConf1287798032.articleText+'"></a>' + 
+                    '</div>' + 
+                    '<div class="inf-text">' +
+                        '<span>'+creativeConf1287798032.articleLabel+'</span>' +
+                        '<div>' +
+                            '<div><a  rel="nofollow" href="'+creativeConf1287798032.landingpage+'">'+creativeConf1287798032.articleText+'</a></div>' +
+                        '</div>' + 
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        
+        if(impressionTracker != '') creative += '<img src="' + impressionTracker  + '" style="display:none; visibility:hidden;" width="0" height="0" />'; 
+
+        return creative;
+    }
+    
+
+}else{
+    //console.log('templateID defined, load NEW creative template ');
+
+    var resParam1287798032 = {
+        "image" : "https://tpc.googlesyndication.com/pagead/imgad?id=CICAgKDnpuS9OBABGAEyCB3Aa4l3SWw7&b2s=false",
+        "label" : "Healthy",
+        "text"  : "5 Kebaikan Buah Jambu, Bisa Cegah Covid-19 Juga Lho",
+        "desc"  : "Buah jambu bisa cegah COVID-19 lho.",
+        "link"  : "https://d.infeed.id/article/5-kebaikan-buah-jambu-yang-jarang-disadari-salah-satunya-bisa-cegah-covid-19-4545.html", 
+        "target": "self", 
+        "no_tracker"        : "FALSE",
+        "dfp_impr_tracker"  : "https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjsu1RYn0UrwgQYNa0O-Kp-CfMEVRbgEVhtYVtpGHq901kGvB_htIbhfEM4ZE7GDs0fzyaCYXrGgWNxbvIdv-Yq-HqoYdQ2uyFVdje9r_MOSg0joXOHnWQQWFU5jNPgNepD6DNrh6j_hec6oWub1rIXY2Sf77Mq_uNpQP07WDPX974QTS11I62ypj2G6cQ7fYudkezBbDXXpnS1PHjj5B9NhaHbW3GuJ2F9Z9yYcl5bmsBGYhmzYGq_aFl9zfToGPOHcRq-LmyBm1JQrRkJ847cUHtDkLdbTRmlJdIa7p-aSc&sai=AMfl-YRhcTf3Gzfq05Jm9k4_hPR-qJ0wkpHNfbjOj6yl5CkaUB-KKolb-XPiMm1btqw-iAldVs0ieJoYClWJWPMHDqdbFzYLMqd_4tIVqsRLDWjGmU2MWJ2fSRnc-QHQSC9phLof&sig=Cg0ArKJSzFH2UHzyRP8bEAE&urlfix=1&adurl=",
+        "dfp_click_tracker" : "https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsv8OkXmV59vC0j6EYbE1zFGyF2l_YKGhCmKqxhS7O0hHUCk10wIjvjfCF6S4apdih41yXEwWDJZmbWo3M0T2nm6tVw_hi3e-pUFwCRGNNQkxGuFiF5hVyWrVvalQdZsgy5znDp3mO7c0swaMw7o5WK3M94b3cSC1EOqUq4QjTjj1VUF8Q8jin12YZKqRRKM37bhnLbW_D7vNxwON1tUgRWjmq7ZeXuSoKfpYSij8rWNm0YrhfoKKmnHZQreawuo3vqobN9WSqwWPCWcvsdhI1CKGVL1K4MjqLCz%2526sai%253DAMfl-YQ-iq0YDycXyglR8SLEzWUGfFCgo8FWlO3sV-cH588AdCushm-P_TMJ1kJ69Ner-rIP1i8x25kbsV9vGFzcn362xki-4BVXrSO932DaiHX7ISzJx6fqIvYckXsXJl8vvAtz%2526sig%253DCg0ArKJSzNIOZVV6xVlfEAE%2526urlfix%253D1%2526adurl%253D",
+        "3rd_impression_tracker" : "",
+        "3rd_click_tracker" : "",
+        "adunitID" : '/36504930/infeed.id/m.merdeka.com/dfp-natAds-5'
+    };
+    
+    var currentID = this.frameElement.getAttribute('id');
+        //console.log('currentID : '+currentID);
+    var parentID = parent.document.getElementById(currentID).parentNode.getAttribute('id');
+        //console.log('parentID : '+parentID);
+    var topparentID = parent.document.getElementById(parentID).parentNode.getAttribute('id');
+        //console.log('topparentID : '+topparentID);
+    var templateID = parent.getTemplateID();
+        //console.log('templateID : '+templateID );
+    parent.setResParam(topparentID, resParam1287798032);
+
+}
+</script>
+</div><div style="bottom:0;right:0;width:100px;height:100px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB9SURBVBjTbVCBDcAgDKIf8P+1mwK1LusSXSOlAPBfpXp/UKMD9yt9pKuFwPh2t15ICsjT9XuORofWU+L27ma2ktRivXTDeOMqKKveaPrWesgoMIltLwYW3LQYgzMzyc6moxuyiTvBSKCok2DDPwnGArN7Jh2fze0SfiQ4ph44mwXvu0H26AAAAABJRU5ErkJggg==&#39;) !important;"></div></body></html>

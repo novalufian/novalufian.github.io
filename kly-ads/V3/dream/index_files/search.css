@@ -1,0 +1,67 @@
+.navbar-search{
+    height: 42px;
+}
+#___gcse_0{
+  border-bottom: 1px solid #d4d4d4;
+}
+form.gsc-search-box,
+table.gsc-search-box{
+  margin-bottom: 0;
+}
+.gsc-search-button,
+.gsc-search-button:hover,
+.gsc-search-button:focus{
+  border: 0;
+  background-color: transparent;
+  background-image: url('https://cdns.klimg.com/a.dream.co.id/m-assets/img/redesign/update2.0/SearchIcon@2x.png');
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-size: 18px auto;
+}
+.gsc-search-button svg{
+  display: none;
+}
+.gsib_a,
+.gsst_b{
+  padding: 0
+}
+.gsc-search-box-tools .gsc-search-box td.gsc-input{
+  padding-right: 0;
+}
+.gsc-input-box{
+  background: transparent;
+  border: 0;
+}
+.gsc-input-box-focus,
+.gsc-input-box-hover{
+  box-shadow:none;
+}
+.gsc-search-box input.gsc-input{
+  background: none !important;
+  text-indent: 0 !important;
+  height: 40px !important;
+  font-family: "MetropolisRegular";
+  padding: 6px 0;
+  padding-right: 0 !important;
+  color: #777777;
+  font-size: 14px;
+}
+.gsst_a{
+  padding-top: 2px;
+  padding-left: 5px;
+  padding-right: 0;
+}
+.gsst_a .gscb_a{
+  text-indent: -9999px;
+  background-image: url('https://cdns.klimg.com/a.dream.co.id/assets/img/redesign/close.png');
+  background-position: center;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: 24px;
+  background-repeat: no-repeat;
+}

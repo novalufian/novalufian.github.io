@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://m.dream.co.id/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <!--<base target="_parent">--><base href="." target="_parent">
+ 	<meta http-equiv="content-type" content="text/html">
+ 	<meta name="author" content="KLNmalang">
+ 
+ 	<title>Safe Frame</title>
+ 
+ <style>
+@font-face {
+ font-family: "MetropolisBold";
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bold-webfont.eot");
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bold-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bold-webfont.woff") format("woff"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bold-webfont.ttf") format("truetype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bold-webfont.svg#metropolisbold") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: "MetropolisBold_italic";
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bolditalic-webfont.eot");
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bolditalic-webfont.woff") format("woff"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bolditalic-webfont.ttf") format("truetype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-bolditalic-webfont.svg#metropolisbold_italic") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: "MetropolisRegular";
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regular-webfont.eot");
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regular-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regular-webfont.woff") format("woff"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regular-webfont.ttf") format("truetype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regular-webfont.svg#metropolisregular") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: "MetropolisRegular_italic";
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regularitalic-webfont.eot");
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regularitalic-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regularitalic-webfont.woff") format("woff"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regularitalic-webfont.ttf") format("truetype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-regularitalic-webfont.svg#metropolisregular_italic") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: "MetropolisSemibold";
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibold-webfont.eot");
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibold-webfont.woff") format("woff"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibold-webfont.ttf") format("truetype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibold-webfont.svg#metropolissemi_bold") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+@font-face {
+ font-family: "MetropolisSemibold_italic";
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibolditalic-webfont.eot");
+ src: url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibolditalic-webfont.woff") format("woff"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibolditalic-webfont.ttf") format("truetype"), url("https://cdns.klimg.com/a.dream.co.id/assets/fonts/metropolis-semibolditalic-webfont.svg#metropolissemi_bold_italic") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+*, *::after, *::before {
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+}
+* {
+ -webkit-tap-highlight-color: transparent;
+}
+
+.inf-cont {
+ width:210px;
+}
+
+a{
+	text-decoration:none;
+ 	outlined:none;
+ 	color:#000;
+ 	transition:0.5s ease;
+}
+
+.item {
+	-webkit-border-radius: 4px;
+ 	border-radius: 4px;
+ 	border: 1px solid #efefef;
+ background-color: #fff;
+ box-shadow: 0 2px 1px 0 rgba(244, 244, 244, 0.5);
+}
+
+.item figure {
+ margin: 0;
+ padding: 0;
+ height:138px;
+}
+
+.item figure a {
+ display: block;
+ position: relative;
+} 
+
+.item figure a > img {
+ width: 100%;
+ height:138px;
+ object-fit:cover;
+ border-radius: 4px;
+ border-bottom-left-radius:0;
+ border-bottom-right-radius:0;
+}
+
+.item .description {
+ padding:15px;
+ height:119px;
+}
+
+.description .link-kategori {
+	font-size: 11px;
+	font-family:"MetropolisSemibold";
+ 	letter-spacing:1px;
+ 	color:#d85388;
+ margin-bottom:10px;
+ 	display:table;
+ 	line-height:1em;
+ 	text-transform:uppercase;
+}
+
+.description p {
+	height:68px;
+ 	overflow:hidden;
+ 	font-family:"MetropolisSemibold";
+ 	font-size:15px;
+ 	line-height:1.5em;
+ 	margin:0;
+}
+</style> 
+ </head>
+ 
+ <body style="padding: 0;margin: 0; overflow: hidden; width: 100%;" class="inf-undefined" id="inf-slot-1">
+ 
+ <div id="inf-outstream-container">
+ 
+ <div class="inf-cont">
+ <div class="item">
+ <figure>
+ <a href="https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjss26U5xA5njq4DMjNovJY-yzIBZ4xaG4Dtrf2QHroRiHgvq0WKqml5lXiT2X0p12jA2LzL8Pveg3LMayxJbD_o4JJ56_gp7yGTYUjx5j_EpZgOvTJKTdyz1azuah2ZLpW2c3WpC9tf7Ey8IqIhsuD51Y6TkS_KfXS5YwvzFcMIG7fzyUZ9U4TjWAJpuer2XmHxVhE0n7rWI_YEHa1JegoLAGFr4_Nq-hDgGdpvwhGNXn73tUU9OGnlDIBAVt4hVP8sgBMJd19Xnm8sb4-bZ1VK_dN0WQFwJnMQCPQmG%2526sig%253DCg0ArKJSzJVdlDbDp_oqEAE%2526urlfix%253D1%2526adurl%253Dhttps://hot.liputan6.com/read/4211191/berbagai-cashback-dari-tokopedia-supaya-kamu-tenang-di-rumah" target="_blank">
+ <img src="./view">
+ </a>
+ </figure>
+ <div class="description">
+ <a href="https://m.dream.co.id/infeed/" class="link link-kategori">Hot</a>
+ <p><a href="https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjss26U5xA5njq4DMjNovJY-yzIBZ4xaG4Dtrf2QHroRiHgvq0WKqml5lXiT2X0p12jA2LzL8Pveg3LMayxJbD_o4JJ56_gp7yGTYUjx5j_EpZgOvTJKTdyz1azuah2ZLpW2c3WpC9tf7Ey8IqIhsuD51Y6TkS_KfXS5YwvzFcMIG7fzyUZ9U4TjWAJpuer2XmHxVhE0n7rWI_YEHa1JegoLAGFr4_Nq-hDgGdpvwhGNXn73tUU9OGnlDIBAVt4hVP8sgBMJd19Xnm8sb4-bZ1VK_dN0WQFwJnMQCPQmG%2526sig%253DCg0ArKJSzJVdlDbDp_oqEAE%2526urlfix%253D1%2526adurl%253Dhttps://hot.liputan6.com/read/4211191/berbagai-cashback-dari-tokopedia-supaya-kamu-tenang-di-rumah" target="_blank">Deretan Cashback Menarik Tokopedia yang Bikin Kamu Tetap Tenang di Rumah</a></p>
+ </div>
+ </div>
+</div> 
+ <div style="clear: both; height: 0;"></div>
+ </div>
+ 
+ 
+ 
+ <script>
+ /* Start Global targetting tags */
+ if(typeof parent.window.kly !== 'undefined')
+ {
+ var tags = parent.window.kly.gtm.tag.replace(/[^A-Za-z0-9|\- ]/ig,"").trim().split("|").map(item => item.trim().toLowerCase().replace(/ /g,'-'));
+ }
+ if(typeof parent.window.kmklabs !== 'undefined')
+ {
+ var tags = parent.window.kmklabs.gtm.tag.replace(/[^A-Za-z0-9|\- ]/ig,"").trim().split("|").map(item => item.trim().toLowerCase().replace(/ /g,'-'));
+ }
+ 
+ if( tags )
+ {
+ for( var i in tags )
+ {
+ if( tags[i] )
+ {
+ document.body.classList.add(tags[i]); 
+ }
+ }
+ } 
+ /* End Global targetting tags */
+ </script>
+ 
+</body></html>
