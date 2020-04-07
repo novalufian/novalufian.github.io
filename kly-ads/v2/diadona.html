@@ -1723,7 +1723,8 @@ document.body.appendChild(gptdiadonaStyle);
         var dfpHL = document.getElementById("div-gpt-ad-diadona-hl");
         var menubar = document.querySelector(".layout__nav-content");
         var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
-        var hlTop = dfpHL.offsetTop + parseInt(document.body.style.marginTop.split("px")[0]);
+        var bodymarginTop = (document.body.style.marginTop == "") ? 0 : parseInt(document.body.style.marginTop.split("px")[0]);
+        var hlTop = dfpHL.offsetTop + bodymarginTop;
         if (scrollTOP >= hlTop) {
             if (!headlineStickyStatus) {
                 dfpHL.classList.add("hl-active-sticky");
