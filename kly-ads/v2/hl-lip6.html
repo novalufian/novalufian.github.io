@@ -7968,7 +7968,8 @@ gtmHandlerV2.setGtmEvent();
 		var dfpHL = document.getElementById("div-gpt-ad-liputan6-hl");
 		var menubar = document.querySelector(".layout__nav-content");
 		var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
-		var hlTop = dfpHL.offsetTop + parseInt(document.body.style.marginTop.split("px")[0]);
+		var bodymarginTop = (document.body.style.marginTop == "") ? 0 : parseInt(document.body.style.marginTop.split("px")[0]);
+		var hlTop = dfpHL.offsetTop + bodymarginTop;
 		console.log(hlTop)
 		if (scrollTOP >= hlTop) {
 			if (!headlineStickyStatus) {
