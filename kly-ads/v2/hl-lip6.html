@@ -7969,6 +7969,7 @@ gtmHandlerV2.setGtmEvent();
 		var menubar = document.querySelector(".layout__nav-content");
 		var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
 		var hlTop = dfpHL.offsetTop + parseInt(document.body.style.marginTop.split("px")[0]);
+		console.log(hlTop)
 		if (scrollTOP >= hlTop) {
 			if (!headlineStickyStatus) {
 				dfpHL.classList.add("hl-active-sticky");
