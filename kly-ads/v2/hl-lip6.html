@@ -7968,10 +7968,8 @@ gtmHandlerV2.setGtmEvent();
 		var dfpHL = document.getElementById("div-gpt-ad-liputan6-hl");
 		var menubar = document.querySelector(".layout__nav-content");
 		var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
-		var bodymarginTop = (document.body.style.marginTop == "") ? 0 : parseInt(document.body.style.marginTop.split("px")[0]);
-		var hlTop = dfpHL.offsetTop + bodymarginTop;
-		console.log(hlTop)
-		if (scrollTOP >= hlTop) {
+
+		if (scrollTOP >= dfpHL.offsetTop ) {
 			if (!headlineStickyStatus) {
 				dfpHL.classList.add("hl-active-sticky");
 				dfpHL.style = '';
@@ -7987,6 +7985,7 @@ gtmHandlerV2.setGtmEvent();
 		}else{
 			if (headlineStickyStatus) {
 				dfpHL.classList.remove("hl-active-sticky");
+				dfpHL.classList.remove("hl-navbar-hanging");
 				window.removeEventListener("scroll", headlineStickyScrollEevent);
 				removeStickyHeadline(dfpHL, false);
 			}
@@ -8016,22 +8015,16 @@ gtmHandlerV2.setGtmEvent();
 		_style.textContent = `
 		.hl-active-sticky {
 			position: fixed;
-			top: -100%;
+			top: 0;
 			z-index: 9999;
 			left: 50%;
 			transform: translateX(-50%);
 			margin: 0;
-			transition : top .5s ease;
-			animation: hlSlideDown .5s forwards;
+			transition : all .5s ease;
 		}
 
 		.hl-navbar-hanging{
 			margin-top : 50px !important;
-		}
-
-		@keyframes hlSlideDown{
-			0%{top : -100px;}
-			100%{top : 0px;}
 		}
 		`;
 		document.head.appendChild(_style)
