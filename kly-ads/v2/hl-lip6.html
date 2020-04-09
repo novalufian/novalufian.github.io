@@ -7959,6 +7959,11 @@ gtmHandlerV2.setGtmEvent();
 		if (timeInterval != null) {
 			headlineStickyInterval = timeInterval;
 		}
+		var dfpHL = document.getElementById("div-gpt-ad-liputan6-hl");
+		var dfpHLShadow = document.createElement("div");
+			dfpHLShadow.setAttribute("id","div-gpt-ad-liputan6-hl-shadow");
+			dfpHL.parentElement.insertBefore(dfpHLShadow, dfpHL);
+			
 		console.log(headlineStickyInterval)
 		injectStickyStyleAndAnimation();
 		window.addEventListener("scroll", headlineStickyScrollEevent)
@@ -7966,31 +7971,31 @@ gtmHandlerV2.setGtmEvent();
 
 	function headlineStickyScrollEevent() {
 		var dfpHL = document.getElementById("div-gpt-ad-liputan6-hl");
-		var hlTop = dfpHL.getBoundingClientRect().top;
+		var dfpHLShadow = document.getElementById("div-gpt-ad-liputan6-hl-shadow");
+		var hlTop = dfpHLShadow.getBoundingClientRect().top;
 		var menubar = document.querySelector(".layout__nav-content");
 		var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
 
-		console.log(hlTop)
-		if (hlTop <= 0) {
-			if (!headlineStickyStatus) {
+		if(!headlineStickyStatus){
+			if(hlTop <= 0){
 				dfpHL.classList.add("hl-active-sticky");
 				dfpHL.style = '';
 				removeStickyHeadline(dfpHL, true);
 				headlineStickyStatus = true;
-			}else{
+			}
+		}else{
+			if(hlTop <= 0){
 				if (menubar.classList.contains("layout__nav-content--no-hanging")) {
 					dfpHL.classList.remove("hl-navbar-hanging");
 				}else{
 					dfpHL.classList.add("hl-navbar-hanging");
 				}
-			}
-		}else{
-			if (headlineStickyStatus) {
-				dfpHL.classList.remove("hl-active-sticky");
+			}else{
 				window.removeEventListener("scroll", headlineStickyScrollEevent);
 				removeStickyHeadline(dfpHL, false);
 			}
 		}
+
 	}
 
 	function removeStickyHeadline(dfpHL, status) {
@@ -8008,6 +8013,9 @@ gtmHandlerV2.setGtmEvent();
 
 		if (!status) {
 			clearInterval(_interval);
+			dfpHL.classList.remove("hl-active-sticky");
+			dfpHL.classList.remove("hl-navbar-hanging");
+			dfpHL.style.margin = "10px 0";
 		}
 	}
 
@@ -8021,7 +8029,7 @@ gtmHandlerV2.setGtmEvent();
 			left: 50%;
 			transform: translateX(-50%);
 			margin: 0;
-			transition : top .5s ease;
+			transition : margin-top .5s ease;
 			animation: hlSlideDown .5s forwards;
 		}
 

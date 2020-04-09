@@ -2103,38 +2103,46 @@ document.body.appendChild(gptMKapanlagiStyle);
 <div id='div-gpt-ad-kapanlagi-visual-story-3-oop' data-info='ad'></div>
 <!-- END KLY VISUAL STORY -->
 <script>
-	var headlineStickyInterval = 5
-	var headlineStickyStatus = false;
+    var headlineStickyInterval = 5
+    var headlineStickyStatus = false;
 
-	function headlineSticky(timeInterval) {
-		if (timeInterval != null) {
-			headlineStickyInterval = timeInterval;
-		}
-		console.log(headlineStickyInterval)
-		injectStickyStyleAndAnimation();
-		window.addEventListener("scroll", headlineStickyScrollEevent)
-	}
+    function headlineSticky(timeInterval) {
+        if (timeInterval != null) {
+            headlineStickyInterval = timeInterval;
+        }
+        console.log(headlineStickyInterval)
+        var dfpHL = document.getElementById("div-gpt-ad-kapanlagi-hl");
+		var dfpHLShadow = document.createElement("div");
+			dfpHLShadow.setAttribute("id","div-gpt-ad-kapanlagi-hl-shadow");
+			dfpHL.parentElement.insertBefore(dfpHLShadow, dfpHL);
 
-	function headlineStickyScrollEevent() {
+        injectStickyStyleAndAnimation();
+        window.addEventListener("scroll", headlineStickyScrollEevent)
+    }
+
+    function headlineStickyScrollEevent() {
 		var dfpHL = document.getElementById("div-gpt-ad-kapanlagi-hl");
+		var dfpHLShadow = document.getElementById("div-gpt-ad-kapanlagi-hl-shadow");
+		var hlTop = dfpHLShadow.getBoundingClientRect().top;
 		var menubar = document.querySelector(".layout__nav-content");
 		var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
-		var bodymarginTop = (document.body.style.marginTop == "") ? 0 : parseInt(document.body.style.marginTop.split("px")[0]);
-		var hlTop = dfpHL.offsetTop + bodymarginTop;
-		if (scrollTOP >= hlTop) {
-			if (!headlineStickyStatus) {
+
+		if(!headlineStickyStatus){
+			if(hlTop <= 0){
 				dfpHL.classList.add("hl-active-sticky");
-				dfpHL.style = '';
+				dfpHL.style = ''; 
 				removeStickyHeadline(dfpHL, true);
 				headlineStickyStatus = true;
 			}
 		}else{
-			if (headlineStickyStatus) {
-				dfpHL.classList.remove("hl-active-sticky");
+			if(hlTop <= 0){
+				
+			}else{
 				window.removeEventListener("scroll", headlineStickyScrollEevent);
 				removeStickyHeadline(dfpHL, false);
 			}
 		}
+
 	}
 
 	function removeStickyHeadline(dfpHL, status) {
@@ -2152,6 +2160,9 @@ document.body.appendChild(gptMKapanlagiStyle);
 
 		if (!status) {
 			clearInterval(_interval);
+			dfpHL.classList.remove("hl-active-sticky");
+			dfpHL.classList.remove("hl-navbar-hanging");
+			dfpHL.style.margin = "10px 0";
 		}
 	}
 
@@ -2165,7 +2176,7 @@ document.body.appendChild(gptMKapanlagiStyle);
 			left: 50%;
 			transform: translateX(-50%);
 			margin: 0;
-			transition : top .5s ease;
+			transition : margin-top .5s ease;
 			animation: hlSlideDown .5s forwards;
 		}
 
