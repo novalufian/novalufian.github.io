@@ -1,0 +1,1109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kapanlagi</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://d.kapanlaginetwork.com/banner/preview/2018/12/15/guide/prism.css">
+</head>
+<body>
+    
+    
+    <div class="container">
+        <br>
+        <br>
+        <h1 class="col-md-12 text-center text-danger">Sticky headline All Site</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#kapanlagi">kapanlagi</a></li>
+            <li><a data-toggle="tab" href="#merdeka">merdeka</a></li>
+            <li><a data-toggle="tab" href="#otosia">otosia</a></li>
+            <li><a data-toggle="tab" href="#liputan6">liputan6</a></li>
+            <li><a data-toggle="tab" href="#fimela">fimela</a></li>
+            <li><a data-toggle="tab" href="#bolacom">bolacom</a></li>
+            <li><a data-toggle="tab" href="#bolanet">bolanet</a></li>
+            <li><a data-toggle="tab" href="#dream">dream</a></li>
+            <li><a data-toggle="tab" href="#diadona">diadona</a></li>
+        </ul>
+        
+        <div class="tab-content">
+            <div id="kapanlagi" class="tab-pane fade in active">
+                <h3>Kapanlagi</h3>
+                <div class="alert alert-info">
+                    <h2>javascript</h2>
+                    <p>slot</p>
+                    
+                </div>
+                <pre><code class="language-js line-numbers">
+                    if (dfp_slotDelivered == 'block') {    
+                        //......... 
+                        
+                        if (dfp_slotAdUnitPath == oop_dfpHeadline) {
+                            console.log('INIT STICKY HEADLINE ');
+                            headlineSticky();
+                        }
+                        
+                        //......... 
+                    }
+                </code></pre>
+                <div class="alert alert-info">
+                    <p>diapsang dibagian bawah</p>
+                </div>
+                <pre><code class="language-js line-numbers">
+                    var headlineStickyInterval = 5
+                    var headlineStickyStatus = false;
+                    
+                    function headlineSticky(timeInterval) {
+                        if (timeInterval != null) {
+                            headlineStickyInterval = timeInterval;
+                        }
+                        console.log(headlineStickyInterval)
+                        var dfpHL = document.getElementById("div-gpt-ad-kapanlagi-hl");
+                        var dfpHLShadow = document.createElement("div");
+                        dfpHLShadow.setAttribute("id","div-gpt-ad-kapanlagi-hl-shadow");
+                        dfpHL.parentElement.insertBefore(dfpHLShadow, dfpHL);
+                        
+                        injectStickyStyleAndAnimation();
+                        window.addEventListener("scroll", headlineStickyScrollEevent)
+                    }
+                    
+                    function headlineStickyScrollEevent() {
+                        var dfpHL = document.getElementById("div-gpt-ad-kapanlagi-hl");
+                        var dfpHLShadow = document.getElementById("div-gpt-ad-kapanlagi-hl-shadow");
+                        var hlTop = dfpHLShadow.getBoundingClientRect().top;
+                        var menubar = document.querySelector(".layout__nav-content");
+                        var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
+                        
+                        if(!headlineStickyStatus){
+                            if(hlTop <= 0){
+                                dfpHL.classList.add("hl-active-sticky");
+                                dfpHL.style = ''; 
+                                removeStickyHeadline(dfpHL, true);
+                                headlineStickyStatus = true;
+                            }
+                        }else{
+                            if(hlTop <= 0){
+                                
+                            }else{
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                                removeStickyHeadline(dfpHL, false);
+                            }
+                        }
+                        
+                    }
+                    
+                    function removeStickyHeadline(dfpHL, status) {
+                        var _interval = setInterval(function () {
+                            if (headlineStickyInterval <= 0) {
+                                dfpHL.classList.remove("hl-active-sticky");
+                                dfpHL.classList.remove("hl-navbar-hanging");
+                                dfpHL.style.margin = "10px 0";
+                                clearInterval(_interval);
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                            }else{
+                                headlineStickyInterval--;
+                            }
+                        }, 1000)
+                        
+                        if (!status) {
+                            clearInterval(_interval);
+                            dfpHL.classList.remove("hl-active-sticky");
+                            dfpHL.classList.remove("hl-navbar-hanging");
+                            dfpHL.style.margin = "10px 0";
+                        }
+                    }
+                    
+                    function injectStickyStyleAndAnimation() {
+                        var _style = document.createElement("style");
+                        _style.textContent = `
+                        .hl-active-sticky {
+                            position: fixed;
+                            top: -100%;
+                            z-index: 9999;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            margin: 0;
+                            transition : margin-top .5s ease;
+                            animation: hlSlideDown .5s forwards;
+                        }
+                        
+                        .hl-navbar-hanging{
+                            margin-top : 50px !important;
+                        }
+                        
+                        @keyframes hlSlideDown{
+                            0%{top : -100px;}
+                            100%{top : 0px;}
+                        }
+                        `;
+                        document.head.appendChild(_style)
+                    }
+                </code></pre>
+                <br>
+                <br>
+            </div>
+            <div id="merdeka" class="tab-pane fade">
+                <h3>Merdeka</h3>
+                <div class="alert alert-info">
+                    <h2>javascript</h2>
+                    <p>slot</p>
+                    
+                </div>
+                <pre><code class="language-js line-numbers">
+                    if (dfp_slotDelivered == 'block') {    
+                        //......... 
+                        
+                        if (dfp_slotAdUnitPath == oop_dfpHeadline) {
+                            console.log('INIT STICKY HEADLINE ');
+                            headlineSticky();
+                        }
+                        
+                        //......... 
+                    }
+                </code></pre>
+                
+                <div class="alert alert-info">
+                    <p>diapsang dibagian bawah</p>
+                </div>
+                <pre><code class="language-js line-numbers">
+                    var headlineStickyInterval = 5
+                    var headlineStickyStatus = false;
+                    
+                    function headlineSticky(timeInterval) {
+                        if (timeInterval != null) {
+                            headlineStickyInterval = timeInterval;
+                        }
+                        console.log(headlineStickyInterval)
+                        var dfpHL = document.getElementById("div-gpt-ad-merdeka-hl");
+                        var dfpHLShadow = document.createElement("div");
+                        dfpHLShadow.setAttribute("id","div-gpt-ad-merdeka-hl-shadow");
+                        dfpHL.parentElement.insertBefore(dfpHLShadow, dfpHL);
+                        
+                        injectStickyStyleAndAnimation();
+                        window.addEventListener("scroll", headlineStickyScrollEevent)
+                    }
+                    
+                    function headlineStickyScrollEevent() {
+                        var dfpHL = document.getElementById("div-gpt-ad-merdeka-hl");
+                        var dfpHLShadow = document.getElementById("div-gpt-ad-merdeka-hl-shadow");
+                        var hlTop = dfpHLShadow.getBoundingClientRect().top;
+                        var menubar = document.querySelector(".layout__nav-content");
+                        var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
+                        
+                        if(!headlineStickyStatus){
+                            if(hlTop <= 0){
+                                dfpHL.classList.add("hl-active-sticky");
+                                dfpHL.style = ''; 
+                                removeStickyHeadline(dfpHL, true);
+                                headlineStickyStatus = true;
+                            }
+                        }else{
+                            if(hlTop <= 0){
+                                
+                            }else{
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                                removeStickyHeadline(dfpHL, false);
+                            }
+                        }
+                        
+                    }
+                    
+                    function removeStickyHeadline(dfpHL, status) {
+                        var _interval = setInterval(function () {
+                            if (headlineStickyInterval <= 0) {
+                                dfpHL.classList.remove("hl-active-sticky");
+                                dfpHL.classList.remove("hl-navbar-hanging");
+                                dfpHL.style.margin = "10px 0";
+                                clearInterval(_interval);
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                            }else{
+                                headlineStickyInterval--;
+                            }
+                        }, 1000)
+                        
+                        if (!status) {
+                            clearInterval(_interval);
+                            dfpHL.classList.remove("hl-active-sticky");
+                            dfpHL.classList.remove("hl-navbar-hanging");
+                            dfpHL.style.margin = "10px 0";
+                        }
+                    }
+                    
+                    function injectStickyStyleAndAnimation() {
+                        var _style = document.createElement("style");
+                        _style.textContent = `
+                        .hl-active-sticky {
+                            position: fixed;
+                            top: -100%;
+                            z-index: 9999;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            margin: 0;
+                            transition : margin-top .5s ease;
+                            animation: hlSlideDown .5s forwards;
+                        }
+                        
+                        .hl-navbar-hanging{
+                            margin-top : 50px !important;
+                        }
+                        
+                        @keyframes hlSlideDown{
+                            0%{top : -100px;}
+                            100%{top : 0px;}
+                        }
+                        `;
+                        document.head.appendChild(_style)
+                    }
+                </code></pre>
+                <br>
+                <br>
+            </div>
+            <div id="otosia" class="tab-pane fade">
+                <h3>otosia</h3>
+                <div class="alert alert-info">
+                    <h2>javascript</h2>
+                    <p>slot</p>
+                    
+                </div>
+                <pre><code class="language-js line-numbers">
+                    if (dfp_slotDelivered == 'block') {    
+                        //......... 
+                        
+                        if (dfp_slotAdUnitPath == oop_dfpHeadline) {
+                            console.log('INIT STICKY HEADLINE ');
+                            headlineSticky();
+                        }
+                        
+                        //......... 
+                    }
+                </code></pre>
+                
+                <div class="alert alert-info">
+                    <p>diapsang dibagian bawah</p>
+                </div>
+                <pre><code class="language-js line-numbers">
+                    var headlineStickyInterval = 5
+                    var headlineStickyStatus = false;
+                    
+                    function headlineSticky(timeInterval) {
+                        if (timeInterval != null) {
+                            headlineStickyInterval = timeInterval;
+                        }
+                        console.log(headlineStickyInterval)
+                        var dfpHL = document.getElementById("div-gpt-ad-otosia-hl");
+                        var dfpHLShadow = document.createElement("div");
+                        dfpHLShadow.setAttribute("id","div-gpt-ad-otosia-hl-shadow");
+                        dfpHL.parentElement.insertBefore(dfpHLShadow, dfpHL);
+                        
+                        injectStickyStyleAndAnimation();
+                        window.addEventListener("scroll", headlineStickyScrollEevent)
+                    }
+                    
+                    function headlineStickyScrollEevent() {
+                        var dfpHL = document.getElementById("div-gpt-ad-otosia-hl");
+                        var dfpHLShadow = document.getElementById("div-gpt-ad-otosia-hl-shadow");
+                        var hlTop = dfpHLShadow.getBoundingClientRect().top;
+                        var menubar = document.querySelector(".layout__nav-content");
+                        var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
+                        
+                        if(!headlineStickyStatus){
+                            if(hlTop <= 0){
+                                dfpHL.classList.add("hl-active-sticky");
+                                dfpHL.style = ''; 
+                                removeStickyHeadline(dfpHL, true);
+                                headlineStickyStatus = true;
+                            }
+                        }else{
+                            if(hlTop <= 0){
+                                
+                            }else{
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                                removeStickyHeadline(dfpHL, false);
+                            }
+                        }
+                        
+                    }
+                    
+                    function removeStickyHeadline(dfpHL, status) {
+                        var _interval = setInterval(function () {
+                            if (headlineStickyInterval <= 0) {
+                                dfpHL.classList.remove("hl-active-sticky");
+                                dfpHL.classList.remove("hl-navbar-hanging");
+                                dfpHL.style.margin = "10px 0";
+                                clearInterval(_interval);
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                            }else{
+                                headlineStickyInterval--;
+                            }
+                        }, 1000)
+                        
+                        if (!status) {
+                            clearInterval(_interval);
+                            dfpHL.classList.remove("hl-active-sticky");
+                            dfpHL.classList.remove("hl-navbar-hanging");
+                            dfpHL.style.margin = "10px 0";
+                        }
+                    }
+                    
+                    function injectStickyStyleAndAnimation() {
+                        var _style = document.createElement("style");
+                        _style.textContent = `
+                        .hl-active-sticky {
+                            position: fixed;
+                            top: -100%;
+                            z-index: 9999;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            margin: 0;
+                            transition : margin-top .5s ease;
+                            animation: hlSlideDown .5s forwards;
+                        }
+                        
+                        .hl-navbar-hanging{
+                            margin-top : 50px !important;
+                        }
+                        
+                        @keyframes hlSlideDown{
+                            0%{top : -100px;}
+                            100%{top : 0px;}
+                        }
+                        `;
+                        document.head.appendChild(_style)
+                    }
+                </code></pre>
+                <br>
+                <br>
+            </div>
+            <div id="liputan6" class="tab-pane fade">
+                <h3>liputan6</h3>
+                <div class="alert alert-info">
+                    <h2>javascript</h2>
+                    <p>slot</p>
+                    
+                </div>
+                <pre><code class="language-js line-numbers">
+                    if (dfp_slotDelivered == 'block') {    
+                        //......... 
+                        
+                        if (dfp_slotAdUnitPath == oop_dfpHeadline) {
+                            console.log('INIT STICKY HEADLINE ');
+                            headlineSticky();
+                        }
+                        
+                        //......... 
+                    }
+                </code></pre>
+                
+                <div class="alert alert-info">
+                    <p>diapsang dibagian bawah</p>
+                </div>
+                <pre><code class="language-js line-numbers">
+                    var headlineStickyInterval = 5
+                    var headlineStickyStatus = false;
+                    
+                    function headlineSticky(timeInterval) {
+                        if (timeInterval != null) {
+                            headlineStickyInterval = timeInterval;
+                        }
+                        var dfpHL = document.getElementById("div-gpt-ad-liputan6-hl");
+                        var dfpHLShadow = document.createElement("div");
+                        dfpHLShadow.setAttribute("id","div-gpt-ad-liputan6-hl-shadow");
+                        dfpHL.parentElement.insertBefore(dfpHLShadow, dfpHL);
+                        
+                        console.log(headlineStickyInterval)
+                        injectStickyStyleAndAnimation();
+                        window.addEventListener("scroll", headlineStickyScrollEevent)
+                    }
+                    
+                    function headlineStickyScrollEevent() {
+                        var dfpHL = document.getElementById("div-gpt-ad-liputan6-hl");
+                        var dfpHLShadow = document.getElementById("div-gpt-ad-liputan6-hl-shadow");
+                        var hlTop = dfpHLShadow.getBoundingClientRect().top;
+                        var menubar = document.querySelector(".layout__nav-content");
+                        var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
+                        
+                        if(!headlineStickyStatus){
+                            if(hlTop <= 0){
+                                dfpHL.classList.add("hl-active-sticky");
+                                dfpHL.style = '';
+                                removeStickyHeadline(dfpHL, true);
+                                headlineStickyStatus = true;
+                            }
+                        }else{
+                            if(hlTop <= 0){
+                                if (menubar.classList.contains("layout__nav-content--no-hanging")) {
+                                    dfpHL.classList.remove("hl-navbar-hanging");
+                                }else{
+                                    dfpHL.classList.add("hl-navbar-hanging");
+                                }
+                            }else{
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                                removeStickyHeadline(dfpHL, false);
+                            }
+                        }
+                        
+                    }
+                    
+                    function removeStickyHeadline(dfpHL, status) {
+                        var _interval = setInterval(function () {
+                            if (headlineStickyInterval <= 0) {
+                                dfpHL.classList.remove("hl-active-sticky");
+                                dfpHL.classList.remove("hl-navbar-hanging");
+                                dfpHL.style.margin = "10px 0";
+                                clearInterval(_interval);
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                            }else{
+                                headlineStickyInterval--;
+                            }
+                        }, 1000)
+                        
+                        if (!status) {
+                            clearInterval(_interval);
+                            dfpHL.classList.remove("hl-active-sticky");
+                            dfpHL.classList.remove("hl-navbar-hanging");
+                            dfpHL.style.margin = "10px 0";
+                        }
+                    }
+                    
+                    function injectStickyStyleAndAnimation() {
+                        var _style = document.createElement("style");
+                        _style.textContent = `
+                        .hl-active-sticky {
+                            position: fixed;
+                            top: -100%;
+                            z-index: 9999;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            margin: 0;
+                            transition : margin-top .5s ease;
+                            animation: hlSlideDown .5s forwards;
+                        }
+                        
+                        .hl-navbar-hanging{
+                            margin-top : 50px !important;
+                        }
+                        
+                        @keyframes hlSlideDown{
+                            0%{top : -100px;}
+                            100%{top : 0px;}
+                        }
+                        `;
+                        document.head.appendChild(_style)
+                    }
+                </code></pre>
+                <br>
+                <br>
+            </div>
+            <div id="fimela" class="tab-pane fade">
+                <h3>fimela</h3>
+                <div class="alert alert-info">
+                    <h2>javascript</h2>
+                    <p>slot</p>
+                    
+                </div>
+                <pre><code class="language-js line-numbers">
+                    if (dfp_slotDelivered == 'block') {    
+                        //......... 
+                        
+                        if (dfp_slotAdUnitPath == headlineAdUnit) {
+                            console.log('INIT STICKY HEADLINE ');
+                            headlineSticky();
+                        }
+                        
+                        //......... 
+                    }
+                </code></pre>
+                
+                <div class="alert alert-info">
+                    <p>diapsang dibagian bawah</p>
+                </div>
+                <pre><code class="language-js line-numbers">
+                    var headlineStickyInterval = 5
+                    var headlineStickyStatus = false;
+                    
+                    function headlineSticky(timeInterval) {
+                        if (timeInterval != null) {
+                            headlineStickyInterval = timeInterval;
+                        }
+                        console.log(headlineStickyInterval)
+                        var dfpHL = document.getElementById("div-gpt-ad-fimela-hl-1");
+                        var dfpHLShadow = document.createElement("div");
+                        dfpHLShadow.setAttribute("id","div-gpt-ad-fimela-hl-1-shadow");
+                        dfpHL.parentElement.insertBefore(dfpHLShadow, dfpHL);
+                        
+                        injectStickyStyleAndAnimation();
+                        window.addEventListener("scroll", headlineStickyScrollEevent)
+                    }
+                    
+                    function headlineStickyScrollEevent() {
+                        var dfpHL = document.getElementById("div-gpt-ad-fimela-hl-1");
+                        var dfpHLShadow = document.getElementById("div-gpt-ad-fimela-hl-1-shadow");
+                        var hlTop = dfpHLShadow.getBoundingClientRect().top;
+                        var menubar = document.querySelector(".layout__nav-content");
+                        var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
+                        
+                        if(!headlineStickyStatus){
+                            if(hlTop <= 0){
+                                dfpHL.classList.add("hl-active-sticky");
+                                dfpHL.style = ''; 
+                                removeStickyHeadline(dfpHL, true);
+                                headlineStickyStatus = true;
+                            }
+                        }else{
+                            if(hlTop <= 0){
+                                
+                            }else{
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                                removeStickyHeadline(dfpHL, false);
+                            }
+                        }
+                        
+                    }
+                    
+                    function removeStickyHeadline(dfpHL, status) {
+                        var _interval = setInterval(function () {
+                            if (headlineStickyInterval <= 0) {
+                                dfpHL.classList.remove("hl-active-sticky");
+                                dfpHL.classList.remove("hl-navbar-hanging");
+                                dfpHL.style.margin = "10px 0";
+                                clearInterval(_interval);
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                            }else{
+                                headlineStickyInterval--;
+                            }
+                        }, 1000)
+                        
+                        if (!status) {
+                            clearInterval(_interval);
+                            dfpHL.classList.remove("hl-active-sticky");
+                            dfpHL.classList.remove("hl-navbar-hanging");
+                            dfpHL.style.margin = "10px 0";
+                        }
+                    }
+                    
+                    function injectStickyStyleAndAnimation() {
+                        var _style = document.createElement("style");
+                        _style.textContent = `
+                        .hl-active-sticky {
+                            position: fixed;
+                            top: -100%;
+                            z-index: 9999;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            margin: 0;
+                            transition : margin-top .5s ease;
+                            animation: hlSlideDown .5s forwards;
+                        }
+                        
+                        .hl-navbar-hanging{
+                            margin-top : 50px !important;
+                        }
+                        
+                        @keyframes hlSlideDown{
+                            0%{top : -100px;}
+                            100%{top : 0px;}
+                        }
+                        `;
+                        document.head.appendChild(_style)
+                    }
+                </code></pre>
+                <br>
+                <br>
+            </div>
+            <div id="bolacom" class="tab-pane fade">
+                <h3>bolacom</h3>
+                <div class="alert alert-info">
+                    <h2>javascript</h2>
+                    <p>slot</p>
+                    
+                </div>
+                <pre><code class="language-js line-numbers">
+                    if (dfp_slotDelivered == 'block') {    
+                        //......... 
+                        
+                        if (dfp_slotAdUnitPath == oop_dfpHeadline) {
+                            console.log('INIT STICKY HEADLINE ');
+                            headlineSticky();
+                        }
+                        
+                        //......... 
+                    }
+                </code></pre>
+                
+                <div class="alert alert-info">
+                    <p>diapsang dibagian bawah</p>
+                </div>
+                <pre><code class="language-js line-numbers">
+                    var headlineStickyInterval = 5
+                    var headlineStickyStatus = false;
+                    
+                    function headlineSticky(timeInterval) {
+                        if (timeInterval != null) {
+                            headlineStickyInterval = timeInterval;
+                        }
+                        var dfpHL = document.getElementById("div-gpt-ad-bolacom-hl");
+                        var dfpHLShadow = document.createElement("div");
+                        dfpHLShadow.setAttribute("id","div-gpt-ad-bolacom-hl-shadow");
+                        dfpHL.parentElement.insertBefore(dfpHLShadow, dfpHL);
+                        
+                        console.log(headlineStickyInterval)
+                        injectStickyStyleAndAnimation();
+                        window.addEventListener("scroll", headlineStickyScrollEevent)
+                    }
+                    
+                    function headlineStickyScrollEevent() {
+                        var dfpHL = document.getElementById("div-gpt-ad-bolacom-hl");
+                        var dfpHLShadow = document.getElementById("div-gpt-ad-bolacom-hl-shadow");
+                        var hlTop = dfpHLShadow.getBoundingClientRect().top;
+                        var menubar = document.querySelector(".layout__nav-content");
+                        var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
+                        
+                        if(!headlineStickyStatus){
+                            if(hlTop <= 0){
+                                dfpHL.classList.add("hl-active-sticky");
+                                dfpHL.style = '';
+                                removeStickyHeadline(dfpHL, true);
+                                headlineStickyStatus = true;
+                            }
+                        }else{
+                            if(hlTop <= 0){
+                                if (menubar.classList.contains("layout__nav-content--no-hanging")) {
+                                    dfpHL.classList.remove("hl-navbar-hanging");
+                                }else{
+                                    dfpHL.classList.add("hl-navbar-hanging");
+                                }
+                            }else{
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                                removeStickyHeadline(dfpHL, false);
+                            }
+                        }
+                        
+                    }
+                    
+                    function removeStickyHeadline(dfpHL, status) {
+                        var _interval = setInterval(function () {
+                            if (headlineStickyInterval <= 0) {
+                                dfpHL.classList.remove("hl-active-sticky");
+                                dfpHL.classList.remove("hl-navbar-hanging");
+                                dfpHL.style.margin = "10px 0";
+                                clearInterval(_interval);
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                            }else{
+                                headlineStickyInterval--;
+                            }
+                        }, 1000)
+                        
+                        if (!status) {
+                            clearInterval(_interval);
+                            dfpHL.classList.remove("hl-active-sticky");
+                            dfpHL.classList.remove("hl-navbar-hanging");
+                            dfpHL.style.margin = "10px 0";
+                        }
+                    }
+                    
+                    function injectStickyStyleAndAnimation() {
+                        var _style = document.createElement("style");
+                        _style.textContent = `
+                        .hl-active-sticky {
+                            position: fixed;
+                            top: -100%;
+                            z-index: 9999;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            margin: 0;
+                            transition : margin-top .5s ease;
+                            animation: hlSlideDown .5s forwards;
+                        }
+                        
+                        .hl-navbar-hanging{
+                            margin-top : 50px !important;
+                        }
+                        
+                        @keyframes hlSlideDown{
+                            0%{top : -100px;}
+                            100%{top : 0px;}
+                        }
+                        `;
+                        document.head.appendChild(_style)
+                    }
+                </code></pre>
+                <br>
+                <br>
+            </div>
+            <div id="bolanet" class="tab-pane fade">
+                <h3>bolanet</h3>
+                <div class="alert alert-info">
+                    <h2>javascript</h2>
+                    <p>slot</p>
+                    
+                </div>
+                <pre><code class="language-js line-numbers">
+                    if (dfp_slotDelivered == 'block') {    
+                        //......... 
+                        
+                        if (dfp_slotAdUnitPath == oop_dfpHeadline) {
+                            console.log('INIT STICKY HEADLINE ');
+                            headlineSticky();
+                        }
+                        
+                        //......... 
+                    }
+                </code></pre>
+                
+                <div class="alert alert-info">
+                    <p>diapsang dibagian bawah</p>
+                </div>
+                <pre><code class="language-js line-numbers">
+                    var headlineStickyInterval = 5
+                    var headlineStickyStatus = false;
+                    
+                    function headlineSticky(timeInterval) {
+                        if (timeInterval != null) {
+                            headlineStickyInterval = timeInterval;
+                        }
+                        console.log(headlineStickyInterval)
+                        var dfpHL = document.getElementById("div-gpt-ad-bola-hl");
+                        var dfpHLShadow = document.createElement("div");
+                        dfpHLShadow.setAttribute("id","div-gpt-ad-bola-hl-shadow");
+                        dfpHL.parentElement.insertBefore(dfpHLShadow, dfpHL);
+                        
+                        injectStickyStyleAndAnimation();
+                        window.addEventListener("scroll", headlineStickyScrollEevent)
+                    }
+                    
+                    function headlineStickyScrollEevent() {
+                        var dfpHL = document.getElementById("div-gpt-ad-bola-hl");
+                        var dfpHLShadow = document.getElementById("div-gpt-ad-bola-hl-shadow");
+                        var hlTop = dfpHLShadow.getBoundingClientRect().top;
+                        var menubar = document.querySelector(".layout__nav-content");
+                        var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
+                        
+                        if(!headlineStickyStatus){
+                            if(hlTop <= 0){
+                                dfpHL.classList.add("hl-active-sticky");
+                                dfpHL.style = ''; 
+                                removeStickyHeadline(dfpHL, true);
+                                headlineStickyStatus = true;
+                            }
+                        }else{
+                            if(hlTop <= 0){
+                                
+                            }else{
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                                removeStickyHeadline(dfpHL, false);
+                            }
+                        }
+                        
+                    }
+                    
+                    function removeStickyHeadline(dfpHL, status) {
+                        var _interval = setInterval(function () {
+                            if (headlineStickyInterval <= 0) {
+                                dfpHL.classList.remove("hl-active-sticky");
+                                dfpHL.classList.remove("hl-navbar-hanging");
+                                dfpHL.style.margin = "10px 0";
+                                clearInterval(_interval);
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                            }else{
+                                headlineStickyInterval--;
+                            }
+                        }, 1000)
+                        
+                        if (!status) {
+                            clearInterval(_interval);
+                            dfpHL.classList.remove("hl-active-sticky");
+                            dfpHL.classList.remove("hl-navbar-hanging");
+                            dfpHL.style.margin = "10px 0";
+                        }
+                    }
+                    
+                    function injectStickyStyleAndAnimation() {
+                        var _style = document.createElement("style");
+                        _style.textContent = `
+                        .hl-active-sticky {
+                            position: fixed;
+                            top: -100%;
+                            z-index: 9999;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            margin: 0;
+                            transition : margin-top .5s ease;
+                            animation: hlSlideDown .5s forwards;
+                        }
+                        
+                        .hl-navbar-hanging{
+                            margin-top : 50px !important;
+                        }
+                        
+                        @keyframes hlSlideDown{
+                            0%{top : -100px;}
+                            100%{top : 0px;}
+                        }
+                        `;
+                        document.head.appendChild(_style)
+                    }
+                </code></pre>
+                <br>
+                <br>
+            </div>
+            <div id="dream" class="tab-pane fade">
+                <h3>dream</h3>
+                <div class="alert alert-info">
+                    <h2>javascript</h2>
+                    <p>slot</p>
+                    
+                </div>
+                <pre><code class="language-js line-numbers">
+                    if (dfp_slotDelivered == 'block') {    
+                        //......... 
+                        
+                        if (dfp_slotAdUnitPath == oop_dfpHeadline) {
+                            console.log('INIT STICKY HEADLINE ');
+                            headlineSticky();
+                        }
+                        
+                        //......... 
+                    }
+                </code></pre>
+                
+                <div class="alert alert-info">
+                    <p>diapsang dibagian bawah</p>
+                </div>
+                <pre><code class="language-js line-numbers">
+                    var headlineStickyInterval = 5
+                    var headlineStickyStatus = false;
+                    
+                    function headlineSticky(timeInterval) {
+                        if (timeInterval != null) {
+                            headlineStickyInterval = timeInterval;
+                        }
+                        console.log(headlineStickyInterval)
+                        var dfpHL = document.getElementById("div-gpt-ad-dream-hl");
+                        var dfpHLShadow = document.createElement("div");
+                        dfpHLShadow.setAttribute("id","div-gpt-ad-dream-hl-shadow");
+                        dfpHL.parentElement.insertBefore(dfpHLShadow, dfpHL);
+                        
+                        injectStickyStyleAndAnimation();
+                        window.addEventListener("scroll", headlineStickyScrollEevent)
+                    }
+                    
+                    function headlineStickyScrollEevent() {
+                        var dfpHL = document.getElementById("div-gpt-ad-dream-hl");
+                        var dfpHLShadow = document.getElementById("div-gpt-ad-dream-hl-shadow");
+                        var hlTop = dfpHLShadow.getBoundingClientRect().top;
+                        var menubar = document.querySelector(".layout__nav-content");
+                        var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
+                        
+                        if(!headlineStickyStatus){
+                            if(hlTop <= 0){
+                                dfpHL.classList.add("hl-active-sticky");
+                                dfpHL.style = ''; 
+                                removeStickyHeadline(dfpHL, true);
+                                headlineStickyStatus = true;
+                            }
+                        }else{
+                            if(hlTop <= 0){
+                                
+                            }else{
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                                removeStickyHeadline(dfpHL, false);
+                            }
+                        }
+                        
+                    }
+                    
+                    function removeStickyHeadline(dfpHL, status) {
+                        var _interval = setInterval(function () {
+                            if (headlineStickyInterval <= 0) {
+                                dfpHL.classList.remove("hl-active-sticky");
+                                dfpHL.classList.remove("hl-navbar-hanging");
+                                dfpHL.style.margin = "10px 0";
+                                clearInterval(_interval);
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                            }else{
+                                headlineStickyInterval--;
+                            }
+                        }, 1000)
+                        
+                        if (!status) {
+                            clearInterval(_interval);
+                            dfpHL.classList.remove("hl-active-sticky");
+                            dfpHL.classList.remove("hl-navbar-hanging");
+                            dfpHL.style.margin = "10px 0";
+                        }
+                    }
+                    
+                    function injectStickyStyleAndAnimation() {
+                        var _style = document.createElement("style");
+                        _style.textContent = `
+                        .hl-active-sticky {
+                            position: fixed;
+                            top: -100%;
+                            z-index: 9999;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            margin: 0;
+                            transition : margin-top .5s ease;
+                            animation: hlSlideDown .5s forwards;
+                        }
+                        
+                        .hl-navbar-hanging{
+                            margin-top : 50px !important;
+                        }
+                        
+                        @keyframes hlSlideDown{
+                            0%{top : -100px;}
+                            100%{top : 0px;}
+                        }
+                        `;
+                        document.head.appendChild(_style)
+                    }
+                </code></pre>
+                <br>
+                <br>
+            </div>
+            <div id="diadona" class="tab-pane fade">
+                <h3>diadona</h3>
+                <div class="alert alert-info">
+                    <h2>javascript</h2>
+                    <p>slot</p>
+                    
+                </div>
+                <pre><code class="language-js line-numbers">
+                    if (dfp_slotDelivered == 'block') {    
+                        //......... 
+                        
+                        if (dfp_slotAdUnitPath == oop_dfpHeadline) {
+                            console.log('INIT STICKY HEADLINE ');
+                            headlineSticky();
+                        }
+                        
+                        //......... 
+                    }
+                </code></pre>
+                
+                <div class="alert alert-info">
+                    <p>diapsang dibagian bawah</p>
+                </div>
+                <pre><code class="language-js line-numbers">
+                    var headlineStickyInterval = 5
+                    var headlineStickyStatus = false;
+                    
+                    function headlineSticky(timeInterval) {
+                        if (timeInterval != null) {
+                            headlineStickyInterval = timeInterval;
+                        }
+                        console.log(headlineStickyInterval)
+                        var dfpHL = document.getElementById("div-gpt-ad-diadona-hl");
+                        var dfpHLShadow = document.createElement("div");
+                        dfpHLShadow.setAttribute("id","div-gpt-ad-diadona-hl-shadow");
+                        dfpHL.parentElement.insertBefore(dfpHLShadow, dfpHL);
+                        
+                        injectStickyStyleAndAnimation();
+                        window.addEventListener("scroll", headlineStickyScrollEevent)
+                    }
+                    
+                    function headlineStickyScrollEevent() {
+                        var dfpHL = document.getElementById("div-gpt-ad-diadona-hl");
+                        var dfpHLShadow = document.getElementById("div-gpt-ad-diadona-hl-shadow");
+                        var hlTop = dfpHLShadow.getBoundingClientRect().top;
+                        var menubar = document.querySelector(".layout__nav-content");
+                        var scrollTOP = document.documentElement.scrollTop || document.body.scrollTop;
+                        
+                        if(!headlineStickyStatus){
+                            if(hlTop <= 0){
+                                dfpHL.classList.add("hl-active-sticky");
+                                dfpHL.style = ''; 
+                                removeStickyHeadline(dfpHL, true);
+                                headlineStickyStatus = true;
+                            }
+                        }else{
+                            if(hlTop <= 0){
+                                
+                            }else{
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                                removeStickyHeadline(dfpHL, false);
+                            }
+                        }
+                        
+                    }
+                    
+                    function removeStickyHeadline(dfpHL, status) {
+                        var _interval = setInterval(function () {
+                            if (headlineStickyInterval <= 0) {
+                                dfpHL.classList.remove("hl-active-sticky");
+                                dfpHL.classList.remove("hl-navbar-hanging");
+                                dfpHL.style.margin = "10px 0";
+                                clearInterval(_interval);
+                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                            }else{
+                                headlineStickyInterval--;
+                            }
+                        }, 1000)
+                        
+                        if (!status) {
+                            clearInterval(_interval);
+                            dfpHL.classList.remove("hl-active-sticky");
+                            dfpHL.classList.remove("hl-navbar-hanging");
+                            dfpHL.style.margin = "10px 0";
+                        }
+                    }
+                    
+                    function injectStickyStyleAndAnimation() {
+                        var _style = document.createElement("style");
+                        _style.textContent = `
+                        .hl-active-sticky {
+                            position: fixed;
+                            top: -100%;
+                            z-index: 9999;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            margin: 0;
+                            transition : margin-top .5s ease;
+                            animation: hlSlideDown .5s forwards;
+                        }
+                        
+                        .hl-navbar-hanging{
+                            margin-top : 50px !important;
+                        }
+                        
+                        @keyframes hlSlideDown{
+                            0%{top : -100px;}
+                            100%{top : 0px;}
+                        }
+                        `;
+                        document.head.appendChild(_style)
+                    }
+                </code></pre>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="alert alert-success">
+            hasil : <code><a href="http://klios.kapanlagi.com/banner/preview/2018/12/15/dev/foto2/foto-dev2.html">http://klios.kapanlagi.com/banner/preview/2018/12/15/dev/foto2/foto-dev2.html</a></code>
+        </div>
+        
+        
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <script src="https://d.kapanlaginetwork.com/banner/preview/2018/12/15/guide/prism.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
