@@ -85,6 +85,21 @@
                     if (dfp_slotAdUnitPath == oop_dfpBottomframe) {
                         document.getElementById("dfp-bframe-cont-transparent") && document.getElementById("dfp-bframe-cont-transparent").setAttribute("style", "position: fixed; bottom: 0; min-height: 50px; background-color: #ECECEC70; width: 100%; text-align: center;display:block; z-index: 999999");
                     }
+
+                    if (dfp_slotAdUnitPath == oop_dfpBottomframe) {
+                        if (isHomepage) {
+                            var bottomFrameContainerPIP = document.getElementById("div-gpt-ad-merdeka-bottomfrm");
+                            if (dfp_slotDelivered == 'none') {
+                                bottomFrameContainerPIP.style.display = "none";
+                            } else {
+                                // take out
+                                // bottomFrameContainerPIP.style.position = "fixed";
+                                // bottomFrameContainerPIP.style.bottom = "0";
+                            }
+                        }
+                    }
+                    
+                    
                 </code></pre>
                 <div class="alert alert-danger">
                     <h2>Publishing</h2>
