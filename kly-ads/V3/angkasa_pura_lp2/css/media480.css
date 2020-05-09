@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/*===============================================================================================================   
+
+Author      : Muhammad Febriansyah
+
+Built       : Desember 2016
+
+=============================================================================================================== */
+
+
+
+@media all and (max-width:767px){
+
+    
+
+    /* header
+
+    ================================================================================================================= */
+    .logonya {
+        max-width: 130px;
+    }
+    .fly-but-wrap {
+        width: 35px;
+        height: 35px;
+    }
+    .fly-but-wrap span {
+        width: 30px;
+        height: 3px;
+    }
+    .fly-but-wrap span:nth-child(2), .fly-but-wrap span:nth-child(3) {
+        top: 19.5px;
+    }
+    .fly-but-wrap span:nth-child(1) {
+        top: 11.5px;
+    }
+    .fly-but-wrap span:nth-child(4) {
+        top: 27.5px;
+    }
+    /* middle homepage
+
+    ================================================================================================================= */
+    .wrapper, .mid-wrapper{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #banner-home {
+        height: 540px;
+        min-height: 540px;
+    }
+    .homebanner img {
+        max-width: 1000px;
+        width: 1000px;
+        left: 50%;
+        margin-left: -500px;
+        top: 0;
+        position: absolute;
+    }
+    .howto-top1,.howto-top2{
+        display: none;
+    }
+    .items2,.items3{
+        width: 100%;
+    }
+    .content-howto{
+        padding-top: 20px;
+    }
+    .box-galeri{
+        padding:10px;
+    }
+    .tnc-title .text-img{
+        max-width: 250px;
+    }
+    .tnc-title, .tnc-footer{
+        height: 110px;
+    }
+    .baby-bottom{
+        
+        display: none;
+    }
+    .tnc-footer .paper-bottom-img{
+        height: 113px;
+    }
+    .tnc-text{
+        padding:20px;
+    }
+    .tnc-text ol li {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .box-galeri{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .register-body {
+        width: 100%;
+    }
+    .form-popup .row-input .line-input{
+        width: 90%;
+    }
+    .inputFile{
+        padding: 10px 10px 10px 0px;
+    }
+    .rounded-text{
+        width: 90%;
+    }
+    .register-body{
+        padding: 70px 10px 20px 10px;
+    }
+    #detailGal .register-body{
+        width: 100%;
+    }
+    #tncPop .checkbox-row p{
+        width: 88%;
+    }
+    #tncPop .bt-block {
+        font-size: 18px;
+    }
+    .titik-dua,.checkbox-row .label-input{
+        display: none !important;
+    }
+    .input-result{
+        margin: 15px 0 0 0;
+        width: 100%;
+    }
+    .expand-gal .row-info-socmed span{
+        font-size: 15px;
+    }
+	/* middle contentpage
+
+    ================================================================================================================= */
+   
+    /* footer
+
+    ================================================================================================================= */
+	
+	
+	
+	
+}

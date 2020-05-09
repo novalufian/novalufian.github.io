@@ -1,0 +1,19 @@
+@font-face {
+  	font-family: 'acumin-pro';
+    src:  
+    	url('AcuminPro.eot') format('eot'),
+    	url('AcuminPro.svg') format('svg'),
+        url('AcuminPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'acumin-pro';
+    src:  
+        url('AcuminPro-Bold.eot') format('eot'),
+        url('AcuminPro-Bold.svg') format('svg'),
+        url('AcuminPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
