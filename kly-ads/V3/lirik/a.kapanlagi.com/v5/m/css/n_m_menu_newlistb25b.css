@@ -1,0 +1,109 @@
+/* .swiper-menu-slide{
+			overflow: hidden;
+		}
+		.swiper-menu-slide .swiper-slide{
+		width: auto;
+		padding: 14px 7px;
+		position: relative;
+		} */
+		/* .swiper-menu-slide .swiper-slide.new-menu:after{
+		content: "";
+		width: 21px;
+		height: 9px;
+		position: absolute;
+		top: 7px;
+		left: 7px;
+		background: url("new.svg");
+		} */
+		.menu-second li{
+			position: relative;
+		}
+		.menu-second li.new-menu:after{
+			content: "";
+			width: 26px;
+			height: 9px;
+			position: absolute;
+			top: 4px;
+			left: 7px;
+			background: url("../../../../cdns.klimg.com/kapanlagi.com/v5/m/i/assets/img/new_tag_menulist3.png");
+			background-size: cover;
+		}
+		.header-menu ul.menu-second{
+			overflow-x: auto;
+			white-space: nowrap;
+			-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+			margin: 0px 14px 0px 12px;
+			-webkit-overflow-scrolling: auto; /* Stops scrolling immediately */
+		}
+		/* .swiper-menu-slide .swiper-slide a{
+		font-size: 15px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: 0.8;
+		letter-spacing: normal;
+		text-align: center;
+		} */
+		.nav > li.kuis a:before{
+			content: "";
+			width: 41px;
+			height: 15px;
+			position: absolute;
+			top: 9px;
+			left: 60px;
+			background: url("../../../../cdns.klimg.com/kapanlagi.com/v5/m/i/assets/img/new_tag_menulist3.png");
+			background-size: cover;
+
+		}
+		.nav > li.dangdut a:before{
+			content: "";
+			width: 41px;
+			height: 15px;
+			position: absolute;
+			top: 9px;
+			left: 95px;
+			background: url("../../../../cdns.klimg.com/kapanlagi.com/v5/m/i/assets/img/new_tag_menulist3.png");
+			background-size: cover;
+
+		}
+		.close-main-menu-mobile{
+			position: absolute !important;
+    top: 10px;
+    right: 15px;
+    min-height: 30px;
+    width: 30px;
+    margin: 0 !important;
+		}
+		.close-main-menu-mobile i{
+			background: #f08b0e;
+			width: 2px;
+			height: 30px;
+			display: block;
+			position: absolute;
+    right: 15px;
+		}
+		.close-main-menu-mobile i:first-child{
+			transform: rotate(45deg);
+		}
+		.close-main-menu-mobile i:last-child{
+			transform: rotate(-45deg);
+		}
+		.nav > li.logo-nav a {
+    margin: 10px;
+	}
+	html.freeze,
+	body.freeze{
+		overflow: hidden;
+	}
+	.nav > li a {
+    padding: 15px 15px 15px 25px;
+}
+.nav {
+    margin-bottom: 20px;
+	}
+		@media (min-width: 1px) and (orientation: landscape) {
+			.wrapper-menu-slide{
+				width: 434px;
+				margin: auto;
+			}
+		}

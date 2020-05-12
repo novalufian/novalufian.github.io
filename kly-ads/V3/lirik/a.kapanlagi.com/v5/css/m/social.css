@@ -1,0 +1,186 @@
+.kl-share-new{
+	margin:0 -3px;
+}
+.kl-share-new a{
+	float:left;
+	width:65px;
+	font-family:Arial, Helvetica, sans-serif !important;
+	margin:3px;
+	text-decoration: none;
+}
+.kl-share-new .fb-like,
+.kl-share-new .fb-share{
+	background:#445FAE !important;
+}
+.kl-share-new .count-box{
+	background:#E2EBF2 !important;
+	text-align:center;
+	display:block;
+	padding:10px 0;
+	font-size:11px !important;
+	color:#555 !important;
+	position:relative;
+	border:1px solid #d2d2d2;
+	border-bottom:0;
+	text-decoration: none;
+}
+.kl-share-new .count-box:after{
+	width:14px;
+	height:8px;
+	margin:0 auto;
+	background:url('../../../../cdns.klimg.com/kapanlagi.com/v5/m/i/assets/img/arrow-socbtt-16bit-v1.png') no-repeat;
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	margin-bottom:-5px;
+	content:"";
+}
+.kl-share-new .box-title{
+	display: table-cell;
+	color: #FFF !important;
+	font-size: 11px !important;
+	vertical-align: middle;
+	height: 30px;
+	width: 65px;
+	padding-left: 28px;
+	padding-top:1px;
+	background-position: 2px 3px !important;
+	font-family:Arial, Helvetica, sans-serif !important;
+	text-decoration: none;
+}
+.kl-share-new .fb-share .box-title{
+	background:url('../../../../cdns.klimg.com/kapanlagi.com/v5/m/i/assets/img/fb-icon-2x.png') no-repeat;
+	background-size:24px;
+}
+.kl-share-new .tweet-share{
+	background:#67ADD1;
+}
+.kl-share-new .tweet-share .box-title{
+	background:url('../../../../cdns.klimg.com/kapanlagi.com/v5/m/i/assets/img/tw-icon-2x.png') no-repeat;
+	background-size:24px;
+}
+.kl-share-new .wa-share{
+	background:#58AD14;
+}
+.kl-share-new .wa-share .box-title{
+	background:url('../../../../cdns.klimg.com/kapanlagi.com/v5/m/i/assets/img/wa-icon-2x.png') no-repeat;
+	background-size:24px;
+}
+
+.gplus-share-new-m{
+	border:1px solid #e5e5e5;
+	font-family:Arial;
+	font-size:12px;
+	padding:10px 0px 0px 8px; 
+	border-bottom:0;        
+}
+
+.gplus-share-new-m .caption-gplus{
+	display: inline-block;
+	float: left;
+	height: 24px;
+	margin-right: 10px;
+	padding-top: 4px;
+	top: 0;
+}
+
+#___plusone_0 {
+	max-width: 64px !important;
+	margin-left: 10px !important;
+	width: 75px !important;
+	margin: 1px 0px 0px 6px !important;    
+}
+
+
+/*
+ *  ____   ___  _  __
+ * |___ \ / _ \/ |/ /___   _____ _ __ 
+ *   __) | | | | | '_ \ \ / / _ \ '__|
+ *  / __/| |_| | | (_) \ V /  __/ |
+ * |_____|\___/|_|\___/ \_/ \___|_|
+ * 2016 Version of Social Media Sharer
+ */
+.mkl-share16 *, 
+.mkl-share16 *:after, 
+.mkl-share16 *:before{
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+.mkl-share16 {
+	margin:30px 0;
+	overflow:hidden;
+}
+.mkl-share16.alignleft{
+	text-align:left;
+}
+.mkl-share16.alignright{
+	text-align:right;
+}
+.mkl-share16.aligncenter{
+	text-align:center;
+}
+.mkl-share16 .list-share16{
+	list-style:none;
+	margin:0 -4px;
+	padding:0;
+	display: inline-block;
+	height: auto;
+}
+.mkl-share16 .list-share16 > li{
+	display: inline-block;
+	vertical-align: middle;
+	padding:0 4px;
+}
+.mkl-share16 .list-share16 > li a{
+	background-size: 38px;
+	background-repeat:no-repeat;
+	width:42px;
+	height:42px;
+	display:block;
+	background-position: 1px 1px;
+}
+.mkl-share16 .list-share16 > li .fb-share{
+	background-image: url('../../../../cdns.klimg.com/kapanlagi.com/v5/i/m/socialtabs/klshare16icon-facebook_75.png');
+}
+.mkl-share16 .list-share16 > li .tweet-share{
+	background-image:url('../../../../cdns.klimg.com/kapanlagi.com/v5/i/m/socialtabs/klshare16icon-twitter_75.png');
+}
+.mkl-share16 .list-share16 > li .gplus-share{
+	background-image: url('../../../../cdns.klimg.com/kapanlagi.com/v5/i/m/socialtabs/klshare16icon-gplus_75.png');
+}
+.mkl-share16 .list-share16 > li .bbm-share{
+	background-image: url('../../../../cdns.klimg.com/kapanlagi.com/v5/i/m/socialtabs/klshare16icon-bbm_75.png');
+}
+.mkl-share16 .list-share16 > li .wa-share{
+	background-image: url('../../../../cdns.klimg.com/kapanlagi.com/v5/i/m/socialtabs/klshare16icon-whatsapp_75.png');
+}
+.mkl-share16 .list-share16 > li.count-share{
+	padding-left:10px;
+}
+.mkl-share16 .list-share16 > li.count-share dt,
+.mkl-share16 .list-share16 > li.count-share dd{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	display: block;
+	line-height: 1.1em;
+}
+.mkl-share16 .list-share16 > li.count-share dt{
+	font-size: 33px;
+	color: #333;
+	font-weight: bold;
+}
+.mkl-share16 .list-share16 > li.count-share dd{
+	font-size:11px;
+	color:#858585;
+	letter-spacing: 3px;
+}
+/*
+ * End of 2016ver.
+ */
+
+/* eof */
+
+

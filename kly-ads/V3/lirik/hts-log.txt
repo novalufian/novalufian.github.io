@@ -1,0 +1,40 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 12 May 2020 12:02:13 at https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/ -O1 "Z:\home\error\Documents\lirik\lirik" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+12:02:57	Error: 	"Bad Request" (400) at link https://www.googletagmanager.com/gtm.js?id= (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/)
+12:03:38	Error: 	"No Content" (204) at link https://beacon.krxd.net/event.gif?event_id=M361oCpv&event_type=registration&cat= (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/)
+12:03:38	Error: 	"Not Found" (404) at link https://cdns.klimg.com/a.kapanlagi.com/v5/css/m2/1.18k/vfjallaone-regular-webfont.svg (from https://cdns.klimg.com/a.kapanlagi.com/v5/css/m2/1.18k/entertainment.css)
+12:03:38	Error: 	"Not Found" (404) at link https://cdns.klimg.com/a.kapanlagi.com/v5/css/m2/img/vimeo-play.png (from https://cdns.klimg.com/a.kapanlagi.com/v5/css/m2/1.18k/entertainment.css)
+12:03:38	Error: 	"Not Found" (404) at link https://cdns.klimg.com/a.kapanlagi.com/v5/css/m2/img/video-play.png (from https://cdns.klimg.com/a.kapanlagi.com/v5/css/m2/1.18k/entertainment.css)
+12:03:38	Error: 	"Not Found" (404) at link https://cdns.klimg.com/a.kapanlagi.com/v5/css/m2/img/youtube-play.png (from https://cdns.klimg.com/a.kapanlagi.com/v5/css/m2/1.18k/entertainment.css)
+12:03:53	Error: 	"Not Found" (404) at link https://m.kapanlagi.com/NT/NX.js (from https://cdns.klimg.com/a.kapanlagi.com/v5/js/m/1.18o/entertainment.js)
+12:03:56	Error: 	"Not Found" (404) at link https://lirik.kapanlagi.com/artis/gwen-stefani/ache/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/linkid.js)
+12:03:57	Warning: 	Moved Temporarily for https://d.kapanlaginetwork.com/robots.txt
+12:03:57	Warning: 	File has moved from https://d.kapanlaginetwork.com/robots.txt to http://www.kapanlagi.com/
+12:03:57	Error: 	"No Content" (204) at link https://d.kapanlaginetwork.com/mga.html?https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/linkid.js)
+12:03:59	Error: 	"Not Found" (404) at link https://lirik.kapanlagi.com/artis/gwen-stefani/ache/4q:/mo.a9.48/gh/mo.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://mO.a9.48/gH/mO.js)
+12:04:06	Error: 	"No Content" (204) at link https://d.kapanlaginetwork.com/mga.html?https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://mO.a9.48/gH/mO.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://mO.a9.48/gH/mO.js)
+12:04:28	Error: 	"Not Found" (404) at link https://lirik.kapanlagi.com/artis/gwen-stefani/ache/4q:/a.9t.48/v5/js/m/rd/cz.4m.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://a.9T.48/v5/js/m/RD/cZ.4M.js)
+12:04:44	Error: 	"No Content" (204) at link https://d.kapanlaginetwork.com/mga.html?https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://a.9T.48/v5/js/m/RD/cZ.4M.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://a.9T.48/v5/js/m/RD/cZ.4M.js)
+12:04:44	Error: 	"Not Found" (404) at link https://lirik.kapanlagi.com/artis/gwen-stefani/ache/4q:/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://linkid.js)
+12:04:44	Error: 	"No Content" (204) at link https://d.kapanlaginetwork.com/mga.html?https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://linkid.js)
+12:04:44	Error: 	"Not Found" (404) at link https://lirik.kapanlagi.com/artis/gwen-stefani/ache/4q:/mo.a9.48/gh/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://mO.a9.48/gH/linkid.js)
+12:04:44	Error: 	"No Content" (204) at link https://d.kapanlaginetwork.com/mga.html?https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://mO.a9.48/gH/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://mO.a9.48/gH/linkid.js)
+12:04:44	Error: 	"Not Found" (404) at link https://lirik.kapanlagi.com/artis/gwen-stefani/ache/4q:/4r.rr.48/rw/4n/1j/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://4R.RR.48/RW/4n/1J/linkid.js)
+12:04:44	Error: 	"No Content" (204) at link https://d.kapanlaginetwork.com/mga.html?https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://4R.RR.48/RW/4n/1J/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://4R.RR.48/RW/4n/1J/linkid.js)
+12:04:44	Error: 	"Not Found" (404) at link https://lirik.kapanlagi.com/artis/gwen-stefani/ache/sk/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/sK/linkid.js)
+12:04:44	Error: 	"No Content" (204) at link https://d.kapanlaginetwork.com/mga.html?https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/sK/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/sK/linkid.js)
+12:04:44	Error: 	"Not Found" (404) at link https://lirik.kapanlagi.com/artis/gwen-stefani/ache/aw/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/aw/linkid.js)
+12:04:45	Error: 	"No Content" (204) at link https://d.kapanlaginetwork.com/mga.html?https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/aw/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/aw/linkid.js)
+12:04:45	Error: 	"Not Found" (404) at link https://lirik.kapanlagi.com/artis/gwen-stefani/ache/4q:/a.9t.48/mu/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://a.9T.48/MU/linkid.js)
+12:04:47	Error: 	"No Content" (204) at link https://d.kapanlaginetwork.com/mga.html?https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://a.9T.48/MU/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://a.9T.48/MU/linkid.js)
+12:04:47	Error: 	"Not Found" (404) at link https://lirik.kapanlagi.com/artis/gwen-stefani/ache/4q:/a.9t.48/v5/js/m/rd/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://a.9T.48/v5/js/m/RD/linkid.js)
+12:04:50	Error: 	"No Content" (204) at link https://d.kapanlaginetwork.com/mga.html?https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://a.9T.48/v5/js/m/RD/linkid.js (from https://m.kapanlagi.com/lirik/artis/gwen-stefani/ache/4Q://a.9T.48/v5/js/m/RD/linkid.js)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 37 seconds : 94 links scanned, 65 files written (2307946 bytes overall) [837337 bytes received at 5333 bytes/sec], 2105743 bytes transferred using HTTP compression in 48 files, ratio 27%, 2.4 requests per connection
+(27 errors, 2 warnings, 0 messages)

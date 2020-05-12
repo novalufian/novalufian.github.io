@@ -1,0 +1,10 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+m.kapanlagi.com	TRUE	/	FALSE	1999999999	PHPSESSID	kmjbfs74nm1sn4a6kg35ceat45
+.onesignal.com	TRUE	/	FALSE	1999999999	__cfduid	dc201585b432a6683443a603585b15afa1589259747
+cdn.onesignal.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.krxd.net	TRUE	/	FALSE	1999999999	_kuid_	NZfF2yAN
+.krxd.net	TRUE	/	FALSE	1999999999	e_M361oCpv^cat|	1589259758
+lirik.kapanlagi.com	TRUE	/	FALSE	1999999999	PHPSESSID	6agb41fhp5ri6ovc1itnj08bf6
+d.kapanlaginetwork.com	TRUE	/	FALSE	1999999999	PHPSESSID	8b9ilnfs4oe0k6qfk1u8ac2v36
+
