@@ -1,3 +1,37 @@
-<div id="M550860ScriptRootC927947">
-</div>
-<script src="https://jsc.mgid.com/f/i/fimela.com.927947.js" async></script>
+<!-- Composite Start -->
+<div id="M550860ScriptRootC927945">
+    </div>
+    <script src="https://jsc.mgid.com/f/i/fimela.com.927945.js" async></script>
+<!-- Composite End -->
+
+<script>
+    bootMgidArticle()
+
+    function bootMgidArticle(){
+        var _target = parent.document.querySelector(".fimela--related-articles__wrapper");
+
+        var _dable = setInterval(function () {
+            if(typeof parent.window.dable =="function"){
+                console.log(_target);
+                injectMgidWidgetArticle(_target);
+                clearInterval(_dable);
+            }
+        }, 100)
+    }
+
+    function injectMgidWidgetArticle(_target) {
+        var _parantTarget = _target.parentElement;
+        window.document.firstElementChild
+        var wrapper = document.createElement("div");
+        wrapper.setAttribute("id", "M550860ScriptRootC927945");
+        wrapper.setAttribute("class", "mgidWidgetWrapper");
+        _parantTarget.insertBefore(wrapper, _target);
+
+
+        var mgidScript = document.createElement("script");
+        mgidScript.setAttribute("src", "https://jsc.mgid.com/f/i/fimela.com.927945.js");
+        mgidScript.setAttribute("async", true);
+        _parantTarget.insertBefore(mgidScript, _target);
+
+    }
+</script>
