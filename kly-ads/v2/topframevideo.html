@@ -1,0 +1,601 @@
+<link rel="stylesheet" href="https://vjs.zencdn.net/5.0.0/video-js.css">
+ <style>
+     #topframe-overlay {
+        position: fixed;
+        width: 100%;
+        height: 0;
+        z-index: -50;
+        background: white;
+        bottom: 0;
+    }
+
+    #topframe {       
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        -moz-transition: height .5s .25s ease;
+        -webkit-transition: height .25s ease;
+        -o-transition: height .5s .25s ease;
+        transition: height .5s .25s ease;
+    }      
+    
+    #topframe-content-wrapper{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: inherit;
+        height: inherit;
+        display: block;
+        margin: 0 auto;    
+    }
+     .topframe-click-area{
+        position: relative;
+        width: inherit;
+        height: inherit;
+        background: red;
+    }
+
+    [class*="topframe-wrapper-"]{
+        width: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: inherit;
+    }
+    
+    .topframe-wrapper-repeat{
+        z-index: 10;
+        transition: all .25s ease; 
+        background: rgba(0,0,0, .7) ; 
+        display: none;
+        opacity: 0;
+        justify-content: center;
+    } 
+    .topframe-wrapper-button{z-index: 10;transition: all .25s ease}
+    .topframe-wrapper-img{z-index: 5;transition: all .25s ease}
+    .topframe-wrapper-video{z-index: 1;}
+    
+    .topframe-wrapper-repeat .repate-button{
+        align-self: center;
+    }
+    
+    .topframe-wrapper-button .topframe-btn{
+        cursor: pointer;
+    }
+    #topframe-content-wrapper #topframe-btn-close{
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 15;
+        right: 0;
+        width: 60px;
+        max-height : 60px;
+        padding: 15px;
+    }
+    .topframe-wrapper-button #wrapper-btn-bottom{
+        position: absolute;
+        display: block;
+        width: inherit;
+        bottom: 0;
+        height: 70px;
+    }
+    .topframe-wrapper-button #wrapper-btn-bottom #topframe-btn-play{
+        display: block;
+        height: 30px;
+        margin: 25px auto;
+    }
+    .topframe-wrapper-button #wrapper-btn-bottom #topframe-btn-more{
+       position: absolute;
+       right: 10px;
+       bottom: 23px;
+       height: 8px;
+    }
+    
+    .topframe-wrapper-img img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-width: 100%;
+        max-height: inherit;
+        z-index: 0;
+        object-fit: cover;
+    }
+    .topframe-wrapper-img .overlay{
+        position: absolute;
+        width: inherit;
+        height: inherit;
+    }
+    .topframe-wrapper-img .overlay::after,
+    .topframe-wrapper-img .overlay::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: inherit;
+        height: 15vh;
+    }
+    
+    .topframe-wrapper-img .overlay::after{
+        top: 0;
+        background: linear-gradient( rgba(0,0,0, .6), transparent);
+    }
+    .topframe-wrapper-img .overlay::before{
+        bottom: 0;
+        background: linear-gradient( transparent, rgba(0,0,0, .6));
+    }
+    
+    .topframe-wrapper-repeat .repate-button img {
+        margin: 10px;
+        height: 70px;
+    }
+    
+    .topframe-wrapper-video #topframe-tappable-ios{
+        position: absolute;
+        z-index: 10;
+        display: none;
+        width: inherit;
+        height: calc(100% - 30px);
+        background: rgba(0,0,0, 0);
+    }
+    
+     div#topframeCusBtnVolume {
+        position: absolute;
+        width: 4em;
+        height: 3em;
+        background: rgba(255,255,255, 0);
+        z-index: 10;
+        bottom: 0;
+        left: 4em;
+    }    
+  div#div-gpt-ad-liputan6-topfrm-oop {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    </style>
+<div id="topframe-overlay"></div>
+<div id="topframe">
+   <div id="topframe-content-wrapper">
+      <img src="https://d.kapanlaginetwork.com/banner/preview/2018/01/23/topframe/video/assets/icon/close-button.png" alt="" id="topframe-btn-close" class="topframe-btn">
+      <div class="topframe-wrapper-repeat" id="topframe-wrapper-repeat">
+         <div class="repate-button">
+            <img src="https://d.kapanlaginetwork.com/banner/preview/2018/01/23/topframe/video/assets/icon/play-again.png" alt="" id="topframe-btn-play-again" class="topframe-btn">
+            <img src="https://d.kapanlaginetwork.com/banner/preview/2018/01/23/topframe/video/assets/icon/more-info.png" alt="" id="topframe-btn-more" class="topframe-btn-more topframe-btn">
+         </div>
+      </div>
+      <div class="topframe-wrapper-button" id="topframe-wrapper-button">
+         <div id="wrapper-btn-bottom">
+            <img src="https://d.kapanlaginetwork.com/banner/preview/2018/01/23/topframe/video/assets/icon/play-now-button.png" alt="" id="topframe-btn-play" class="topframe-btn">
+            <img src="https://d.kapanlaginetwork.com/banner/preview/2018/01/23/topframe/video/assets/icon/more-info-with-arrow.png" alt="" id="topframe-btn-more" class="topframe-btn-more topframe-btn">
+         </div>
+      </div>
+      <div class="topframe-wrapper-img" id="topframe-wrapper-img">
+         <img src="https://tpc.googlesyndication.com/pimgad/7291379986514835066?" alt="">
+         <div class="overlay"></div>
+      </div>
+      <div class="topframe-wrapper-video">
+         <div id="topframe-tappable-ios"></div>
+         <div id="topframe-video-player"></div>
+      </div>
+   </div>
+</div>
+
+<script src="https://cdns.klimg.com/d.kapanlaginetwork.com/banner/asset/img/video.js?123"></script>
+<script>
+  var dfpLandingPage  = true ? " %%CLICK_URL_UNESC%%kesitu.com" : "kesitu.com";
+  var dfp_topframeDMPCat  = ''.trim().split(/\\s*,\\s*/);
+  /*REFERENCES*/
+
+  var ios = parent.window.navigator.platform.match(/iPhone|iPod|iPad/);
+  var orientation = (ios) ? parent.window.orientation : parent.screen.orientation.angle;
+  var topwidth = (orientation == 0 ) ? parent.window.screen.width : parent.window.screen.height;
+  var ratio = 16/9;
+
+  /*CODE*/
+  topframeVisualCallback();
+
+  function initParent(height) {
+    var thisparent = window.frameElement;
+    thisparent.style = "width: 100%;height: "+height+"px;position: fixed;top: 0;left: 0;";
+    thisparent.parentElement.style = "transition: all ,.5s ease;position: absolute;width: 100%;height: "+height+"px;clip: rect(0px "+topwidth+"px "+height+"px 0px);top: 0;";
+    thisparent.parentElement.parentElement.style = "height: "+height+"px;position: relative;width :"+topwidth+"px;display : block; margin : 0 auto;";
+  }
+
+  function topframeVisualCallback() {
+    setTimeout(function () {
+      initParent(topwidth / ratio);
+    }, 500);
+  }
+
+    var dfp_topframeVideoURL="https://www.youtube.com/watch?v=ISiGBVmp6MY";
+    var dfpTFVLandingPage=dfpLandingPage;
+    var dfpTFVCampaignName="dummy";
+    var DMPCatTopframeVideo  = ''.trim().split(/s*,s*/);
+    
+    var onsignaldiv = document.getElementById("onesignal-popover-container");
+    var TFVContentWrapper = document.getElementById("topframe-content-wrapper");
+    var TFVVideoWrapper = document.querySelector(".topframe-wrapper-video");
+    var TFVBtnWrapper = document.getElementById("topframe-wrapper-button");
+    var TFVRepeatWrapper = document.getElementById("topframe-wrapper-repeat");
+    var TFVImgWrapper = document.getElementById("topframe-wrapper-img");
+    var TFVBtnClose = document.getElementById("topframe-btn-close");
+    var TFVBtnPlay = document.getElementById("topframe-btn-play");
+    var TFVBtnrepeat = document.getElementById("topframe-btn-play-again");
+    var TFVBtnLP = document.querySelectorAll(".topframe-btn-more");
+    var topFrameVideoContainer = document.getElementById("topframe-video-player");
+    var TFVTappbaleIOS = document.getElementById("topframe-tappable-ios");
+    var TFVEmbedSource = "youtube";
+    var TFVEmbedVidiocom ;
+    var TFVWidth;
+    var TFVWidthLandscape;
+    var TFVHeight;
+    var TFVHeightLandscape;
+    var TFVPlayer;
+    var TFVScrollTOP;
+    var TFVCookieName = "topframe-video-" + dfpTFVCampaignName;
+    var TFVDefaultCookieDuration = 10;
+    var TFVVolumeBtn;
+    var TFVbtnMuteState;
+    var statusMatrixTime = false;
+    var TVFStateOnInit = false;
+    var TFVOnPlayState = false;
+    var TFVAdsStatus = TFVGetCookieValue(TFVCookieName);
+    var TFVTappbaleIOSstatus = true;
+    var TFVYoutubeSettings = {
+        "modestbranding": 0,
+        "playsinline": 1,
+        "autoplay": 0,
+        "ytControls": 0,
+        "enablejsapi": 1,
+        "iv_load_policy": 3,
+        "rel": 0,
+        "showinfo": 0,
+        "loop": 0
+    };
+
+    TFVBtnPlay.style.display = 'none';
+
+    TFVBtnPlay.addEventListener("click", TFVOnInitPlayVideo);
+    TFVBtnClose.addEventListener("click", TFVCloseAds);
+    TFVBtnrepeat.addEventListener("click", TFVRepeatVideo);
+    TFVBtnLP.forEach(function(v, k) {
+        v.addEventListener("click", TFVGoToLandingPage);
+    });
+    bootAds();
+    
+    function bootAds() {
+        console.log("boot");
+        if (!TFVAdsStatus || TFVAdsStatus == null) {
+            TFVInitDimention();
+        } else {
+            document.getElementById("topframe").style.display = "none";
+        }
+        if (onsignaldiv) {
+            onsignaldiv.classList.add("hidden");
+        }
+        onOrientationChange();
+    
+        if (TFVEmbedSource == "youtube") {
+          var myinterval = setInterval(function() {
+              console.log("mencari video js .......");
+              if (typeof videojs == "function") {
+                  TFVGenerateVideoJs();
+                  clearInterval(myinterval);
+              }
+          }, 500);
+        }else{
+          generateEmbedVideo();
+          TFVTappbaleIOS.style.display = "none";
+          topFrameVideoContainer.style.display = "none";
+        }
+    }
+    window.addEventListener("scroll", function() {
+        var TFVScrollTOP = document.body.scrollTop || document.documentElement.scrollTop;
+        if (TFVScrollTOP > 100) {
+            TFVPauseVideo();
+        }
+        if (TFVScrollTOP > 700) {
+            document.getElementById("topframe-overlay").style.height = "100vh";
+        } else {
+            document.getElementById("topframe-overlay").style.height = "0";
+        }
+    });
+    
+    function TFVInitDimention() {
+        var orien = (navigator.platform == "iPhone") ? window.orientation : screen.orientation.angle;
+        if ( orien == 0) {
+            TFVWidth = (document.getElementsByTagName("body")[0].clientWidth > 480) ? 480 : document.getElementsByTagName("body")[0].clientWidth;
+            TFVHeight = (TFVWidth / 16) * 9;
+            TVFStateOnInit = true;
+            TFVinit();
+        } else {
+            if (navigator.platform == "iPhone") {
+                TFVWidth = (screen.width > 480) ? 480 : screen.width;
+            } else {
+                TFVWidth = (screen.height > 480) ? 480 : screen.height;
+            }
+            TFVHeight = (TFVWidth / 16) * 9;
+        }
+
+    }
+    
+    function TFVGetDomainName() {
+        hostName = window.location.hostname;
+        return rHN = hostName.substring(hostName.lastIndexOf(".", hostName.lastIndexOf(".") - 1) + 1);
+    }
+    
+    function TFVSetCookie(cookieName, cookieValue, cookiePath, cookieExpires) {
+        var cookieValue = escape(cookieValue);
+        var banner_cookieDomain = TFVGetDomainName();
+        if (cookiePath != "") {
+            cookiePath = ";Path=" + cookiePath;
+        }
+        document.cookie = cookieName + "=" + cookieValue + ";expires=" + cookieExpires + cookiePath + ";Domain=" + banner_cookieDomain;
+    }
+    
+    function TFVGetCookieValue(cookieName) {
+        var cookieValue = document.cookie;
+        var cookieStartsAt = cookieValue.indexOf(" " + cookieName + "=");
+        if (cookieStartsAt == -1) {
+            cookieStartsAt = cookieValue.indexOf(cookieName + "=");
+        }
+        if (cookieStartsAt == -1) {
+            cookieValue = null;
+        } else {
+            cookieStartsAt = cookieValue.indexOf("=", cookieStartsAt) + 1;
+            var cookieEndsAt = cookieValue.indexOf(";", cookieStartsAt);
+            if (cookieEndsAt == -1) {
+                cookieEndsAt = cookieValue.length;
+            }
+            cookieValue = unescape(cookieValue.substring(cookieStartsAt, cookieEndsAt));
+        }
+        switch (cookieValue) {
+            case "false":
+                return false;
+                break;
+            case "true":
+                return true;
+                break;
+            default:
+                return null;
+                break;
+        }
+    }
+    
+    function TFVinit() {
+        TFVContentWrapper.style.width = TFVWidth + "px";
+        TFVContentWrapper.style.height = TFVHeight + "px";
+        var nowDate = new Date();
+        nowDate.setHours(nowDate.getHours(), nowDate.getMinutes() + TFVDefaultCookieDuration);
+        cookieExpires = nowDate.toGMTString();
+        TFVSetCookie(TFVCookieName, false, "/", cookieExpires);
+    }
+    
+    function TFVOnPlayerStateChange() {
+        TFVPlayer.on("ended", function() {
+            TFVShowRepeatWrapper();
+            TFVPlayer.exitFullscreen();
+        });
+        TFVPlayer.on("fullscreenchange", function() {
+            console.log(TFVPlayer.isFullscreen());
+            if (screen.orientation.angle != 0 && TFVPlayer.isFullscreen() == false) {
+                TFVPauseVideo();
+            }
+        });
+        TFVPlayer.on("ready", function() {
+            TFVTappbaleIOS.style.display = "block";
+            TFVbtnMuteState = TFVPlayer.muted();
+            var node = document.createElement("div");
+            node.setAttribute("id", "topframeCusBtnVolume");
+            document.querySelector(".vjs-control-bar").appendChild(node);
+            TFVVolumeBtn = document.querySelector("#topframeCusBtnVolume");
+            var volumeBtn = document.querySelector(".topframe-wrapper-video .vjs-volume-menu-button");
+            TFVVolumeBtn.addEventListener("click", function() {
+                if (TFVbtnMuteState) {
+                    volumeBtn.classList.add("vjs-vol-0");
+                    TFVPlayer.tech_.ytPlayer.mute();
+                } else {
+                    volumeBtn.classList.remove("vjs-vol-0");
+                    TFVPlayer.tech_.ytPlayer.unMute();
+                }
+                TFVbtnMuteState = !TFVbtnMuteState;
+            })
+
+            TFVBtnPlay.style.display = 'block';
+
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        })
+    }
+    
+    function TFVOnInitPlayVideo() {
+      if (!TFVEmbedSource == "youtube") {
+        TFVBtnWrapper.style.display = "none";
+        TFVImgWrapper.style.display = "none";
+        TFVOnPlayState = true;
+
+      }else{
+        TFVBtnWrapper.style.opacity = 0;
+        TFVImgWrapper.style.opacity = 0;
+        TFVOnPlayState = true;
+        TFVPlayVideo();
+        setTimeout(function() {
+            TFVBtnWrapper.style.display = "none";
+            TFVImgWrapper.style.display = "none";
+        }, 250);
+        if (navigator.platform == "iPhone") {
+            document.querySelector(".video-js .vjs-fullscreen-control").style.display = "none";
+        }
+        if (TFVTappbaleIOS) {
+            TFVTappbaleIOS.addEventListener("click", TFVGoToLandingPage);
+        }
+        var x = document.createElement("IMG");
+        x.setAttribute("src", "");
+        TFVContentWrapper.appendChild(x);
+      }
+    }
+    
+    function TFVPlayVideo() {
+        TFVPlayer.play();
+    }
+    
+    function TFVStopVideo() {
+        TFVPlayer.pause();
+    }
+    
+    function TFVPauseVideo() {
+        TFVPlayer.pause();
+    }
+    
+    function TFVGenerateVideoJs() {
+        do {
+            TFVPlayer = document.createElement("video");
+            TFVPlayer.setAttribute("id", "topframe-video");
+            TFVPlayer.setAttribute("class", "video-js vjs-default-skin vjs-big-play-centered");
+            TFVPlayer.setAttribute("webkit-playsinline", "");
+            TFVPlayer.setAttribute("playsinline", "");
+            TFVPlayer.style.width = TFVWidth + "px";
+            TFVPlayer.style.height = TFVHeight + "px";
+            TFVPlayer.dataset.setup = '{"inactivityTimeout": 0 , "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "' + dfp_topframeVideoURL + '"}], "youtube": " + JSON.stringify(TFVYoutubeSettings) + "}';
+            topFrameVideoContainer.appendChild(TFVPlayer);
+            TFVPlayer = videojs("topframe-video");
+            TFVPlayer.muted(false);
+            TFVPlayer.controls(true);
+            TFVPlayer.preload(true);
+            TFVPlayer.load();
+            console.log("loop");
+            TFVOnPlayerStateChange();
+        } while ((TFVPlayer == null) && (typeof videojs === "function"));
+    }
+    
+    function generateEmbedVideo() {
+         TFVEmbedVidiocom = document.createElement("iframe");
+         TFVEmbedVidiocom.setAttribute("src", dfp_topframeVideoURL);
+         TFVEmbedVidiocom.setAttribute("scrolling", "no");
+         TFVEmbedVidiocom.setAttribute("frameborder", "0");
+         TFVEmbedVidiocom.setAttribute("width", "100%");
+         TFVEmbedVidiocom.setAttribute("height", "100%");
+         TFVVideoWrapper.appendChild(TFVEmbedVidiocom);
+    }
+    
+    function TFVCloseAds() {
+        TFVContentWrapper.style.height = 0;
+        TFVContentWrapper.style.zIndex = -1;
+        if (TFVEmbedSource == "youtube") {
+            TFVStopVideo();
+        }
+        var videoContentWrapper = (TFVEmbedSource == "youtube") ? TFVEmbedVidiocom : TFVContentWrapper;
+        setTimeout(function() {
+            videoContentWrapper.style.display = "none";
+            videoContentWrapper.remove();
+            TFVAdsStatus = true;
+        }, 500);
+        var nowDate = new Date();
+        nowDate.setHours(nowDate.getHours(), nowDate.getMinutes() + TFVDefaultCookieDuration);
+        cookieExpires = nowDate.toGMTString();
+        TFVSetCookie(TFVCookieName, true, "/", cookieExpires);
+    }
+    
+    function TFVRepeatVideo() {
+        TFVPlayVideo();
+        TFVRepeatWrapper.style.opacity = 0;
+        setTimeout(function() {
+            TFVRepeatWrapper.style.display = "none";
+        }, 250);
+    }
+    
+    
+    function generateDMPLPTopframeVideo(){
+        if(typeof parent.window.createDMPTracker === "function"){
+            parent.window.createDMPTracker(DMPCatTopframeVideo,dfpTFVLandingPage);
+        }else{
+            parent.window.open(dfpTFVLandingPage, '_blank');
+        }
+    }
+    
+    function TFVShowRepeatWrapper() {
+        TFVRepeatWrapper.style.opacity = 1;
+        TFVRepeatWrapper.style.display = "flex";
+    }
+    
+    function TFVGoToLandingPage() {
+        if (TFVEmbedSource == "youtube") {
+            TFVPauseVideo();
+        }
+        generateDMPLPTopframeVideo();
+    }
+    
+    function onOrientationChange() {
+        var TFVScrollTOP = document.body.scrollTop || document.documentElement.scrollTop;
+        window.addEventListener("orientationchange", function() {
+            if (TFVOnPlayState == false) {
+                TFVHideCover();
+                console.log("hide cover");
+            } else {
+                console.log("visual callback");
+                TFVVisualCallback();
+            }
+        })
+    }
+    
+    function TFVTappableIOSFunc() {
+        if (TFVTappbaleIOSstatus) {
+            TFVPauseVideo();
+        } else {
+            TFVPlayVideo();
+        }
+        TFVTappbaleIOSstatus = !TFVTappbaleIOSstatus;
+    }
+    
+    function TFVHideCover() {
+        var orien = (navigator.platform == "iPhone") ? window.orientation : screen.orientation.angle;
+        if ( orien == 0) {
+            if (TVFStateOnInit == false) {
+                TFVinit();
+            } else {
+                if (!TFVAdsStatus || TFVAdsStatus == null) {
+                    if (TFVScrollTOP >= 0) {
+                        if (TFVOnPlayState) {
+                            TFVPlayVideo();
+                        }
+                    }
+                }
+            }
+        } else {
+        }
+    }
+    
+    function TFVVisualCallback() {
+        var videoContentWrapper = document.querySelector("#topframe-video-player div");
+        if (!TFVAdsStatus || TFVAdsStatus == null) {
+            if (screen.orientation.angle == 0) {
+                
+                TFVContentWrapper.style.width = TFVWidth + "px";
+                TFVContentWrapper.style.height = TFVHeight + "px";
+                
+                if (videoContentWrapper !== null) {
+                    videoContentWrapper.style.width = TFVWidth + "px";
+                    videoContentWrapper.style.height = TFVHeight + "px";
+                }
+                
+            } else {
+                TFVWidthLandscape = (navigator.platform == "iPhone") ? screen.height : screen.width;
+                TFVHeightLandscape = (TFVWidthLandscape / 16) * 9;
+                
+                TFVContentWrapper.style.width = TFVWidthLandscape + "px";
+                TFVContentWrapper.style.height = TFVHeightLandscape + "px";
+                if (videoContentWrapper !== null) {
+                    videoContentWrapper.style.width = TFVWidthLandscape + "px";
+                    videoContentWrapper.style.height = TFVHeightLandscape + "px";
+                }
+                
+            }
+        }
+    }
+</script>

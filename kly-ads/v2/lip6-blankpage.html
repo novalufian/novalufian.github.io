@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var PWT={}; //Initialize Namespace  
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+
+        var gads = document.createElement('script');
+        var useSSL = 'https:' == document.location.protocol;
+        gads.async = true;
+        gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+
+
+        googletag.defineSlot('/36504930/www.liputan6.com/dfp-sc', [300, 250], 'div-gpt-ad-liputan6-sc').addService(googletag.pubads());
+        googletag.defineSlot('/36504930/www.liputan6.com/dfp-halfpage1', [[300, 250],[300, 600]], 'div-gpt-ad-liputan6-halfpage1').addService(googletag.pubads());
+        googletag.defineSlot('/36504930/www.liputan6.com/dfp-halfpage2', [[300, 250],[300, 600]], 'div-gpt-ad-liputan6-halfpage2').addService(googletag.pubads());
+        googletag.defineSlot('/36504930/www.liputan6.com/dfp-lb', [[970, 90],[728, 90],[970, 250]], 'div-gpt-ad-liputan6-lb').addService(googletag.pubads()).setTargeting("leaderboard_type", ['direct']);
+        
+        googletag.cmd.push(function() {googletag.display('div-gpt-ad-liputan6-sc');});
+        googletag.cmd.push(function() {googletag.display('div-gpt-ad-liputan6-halfpage1');});
+        googletag.cmd.push(function() {googletag.display('div-gpt-ad-liputan6-halfpage2');});
+        googletag.cmd.push(function() {googletag.display('div-gpt-ad-liputan6-lb');});
+    </script>
+    
+    <div id="div-gpt-ad-liputan6-sc"></div>
+    <div id="div-gpt-ad-liputan6-halfpage1"></div>
+    <div id="div-gpt-ad-liputan6-halfpage2"></div>
+    <div id="div-gpt-ad-liputan6-lb"></div>
+</body>
+</html>
