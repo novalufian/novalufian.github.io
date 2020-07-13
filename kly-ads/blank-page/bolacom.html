@@ -514,29 +514,7 @@ function CriteoCDBRefreshDFP(dfpSlots) { CriteoCDBHandling(dfpSlots, true); }
       googletag.cmd.push(function() { googletag.display('div-gpt-ad-bolacom-popup-oop'); });
       googletag.cmd.push(function() { googletag.display('div-gpt-ad-bolacom-newsTag1-oop'); });
 
-      function showGamInformation(gam){
-            var _wrapper = document.createElement("div");
-            var _parent = document.getElementById("kly-console");
-
-            _wrapper.setAttribute("class", "console-item");
-            _wrapper.innerHTML = `<h2>${gam.slot.getSlotId().getDomId()}</h2>`;
-
-            var _x = gam.slot.getResponseInformation();
-            console.log(gam.slot.getSlotId().getDomId());
-
-                if(_x !== null){
-
-                    Object.keys(_x).forEach(function(key) {
-                        var _p = document.createElement("p");
-                        _p.innerHTML = `<strong>${key}</strong> : ${_x[key]}`; 
-                        _wrapper.appendChild(_p);
-                    });
-
-
-                }
-            
-            console.log("\n");
-
-            _parent.appendChild(_wrapper);
-      }
-  </script></div></div></body></html>
+  </script>
+    <script src="renderGam.js"></script>
+  
+</div></div></body></html>

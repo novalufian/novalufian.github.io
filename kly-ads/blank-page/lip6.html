@@ -175,38 +175,8 @@
     <div id='div-gpt-ad-liputan6-halfpage1' data-info="ad" style="margin-bottom:15px" class="immersive-card"></div>
     <!-- /36504930/www.liputan6.com/dfp-halfpage2 -->
     <div id='div-gpt-ad-liputan6-halfpage2' data-info="ad" class="immersive-card"></div>
-    
-    <div id="kly-console"></div>
-    <style>
-        div#kly-console {
-            z-index: 1000;
-            min-height: 100vh;
-            width: 100%;
-            background: rgb(248, 224, 224);
-            margin: 20px 0;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            
-        }
+    <script src="renderGam.js"></script>
 
-        .console-item {
-            width: calc(100% / 3);
-            box-sizing: border-box;
-            padding: 10px;
-        }
-
-        .console-item h2 {
-            text-align: center;
-            width: 80%;
-            margin: 10px auto;
-        }
-
-        .console-item p {
-            width: 100%;
-            margin: 3px 10px;
-        }
-    </style>
 <script id="custom-javascript" type="text/javascript">/*** START of Javascript Public ****/
     
     var novaskinads = null;
@@ -528,32 +498,6 @@
       googletag.cmd.push(function() {
           googletag.display('div-gpt-ad-liputan6-newsTag2-oop');
       });
-
-      function showGamInformation(gam){
-            var _wrapper = document.createElement("div");
-            var _parent = document.getElementById("kly-console");
-
-            _wrapper.setAttribute("class", "console-item");
-            _wrapper.innerHTML = `<h2>${gam.slot.getSlotId().getDomId()}</h2>`;
-
-            var _x = gam.slot.getResponseInformation();
-            console.log(gam.slot.getSlotId().getDomId());
-
-                if(_x !== null){
-
-                    Object.keys(_x).forEach(function(key) {
-                        var _p = document.createElement("p");
-                        _p.innerHTML = `<strong>${key}</strong> : ${_x[key]}`; 
-                        _wrapper.appendChild(_p);
-                    });
-
-
-                }
-            
-            console.log("\n");
-
-            _parent.appendChild(_wrapper);
-      }
 
       </script></div></div>
         <div id="gam-information"></div>  
