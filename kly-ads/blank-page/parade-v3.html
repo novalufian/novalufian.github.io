@@ -19,10 +19,18 @@
             height: 150px;
             position: fixed;
             z-index: 1000;
-            bottom: 0;
+            bottom: -100%;
             margin: 0;
             background-image: url(asset/bg-destkop.png);
             background-size: contain;
+        }
+
+        #parade-wrapper.active{
+            animation: slideup 62s forwards 1s;
+        }
+
+        #parade-wrapper.remove{
+            animation: slidedown 1s forwards;
         }
 
         div#parede-close {
@@ -33,7 +41,7 @@
             top: 0;
             opacity: 0;
             background: red;
-            animation: closebtn 1s 20s forwards;
+            animation: closebtn 1s 21s forwards;
             
         }
         
@@ -43,6 +51,7 @@
             height: 120px;
             display: flex;
             animation: carmove 20s linear 3;
+            animation-delay: 1.5s;
         }
         
         .car{
@@ -58,6 +67,30 @@
                 opacity: 1;
             }
         }
+
+        @keyframes slideup{
+            0%{
+                bottom: -100%;
+            }
+            1.6129032258064515%{
+                bottom: 0;
+            }
+            98.38709677419354%{
+                bottom: 0;
+            }
+            100%{
+                bottom: -100%;
+            }
+        }
+
+        @keyframes slidedown{
+            0%{
+                bottom: 0;
+            }
+            100%{
+                bottom: -100%;
+            }
+        }
         /* @keyframes carmove{
             0%{
                 left: -100vw;
@@ -67,7 +100,7 @@
             }
         } */
     </style>
-    <div id="parade-wrapper">
+    <div id="parade-wrapper" class="active">
         <div id="parede-close"></div>
 
         <div id="cars-wrapper">
@@ -91,6 +124,15 @@
     
     <script>
         
+        var _paradeWrapper = document.querySelector("#parade-wrapper")
+        var _btnClose = document.querySelector("#parede-close");
+
+        _btnClose.addEventListener("click", closeParade);
+
+        function closeParade() {
+            _paradeWrapper.classList.add("remove")
+        }
+
         setTimeout(function(){
             var _carsWrapper = document.getElementById("cars-wrapper");
             var _cars = document.querySelectorAll("#cars-wrapper .car");
@@ -114,6 +156,7 @@
             document.body.appendChild(_style);
         }, 500)
         
+      //%%CLICK_URL_UNESC%%%%CLICK_URL_ESC%%%%VIEW_URL_UNESC%%
     </script>
     
 </body>

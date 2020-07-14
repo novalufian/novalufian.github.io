@@ -18,7 +18,7 @@ function showGamInformation(gam){
                 _wrapper.appendChild(_p);
             });
 
-
+ 
         }
     
     console.log("\n");
