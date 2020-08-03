@@ -42,6 +42,7 @@ function createConsole() {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        overflow :hidden;
         
     }
 

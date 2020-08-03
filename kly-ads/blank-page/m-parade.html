@@ -5,108 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <style>
-        #parade-wrapper{
-            width: 100%;
-            height: 150px;
-            position: fixed;
-            z-index: 1000;
-            bottom: 0;
-            margin: 0;
-            background-image: url(asset/bg-mobile.png);
-            background-size: contain;
-            background-repeat-y: no-repeat;
-        }
-        
-        div#parede-close {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            right: 0;
-            top: 0;
-            opacity: 0;
-            background: red;
-            animation: closebtn 1s 15s forwards;
-            
-        }
-        
-        #cars-wrapper{
-            position: absolute;
-            bottom: 0;
-            height: 120px;
-            display: flex;
-            left: -120%;
-            animation: carmove 15s linear 3;
-        }
-        
-        .car{
-            height: 120px;
-            margin: 0 20px;
-        }
-        
-        
-        
-        @keyframes closebtn{
-            0%{
-                opacity: 0;
-            }
-            100%{
-                opacity: 1;
-            }
-        }
-
-        /* @keyframes carmove{
-            0%{
-                left: -100vw;
-            }
-            100%{
-                left: 100%;
-            }
-        } */
-
-    </style>
-    <div id="parade-wrapper">
-        <div id="parede-close"></div>
-        <div id="cars-wrapper">
-            <img src="asset/01.png" alt="" class="car">
-            <img src="asset/02.png" alt="" class="car">
-            <img src="asset/03.png" alt="" class="car">
-            <img src="asset/04.png" alt="" class="car">
-            <img src="asset/05.png" alt="" class="car">
-            <img src="asset/06.png" alt="" class="car">
-        </div>
-    </div>
     
+    <input type="text" id="id">
+    <input type="text" id="userid" readonly >
+    <input type="text" id="title" readonly>
     
     <script>
-        
-        setTimeout(function(){
-            var _carsWrapper = document.getElementById("cars-wrapper");
-            var _cars = document.querySelectorAll("#cars-wrapper .car");
-            console.log(_carsWrapper.clientWidth);
-            var _style = document.createElement("style");
-            var _s = ` 
-            @keyframes carmove{
-                0%{
-                    left: -${165 * _cars.length }px;
-                }
-                100%{
-                    left: 100%;
-                }
+        var _myurl = "https://simpul.lumajangkab.go.id/s_admin/get_dis/";
+
+        $("#id").keydown(function(e){
+
+            if(e.keyCode == 13){
+                $.getJSON(_myurl +this.value, function (data) {
+                    console.log(data)
+                    $("#userid").val(data.userId);
+                    $("#title").val(data.title);
+
+                })
             }
-            `;
-            _style.textContent = _s;
-            console.log(_carsWrapper.clientWidth);
-            document.body.appendChild(_style);
-        }, 500)
+        })
+        
         
     </script>
 </body>
