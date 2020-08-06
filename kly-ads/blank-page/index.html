@@ -94,6 +94,8 @@
         window.googletag = window.googletag || {cmd: []};
         googletag.cmd.push(function() {
             _hladsPhotoswipe = googletag.defineSlot('/36504930/m.liputan6.com/homepage/dfp-hl', [[320, 50], [320, 100]], 'div-gpt-ad-liputan6-hl').addService(googletag.pubads());
+            _hladsPhotoswipe.setTargeting("channel","PhotoSwipe");
+
             googletag.pubads().enableSingleRequest();
             googletag.enableServices();
 
