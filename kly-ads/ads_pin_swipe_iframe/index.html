@@ -1,0 +1,239 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KUIS</title>
+<meta name="description" content="">
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!--Style-->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="css/jTinder.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/media1024.css"/>
+<link rel="stylesheet" type="text/css" href="css/media768.css"/>
+<link rel="stylesheet" type="text/css" href="css/media480.css"/>
+<link rel="stylesheet" type="text/css" href="css/media320.css"/>
+<!--link rel="stylesheet" href="css/style-temp.css"-->
+<!--js-->
+
+<script src="js/vendor/jquery-1.9.1.min.js"></script>
+      <!----- content popup ads--->
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+
+</head>
+<body>
+
+<!-- middle -->
+<div id="middle-content" class="homePage">
+  <div id="popup_swiper" class="">
+
+    <div class="halBefore-kuis" style="display: none;">
+      <div class="box-loading2">
+          <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+      </div>
+        <span class="info-text">Mohon menunggu sebentar</span>
+    </div>
+    
+    <div id="swiper_step1" style="display: block;">
+      <div class="box_white">
+        <h4>Biodata</h4>
+        <div class="form_section overflow_form">
+          <form class="cmxform" id="biodata_form" method="get" action="">
+          <div class="form_group">
+            <div class="field">
+              <input type="text" class="input_floating" name="fullname" id="fullname" placeholder="Jane Appleseed" required>
+              <label for="fullname" class="label_floating">Nama</label>
+            </div>
+            <span class="erorr_help">Nama belum diisi</span>
+          </div><!--end.form_group-->
+
+          <div class="form_group">
+            <div class="field">
+              <input type="email" class="input_floating" name="emailUser" id="emailUser" placeholder="Jane Appleseed" required>
+              <label for="fullname" class="label_floating">Email</label>
+            </div>
+            <span class="erorr_help">Alamat email kurang lengkap</span>
+          </div><!--end.form_group-->
+
+          <div class="form_group">
+            <div class="field">
+              <input type="tel" class="input_floating" onkeypress="return Validate(event);" name="noHp" id="noHp" placeholder="Jane Appleseed" required>
+              <label for="fullname" class="label_floating">Nomer Handphone</label>
+            </div>
+            <span class="erorr_help">Format nomer Handphone salah</span>
+          </div><!--end.form_group-->
+
+          <div class="form_group_button">
+            <button type="submit" id="nextPage1" class="blue_button next_button">SUBMIT</button>
+          </div>
+           </form>
+        </div><!--end,form_section-->
+
+      </div><!--end.box_white-->
+    </div>
+
+    <div id="swiper_step2" style="display: none;">
+
+      <!--start padding container-->
+      <div class="wrap">
+        <div id=""></div>
+          <!--start jtinder container-->
+          <div id="tinderslide">
+            <div id="info_overlay">
+              <div class="overlay_blur"></div>
+              <div class="left_overlay">
+                <img src="images/icon_hand_no.png">
+              </div>
+
+              <div class="right_overlay">
+                <img src="images/icon_hand_yes.png">
+              </div>
+            </div>
+
+              <ul id="list-kuisnya">
+                  
+              </ul>
+          </div>
+          <!-- end jtinder container -->
+      </div>
+      <!-- end padding container -->
+      <div class="actions">
+          <span  class="dislike" id="dislikeNya"><i></i></span>
+          <span  class="like" id="likeNya"><i></i></span>
+      </div>
+
+    <!-- jTinder status text  -->
+    <div id="status" style="opacity: 0;"></div>
+    </div><!--end#swiper_step2-->
+
+
+    <div id="swiper_step3" style="display: none;">
+      <div class="box_white">
+        <div class="result_images">
+          <img id="result_images" src="images/result_images.png">
+        </div><!--end.result_images-->
+        <div class="caption_result">
+          <h3 id="mainTitleResult">There are many variations of passages of Lorem Ipsum available</h3>
+          <p></p>
+        </div><!--end.caption_result-->
+        <div class="box_point">
+          <p>TOTAL POIN</p>
+          <h3>334</h3>
+        </div>
+        <div class="form_group_button">
+          <button type="button" class="blue_button" id="finish_bt">Finish</button>
+        </div>
+      </div><!--end.box_white-->
+    </div><!--end#swiper_step3-->
+
+  </div>
+</div>
+
+<!-- transform2d lib -->
+<script type="text/javascript" src="js/jquery.transform2d.js"></script>
+<!-- jTinder lib -->
+<script type="text/javascript" src="js/jquery.jTinder.js"></script>
+
+<!--CDN link for  TweenMax-->
+<script src="js/js_lib.js"></script>
+<script src="js/js_run.js"></script>
+
+
+<script type="text/javascript">
+
+function onKeyboardOnOff(isOpen) {
+        // Write down your handling code
+        if (isOpen) {
+        //alert("keyboard show up");
+        $(".overflow_form").addClass("overflow_scrollingnya");
+        } else {
+        //alert("keyboard closed");
+        $(".overflow_form").removeClass("overflow_scrollingnya");  
+        }
+    }
+
+var originalPotion = false;
+$(document).ready(function(){
+    if (originalPotion === false) originalPotion = $(window).width() + $(window).height();
+    $('#finish_bt').click(function(e){
+      console.log('masuk')
+      var parentBody = window.parent.document.body;
+      parent.document.getElementById("iframe_pinadsnya").remove();
+      $(parentBody).removeClass("overflowHiddenya");
+    });
+});
+
+/**
+ * Determine the mobile operating system.
+ * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
+ *
+ * @returns {String}
+ */
+function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "winphone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "ios";
+    }
+
+    return "";
+}
+
+function applyAfterResize() {
+
+    if (getMobileOperatingSystem() != 'ios') {
+        if (originalPotion !== false) {
+            var wasWithKeyboard = $('body').hasClass('view-withKeyboard');
+            var nowWithKeyboard = false;
+
+                var diff = Math.abs(originalPotion - ($(window).width() + $(window).height()));
+                if (diff > 100) nowWithKeyboard = true;
+
+            $('body').toggleClass('view-withKeyboard', nowWithKeyboard);
+            if (wasWithKeyboard != nowWithKeyboard) {
+                onKeyboardOnOff(nowWithKeyboard);
+            }
+        }
+    }
+}
+
+$(document).on('focus blur', 'select, textarea, input[type=text], input[type=date], input[type=password], input[type=email], input[type=number]', function(e){
+    var $obj = $(this);
+    var nowWithKeyboard = (e.type == 'focusin');
+    $('body').toggleClass('view-withKeyboard', nowWithKeyboard);
+    onKeyboardOnOff(nowWithKeyboard);
+});
+
+$(window).on('resize orientationchange', function(){
+    applyAfterResize();
+});
+</script>
+
+</body>
+</html>
