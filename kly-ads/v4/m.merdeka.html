@@ -45,7 +45,10 @@
         <link rel="preconnect" href="https://a.merdeka.com" crossorigin="anonymous" />
 
         <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+        <!-- GPT SDK start -->
+        <script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
         <script src="prebid4.14.0.js" async></script>
+
         <script>
             var OneSignal = window.OneSignal || [];
             OneSignal.push([
@@ -529,15 +532,11 @@
                 // Check the gptRan flag
                 if (!gptRan) {
                     gptRan = true;
-                    var gads = document.createElement("script");
                     var rads = document.createElement("script"); // #1
                     var useSSL = "https:" == document.location.protocol;
-                    gads.src = (useSSL ? "https:" : "http:") + "//securepubads.g.doubleclick.net/tag/js/gpt.js";
                     rads.src = (useSSL ? "https:" : "http:") + "//adserver.kl-youniverse.com/asyncjs.php"; // #2
-                    gads.async = true;
                     rads.async = true; // #3
                     var node = document.getElementsByTagName("script")[0];
-                    node.parentNode.insertBefore(gads, node);
                     node.parentNode.insertBefore(rads, node); // #4
                 }
             };
