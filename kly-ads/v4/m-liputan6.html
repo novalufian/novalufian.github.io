@@ -1891,13 +1891,20 @@
                             headlineStickyStatus = !1;
                         function headlineSticky(t) {
                             null != t && (headlineStickyInterval = t);
-                            var e = document.getElementById("div-gpt-ad-liputan6-hl"),
-                                n = document.createElement("div");
-                            n.setAttribute("id", "div-gpt-ad-liputan6-hl-shadow"),
-                                e.parentElement.insertBefore(n, e),
-                                console.log(headlineStickyInterval),
-                                injectStickyStyleAndAnimation(),
-                                window.addEventListener("scroll", headlineStickyScrollEevent);
+                            var _serachDiv = setInterval(function () {
+                                console.log('search hl div');
+                                if(document.getElementById("div-gpt-ad-liputan6-hl")){
+
+                                    var e = document.getElementById("div-gpt-ad-liputan6-hl"),
+                                        n = document.createElement("div");
+                                    n.setAttribute("id", "div-gpt-ad-liputan6-hl-shadow"),
+                                        e.parentElement.insertBefore(n, e),
+                                        console.log(headlineStickyInterval),
+                                        injectStickyStyleAndAnimation(),
+                                        window.addEventListener("scroll", headlineStickyScrollEevent);
+                                    clearInterval(_serachDiv);
+                                }
+                            }, 100)
                         }
                         function headlineStickyScrollEevent() {
                             var t = document.getElementById("div-gpt-ad-liputan6-hl"),
