@@ -395,11 +395,18 @@
                     },
                     bids: [
                         { bidder: "emx_digital", params: { tagid: "113616" } },
-                        { bidder: "innity", params: { zone: 54305 } },
+                        { bidder: "innity", params: { zone: 54305 , pub : 536} },
                         { bidder: "oftmedia", params: { placementId: "18777699" } },
                         { bidder: "pubmatic", params: { publisherId: "224248", adSlot: "1501748" } },
                         { bidder: "rtbhouse", params: { publisherId: "bI2sp5Pt1ubwkv6C9Hs5", region: "prebid-asia" } },
-                        
+                        {
+                            bidder: "spotx",
+                            params: {
+                                channel_id: 79391,
+                                ad_unit: "outstream",
+                                outstream_function: spotxOutstreamFunc,
+                            },
+                        },
 
                     ],
                 },
@@ -419,13 +426,19 @@
                     },
                     bids: [
                         { bidder: "emx_digital", params: { tagid: "113616" } },
-                        { bidder: "innity", params: { zone: 53203 } },
-                        { bidder: "oftmedia", params: { placementId: "18777699" } },
+                        { bidder: "innity", params: { zone: 53203 , pub : 536} },
                         { bidder: "oftmedia", params: { placementId: "18777699" } },
                         { bidder: "pubmatic", params: { publisherId: "224248", adSlot: "1276557" } },
                         { bidder: "pubmatic", params: { publisherId: "224248", adSlot: "1191252" } },
                         { bidder: "rtbhouse", params: { publisherId: "bI2sp5Pt1ubwkv6C9Hs5", region: "prebid-asia" } },
-                        { bidder: "rtbhouse", params: { publisherId: "bI2sp5Pt1ubwkv6C9Hs5", region: "prebid-asia" } },
+                        {
+                            bidder: "spotx",
+                            params: {
+                                channel_id: 79391,
+                                ad_unit: "outstream",
+                                outstream_function: spotxOutstreamFunc,
+                            },
+                        },
                     ],
                 },
                 {
@@ -444,13 +457,84 @@
                     },
                     bids: [
                         { bidder: "emx_digital", params: { tagid: "113616" } },
-                        { bidder: "innity", params: { zone: 53203 } },
-                        { bidder: "oftmedia", params: { placementId: "18777699" } },
+                        { bidder: "innity", params: { zone: 53203 , pub : 536} },
                         { bidder: "oftmedia", params: { placementId: "18777699" } },
                         { bidder: "pubmatic", params: { publisherId: "224248", adSlot: "1276557" } },
                         { bidder: "pubmatic", params: { publisherId: "224248", adSlot: "1191252" } },
                         { bidder: "rtbhouse", params: { publisherId: "bI2sp5Pt1ubwkv6C9Hs5", region: "prebid-asia" } },
+                        {
+                            bidder: "spotx",
+                            params: {
+                                channel_id: 79391,
+                                ad_unit: "outstream",
+                                outstream_function: spotxOutstreamFunc,
+                            },
+                        },
+                    ],
+                },
+                {
+                    code: "div-gpt-ad-merdeka-dfp-exposer-slot1-oop",
+                    mediaTypes: {
+                        banner: {
+                            sizes: [
+                                [300, 250],
+                                [300, 600],
+                                [320, 480],
+                                [160, 600],
+                                [250, 250],
+                            ],
+                        },
+                        video: {
+                            playerSize: [300, 600], // Not set so that the player can be repsonsive
+                            context: "outstream",
+                        },
+                    },
+                    bids: [
+                        { bidder: "emx_digital", params: { tagid: "113616" } },
+                        { bidder: "innity", params: { zone: 53203 , pub : 536} },
+                        { bidder: "oftmedia", params: { placementId: "18777699" } },
+                        { bidder: "pubmatic", params: { publisherId: "224248", adSlot: "1276557" } },
+                        { bidder: "pubmatic", params: { publisherId: "224248", adSlot: "1191252" } },
                         { bidder: "rtbhouse", params: { publisherId: "bI2sp5Pt1ubwkv6C9Hs5", region: "prebid-asia" } },
+                        {
+                            bidder: "spotx",
+                            params: {
+                                channel_id: 79391,
+                                ad_unit: "outstream",
+                                outstream_function: spotxOutstreamFunc,
+                            },
+                        },
+                    ],
+                },
+                {
+                    code: "div-gpt-ad-merdeka-bottomfrm",
+                    mediaTypes: {
+                        banner: {
+                            sizes: [
+                                [320, 50],
+                                [320, 100],
+                            ],
+                        },
+                        video: {
+                            playerSize: [320, 100], // Not set so that the player can be repsonsive
+                            context: "outstream",
+                        },
+                    },
+                    bids: [
+                        { bidder: "emx_digital", params: { tagid: "113616" } },
+                        { bidder: "innity", params: { zone: 53203 , pub : 536} },
+                        { bidder: "oftmedia", params: { placementId: "18777699" } },
+                        { bidder: "pubmatic", params: { publisherId: "224248", adSlot: "1276557" } },
+                        { bidder: "pubmatic", params: { publisherId: "224248", adSlot: "1191252" } },
+                        { bidder: "rtbhouse", params: { publisherId: "bI2sp5Pt1ubwkv6C9Hs5", region: "prebid-asia" } },
+                        {
+                            bidder: "spotx",
+                            params: {
+                                channel_id: 79391,
+                                ad_unit: "outstream",
+                                outstream_function: spotxOutstreamFunc,
+                            },
+                        },
                     ],
                 },
             ];
@@ -1316,7 +1400,6 @@
                 googletag.defineOutOfPageSlot(GAMLibrary.dfpTopframe, "div-gpt-ad-merdeka-topfrm-oop").addService(googletag.pubads());
                 googletag.defineOutOfPageSlot("/36504930/m.merdeka.com/dfp-recommend-slot-1", "dfp-recommend-1").addService(googletag.pubads());
                 googletag.defineOutOfPageSlot("/36504930/m.merdeka.com/dfp-recommend-slot-2", "dfp-recommend-2").addService(googletag.pubads());
-                googletag.defineOutOfPageSlot(GAMLibrary.dfpExposer2, "div-gpt-ad-merdeka-dfp-exposer-slot2-oop").addService(googletag.pubads());
                 googletag.defineOutOfPageSlot(GAMLibrary.dfpSlideup, "div-gpt-ad-dfp-overlay-oop").addService(googletag.pubads());
 
                 if (isReadPage) {
@@ -1415,33 +1498,25 @@
                 googletag.enableServices();
             });
 
-            if (isReadPage) {
-                googletag.cmd.push(function () {
-                    googletag.display("div-gpt-ad-merdeka-insertion-oop");
-                });
-                googletag.cmd.push(function () {
-                    googletag.display("div-gpt-ad-merdeka-mobile-contextual-oop");
-                });
-            }
 
             var gptMMerdekaStyle = document.createElement("style");
             gptMMerdekaStyle.textContent = `
-.div-gpt-ad-merdeka-sc-continous {
-    width: 300px;
-    margin: 0 auto !important;
-    padding-bottom: 50px;
-}
+                .div-gpt-ad-merdeka-sc-continous {
+                    width: 300px;
+                    margin: 0 auto !important;
+                    padding-bottom: 50px;
+                }
 
-.div-gpt-ad-merdeka-sc-multiple-page {
-    width: 300px;
-    margin: auto;
-    padding-top: 30px;
-}
+                .div-gpt-ad-merdeka-sc-multiple-page {
+                    width: 300px;
+                    margin: auto;
+                    padding-top: 30px;
+                }
 
-[id^="div-gpt-ad-merdeka-sc-"] {
-    display: flex;
-}
-`;
+                [id^="div-gpt-ad-merdeka-sc-"] {
+                    display: flex;
+                }
+                `;
             window.onload = function () {
                 document.body.appendChild(gptMMerdekaStyle);
             };
@@ -2152,7 +2227,7 @@
                                     <div id="div-gpt-ad-merdeka-dfp-exposer-slot1-oop" style="margin: 15px 0 25px 0;">
                                         <script>
                                             googletag.cmd.push(function() {
-                                                googletag.display('div-gpt-ad-merdeka-dfp-exposer-slot2-oop');
+                                                googletag.display('div-gpt-ad-merdeka-dfp-exposer-slot1-oop');
                                             });
                                         </script>
                                     </div>
@@ -2785,11 +2860,7 @@
                                         </li>
                                         <!-- END DFP NATIVEOUT 1 --><!--DFP EXPOSER 2 CODE-->
                                         <div id="div-gpt-ad-merdeka-dfp-exposer-slot2-oop">
-                                            <script>
-                                                googletag.cmd.push(function () {
-                                                    googletag.display("div-gpt-ad-merdeka-dfp-exposer-slot2-oop");
-                                                });
-                                            </script>
+                                            
                                         </div>
                                         <!--END DFP EXPOSER 2 CODE-->
                                         <li style="padding: 0px;">
