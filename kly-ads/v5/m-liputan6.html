@@ -404,7 +404,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         extractDomain : function(){var e,n=window.location.href;return e=n.indexOf("://")>-1?n.split("/")[2]:n.split("/")[0],e=e.split(":")[0]}
     };
     gamInitTopFrame.gamTFfreeze();
-    
+
 }
 });
   </script><script type="text/javascript">; window.kmklabs.featureToggle = {};
@@ -820,7 +820,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         setTimeout(function () {
             initAdserver();
         }, FAILSAFE_TIMEOUT);
-        
+
         var gpt_gam_site = window.location.hostname.toUpperCase(),
         gpt_gam_ver = 'V05 DK';
         console.log('%c GPT '+gpt_gam_site+' '+gpt_gam_ver ,'color:#d3d3d3; font-size:25px; font-weight: bold; -webkit-text-stroke: 1px black;');
@@ -1036,7 +1036,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                   });
                                   parent.window.open(dfpTracker, '_blank');
                               };
-                              
+
                               window.createCDPTracker = function(cat, campaignName){
                                 var cName ='liputan6_id_visitor_id=',
                                 cVisitorId = document.cookie.split(';').find(v=>{ return v.match(cName);}),
@@ -1051,7 +1051,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                                 console.log("%c DATA CDP : ", "color:#cad315; font-size:12px; font-weight: bold; -webkit-text-stroke: 1px black;",cdpData);
                                 console.log("%c PARTNER USER ID : ", "color:#cad315; font-size:12px; font-weight: bold; -webkit-text-stroke: 1px black;",partnerUID);
-                                
+
                                 partnerUID ? window.VidioPersonalization.sendData(partnerUID, cdpData) : '';
                             };
                             googletag.cmd.push(function() {
@@ -1099,7 +1099,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 googletag.defineOutOfPageSlot('/36504930/m.liputan6.com/dfp-visual-story-3', 'div-gpt-ad-liputan6-visual-story-3-oop').addService(googletag.pubads());
                                 googletag.defineOutOfPageSlot(GAMLibrary.dfpSlideup, 'div-gpt-ad-liputan6-overlay-oop').addService(googletag.pubads());
                                 googletag.defineOutOfPageSlot('/36504930/m.liputan6.com/dfp-crm', 'div-gpt-ad-liputan6-crm-oop').addService(googletag.pubads());
-                                
+
 
                                 /*Bottom Frame Scrolling*/
                                 GAMLibrary.scrollBottomFrame();
@@ -2109,7 +2109,7 @@ install: function() {
     const targetElement = this.domGetter();
     targetElement.insertAdjacentHTML('afterbegin', dableIframe);
     dableHandler.vendorScript();
-    
+
         // $("#div-gpt-ad-liputan6-sc.article-ad").insertBefore(".relateds--async.js-related-articles-placeholder");
         $("#div-gpt-ad-liputan6-sc.article-ad").insertAfter($('div[id^="dablewidget_"]'));
     }
@@ -2182,7 +2182,7 @@ window.addEventListener('DOMContentLoaded', function() {
 },
 shareElementTemplate: function() {
     const title = this.getLiveReportTitleEncoded();
-    
+
     const template = `
     <div class="livereport--share livereport--share--hidden">
     <div class="livereport--share__wrapper">
@@ -2218,10 +2218,10 @@ appendElement: function() {
     //   },
     //   addAction: function(){
     //     this.getButton();
-    
+
     //   }
     // };
-    
+
     const cssPreparation = {
       cssTemplate: function() {
         const rawCSS = `
@@ -2229,14 +2229,14 @@ appendElement: function() {
             font-family: myFirstFont;
             src: url('https://cdn-production-assets-kly.akamaized.net/assets/fonts/liputan6/AcuminPro/AcuminPro.woff');
         } */
-        
+
         .livereport--share {
           position: relative;
           display: block;
           /* padding-left: 15px;
           padding-right: 15px; */
       }
-      
+
       .livereport--share__wrapper {
           position: relative;
           display: grid;
@@ -2244,7 +2244,7 @@ appendElement: function() {
           grid-template-columns: 14% 86%;
           height: 30px;
       }
-      
+
       .livereport--share__button--fb {
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='50px' height='30px' viewBox='0 0 50 30' version='1.1'%3E%3Cscript xmlns=''/%3E%3C!-- Generator: sketchtool 57.1 (101010) - https://sketch.com --%3E%3Ctitle%3E4C44A201-2549-440C-A1A3-8B31553ED1CA%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Hanging-Share' transform='translate(-65.000000, -8.000000)'%3E%3Cg id='Share'%3E%3Cg id='share' transform='translate(65.000000, 8.000000)'%3E%3Cg id='facebook-share'%3E%3Crect id='button' fill='%2343609C' x='0' y='0' width='50' height='30' rx='15'/%3E%3Cpath d='M23.0133751,15.9614638 L21,15.9614638 L21,13.4272078 L23.0133751,13.4272078 L23.0133751,11.2627246 C23.0133751,9.5618248 24.2027,8 26.9430738,8 C28.0526567,8 28.8733042,8.09832344 28.8733042,8.09832344 L28.8085045,10.4647868 C28.8085045,10.4647868 27.9717311,10.4572655 27.0586184,10.4572655 C26.0703499,10.4572655 25.9120494,10.8781829 25.9120494,11.5769767 C25.9120494,12.1293111 25.9120494,10.3996937 25.9120494,13.4273446 L28.887063,13.4273446 L28.7576117,15.9616005 L25.9120494,15.9616005 L25.9120494,23 L23.0133751,23 L23.0133751,15.9614638 Z' id='facebook-icon-copy-5' fill='%23FFFFFF'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
           background-repeat: no-repeat;
@@ -2257,7 +2257,7 @@ appendElement: function() {
           background-color: #43609C;
           border-radius: 15px;
       }
-      
+
       .livereport--share__button--whatsapp {
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='50px' height='30px' viewBox='0 0 50 30' version='1.1'%3E%3Cscript xmlns=''/%3E%3C!-- Generator: sketchtool 57.1 (101010) - https://sketch.com --%3E%3Ctitle%3EBB844963-6069-401B-BA60-DEB68A3D16DC%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Hanging-Share' transform='translate(-123.000000, -8.000000)'%3E%3Cg id='Share'%3E%3Cg id='share' transform='translate(65.000000, 8.000000)'%3E%3Cg id='wa' transform='translate(58.000000, 0.000000)'%3E%3Crect id='button' fill='%2325D366' x='0' y='0' width='50' height='30' rx='15'/%3E%3Cpath d='M29.8659375,18.5909375 C29.685,19.101875 28.966875,19.525625 28.3940625,19.649375 C28.0021875,19.7328125 27.4903125,19.799375 25.7671875,19.085 C23.563125,18.171875 22.14375,15.9321875 22.033125,15.786875 C21.9271875,15.6415625 21.1425,14.6009375 21.1425,13.5246875 C21.1425,12.4484375 21.6890625,11.924375 21.909375,11.699375 C22.0903125,11.5146875 22.389375,11.4303125 22.67625,11.4303125 C22.7690625,11.4303125 22.8525,11.435 22.9275,11.43875 C23.1478125,11.448125 23.2584375,11.46125 23.40375,11.8090625 C23.5846875,12.245 24.0253125,13.32125 24.0778125,13.431875 C24.13125,13.5425 24.1846875,13.6925 24.1096875,13.8378125 C24.039375,13.9878125 23.9775,14.054375 23.866875,14.181875 C23.75625,14.309375 23.65125,14.406875 23.540625,14.54375 C23.439375,14.6628125 23.325,14.7903125 23.4525,15.010625 C23.58,15.22625 24.020625,15.9453125 24.669375,16.5228125 C25.5065625,17.268125 26.1853125,17.50625 26.428125,17.6075 C26.6090625,17.6825 26.8246875,17.6646875 26.956875,17.5240625 C27.1246875,17.343125 27.331875,17.043125 27.5428125,16.7478125 C27.6928125,16.5359375 27.8821875,16.5096875 28.0809375,16.5846875 C28.2834375,16.655 29.355,17.1846875 29.5753125,17.294375 C29.795625,17.405 29.9409375,17.4575 29.994375,17.5503125 C30.046875,17.643125 30.046875,18.0790625 29.8659375,18.5909375 Z M25.501875,8 L25.498125,8 C21.3628125,8 18,11.36375 18,15.5 C18,17.140625 18.52875,18.66125 19.4278125,19.8959375 L18.493125,22.6821875 L21.3759375,21.760625 C22.561875,22.54625 23.9765625,23 25.501875,23 C29.6371875,23 33,19.6353125 33,15.5 C33,11.3646875 29.6371875,8 25.501875,8 L25.501875,8 Z' id='Fill-1' fill='%23FFFFFF'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
           background-repeat: no-repeat;
@@ -2270,7 +2270,7 @@ appendElement: function() {
           background-color: #25D366;
           border-radius: 15px;
       }
-      
+
       .livereport--share__button--twitter {
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='50px' height='30px' viewBox='0 0 50 30' version='1.1'%3E%3Cscript xmlns=''/%3E%3C!-- Generator: sketchtool 57.1 (101010) - https://sketch.com --%3E%3Ctitle%3E9F90A524-855F-480C-9EC2-17F4EF82121D%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Hanging-Share' transform='translate(-180.000000, -8.000000)'%3E%3Cg id='Share'%3E%3Cg id='share' transform='translate(65.000000, 8.000000)'%3E%3Cg id='twitter' transform='translate(115.000000, 0.000000)'%3E%3Crect id='button' fill='%2355ACEE' x='0' y='0' width='50' height='30' rx='15'/%3E%3Cpath d='M32.6470252,10.3718891 C33.4462825,9.90325161 34.060232,9.16116529 34.3492327,8.27686344 C33.6011144,8.71089304 32.772608,9.02596364 31.8906982,9.19577322 C31.1845666,8.45977789 30.178395,8 29.0648507,8 C26.9268305,8 25.1932981,9.69541945 25.1932981,11.7866613 C25.1932981,12.0834589 25.2275479,12.3725044 25.2935001,12.6496447 C22.0759024,12.4917402 19.2232589,10.9841265 17.313854,8.69308149 C16.9806021,9.25234565 16.7896333,9.90279017 16.7896333,10.5967945 C16.7896333,11.9106039 17.4731204,13.0696465 18.5119378,13.7487003 C17.8772308,13.729043 17.280359,13.5586797 16.7584027,13.2750792 C16.7580253,13.2908604 16.7580253,13.3067339 16.7580253,13.3226997 C16.7580253,15.1573815 18.0925424,16.6878826 19.863627,17.0358077 C19.5387725,17.1223736 19.1967459,17.1686098 18.8435857,17.1686098 C18.5940242,17.1686098 18.3515391,17.1447996 18.1150926,17.100686 C18.607894,18.6050697 20.0375181,19.6999723 21.7317057,19.7304273 C20.4067181,20.746147 18.7374395,21.3514628 16.923519,21.3514628 C16.6110247,21.3514628 16.3028705,21.3335589 16,21.2984896 C17.7133411,22.3729966 19.748423,23 21.9346572,23 C29.0556986,23 32.9498013,17.2297967 32.9498013,12.2256745 C32.9498013,12.0614944 32.9460273,11.8982373 32.9385734,11.7357185 C33.6951835,11.2019257 34.3514972,10.5349617 34.8705285,9.77561756 C34.1762852,10.076845 33.4300539,10.2803396 32.6470252,10.3718891 Z' id='twiiter-icon' fill='%23FFFFFF'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
           background-repeat: no-repeat;
@@ -2283,7 +2283,7 @@ appendElement: function() {
           background-color: #55ACEE;
           border-radius: 15px;
       }
-      
+
       .livereport--share__button--line {
         background-image: url('data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20width%3D%2219%22%20height%3D%2218%22%20viewBox%3D%220%200%2019%2018%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3EGroup%2013%3C%2Ftitle%3E%3Cpath%20d%3D%22M18.5%207.786c0-3.842-4.037-6.968-9-6.968-4.962%200-9%203.126-9%206.968%200%203.445%203.202%206.33%207.527%206.876.293.06.692.185.793.424.09.216.06.556.029.775l-.128.736c-.04.217-.181.849.78.462.96-.386%205.182-2.912%207.07-4.985%201.304-1.364%201.929-2.75%201.929-4.288zM5.977%2010.072H4.189a.462.462%200%200%201-.472-.45V6.21c0-.248.212-.45.472-.45s.471.202.471.45v2.962h1.317c.26%200%20.472.202.472.45%200%20.249-.211.45-.472.45zm1.85-.45c0%20.249-.212.45-.472.45a.462.462%200%200%201-.472-.45V6.21c0-.248.212-.45.472-.45s.471.202.471.45v3.412zm4.304%200c0%20.194-.129.366-.322.427a.48.48%200%200%201-.527-.157l-1.833-2.38v2.11c0%20.249-.211.45-.472.45a.462.462%200%200%201-.472-.45V6.21c0-.194.13-.366.323-.428a.48.48%200%200%201%20.526.157l1.834%202.382V6.21c0-.248.211-.45.471-.45s.472.202.472.45v3.412zm2.894-2.156c.26%200%20.472.201.472.45%200%20.248-.212.45-.472.45h-1.316v.806h1.316c.26%200%20.472.202.472.45%200%20.249-.212.45-.472.45h-1.788a.462.462%200%200%201-.472-.45V6.21c0-.248.212-.45.472-.45h1.788c.26%200%20.472.202.472.45s-.212.45-.472.45h-1.316v.806h1.316z%22%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
         background-repeat: no-repeat;
@@ -2296,13 +2296,13 @@ appendElement: function() {
         background-color: #25D366;
         border-radius: 15px;
     }
-    
+
     .livereport--share__button {
       position: relative;
       display: flex;
       justify-content: center;
   }
-  
+
   .livereport--share__copy-link {
       font-family: AcuminPro;
       font-size: 9px;
@@ -2323,7 +2323,7 @@ appendElement: function() {
       width: 25%;
       height: 30px;
   }
-  
+
   .livereport--share__label {
       position: relative;
       display: flex;
@@ -2337,7 +2337,7 @@ appendElement: function() {
       letter-spacing: normal;
       color: #333333;
   }
-  
+
   .livereport--share--hidden{
     position: fixed;
     display: block;
@@ -2384,7 +2384,7 @@ const scrollHandler = {
   do: function() {
     let last_known_scroll_position = 0;
     let ticking = false;
-    
+
     window.addEventListener(
       'scroll',
       function(e) {
@@ -2397,17 +2397,17 @@ const scrollHandler = {
               ticking = false;
           }.bind(this)
           );
-          
+
           ticking = true;
       }
   }.bind(this)
   );
-    
+
     this.copyLink();
 },
 getScrollDirection: function() {
     let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-    
+
     if (currentScroll > 0 && scrollHandler.lastScroll <= currentScroll) {
       scrollHandler.lastScroll = currentScroll;
       scrollHandler.scrollDirection = 'down';
@@ -2419,7 +2419,7 @@ getScrollDirection: function() {
 copyLink: function() {
   $(".livereport--share__copy-link").click(function() {
       var clipboard = new ClipboardJS(".livereport--share__copy-link");
-      
+
       $(this).text("");
       $(this).css("transition", "all 2s ease 0s");
       $(this).css("background-color", "#FFFFFF");
@@ -2455,7 +2455,7 @@ executor: function() {
 };
 
 if ($('.livereport__container').length > 0) {
-    
+
     elementPreparation.appendElement();
     elementPreparation.getElement();
     elementPreparation.shareButtonClickHandler();
@@ -2515,19 +2515,19 @@ $(document).ready(() => {
                     display: flex;
                     margin-bottom: 22px;
                 }
-                
+
                 .copy-text-container {
                     float: left;
                     /* margin-right: 15px; */
                     width: 60%;
-                    
+
                 }
-                
+
                 .copy-button-container {
                     width: 40%;
-                    
+
                 }
-                
+
                 button.copy-button {
                     border-radius: 16px;
                     background-color: transparent;
@@ -2545,7 +2545,7 @@ $(document).ready(() => {
                     font-size: 12px;
                     color: #ff5722;
                 }
-                
+
                 input.copy-text {
                     border: none;
                     border-bottom: 1px solid #d8d8d8;
@@ -2560,13 +2560,13 @@ $(document).ready(() => {
                     color: #787878;
                     width: 100%;
                 }
-                
+
                 input:focus,
                 textarea:focus,
                 select:focus {
                     outline: none;
                 }
-                
+
                 .copy-button-success::before {
                     content: "Copied";
                     color: white;
@@ -2590,7 +2590,7 @@ $(document).ready(() => {
         <div class="copy-text-container">
         <input type="text" class="copy-text" id="copy-text">
         </div>
-        
+
         <div class="copy-button-container">
         <button class="copy-button" data-clipboard-target=".copy-text">
         Copy Link
@@ -2725,7 +2725,7 @@ const poolingHandler = {
           location.reload(true);
           $(window).scrollTop(0);
       });
-        
+
         $(".livereport--notification__button-close").click(function(){
           $(".livereport--notification").remove();
       });
@@ -2754,7 +2754,7 @@ const cssHandler = {
       background-color: #ffffff;
       z-index: 5;
   }
-  
+
   .livereport--notification__container {
       position: relative;
       width: auto;
@@ -2770,7 +2770,7 @@ const cssHandler = {
       -ms-flex-align: center;
       align-items: center;
   }
-  
+
   .livereport--notification__count {
       width: 40px;
       height: 40px;
@@ -2822,7 +2822,7 @@ const cssHandler = {
       background: -o-linear-gradient(left, #ffae00, #ff3300);
       background: linear-gradient(to right, #ffae00, #ff3300);
   }
-  
+
   .livereport--notification__caption {
       margin-left: 7px;
       margin-right: 17px;
@@ -2836,7 +2836,7 @@ const cssHandler = {
       text-align: center;
       color: #333333;
   }
-  
+
   .livereport--notification__button-update {
       font-family: AcuminPro;
       font-size: 12px;
@@ -2872,7 +2872,7 @@ const cssHandler = {
       -ms-flex-align: center;
       align-items: center;
   }
-  
+
   .livereport--notification__button-update
   .livereport--notification__button-update-logo {
       background-size: 14px 14px;
@@ -2884,7 +2884,7 @@ const cssHandler = {
       height: 14px;
       margin-right: 4px;
   }
-  
+
   .livereport--notification__button-close {
       position: absolute;
       top: 5px;
@@ -3040,7 +3040,7 @@ $(window).load(function () {
                     if($("iframe.visual-stories").length === 1){
                       $("iframe.visual-stories").detach();
                   }
-                  
+
                   handler.checkElementExist('div[data-page="2"]', function() {
                               //$(".articles__page:eq(0)").append(handler.iframeChannel());
                               $(".nav-dropdown--widget-wrapper").append(handler.iframeChannel());
@@ -3058,7 +3058,7 @@ const windowsMessageHandler = {
     'receiveMessage': function () {
         window.addEventListener('message', function (event) {
             const evenData = event.data;
-            
+
             if (evenData.otosiaChildHeight != undefined) {
                 const tinggi = event.data.otosiaChildHeight;
                 const iframe = document.querySelector('.widget-mobil-otosia') || null;
@@ -3248,11 +3248,11 @@ $(document).ready(() => {
               case 'liputan6':
               adsIDElementName = '#div-gpt-ad-liputan6-topfrm-oop';
               break;
-              
+
               case 'bola.com':
               adsIDElementName = '#div-gpt-ad-bolacom-topfrm-oop';
               break;
-              
+
               default:
               break;
           }
@@ -3277,7 +3277,7 @@ $(document).ready(() => {
             return window.kmklabs.site;
         }
     };
-    
+
         // const elementDuplicator = {
         //   duplicatedElement: null,
         //   duplication: function(elementDOMToDuplicate) {
@@ -3288,7 +3288,7 @@ $(document).ready(() => {
         //     appendAt.insertAdjacentHTML(appendPosition, this.duplicatedElement);
         //   }
         // };
-        
+
         const hangingHandler = {
           isItOverlapping: function(DOMelementOne, DOMelementTwo) {
             let overlap = false;
@@ -3302,10 +3302,10 @@ $(document).ready(() => {
               );
             return overlap;
         },
-        
+
         isItInViewPort: function(el) {
             var rect = el.getBoundingClientRect();
-            
+
             return (
               rect.bottom > 0 &&
               rect.right > 0 &&
@@ -3313,12 +3313,12 @@ $(document).ready(() => {
               rect.top < (window.innerHeight || document.documentElement.clientHeight) /* or $(window).height() */
               );
         },
-        
+
         disableHanging() {
             const navbar = domGetter.element.mainNavbar;
             const { layoutContent } = domGetter.element;
             const { ads } = domGetter.element;
-            
+
             // if there's no ads at all (iframe etc)
             if (ads === null) {
               if (navbar.getBoundingClientRect().top <= 0) {
@@ -3337,7 +3337,7 @@ $(document).ready(() => {
                   // this.tagPageHangingSubMenu();
               }
           }
-          
+
               // if there's iframe, but no ads to display
           } else if (navbar.getBoundingClientRect().top <= 0) {
               if (!domGetter.element.isThereACoverPageInTage) {
@@ -3347,12 +3347,12 @@ $(document).ready(() => {
             }
         }
     },
-    
+
     enableHanging() {
         const navbar = domGetter.element.mainNavbar;
         const { layoutContent } = domGetter.element;
         const { ads } = domGetter.element;
-        
+
             // if there's no ads at all (iframe etc)
             if (ads === null) {
               if (!domGetter.element.isThereACoverPageInTage) {
@@ -3376,7 +3376,7 @@ $(document).ready(() => {
             }
         }
     },
-    
+
     tagPageHangingSubMenu(adsElement = null) {
         const pageType = domGetter.element.pageType;
         const sites = domGetter.element.sites;
@@ -3385,42 +3385,42 @@ $(document).ready(() => {
         const navbar = domGetter.element.mainNavbar;
             // const duplcate = new Object(elementDuplicator);
             // console.log(duplcate);
-            
+
             if (sites === 'bola.com') {
               switch (pageType) {
                 case 'SmartTopicPage':
                 if (navbar.classList.contains('layout__nav-content--no-hanging')) {
                     subheaderMenuTag.classList.add('topics--tab--hanging-bola');
                 }
-                
+
                 break;
-                
+
                 case 'TagPage':
                 if (!this.isItInViewPort(tagTitle)) {
                     tagTitle.style.marginBottom = `${tagTitle.clientHeight}px`;
                     subheaderMenuTag.classList.add('topics--tab--hanging-bola');
                 }
-                
+
                 break;
-                
+
                 default:
                 break;
             }
         }
-        
+
         if (sites === 'liputan6') {
           switch (pageType) {
             case 'SmartTopicPage':
             if (navbar.classList.contains('layout__nav-content--no-hanging')) {
                 subheaderMenuTag.classList.add('topics--tab--hanging-liputan6');
             }
-            
+
             break;
-            
+
             case 'TagPage':
             subheaderMenuTag.classList.add('topics--tab--hanging-liputan6');
             break;
-            
+
             default:
             break;
         }
@@ -3434,22 +3434,22 @@ tagPageNoHangingSubMenu(adsElement = null) {
     const navbar = domGetter.element.mainNavbar;
     const tagTitle = domGetter.element.bolaTagTitle;
             // const initializeDuplicator = Object.assign({}, elementDuplicator);
-            
+
             // if (initializeDuplicator.duplicatedElement === null) {
             //   initializeDuplicator.duplication(subheaderMenuTag);
             // }
-            
+
             // console.log(initializeDuplicator);
-            
+
             if (sites === 'bola.com') {
               switch (pageType) {
                 case 'SmartTopicPage':
                 if (!navbar.classList.contains('layout__nav-content--no-hanging')) {
                     subheaderMenuTag.classList.remove('topics--tab--hanging-bola');
                 }
-                
+
                 break;
-                
+
                 case 'TagPage':
                   // const overlappedTagTitle = this.isItOverlapping(tagTitle, subheaderMenuTag);
                   subheaderMenuTag.classList.remove('topics--tab--hanging-bola');
@@ -3458,14 +3458,14 @@ tagPageNoHangingSubMenu(adsElement = null) {
                   //   tagTitle.style.marginBottom = `0px`;
                   //   subheaderMenuTag.classList.remove("topics--tab--hanging-bola");
                   // }
-                  
+
                   break;
-                  
+
                   default:
                   break;
               }
           }
-          
+
           if (sites === 'liputan6') {
               switch (pageType) {
                 case 'SmartTopicPage':
@@ -3473,12 +3473,12 @@ tagPageNoHangingSubMenu(adsElement = null) {
                     subheaderMenuTag.classList.remove('topics--tab--hanging-liputan6');
                 }
                 break;
-                
+
                 case 'TagPage':
                 subheaderMenuTag.classList.remove('topics--tab--hanging-liputan6');
-                
+
                 break;
-                
+
                 default:
                 break;
             }
@@ -3495,7 +3495,7 @@ const scrollHandler = {
 topSharePosition: $('#top-share-buttons').length > 0 ? $('#top-share-buttons').offset().top : 0,
 do(currentScroll) {
     const navbar = this.getNavbar();
-    
+
     if (navbar) {
       switch (scrollHandler.directionScrollValue) {
         case 'down':
@@ -3505,7 +3505,7 @@ do(currentScroll) {
             $('.share-main').addClass('share-main__hanging');
         }
         break;
-        
+
         case 'up':
         hangingHandler.enableHanging();
         if (window.kmklabs.article && window.kmklabs.article.type == 'TextTypeArticle') {
@@ -3513,7 +3513,7 @@ do(currentScroll) {
             $('.share-main').removeClass('share-main__hanging');
         }
         break;
-        
+
         default:
         break;
     }
@@ -3539,23 +3539,23 @@ efficientScroll() {
             //   }
             //   scrollHandler.scrollAtribute.ticking = true;
             // });
-            
+
             window.addEventListener('scroll', function(e) {
               if (!domGetter.normalizeShare) {
                 // cssCreator.cssAppend();
                 domGetter.normalizeShare = true;
             }
             let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-            
+
             scrollHandler.scrollAtribute.last_known_scroll_position = window.scrollY;
-            
+
             if (!scrollHandler.scrollAtribute.ticking) {
                 window.requestAnimationFrame(function() {
                   scrollHandler.scrollDirection();
                   scrollHandler.do(currentScroll);
                   scrollHandler.scrollAtribute.ticking = false;
               });
-                
+
                 scrollHandler.scrollAtribute.ticking = true;
             }
         });
@@ -3568,7 +3568,7 @@ efficientScroll() {
               setTimeout(
                 function() {
                   let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-                  
+
                   if (currentScroll > 0 && scrollHandler.lastScroll <= currentScroll) {
                     scrollHandler.lastScroll = currentScroll;
                     scrollHandler.directionScrollValue = 'down';
@@ -3576,9 +3576,9 @@ efficientScroll() {
                     scrollHandler.lastScroll = currentScroll;
                     scrollHandler.directionScrollValue = 'up';
                 }
-                
+
                 this.oldScroll = this.scrollY;
-                
+
                 scrollHandler.tick = false;
             }.bind(this),
             100
@@ -3604,13 +3604,13 @@ efficientScroll() {
       let listOfStyle = window.getComputedStyle(layoutContentTranslate);
       let marginTopAttribute = listOfStyle['marginTop'];
       let paddingTopAttribute = listOfStyle['paddingTop'];
-      
+
       marginTop = marginTopAttribute.substring(0, marginTopAttribute.length - 2);
       paddingTop = paddingTopAttribute.substring(0, paddingTopAttribute.length - 2);
       let result = parseInt(marginTop) + parseInt(paddingTop);
-      
+
       const AdsWithNavbar = adsHeight + 100 + miniBar;
-      
+
       const rawCSS = `
       .topics--tab--hanging-bola {
           position: fixed;
@@ -3619,7 +3619,7 @@ efficientScroll() {
           z-index: 2;
           border-bottom: none;
       }
-      
+
       .topics--tab--hanging-liputan6 {
           position: fixed;
           top: 0px;
@@ -3627,7 +3627,7 @@ efficientScroll() {
           z-index: 2;
           border-bottom: none;
       }
-      
+
       .js-snapped-nav .js-has-tb .layout .layout__nav-content{
           -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -3639,7 +3639,7 @@ efficientScroll() {
           transform: translateY(0px);
           transition: transform 300ms linear;
       }
-      
+
       .layout__content, .share-main{
           -webkit-transition: padding-top 0.3s ease-in-out;
           -moz-transition: padding-top 0.3s ease-in-out;
@@ -3647,14 +3647,14 @@ efficientScroll() {
           transition: padding-top 0.3s ease-in-out;
           webkit-backface-visibility: hidden;
       }
-      
+
       .share-main__no-hanging{
           -webkit-transform: translateY(-${result}px);
           transform: translateY(-${result}px);
           transition: transform 300ms linear;
       }
-      
-      
+
+
       .js-snapped-nav .js-has-tb .layout .layout__nav-content--no-hanging, .js-has-tb .share-main__no-hanging {
           -webkit-transform: translateY(-${AdsWithNavbar}px);
           transform: translateY(-${AdsWithNavbar}px);
@@ -3666,16 +3666,16 @@ efficientScroll() {
           transform: translateY(-${AdsWithNavbar}px);
           transition: transform 300ms linear;
       }
-      
+
       .layout .layout__nav-content.layout__nav-content--before {
           position: absolute;
           top: unset;
       }
-      
+
       .js-has-tb .layout__nav-content {
           top: unset;
       }
-      
+
       .share-main {
           top: 0px;
           height: 46px;
@@ -3691,7 +3691,7 @@ efficientScroll() {
           transform: translateY(-50px);
           transition: transform 300ms linear;
       }
-      
+
       .share-main .share-main__text {
           display: inline-block;
           vertical-align: top;
@@ -3708,7 +3708,7 @@ efficientScroll() {
       .share-main .share-buttons--item__link {
           height: 30px;
       }
-      
+
       .share-main .share-buttons--item__link_copy {
           border-radius: 2.1px;
           border: solid 1px rgb(250, 100, 0);
@@ -3720,19 +3720,19 @@ efficientScroll() {
           color: #FFFFFF;
           background-color: rgb(250, 100, 0);
       }
-      
+
       .share-main .share-buttons--item:nth-child(6) {
           width: 20%;
           vertical-align: top;
       }
-      
+
       .copy-link-button-success::before {
           content: "Copied";
           color: rgb(250, 100, 0);
           font-weight: bold;
       }
       `;
-      
+
       return rawCSS;
   },
   cssAppend() {
@@ -3753,15 +3753,15 @@ minibarAdjustment: function() {
       case 'NBA':
       domGetter.doWithMiniNavbar('.navbar--custom-submenu');
       break;
-      
+
       case 'Liga1':
       domGetter.doWithMiniNavbar('.subheader-tabs');
       break;
-      
+
       case 'Pilpres':
       domGetter.doWithMiniNavbar('.subheader-tabs');
       break;
-      
+
       default:
       domGetter.doWithMiniNavbar('.subheader-tabs');
       break;
@@ -3773,7 +3773,7 @@ const hangingShare = {
   prepare: function() {
     var title = $('.article-header__title').text();
     title = encodeURIComponent(title);
-    
+
     var shareMain =
     `<div class="share-main">
     <div data-component="mobile:share-buttons" class="share-buttons" id="hanging-share-buttons">
@@ -3817,32 +3817,32 @@ const hangingShare = {
     </span>
     </div>
     </div>`;
-    
+
     $('.mobile').prepend(shareMain);
             // $(shareMain).insertAfter($('.layout__nav-content'));
         },
         getUrl: function(socmed) {
             var utm = '%3Futm_source%3DMobile%26utm_medium%3D' + socmed + '%26utm_campaign%3DShare_Hanging';
-            
+
             var currentUrl = window.location.href;
             currentUrl = currentUrl.substr(0, currentUrl.indexOf('?'));
-            
+
             if (currentUrl == '') {
               currentUrl = window.location.href;
           }
-          
+
           if (socmed == 'copy-link') {
               utm = '?utm_source=Mobile&utm_medium=copy-link&utm_campaign=Share_Hanging';
               return currentUrl + utm;
           }
-          
+
           currentUrl = encodeURIComponent(currentUrl);
           return currentUrl + utm;
       },
       copyLink: function() {
         $('.share-buttons--item__link_copy').click(function() {
           var clipboard = new ClipboardJS('.share-buttons--item__link_copy');
-          
+
           $(this).text('');
           $(this).css('transition', 'all 2s ease 0s');
           $(this).css('background-color', '#FFFFFF');
@@ -3935,7 +3935,7 @@ if ( ["ReadPage"].includes(window.kmklabs.pageType) )
             infInitCfg = {
               publisherId : 4685495694,
               wrapperPage : 'https://m.liputan6.com/infeed/wrapper.html',
-              slots : ['inf-4', 'inf-5', 'inf-6'],
+              slots : ['inf-1', 'inf-2', 'inf-3'],
               seoUrl : true,
               templateID : templateID
           };
@@ -3973,7 +3973,7 @@ else if ( ["ChannelPage"].includes(window.kmklabs.pageType) )
     infInitCfg = {
         publisherId : 4685495694,
         wrapperPage : 'https://m.liputan6.com/infeed/wrapper.html',
-        slots : ['inf-4', 'inf-5', 'inf-6'],
+        slots : ['inf-1', 'inf-2', 'inf-3'],
         seoUrl : true,
         templateID : templateID
     };
@@ -3988,7 +3988,7 @@ else if ( ["ChannelPage"].includes(window.kmklabs.pageType) )
 
 /*** START of [#167686376] Visual Adjusment Tag - Mobile ****/
 $(document).ready(function() {
-    
+
     const tags = $('.tags--topics__list li').length;
 
     if(tags > 3) {
@@ -4264,7 +4264,7 @@ window.addEventListener('DOMContentLoaded', function() {
     const cssHandler = {
       rawCss: function() {
         const style = `
-        
+
         .livereport--streamline__grid--splash {
           /* position: relative;
           display: block;
@@ -4276,7 +4276,7 @@ window.addEventListener('DOMContentLoaded', function() {
           padding-right: 0px;
           padding-bottom: 30px;
       }
-      
+
       .livereport--streamline__vertical-line--splash {
           width: 2px;
           background-color: #ff3900;
@@ -4285,11 +4285,11 @@ window.addEventListener('DOMContentLoaded', function() {
           left: 10px;
           display: block;
       }
-      
+
       .livereport--streamline__vertical-line--splash::before {
           display: none;
       }
-      
+
       .livereport--streamline__splash {
           position: relative;
           display: block;
@@ -4298,12 +4298,12 @@ window.addEventListener('DOMContentLoaded', function() {
           left: -10px;
           /* padding: 20px 15px; */
       }
-      
+
       .livereport--streamline__container {
           position: relative;
           display: block;
       }
-      
+
       .livereport--streamline__splash--img {
           width: 40vw;
           height: calc(13vw + 0px);
