@@ -1223,6 +1223,8 @@ googletag.cmd.push(function() {
     GAMLibrary.infiniteSCArticle();
 
     /*  START TARGETING BLOCK   */
+    googletag.pubads().setTargeting('dummy', ["1"]);
+
     if (isMatcont) { googletag.pubads().setTargeting("isMatcont", ["1"]);}
     if(typeof Krux !== "undefined"){
         googletag.pubads().setTargeting('ksg', Krux.segments);
