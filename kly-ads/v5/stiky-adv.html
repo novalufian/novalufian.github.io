@@ -1390,7 +1390,7 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
     
             #kly-sticky-adv{
                 position: fixed;
-                bottom: 0px;
+                top: 0px;
                 height: 100vh;
                 width: 100%;
                 overflow: hidden;
@@ -1399,11 +1399,11 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
             }
     
             #kly-sticky-adv.show{
-                bottom: calc(60px - 100vh);
+                top: calc(100vh - 60px);
             }
     
             #kly-sticky-adv.hide{
-                bottom: -100vh;
+                top: 100vh;
             }
     
             #kly-sticky-adv.minimize{
@@ -1440,13 +1440,13 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
     
             #kly-sticky-adv.expand #kly-sticky-adv-header{
               margin-top  : 40px;
+              box-shadow: 0px 2px 5px 0px #21212120;
             }
     
             #kly-sticky-adv-header #kly-sticky-adv-logo-brand{
               position: absolute;
               width: 82px;
               height: 44px;
-              background: blue;
               top: 8px;
               left: 17px;
             }
@@ -1571,7 +1571,7 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
             var lastScrollTop = 0;
     
     
-            _expandArea.addEventListener("click", _expandAds)
+            // _expandArea.addEventListener("click", _expandAds)
             _closeArea.addEventListener("click", _closeAds)
             document.addEventListener("scroll", _scrollTrigger)
             _addSwiper(true);
@@ -1590,22 +1590,26 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
 
             function _addSwiper(_status) {
               if (_status) {
-                _mainWrapper.addEventListener('touchstart', handleTouchStart, false);        
-                _mainWrapper.addEventListener('touchmove', handleTouchMove, false);
-                _mainWrapper.addEventListener('touchend', handleTouchEnd, false);
+                _expandArea.addEventListener('touchstart', handleTouchStart, false);        
+                _expandArea.addEventListener('touchmove', handleTouchMove, false);
+                _expandArea.addEventListener('touchend', handleTouchEnd, false);
               }else{
-                _mainWrapper.removeEventListener('touchstart', handleTouchStart, false);        
-                _mainWrapper.removeEventListener('touchmove', handleTouchMove, false);
-                _mainWrapper.removeEventListener('touchend', handleTouchEnd, false);
+                _expandArea.removeEventListener('touchstart', handleTouchStart, false);        
+                _expandArea.removeEventListener('touchmove', handleTouchMove, false);
+                _expandArea.removeEventListener('touchend', handleTouchEnd, false);
               }
             }
     
             function _closeAds(){
+              if (_mainWrapper.classList.contains("minimize")) {
+                _expandAds();
+              }else{
                 _mainWrapper.classList.remove("expand");
                 _mainWrapper.classList.add("minimize", "show");
                 setTimeout(function () {
                   _addSwiper(true);
                 }, 500)
+              }
             }
     
             function _scrollTrigger(){
@@ -1657,7 +1661,7 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
               _mainWrapper.style.transition = '';
               console.log('touch end')
               if (yDiff < 200) {
-                _mainWrapper.style.bottom = ``;
+                _mainWrapper.style.top = ``;
               }
             }                                          
 
@@ -1677,17 +1681,17 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
                     if ( yDiff > 0 ) {
                         /* up swipe */ 
                         if (yDiff > 200) {
-                          _mainWrapper.style.bottom = `0`;
+                          _mainWrapper.style.top = `0`;
                           setTimeout(function () {
                             _expandAds();
-                            _mainWrapper.style.bottom = ``;
+                            _mainWrapper.style.top = ``;
                           },200)
                         }else{
-                          _mainWrapper.style.bottom = `calc((60px + ${yDiff}px) - 100vh)`;
+                          _mainWrapper.style.top = `calc(100vh - (60px + ${yDiff}px))`;
                         }
                         console.log('swipe up')
                     } else { 
-                        _mainWrapper.style.bottom = `calc((60px + ${yDiff}px) - 100vh)`;
+                        _mainWrapper.style.top = `calc(100vh - (60px + ${yDiff}px))`;
                         console.log('swipe down')
                         /* down swipe */
                     }                                                                 
