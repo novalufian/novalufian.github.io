@@ -1391,31 +1391,42 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
             #kly-sticky-adv{
                 position: fixed;
                 bottom: 0px;
-                height: 60px;
+                height: 100vh;
                 width: 100%;
-                background: red;
                 overflow: hidden;
-                transition: all .35s ease-in;
+                transition: all .4s ease-in;
     
             }
     
             #kly-sticky-adv.show{
-                bottom: 0px;
+                bottom: calc(60px - 100vh);
             }
     
             #kly-sticky-adv.hide{
-                bottom: -100px;
+                bottom: -100vh;
             }
     
             #kly-sticky-adv.minimize{
-                border-radius: 10px 10px 0 0;
+                border-radius: 15px 15px 0 0;
                 box-shadow: 0 -3px 12px 0 rgba(0, 0, 0, 0.15);
                 background-color: #f8f8f8;
+            }
+            #kly-sticky-adv.minimize .kly-sticky-adv-menu{
+              display: none;
+            }
+
+            #kly-sticky-adv .kly-sticky-adv-arrowup,
+            #kly-sticky-adv .kly-sticky-adv-menu{
+                left : 80%;
             }
     
             #kly-sticky-adv.expand{
                 height: 100vh;
                 background-color: #21212199;
+            }
+
+            #kly-sticky-adv.expand .kly-sticky-adv-arrowup{
+              display: none;
             }
     
             #kly-sticky-adv-header{
@@ -1428,20 +1439,18 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
             }
     
             #kly-sticky-adv.expand #kly-sticky-adv-header{
-                margin-top: 40px;
+              margin-top  : 40px;
             }
     
             #kly-sticky-adv-header #kly-sticky-adv-logo-brand{
-                position: absolute;
-                width: 82px;
-                height: 44px;
-                background: blue;
-                top: 8px;
-                left: 17px;
+              position: absolute;
+              width: 82px;
+              height: 44px;
+              background: blue;
+              top: 8px;
+              left: 17px;
             }
-    
-            
-            
+
             #kly-sticky-adv-header #kly-sticky-adv-title{
                 position: absolute;
                 width: calc(100% - 198px);
@@ -1450,7 +1459,7 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-transform: uppercase;
-                transition: all .25s ease;
+                transition: all .3s ease;
                 transition-delay: .4s;
             }
     
@@ -1466,14 +1475,14 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
                 font-family: Poppins;
                 font-size: 10px;
                 font-weight: 500;
-                line-height: 1.1;
+                line-height: 1.3;
                 text-align: center;
                 color: #7e7e7e;
                 position: absolute;
-                top : 50%;
+                top : 40%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                transition: all .35s ease;
+                transition: all .3s ease;
             }
     
             #kly-sticky-adv.expand #kly-sticky-adv-title .title{
@@ -1545,12 +1554,13 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
                         <h1 class="title">Lorem, ipsum dolor sit amet consectetur</h1>
                 </div>
                 <div id="kly-sticky-adv-close">
-                        <img src="https://novalufian.github.io/kly-ads/v5/Menu%20mobile.svg" alt="" class="kly-img-asset kly-center-vh">
+                        <img src="https://novalufian.github.io/kly-ads/v5/Menu%20mobile.svg" alt="" class="kly-img-asset kly-center-vh kly-sticky-adv-menu">
+                        <img src="http://novalufian.github.io/kly-ads/v5/arrow up.png" alt="" class="kly-img-asset kly-center-vh kly-sticky-adv-arrowup">
                 </div>
             </div>
     
             <div id="kly-sticky-adv-coontiner">
-                <iframe id="kly-sticky-adv-iframe" src="dummy-content.html" frameborder="0"></iframe>
+                <iframe id="kly-sticky-adv-iframe" src="https://novalufian.github.io/kly-ads/v5/dummy-content.html" frameborder="0"></iframe>
             </div>
         </div>
     
@@ -1564,15 +1574,38 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
             _expandArea.addEventListener("click", _expandAds)
             _closeArea.addEventListener("click", _closeAds)
             document.addEventListener("scroll", _scrollTrigger)
+            _addSwiper(true);
+            
     
             function _expandAds(){
-                _mainWrapper.classList.remove("minimize");
-                _mainWrapper.classList.add("expand");
+              _mainWrapper.classList.remove("minimize");
+              _mainWrapper.classList.add("expand");
+              _mainWrapper.classList.remove("hide");
+              _mainWrapper.classList.remove("show");
+              _mainWrapper.style.transition = '';
+
+              _addSwiper(false);
+              
+            }
+
+            function _addSwiper(_status) {
+              if (_status) {
+                _mainWrapper.addEventListener('touchstart', handleTouchStart, false);        
+                _mainWrapper.addEventListener('touchmove', handleTouchMove, false);
+                _mainWrapper.addEventListener('touchend', handleTouchEnd, false);
+              }else{
+                _mainWrapper.removeEventListener('touchstart', handleTouchStart, false);        
+                _mainWrapper.removeEventListener('touchmove', handleTouchMove, false);
+                _mainWrapper.removeEventListener('touchend', handleTouchEnd, false);
+              }
             }
     
             function _closeAds(){
                 _mainWrapper.classList.remove("expand");
-                _mainWrapper.classList.add("minimize");
+                _mainWrapper.classList.add("minimize", "show");
+                setTimeout(function () {
+                  _addSwiper(true);
+                }, 500)
             }
     
             function _scrollTrigger(){
@@ -1581,16 +1614,85 @@ _callConsoleTime("GPT LOADTIME START AT", _timeStart);; window.gaSendEvent = fun
                 if (_mainWrapper.classList.contains("expand")) {return;}
  
                 if (st > lastScrollTop){
-                    _mainWrapper.classList.add("hide");
-                    _mainWrapper.classList.remove("show");
-    
-    
+                    _showWrapper(false);
                 } else {
-                    _mainWrapper.classList.add("show");
-                    _mainWrapper.classList.remove("hide");
+                    _showWrapper(true);
                 }
                 lastScrollTop = st <= 0 ? 0 : st; 
             }
+
+            function _showWrapper(_status) {
+              if (_status) {
+                _mainWrapper.classList.add("show");
+                _mainWrapper.classList.remove("hide");
+              }else{
+                _mainWrapper.classList.add("hide");
+                _mainWrapper.classList.remove("show");
+              }
+            }
+
+            
+
+            var xDown = 0;                                                        
+            var yDown = 0;
+            var xDiff = 0;
+            var yDiff = 0;
+
+            function getTouches(evt) {
+              return evt.touches ||             // browser API
+                     evt.originalEvent.touches; // jQuery
+            }                                                     
+
+            function handleTouchStart(evt) {
+                _mainWrapper.style.transition = 'unset';
+                evt.preventDefault();
+                const firstTouch = getTouches(evt)[0];                                      
+                xDown = firstTouch.clientX;                                      
+                yDown = firstTouch.clientY; 
+                xDiff = 0;
+                yDiff = 0;                                    
+            };      
+
+            function handleTouchEnd() {
+              _mainWrapper.style.transition = '';
+              console.log('touch end')
+              if (yDiff < 200) {
+                _mainWrapper.style.bottom = ``;
+              }
+            }                                          
+
+            function handleTouchMove(evt) {
+              console.log(xDown, yDown);
+                if ( ! xDown || ! yDown ) {
+                    return;
+                }
+
+                var xUp = evt.touches[0].clientX;                                    
+                var yUp = evt.touches[0].clientY;
+
+                xDiff = Math.abs(xDown - xUp);
+                yDiff = Math.abs(yDown - yUp);
+
+                if ( xDiff < yDiff ) {
+                    if ( yDiff > 0 ) {
+                        /* up swipe */ 
+                        if (yDiff > 200) {
+                          _mainWrapper.style.bottom = `0`;
+                          setTimeout(function () {
+                            _expandAds();
+                            _mainWrapper.style.bottom = ``;
+                          },200)
+                        }else{
+                          _mainWrapper.style.bottom = `calc((60px + ${yDiff}px) - 100vh)`;
+                        }
+                        console.log('swipe up')
+                    } else { 
+                        _mainWrapper.style.bottom = `calc((60px + ${yDiff}px) - 100vh)`;
+                        console.log('swipe down')
+                        /* down swipe */
+                    }                                                                 
+                }
+            };
     
             
         </script>
