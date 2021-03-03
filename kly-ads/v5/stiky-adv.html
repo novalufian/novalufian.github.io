@@ -927,7 +927,7 @@
                                             that.unset();
                                           }, that.timeout);
                                         },
-                                        eventTrackingLock		: 	function(lockDuration){
+                                        eventTrackingLock       :   function(lockDuration){
                                             window.dataLayer.push({
                                               event: "impression",
                                               feature_name: "load-scroll",
@@ -1424,7 +1424,7 @@
               }
       
               #kly-sticky-adv.expand{
-                  height: 100vh;
+                  height: 100%;
                   background-color: #21212199;
               }
   
@@ -1649,6 +1649,7 @@
               }) 
       
               function _expandAds(){
+                _mainWrapper.style = 'height:'+parent.window.innerHeight+'px';
                 _mainWrapper.classList.remove("minimize");
                 _mainWrapper.classList.add("expand");
                 _mainWrapper.classList.remove("hide");
@@ -1705,14 +1706,15 @@
                 startY,
                 distX,
                 distY,
-                threshold = 5,
-                restraint = 100, 
+                threshold = 0,
+                restraint = 15, 
                 allowedTime = 300,
                 elapsedTime,
                 startTime,
                 handleswipe = callback || function(swipedir){}
 
                 touchsurface.addEventListener('touchstart', function(e){
+                    _mainWrapper.style.transition = 'none';
                     var touchobj = e.changedTouches[0]
                     swipedir = 'none'
                     dist = 0
@@ -1737,6 +1739,7 @@
                 }, false)
 
                 touchsurface.addEventListener('touchend', function(e){
+                    _mainWrapper.style.transition = '';
                     handleswipe(swipedir, distY, 'end');
                     e.preventDefault()
                 }, false)
@@ -1747,11 +1750,12 @@
                 if(status){
                   window.document.body.style = `top : -${lastScrollTop}px; position: fixed !important;`;
                 }else{
-                  var _scTop = window.document.body.style.top
+                  var _scTop = window.document.body.style.top;
                   document.documentElement.scrollTop = Math.abs(_scTop.split("-")[1].split("px")[0]);
 
-                  window.document.body.style = ``;
-
+                  setTimeout(function () {
+                    window.document.body.style = ``;
+                  }, 200)
                 }
 
               }
@@ -4466,7 +4470,7 @@
         $(el).fadeIn(500);
       })
   
-      sendGtmClickMoreTag();			
+      sendGtmClickMoreTag();            
   
       $('.tags--topics--item--more').remove();
     });
