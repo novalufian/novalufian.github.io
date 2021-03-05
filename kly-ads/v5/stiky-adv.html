@@ -1396,7 +1396,7 @@
                   bottom: 0px;
                   height: 100vh;
                   width: 100%;
-                  overflow: hidden;
+                  /*overflow: hidden;*/
                   transition: all .4s ease-in;
       
               }
@@ -1414,13 +1414,20 @@
                   box-shadow: 0 -3px 12px 0 rgba(0, 0, 0, 0.15);
                   background-color: #f8f8f8;
               }
+
+              
+
               #kly-sticky-adv.minimize .kly-sticky-adv-menu{
                 display: none;
               }
   
-              #kly-sticky-adv .kly-sticky-adv-arrowup,
+              #kly-sticky-adv .kly-sticky-adv-arrowup{
+                left : 80%;
+                height : 100%;
+              }
+
               #kly-sticky-adv .kly-sticky-adv-menu{
-                  left : 80%;
+                left : 80%;
               }
       
               #kly-sticky-adv.expand{
@@ -1438,7 +1445,22 @@
                   display: block;
                   height: 60px;
                   background: white;
-                  border-radius: 10px 10px 0 0;
+                  border-radius: 15px 15px 0 0;
+              }
+
+              #kly-sticky-adv #kly-sticky-adv-header img#minimize-main-img {
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: auto;
+                left: 0;
+                top: -40px;
+                transition: all .1s ease;
+              }
+
+              #kly-sticky-adv.expand #kly-sticky-adv-header img#minimize-main-img {
+                top: -150px;
+                opacity: 0;
               }
       
               #kly-sticky-adv.expand #kly-sticky-adv-header{
@@ -1561,13 +1583,13 @@
           </style>
       
           <div id="kly-sticky-adv" class="minimize show">
-  
               <div id="kly-sticky-adv-close">
                 <img src="https://novalufian.github.io/kly-ads/v5/Menu%20mobile.svg" alt="" class="kly-img-asset kly-center-vh kly-sticky-adv-menu">
-                <img src="http://novalufian.github.io/kly-ads/v5/arrow up.png" alt="" class="kly-img-asset kly-center-vh kly-sticky-adv-arrowup">
+                <img src="http://novalufian.github.io/kly-ads/v5/animation_200_klvxohoo.gif" alt="" class="kly-img-asset kly-center-vh kly-sticky-adv-arrowup">
               </div>
   
               <div id="kly-sticky-adv-header">
+                  <img src="http://novalufian.github.io/kly-ads/v5/Image Ads@2x.png" alt="" id="minimize-main-img">
                   <div id="kly-sticky-adv-logo-brand">
                       <img src="https://novalufian.github.io/kly-ads/v5/image%2011.jpg" alt="" class="kly-img-asset">
                   </div>
@@ -1589,7 +1611,7 @@
       
           <script>
               var _mainWrapper = document.getElementById("kly-sticky-adv");
-              var _expandArea = document.getElementById("kly-sticky-adv-title");
+              var _expandArea = document.getElementById("kly-sticky-adv-header");
               var _closeArea = document.getElementById("kly-sticky-adv-close");
               var lastScrollTop = 0;
               var isIos = parent.navigator.platform.match(/iPhone|iPod|iPad/);
@@ -1679,13 +1701,6 @@
               function _scrollTrigger(){
       
                   var st = window.pageYOffset || document.documentElement.scrollTop; 
-                  if (_mainWrapper.classList.contains("expand")) {return;}
-   
-                  if (st > lastScrollTop){
-                      _showWrapper(false);
-                  } else {
-                      _showWrapper(true);
-                  }
                   lastScrollTop = st <= 0 ? 0 : st; 
               }
   
