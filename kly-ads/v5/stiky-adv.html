@@ -1411,23 +1411,19 @@
       
               #kly-sticky-adv.minimize{
                   border-radius: 15px 15px 0 0;
-                  box-shadow: 0 -3px 12px 0 rgba(0, 0, 0, 0.15);
-                  background-color: #f8f8f8;
               }
-
-              
 
               #kly-sticky-adv.minimize .kly-sticky-adv-menu{
                 display: none;
               }
   
               #kly-sticky-adv .kly-sticky-adv-arrowup{
-                left : 80%;
+                left : 90%;
                 height : 100%;
               }
 
               #kly-sticky-adv .kly-sticky-adv-menu{
-                left : 80%;
+                left : 90%;
               }
       
               #kly-sticky-adv.expand{
@@ -1444,8 +1440,20 @@
                   width: 100%;
                   display: block;
                   height: 60px;
-                  background: white;
                   border-radius: 15px 15px 0 0;
+              }
+
+              #kly-sticky-adv-header #kly-sticky-adv-logo-brand,
+              #kly-sticky-adv-header #kly-sticky-adv-title{
+                opacity: 0;
+              }
+
+              #kly-sticky-adv.expand #kly-sticky-adv-header #kly-sticky-adv-logo-brand,
+              #kly-sticky-adv.expand #kly-sticky-adv-header #kly-sticky-adv-title{
+                opacity: 1;
+              }
+              #kly-sticky-adv.expand #kly-sticky-adv-header{
+                background: white;
               }
 
               #kly-sticky-adv #kly-sticky-adv-header img#minimize-main-img {
@@ -1454,7 +1462,7 @@
                 width: 100%;
                 height: auto;
                 left: 0;
-                top: -40px;
+                bottom: 0px;
                 transition: all .1s ease;
               }
 
@@ -1474,6 +1482,9 @@
                 height: 44px;
                 top: 8px;
                 left: 17px;
+              }
+              #kly-sticky-adv-header #kly-sticky-adv-logo-brand img{
+                height: 100%;
               }
   
               #kly-sticky-adv-header #kly-sticky-adv-title{
@@ -1539,10 +1550,9 @@
       
               #kly-sticky-adv-close{
                   position: absolute;
-                  width: 82px;
+                  width: 100%;
                   height: 44px;
                   top: 8px;
-                  right: 17px;
                   z-index: 9999;
               }
   
@@ -1561,6 +1571,9 @@
                 display: block;
                 margin: 0px auto;
                 padding: 15px 0px;
+              }
+              #kly-sticky-adv-coontiner .adv-sub-iab.sc{
+                margin-bottom: 50px;
               }
   
               #kly-sticky-adv-coontiner #kly-sticky-adv-iframe{
@@ -1591,7 +1604,7 @@
               <div id="kly-sticky-adv-header">
                   <img src="http://novalufian.github.io/kly-ads/v5/Image Ads@2x.png" alt="" id="minimize-main-img">
                   <div id="kly-sticky-adv-logo-brand">
-                      <img src="https://novalufian.github.io/kly-ads/v5/image%2011.jpg" alt="" class="kly-img-asset">
+                      <img src="https://novalufian.github.io/kly-ads/v5/logo-oppo-2x-size-original.png" alt="" class="kly-img-asset">
                   </div>
                   <div id="kly-sticky-adv-title">
                           <h1 class="title">Lorem, ipsum dolor sit amet consectetur</h1>
@@ -1603,7 +1616,7 @@
                   <img src="https://via.placeholder.com/320x100/81b214/ffffff?text=HEADLINE" alt="" class="adv-sub-iab">
                   <iframe id="kly-sticky-adv-iframe" src="https://d.infeed.id/article/sudah-tahu-cara-mencuci-tangan-yang-benar-0026-1585635310.html/dGl0bGUsIHdyaXRlciwgZGF0ZSwgaW1hZ2UsIHNvY2lhbF9idG4sIGNvbnRlbnQ=/eyJwdWJsaXNoZXJJZCI6IjUwNzE1NzcwIiwiZG9tYWluU2l0ZSI6Im0ua2FwYW5sYWdpLmNvbSIsImNvbnRlbnRTdHlsZSI6Imh0dHBzOi8vZC5rYXBhbmxhZ2luZXR3b3JrLmNvbS9iYW5uZXIvcHJldmlldy8yMDE4LzA5LzE5L2luZmVlZC9tLWFydGljbGUuY3NzIiwiY3VycmVudFVybCI6Imh0dHBzOi8vbS5rYXBhbmxhZ2kuY29tL2luZmVlZC93cmFwcGVyLmh0bWw/dXRtX2RvbWFpbj1rYXBhbmxhZ2kuY29tJnV0bV91cmw9aHR0cHM6Ly9kLmluZmVlZC5pZC9hcnRpY2xlL3N1ZGFoLXRhaHUtY2FyYS1tZW5jdWNpLXRhbmdhbi15YW5nLWJlbmFyLTAwMjYtMTU4NTYzNTMxMC5odG1sIn0=" frameborder="0" scrolling="no"></iframe>
                   <!-- <iframe id="kly-sticky-adv-iframe" src="https://novalufian.github.io/kly-ads/v5/dummy-content.html" frameborder="0"></iframe> -->
-                  <img src="https://via.placeholder.com/300x250/81b214/ffffff?text=showcase" alt="" class="adv-sub-iab">
+                  <img src="https://via.placeholder.com/300x250/81b214/ffffff?text=showcase" alt="" class="adv-sub-iab sc">
   
               </div>
           </div>
