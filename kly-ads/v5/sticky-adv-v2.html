@@ -1395,7 +1395,7 @@
                   width: 100%;
                   z-index: 999;
                   /*overflow: hidden;*/
-                  transition: all .4s ease;
+                  transition: bottom .4s ease;
               }
 
               div#kly-sticky-adv.expand {
@@ -1661,7 +1661,7 @@
                 window.document.body.style = `top : -${_lastScrollTop}px; position: fixed !important;`;
               }else{
                 var _scTop = window.document.body.style.top;
-                document.documentElement.scrollTop = Math.abs(_scTop.split("-")[1].split("px")[0]);
+                document.documentElement.scrollTop = Math.abs(_scTop.split("px")[0]);
 
                 setTimeout(function () {
                   window.document.body.style = ``;
