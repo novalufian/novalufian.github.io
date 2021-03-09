@@ -1612,6 +1612,7 @@
             function _stickyAdvExpandEvent() {
               _stickyAdvMian.setAttribute("data-status", "expand");
               _stickyAdvMian.classList.add("expand");
+              _stickyAdvMian.style = 'height:'+parent.window.innerHeight+'px';
               _locScreen(true);
               _stickyAdvHeader.removeEventListener("click", _stickyAdvExpandEvent);
 
