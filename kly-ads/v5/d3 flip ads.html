@@ -52,10 +52,6 @@
       background: green;
     }
 
-    .puller-flip:hover .puller-flip-item-wrapper{
-      transform: rotateX(360deg);
-    }
-
     .puller-flip-front {
       position: absolute;
       width: 100%;
@@ -67,8 +63,9 @@
 </head>
 <body>
 
-  <h1>Card Flip with Text</h1>
-  <h3>Hover over the image below:</h3>
+  <h1>3D flip ads</h1>
+  <h3>scroll page</h3>
+
 
   <div class="puller-flip" id="puller-3d-flip">
     <div class="puller-flip-item-wrapper">
@@ -108,17 +105,6 @@
       _puller3DflipItemWrapper.style.transform = ` rotateX(-${st/ 3}deg)`;
     }
 
-    // function _scrollDirection() {
-    //   var _direction = null;
-    //   var st = window.pageYOffset || document.documentElement.scrollTop;
-    //   if (st > lastScrollTop){
-    //     _direction = "down";
-    //   } else {
-    //     _direction = "up";
-    //   }
-    //   lastScrollTop = st <= 0 ? 0 : st; 
-    //   return _direction;
-    // }
   </script>
 
 
