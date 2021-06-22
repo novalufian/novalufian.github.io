@@ -131,10 +131,10 @@
             t.innerText = e, document.body.appendChild(t)
         },
         gamTFfreeze: function() {
-            var e;
-            this.gamGetCookie(this.gamTFCookies) ? ((e = this).gamMsg("PAGE FREEZE [ Cookies : " + this.gamTFCookies + " ]"), this.gamAppend(this.gamFreezeStyle), this.gamFreeze3s = setTimeout(function() {
-                e.gamTFunfreeze()
-            }, 6e3)) : (this.gamTFunfreeze(), this.gamSetCookie(this.gamTFCookies, 1, "/", ""))
+            // var e;
+            // this.gamGetCookie(this.gamTFCookies) ? ((e = this).gamMsg("PAGE FREEZE [ Cookies : " + this.gamTFCookies + " ]"), this.gamAppend(this.gamFreezeStyle), this.gamFreeze3s = setTimeout(function() {
+            //     e.gamTFunfreeze()
+            // }, 6e3)) : (this.gamTFunfreeze(), this.gamSetCookie(this.gamTFCookies, 1, "/", ""))
         },
         gamTFunfreeze: function() {
             this.gamMsg("PAGE UNFREEZE"), this.gamAppend(this.gamUnFreezeStyle), clearTimeout(this.gamFreeze3s)
