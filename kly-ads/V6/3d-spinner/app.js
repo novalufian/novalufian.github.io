@@ -18,23 +18,27 @@ function invitationLandToSlideNumber(number, isAutomation) {
 function expandedLandToSlideNumber(number, isAutomation) {
     console.log(number);
 
-//  console.log('expanded land to ' + number, isAutomation);
-  klyAppsTriggerTimerStart('frame' + parseInt(number));
+    //  console.log('expanded land to ' + number, isAutomation);
+    klyAppsTriggerTimerStart('frame' + parseInt(number));
 
-  /* Fixed Timelinemax Transform Matrix Animation */
-  for(var i=0; i<document.querySelectorAll('.innity-apps-carol-big').length; i++) {
+    /* Fixed Timelinemax Transform Matrix Animation */
+    for(var i=0; i<document.querySelectorAll('.innity-apps-carol-big').length; i++) {
     document.querySelectorAll('.innity-apps-carol-big')[i].style.zIndex = 0;
-  }
-  document.querySelector('.innity-apps-carol-card-' + parseInt(number)).style.zIndex = 1;
+    }
+    document.querySelector('.innity-apps-carol-card-' + parseInt(number)).style.zIndex = 1;
 
 
-  if (number === 2) {
-    document.getElementsByClassName('apps-video-control-wrapper')[0].style.opacity = 1;
-    klyAppsPlayVideo();
-  } else {
-    document.getElementsByClassName('apps-video-control-wrapper')[0].style.opacity = 0;
-    klyAppsPauseVideo();
-  }
+    if (number === 2) {
+        if (parent.klyDpfParam.dfp_use_video_source !="youtube") {
+            document.getElementsByClassName('apps-video-control-wrapper')[0].style.opacity = 1;
+        }
+        klyAppsPlayVideo();
+    } else {
+        if (parent.klyDpfParam.dfp_use_video_source !="youtube") {
+            document.getElementsByClassName('apps-video-control-wrapper')[0].style.opacity = 0;
+        }
+        klyAppsPauseVideo();
+    }
 }
 
 function expandedBannerClosed() {
