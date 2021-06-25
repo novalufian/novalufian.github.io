@@ -31,11 +31,15 @@ function expandedLandToSlideNumber(number, isAutomation) {
     if (number === 2) {
         if (parent.klyDpfParam.dfp_use_video_source !="youtube") {
             document.getElementsByClassName('apps-video-control-wrapper')[0].style.opacity = 1;
+        }else{
+            parent.klyDpfParam.dfp_use_video_obj.player_.tech_.play()
         }
         klyAppsPlayVideo();
     } else {
         if (parent.klyDpfParam.dfp_use_video_source !="youtube") {
             document.getElementsByClassName('apps-video-control-wrapper')[0].style.opacity = 0;
+        }else{
+            parent.klyDpfParam.dfp_use_video_obj.player_.tech_.pause()
         }
         klyAppsPauseVideo();
     }
