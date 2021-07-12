@@ -30,7 +30,7 @@ function expandedLandToSlideNumber(number, isAutomation) {
 
     if (number === 2) {
         if (parent.klyDpfParam.dfp_use_video_source !="youtube") {
-          document.getElementsByClassName('apps-video-control-wrapper')[0].style.opacity = 1;
+          //document.getElementsByClassName('apps-video-control-wrapper')[0].style.opacity = 1;
           if (typeof klyDpfParam.dfp_use_video_obj == "object") {
             window.frames.spinner3DVidiocom.postMessage('vidio.playback.play', '*');
           }
@@ -40,7 +40,7 @@ function expandedLandToSlideNumber(number, isAutomation) {
         klyAppsPlayVideo();
     } else {
         if (parent.klyDpfParam.dfp_use_video_source !="youtube") {
-            document.getElementsByClassName('apps-video-control-wrapper')[0].style.opacity = 0;
+            //document.getElementsByClassName('apps-video-control-wrapper')[0].style.opacity = 0;
             if (typeof klyDpfParam.dfp_use_video_obj == "object") {
               window.frames.spinner3DVidiocom.postMessage('vidio.playback.pause', '*');
             }
