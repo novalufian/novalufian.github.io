@@ -259,7 +259,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gamSetCookie : function(e,n,t,i){n=escape(n);var o=this.extractDomain();if(""==i){var r=new Date;r.setHours(r.getHours(),r.getMinutes()+60),i=r.toGMTString()}""!=t&&(t=";Path="+t),document.cookie=e+"="+n+";expires="+i+t+";Domain="+o},
             extractDomain : function(){var e,n=window.location.href;return e=n.indexOf("://")>-1?n.split("/")[2]:n.split("/")[0],e=e.split(":")[0]}
       };
-      gamInitTopFrame.gamTFfreeze();
+      // gamInitTopFrame.gamTFfreeze();
       
     }
   });
