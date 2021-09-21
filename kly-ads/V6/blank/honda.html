@@ -57,32 +57,34 @@ function handleComplete(evt,comp) {
     fnStartAnimation();
 }
 
-function createHTML() {
-    var params = new URLSearchParams(location.search);
-    var _W_ = parseInt(params.get("w"));
-    var _H_ = _W_ / 480 * 530;
-
-    var _HTML_ = `
-        <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:${_W_}px; height:${_H_}px">
-            <canvas id="canvas" width="${_W_}" height="${_H_}" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-            <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:${_W_}px; height:${_H_}px; position: absolute; left: 0px; top: 0px; display: block;">
-            </div>
-        </div>
-    `;
-
-    var _BODY_ = document.querySelector("body");
-    _BODY_.innerHTML = _HTML_;
-
-    setTimeout(function () {
-        init();
-    }, 200);
-}
-    
-    createHTML();
 </script>
 <!-- write your code here -->
 </head>
 <body  style="margin:0px;">
-    
+    <script>
+        
+        function createHTML() {
+            var params = new URLSearchParams(location.search);
+            var _W_ = parseInt(params.get("w"));
+            var _H_ = _W_ / 480 * 530;
+
+            var _HTML_ = `
+                <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:${_W_}px; height:${_H_}px">
+                    <canvas id="canvas" width="${_W_}" height="${_H_}" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+                    <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:${_W_}px; height:${_H_}px; position: absolute; left: 0px; top: 0px; display: block;">
+                    </div>
+                </div>
+            `;
+
+            var _BODY_ = document.querySelector("body");
+            _BODY_.innerHTML = _HTML_;
+
+            setTimeout(function () {
+                init();
+            }, 200);
+        }
+
+        createHTML();
+    </script>   
 </body>
 </html>
