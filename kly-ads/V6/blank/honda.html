@@ -18,10 +18,20 @@
 <script src="https://cdns.klimg.com/d.kapanlaginetwork.com/banner/preview/2021/09/21/honda/HONDA LAUNCH 64 FPS.js"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+var params = new URLSearchParams(location.search);
+var _W_ = parseInt(params.get("w"));
+var _H_ = _W_ / 480 * 530;
+
 function init() {
     canvas = document.getElementById("canvas");
+    canvas.setAttribute("width", _W_);
+    canvas.setAttribute("height", _H_);
     anim_container = document.getElementById("animation_container");
+    anim_container.style.width = _W_+"px";
+    anim_container.style.height = _H_+"px";
     dom_overlay_container = document.getElementById("dom_overlay_container");
+    dom_overlay_container.style.width = _W_+"px";
+    dom_overlay_container.style.height = _H_+"px";
     var comp=AdobeAn.getComposition("7477B5D7261A4AB3BFA4C4700883B81A");
     var lib=comp.getLibrary();
     var loader = new createjs.LoadQueue(false);
@@ -56,35 +66,14 @@ function handleComplete(evt,comp) {
     AdobeAn.compositionLoaded(lib.properties.id);
     fnStartAnimation();
 }
-
 </script>
 <!-- write your code here -->
 </head>
-<body  style="margin:0px;">
-    <script>
-        
-        function createHTML() {
-            var params = new URLSearchParams(location.search);
-            var _W_ = parseInt(params.get("w"));
-            var _H_ = _W_ / 480 * 530;
-
-            var _HTML_ = `
-                <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:${_W_}px; height:${_H_}px">
-                    <canvas id="canvas" width="${_W_}" height="${_H_}" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-                    <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:${_W_}px; height:${_H_}px; position: absolute; left: 0px; top: 0px; display: block;">
-                    </div>
-                </div>
-            `;
-
-            var _BODY_ = document.querySelector("body");
-            _BODY_.innerHTML = _HTML_;
-
-            setTimeout(function () {
-                init();
-            }, 200);
-        }
-
-        createHTML();
-    </script>   
+<body onload="init();" style="margin:0px;">
+    <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:480px; height:530px">
+        <canvas id="canvas" width="480" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+        <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:480px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
+        </div>
+    </div>
 </body>
 </html>
