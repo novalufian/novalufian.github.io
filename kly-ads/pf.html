@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Swiper demo</title>
+	<meta
+	name="viewport"
+	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+	/>
+	<!-- Link Swiper's CSS -->
+	<link
+	rel="stylesheet"
+	href="https://unpkg.com/swiper/swiper-bundle.min.css"
+	/>
+
+	<!-- Demo styles -->
+	<style>
+		html,
+		body {
+			position: relative;
+			height: 100%;
+		}
+
+		body {
+			background: #eee;
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			color: #000;
+			margin: 0;
+			padding: 0;
+		}
+
+		.swiper {
+			width: 100vw;
+			min-height: calc(100vw * ( 648 / 563));
+			padding: 30px 0;
+			background: yellow;
+		}
+
+		div#brand-logo {
+			display: block;
+			width: 100%;
+			padding: 0px 10px 20px;
+		}
+
+		div#brand-logo img {
+			width: 45%;
+		}
+
+		.swiper-slide {
+			width: 200px !important;
+			height: calc(200px * (302/170));
+			overflow: hidden;
+			border-radius: 15px;
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+			flex-direction: column;
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+
+		.swiper-slide::before {
+			content: "";
+			position: absolute;
+			z-index: 5;
+			height: 50%;
+			bottom: 0;
+			background: linear-gradient(0deg, #00000090, transparent);
+			width: 100%;
+		}
+
+		.swiper-slide img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.swiper-slide span#title {
+			position: absolute;
+			bottom: 5.5vh;
+			text-align: left;
+			padding: 0 10px;
+			color: #fff;
+			z-index: 10;
+		}
+
+		.swiper-slide span#link-to-lp {
+			position: absolute;
+			z-index: 10;
+			width: 25px;
+			height: 25px;
+			background: blue;
+			border-radius: 5px;
+			right: 13px;
+			bottom: 13px;
+		}
+		.swiper-slide span#link-to-lp img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Swiper -->
+	<div class="swiper mySwiper">
+		<div id="brand-logo">
+			<img src="https://via.placeholder.com/177x52/FF5C58/000000?text=BRAND%20LOGO" alt="">
+		</div>
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 1" alt="">
+				<span id="title">Lorem ipsum dolor sit amet consectetur adipisicing elit ok.</span>
+				<span id="link-to-lp"></span>
+			</div>
+			<div class="swiper-slide">
+				<img src="http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 2" alt="">
+				<span id="title">Lorem ipsum dolor sit amet consectetur adipisicing elit ok.</span>
+				<span id="link-to-lp"></span>
+			</div>
+			<div class="swiper-slide">
+				<img src="http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 3" alt="">
+				<span id="title">Lorem ipsum dolor sit amet consectetur adipisicing elit ok.</span>
+				<span id="link-to-lp"></span>
+			</div>
+			<div class="swiper-slide">
+				<img src="http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 4" alt="">
+				<span id="title">Lorem ipsum dolor sit amet consectetur adipisicing elit ok.</span>
+				<span id="link-to-lp"></span>
+			</div>
+			<div class="swiper-slide">
+				<img src="http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 5" alt="">
+				<span id="title">Lorem ipsum dolor sit amet consectetur adipisicing elit ok.</span>
+				<span id="link-to-lp"></span>
+			</div>
+			<div class="swiper-slide">
+				<img src="http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 6" alt="">
+				<span id="title">Lorem ipsum dolor sit amet consectetur adipisicing elit ok.</span>
+				<span id="link-to-lp"></span>
+			</div>
+			<div class="swiper-slide">
+				<img src="http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 7" alt="">
+				<span id="title">Lorem ipsum dolor sit amet consectetur adipisicing elit ok.</span>
+				<span id="link-to-lp"></span>
+			</div>
+			<div class="swiper-slide">
+				<img src="http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 8" alt="">
+				<span id="title">Lorem ipsum dolor sit amet consectetur adipisicing elit ok.</span>
+				<span id="link-to-lp"></span>
+			</div>
+			<div class="swiper-slide">
+				<img src="http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 9" alt="">
+				<span id="title">Lorem ipsum dolor sit amet consectetur adipisicing elit ok.</span>
+				<span id="link-to-lp"></span>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<!-- Swiper JS -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: "auto",
+			spaceBetween: 10,
+			centeredSlides: true,
+			scrollbars: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+		});
+	</script>
+</body>
+</html>
