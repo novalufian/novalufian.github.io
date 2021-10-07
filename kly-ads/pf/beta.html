@@ -2672,6 +2672,7 @@
 						padding: 0 10px;
 						color: #fff;
 						z-index: 10;
+						line-height: 18px;
 					}
 
 					.swiper-slide span#link-to-lp {
@@ -2775,10 +2776,11 @@
 					function _BOOTAD_() {
 						var _x_ = _myswper_.getBoundingClientRect();
 						_myswper_.style.marginLeft = `-${_x_.x}px`;
+
 						for(var k = 0; k <= _adConfig_.totalSlide; k++){
 							console.log("slide-" + (k + 1))
 							_generateSlide(_adConfig_.slides["slide-" + (k + 1)]);
-							if (k == _adConfig_.totalSlide) {
+							if ((k - 1) == _adConfig_.totalSlide) {
 								_swiperSlide_ = document.querySelectorAll('.swiper-slide');
 								_swiperWrapper_.addEventListener('scroll', _playPauseVIdeo);
 							}
@@ -2832,7 +2834,7 @@
 					}
 
 					function isInViewport(el) {
-						console.log(el)
+					    console.log(el)
 					    const rect = el.getBoundingClientRect();
 					    return (
 					        rect.top >= 0 &&
@@ -2844,6 +2846,7 @@
 					}
 
 					function _playPauseVIdeo() {
+						console.log('scroll')
 						_swiperSlide_.forEach(function (el,i) {
 
 							var _video_ = el.querySelector("video");
