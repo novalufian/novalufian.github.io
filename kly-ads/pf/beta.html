@@ -2821,16 +2821,16 @@
 					function isInViewport(el) {
 					    const rect = el.getBoundingClientRect();
 					    console.log(rect)
-					    return (
-					        rect.left >= 50 - el.clientWidth
-					    );
+					    //     rect.left >= 50 - el.clientWidth
+					    console.log(rect.left >= 50 - el.clientWidth)
+					    // return (
+					    // );
 					}
 
 					function _playPauseVIdeo() {
 						console.log('scroll')
 						_swiperSlide_.forEach(function (el,i) {
 							var _video_ = el.querySelector("video");
-							console.log(isInViewport(el), _video_)
 							if (isInViewport(el)) {
 								_video_.play();
 							}else{
