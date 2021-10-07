@@ -2768,10 +2768,13 @@
 					}
 
 					const _swiperWrapper_ = document.querySelector('.swiper-wrapper');
+					const _myswper_ = document.querySelector(".swiper.mySwiper")
 					var _swiperSlide_ = null;
 					_BOOTAD_();
 
 					function _BOOTAD_() {
+						var _x_ = _myswper_.getBoundingClientRect();
+						_myswper_.style.marginLeft = `-${_x_.x}px`;
 						for(var k = 0; k <= _adConfig_.totalSlide; k++){
 							console.log("slide-" + (k + 1))
 							_generateSlide(_adConfig_.slides["slide-" + (k + 1)]);
