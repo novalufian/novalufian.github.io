@@ -2766,7 +2766,7 @@
 							console.log("slide-" + (k + 1), k == _adConfig_.totalSlide - 1)
 							_generateSlide(_adConfig_.slides["slide-" + (k + 1)]);
 							if (k == _adConfig_.totalSlide - 1) {
-								_swiperSlide_ = document.querySelectorAll('.swiper-slide');
+								_swiperSlide_ = document.querySelectorAll('.swiper-slide.video');
 								_swiperWrapper_.addEventListener('scroll', _playPauseVIdeo);
 							}
 						}
@@ -2800,7 +2800,7 @@
 
 					function _slideVideo_(_obj_) {
 						var _slideItem_ = document.createElement("div");
-						_slideItem_.setAttribute("class", "swiper-slide");
+						_slideItem_.setAttribute("class", "swiper-slide video");
 
 						var _videoTag_ = document.createElement("video");
 						_videoTag_.setAttribute("width", 170);
