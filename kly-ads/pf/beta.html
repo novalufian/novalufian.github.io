@@ -2819,7 +2819,7 @@
 					}
 
 					function isInViewport(el) {
-					    const rect = el.getBoundingClientRect();
+					    var rect = el.getBoundingClientRect();
 					    console.log("oke ",rect)
 					    //     rect.left >= 50 - el.clientWidth
 					    console.log(rect.left >= 50 - el.clientWidth)
@@ -2831,6 +2831,9 @@
 						console.log('scroll')
 						_swiperSlide_.forEach(function (el,i) {
 							var _video_ = el.querySelector("video");
+					    		var rect = el.getBoundingClientRect();
+							console.log(rect.left >= 50 - el.clientWidth)
+
 							isInViewport(el);
 							if (isInViewport(el)) {
 								_video_.play();
