@@ -2569,21 +2569,6 @@
                             <div id="inf-1"></div>
                             <!-- PICTURE FIRST -->
                             <style>
-					html,
-					body {
-						position: relative;
-						height: 100%;
-					}
-
-					body {
-						background: #eee;
-						font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-						font-size: 14px;
-						color: #000;
-						margin: 0;
-						padding: 0;
-					}
-
 					.swiper-wrapper {
 						position: relative;
 						width: 95vw;
@@ -2778,9 +2763,9 @@
 						_myswper_.style.marginLeft = `-${_x_.x}px`;
 
 						for(var k = 0; k <= _adConfig_.totalSlide; k++){
-							console.log("slide-" + (k + 1))
+							console.log("slide-" + (k + 1), k == _adConfig_.totalSlide - 1)
 							_generateSlide(_adConfig_.slides["slide-" + (k + 1)]);
-							if ((k - 1) == _adConfig_.totalSlide) {
+							if (k == _adConfig_.totalSlide - 1) {
 								_swiperSlide_ = document.querySelectorAll('.swiper-slide');
 								_swiperWrapper_.addEventListener('scroll', _playPauseVIdeo);
 							}
