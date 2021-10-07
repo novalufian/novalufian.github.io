@@ -2818,24 +2818,11 @@
 						return _slideItem_;
 					}
 
-					function isInViewport(el) {
-					    var rect = el.getBoundingClientRect();
-					    console.log("oke ",rect)
-					    //     rect.left >= 50 - el.clientWidth
-					    console.log(rect.left >= 50 - el.clientWidth)
-					    // return (
-					    // );
-					}
-
 					function _playPauseVIdeo() {
-						console.log('scroll')
 						_swiperSlide_.forEach(function (el,i) {
 							var _video_ = el.querySelector("video");
 					    		var rect = el.getBoundingClientRect();
-							console.log(rect.left >= 50 - el.clientWidth)
-
-							isInViewport(el);
-							if (isInViewport(el)) {
+							if (rect.left >= 50 - el.clientWidth) {
 								_video_.play();
 							}else{
 								_video_.pause();
