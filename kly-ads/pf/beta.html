@@ -2579,6 +2579,12 @@
 						box-sizing: content-box;
 						overflow-x: scroll;
 						padding-left: 5vw;
+						-ms-overflow-style: none;  /* IE and Edge */
+						scrollbar-width: none;  /* Firefox */
+					}
+
+					.swiper-wrapper::-webkit-scrollbar {
+						display: none;
 					}
 
 					.swiper {
