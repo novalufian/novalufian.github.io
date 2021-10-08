@@ -2762,14 +2762,20 @@
 						var _x_ = _myswper_.getBoundingClientRect();
 						_myswper_.style.marginLeft = `-${_x_.x}px`;
 
-						for(var k = 0; k <= _adConfig_.totalSlide; k++){
-							console.log("slide-" + (k + 1), k == _adConfig_.totalSlide - 1)
-							_generateSlide(_adConfig_.slides["slide-" + (k + 1)]);
-							if (k == _adConfig_.totalSlide - 1) {
-								_swiperSlide_ = document.querySelectorAll('.swiper-slide.video');
+						var _index_ = 0;
+						Object.entries(_adConfig_.slides).forEach(function ([i, el]) {
+							if (_index_ == _adConfig_.totalSlide - 1) {
+								_swiperSlide_ = document.querySelectorAll('.swiper-slide');
 								_swiperWrapper_.addEventListener('scroll', _playPauseVIdeo);
 							}
-						}
+
+							if (_index_ > _adConfig_.totalSlide - 1) {
+								return;
+							}
+
+							_generateSlide(el, i);
+							_index_++;
+						})
 					}
 
 					function _generateSlide(_obj_) {
