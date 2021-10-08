@@ -2787,6 +2787,8 @@
 					function _slideImage_(_obj_) {
 						var _slideItem_ = document.createElement("div");
 						_slideItem_.setAttribute("class", "swiper-slide");
+						_slideItem_.setAttribute("data-landing-page", _obj_.lp);
+						_slideItem_.addEventListener("click", _gotoLP_);
 
 						var _image_ = document.createElement("img");
 						_image_.setAttribute("src", _obj_.mediaSrc);
@@ -2807,6 +2809,8 @@
 					function _slideVideo_(_obj_) {
 						var _slideItem_ = document.createElement("div");
 						_slideItem_.setAttribute("class", "swiper-slide video");
+						_slideItem_.setAttribute("data-landing-page", _obj_.lp);
+						_slideItem_.addEventListener("click", _gotoLP_);
 
 						var _videoTag_ = document.createElement("video");
 						_videoTag_.setAttribute("width", 170);
@@ -2834,6 +2838,11 @@
 								_video_.pause();
 							}
 						})
+					}
+
+					function _gotoLP_() {
+						var _lp_ = this.getAttribute("data-landing-page");
+						window.open("_blank", _lp_);
 					}
 				</script>
                             <div class="content-promotion" data-cache-key="https_liputan6.com:bump:Category#188::MSTM::697ce7f555cdf3d47e33a245e8d29c40" data-cache-ttl="5" data-component-name="mobile:content-promotion:mstm">
