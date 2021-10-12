@@ -2571,14 +2571,14 @@
                             <style>
 					.swiper-wrapper {
 						position: relative;
-						width: 95vw;
+						width: 90vw;
 						height: 100%;
 						z-index: 1;
 						display: flex;
 						transition-property: transform;
 						box-sizing: content-box;
 						overflow-x: scroll;
-						padding-left: 5vw;
+						padding:0 5vw;
 						-ms-overflow-style: none;  /* IE and Edge */
 						scrollbar-width: none;  /* Firefox */
 					}
@@ -2601,7 +2601,7 @@
 					div#brand-logo {
 						display: block;
 						width: 100%;
-						padding: 10vw 5vw 6vw;
+						padding: 3vw 3vw 7vw;
 					}
 
 					div#brand-logo img {
@@ -2620,7 +2620,7 @@
 						font-size: 18px;
 						background: #fff;
 						flex-direction: column;
-						margin: 0 1.5%;
+						margin: 0 2.25%;
 						/* Center slide text vertically */
 						display: -webkit-box;
 						display: -ms-flexbox;
@@ -2662,12 +2662,13 @@
 
 					.swiper-slide span#title {
 						position: absolute;
-						bottom: 5.5vh;
+						bottom: 40px;
 						text-align: left;
 						padding: 0 10px;
 						color: #fff;
 						z-index: 10;
 						line-height: 18px;
+                        text-shadow: 0 4px 3px rgb(0 0 0 / 25%);
 					}
 
 					.swiper-slide span#link-to-lp {
@@ -2723,7 +2724,7 @@
 							"slide-4" : {
 								"type" 	: "video", // video / image
 								"mediaSrc" 	: "https://novalufian.github.io/kly-ads/blank-page/Test%20VIdeo%201.mp4",
-								"title" 	: "", 
+								"title" 	: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.", 
 								"lp" 		: "https://m.kapanlagi.com?slide=4"
 							},
 							"slide-5" : {
@@ -2836,6 +2837,15 @@
 						_videoSource_.setAttribute("src", _obj_.mediaSrc);
 						_videoSource_.setAttribute("type", "video/mp4");
 						_videoTag_.appendChild(_videoSource_);
+
+                        var _title_ = document.createElement("span");
+                        _title_.setAttribute("id", "title");
+                        _title_.textContent = _obj_.title;  
+                        _slideItem_.appendChild(_title_);
+
+                        var _lp_ = document.createElement("span");
+                        _lp_.setAttribute("id", "link-to-lp");
+                        _slideItem_.appendChild(_lp_);
 
 						return _slideItem_;
 					}
