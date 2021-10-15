@@ -2569,275 +2569,247 @@
                             <div id="inf-1"></div>
                             <!-- PICTURE FIRST -->
                             <style>
-					.swiper-wrapper {
-						position: relative;
-						width: 90vw;
-						height: 100%;
-						z-index: 1;
-						display: flex;
-						transition-property: transform;
-						box-sizing: content-box;
-						overflow-x: scroll;
-						padding:0 5vw;
-						-ms-overflow-style: none;  /* IE and Edge */
-						scrollbar-width: none;  /* Firefox */
-					}
+                    .swiper-wrapper {
+                        position: relative;
+                        width: 90vw;
+                        height: 100%;
+                        z-index: 1;
+                        display: flex;
+                        transition-property: transform;
+                        box-sizing: content-box;
+                        overflow-x: scroll;
+                        padding:0 5vw;
+                        -ms-overflow-style: none;  /* IE and Edge */
+                        scrollbar-width: none;  /* Firefox */
+                    }
 
-					.swiper-wrapper::-webkit-scrollbar {
-						display: none;
-					}
+                    .swiper-wrapper::-webkit-scrollbar {
+                        display: none;
+                    }
 
-					.swiper {
-						width: 100vw;
-						min-height: 115.097vw;
-						box-sizing: border-box;
-						background: yellow;
-						overflow: hidden;
-						background-image: url(https://novalufian.github.io/kly-ads/pf/bg.png);
-    						background-repeat: no-repeat;
-    						background-size: cover;
-					}
+                    .swiper {
+                        width: 100vw;
+                        min-height: 115.097vw;
+                        box-sizing: border-box;
+                        background: #fff;
+                        overflow: hidden;
+                        background-image: url(https://novalufian.github.io/kly-ads/pf/bg.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                    }
 
-					div#brand-logo {
-						display: block;
-						width: 100%;
-						padding: 3vw 3vw 9vw;
-					}
+                    div#brand-logo {
+                        display: block;
+                        width: 100%;
+                        padding: 3vw 3vw 5vw;
+                        position: relative;
+                        left: 15px;
+                    }
 
-					div#brand-logo img {
-						width: 45%;
-					}
+                    div#brand-logo img {
+                        width: 45%;
+                    }
 
-					.swiper-slide {
-						flex-shrink: 0;
-						position: relative;
-						transition-property: transform;
-						width: 43vw !important;
-						height: 74.870vw;
-						overflow: hidden;
-						border-radius: 15px;
-						text-align: center;
-						font-size: 18px;
-						background: #fff;
-						flex-direction: column;
-						margin: 0 2.25%;
-						/* Center slide text vertically */
-						display: -webkit-box;
-						display: -ms-flexbox;
-						display: -webkit-flex;
-						display: flex;
-						-webkit-box-pack: center;
-						-ms-flex-pack: center;
-						-webkit-justify-content: center;
-						justify-content: center;
-						-webkit-box-align: center;
-						-ms-flex-align: center;
-						-webkit-align-items: center;
-						align-items: center;
-					}
+                    .swiper-slide {
+                        flex-shrink: 0;
+                        position: relative;
+                        transition-property: transform;
+                        width: 45.34vw !important;
+                        height: 80.54vw;
+                        overflow: hidden;
+                        border-radius: 15px;
+                        text-align: center;
+                        font-size: 18px;
+                        background: #fff;
+                        flex-direction: column;
+                        margin: 0 2.25%;
+                        /* Center slide text vertically */
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        -webkit-justify-content: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        -webkit-align-items: center;
+                        align-items: center;
+                    }
 
-					.swiper-slide video {
-						width: 100%;
-						height: 100%;
-						position: relative;
-						object-fit: cover;
-					}
+                    .swiper-slide video {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        object-fit: cover;
+                    }
 
-					.swiper-slide::before {
-						content: "";
-						position: absolute;
-						z-index: 5;
-						height: 50%;
-						bottom: 0;
-						background: linear-gradient(0deg, #00000090, transparent);
-						width: 100%;
-					}
+                    .swiper-slide::before {
+                        content: "";
+                        position: absolute;
+                        z-index: 5;
+                        height: 50%;
+                        bottom: 0;
+                        background: linear-gradient(0deg, #00000090, transparent);
+                        width: 100%;
+                    }
 
-					.swiper-slide img {
-						display: block;
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-					}
+                    .swiper-slide img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
 
-					.swiper-slide span#title {
-						position: absolute;
-						bottom: 40px;
-						text-align: left;
-						padding: 0 10px;
-						color: #fff;
-						z-index: 10;
-						line-height: 18px;
+                    .swiper-slide span#title {
+                        position: absolute;
+                        bottom: 40px;
+                        text-align: left;
+                        padding: 0 10px;
+                        color: #fff;
+                        z-index: 10;
+                        line-height: 1.4em;
+                        font-weight: 600;
+                        font-size: 16px;
                         text-shadow: 0 4px 3px rgb(0 0 0 / 25%);
-					}
+                    }
 
-					.swiper-slide span#link-to-lp {
-						position: absolute;
-						z-index: 10;
-						width: 25px;
-						height: 25px;
-						background: blue url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAHCAYAAADebrddAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABcSURBVHgBjZDJDYBADAONRAFbwnYAHQEVUQLbIXQQJlzis4clK3lMZCtSRmYW8I4ntQgw2a3roGcZmSHDJzz4hFPnUQX4r8PhyBIL0Io9fVGl8/Z0nmvg+40PPAH0LDuOuiWWEwAAAABJRU5ErkJggg==);
+                    .swiper-slide span#link-to-lp {
+                        position: absolute;
+                        z-index: 10;
+                        width: 25px;
+                        height: 25px;
+                        background: blue url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAHCAYAAADebrddAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABcSURBVHgBjZDJDYBADAONRAFbwnYAHQEVUQLbIXQQJlzis4clK3lMZCtSRmYW8I4ntQgw2a3roGcZmSHDJzz4hFPnUQX4r8PhyBIL0Io9fVGl8/Z0nmvg+40PPAH0LDuOuiWWEwAAAABJRU5ErkJggg==);
                         border-radius: 5px;
                         right: 13px;
                         bottom: 13px;
                         background-repeat: no-repeat;
                         background-position: center;
-					}
-					.swiper-slide span#link-to-lp img{
-						width: 100%;
-						height: 100%;
-					}
-				</style>
-				<!-- Swiper -->
-				<div class="swiper mySwiper">
-					<div id="brand-logo">
-						<img src="https://novalufian.github.io/kly-ads/pf/logo.png" alt="">
-					</div>
-					<div class="swiper-wrapper">
-						
-					</div>
-					<div class="swiper-pagination"></div>
-				</div>
-				<script>
-					var _adConfig_ = {
-						"totalSlide" : 8,
-						"videoPosition" : 1, // slide number
-						"slides": {
-							"slide-1" : {
-								"type" 	: "video", // video / image
-								"mediaSrc" 	: "https://novalufian.github.io/kly-ads/blank-page/Test%20VIdeo%201.mp4",
-								"title" 	: "Lorem ipsum dolor sit amet consectetur.", 
-								"lp" 		: "https://m.kapanlagi.com"
-							},
-							"slide-2" : {
-								"type" 	: "image", // video / image
-								"mediaSrc" 	: "https://novalufian.github.io/kly-ads/pf/Rectangle%2033slide-1.png",
-								"title" 	: "Mobil ini akan mengusung mesin bensin 4 silinder", 
-								"lp" 		: "https://m.kapanlagi.com?slide=2"
-							},
-							"slide-3" : {
-								"type" 	: "image", // video / image
-								"mediaSrc" 	: "https://novalufian.github.io/kly-ads/pf/Rectangle%2033slide-2.png",
-								"title" 	: "Didesain untuk menyesuaikan selera pasar", 
-								"lp" 		: "https://m.kapanlagi.com?slide=3"
-							},
-							"slide-4" : {
-								"type" 	: "video", // video / image
-								"mediaSrc" 	: "https://novalufian.github.io/kly-ads/blank-page/Test%20VIdeo%201.mp4",
-								"title" 	: "Lorem ipsum, dolor sit amet consectetur.", 
-								"lp" 		: "https://m.kapanlagi.com?slide=4"
-							},
-							"slide-5" : {
-								"type" 	: "image", // video / image
-								"mediaSrc" 	: "https://novalufian.github.io/kly-ads/pf/Rectangle%2033slide-3.png",
-								"title" 	: "Wagon R Smile merupakan kei car pintu geser", 
-								"lp" 		: "https://m.kapanlagi.com?slide=5"
-							},
-							"slide-6" : {
-								"type" 	: "image", // video / image
-								"mediaSrc" 	: "https://novalufian.github.io/kly-ads/pf/Rectangle%2033slide-4.png",
-								"title" 	: "Dioperasikan dengan transmisi otomatis", 
-								"lp" 		: "https://m.kapanlagi.com?slide=6"
-							},
-							"slide-7" : {
-								"type" 	: "image", // video / image
-								"mediaSrc" 	: "https://novalufian.github.io/kly-ads/pf/Rectangle%2033slide-5.png",
-								"title" 	: "Mobil yang pertama kali diluncurkan pada tahun 1969", 
-								"lp" 		: "https://m.kapanlagi.com?slide=7"
-							},
-							"slide-8" : {
-								"type" 	: "image", // video / image
-								"mediaSrc" 	: "https://novalufian.github.io/kly-ads/pf/Rectangle%2033slide-6.png",
-								"title" 	: "BMW secara resmi menghadirkan dua model Seri-3 330i", 
-								"lp" 		: "https://m.kapanlagi.com?slide=8"
-							},
-							"slide-9" : {
-								"type" 	: "image", // video / image
-								"mediaSrc" 	: "http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 9",
-								"title" 	: "Lorem ipsum dolor sit amet consectetur adipisicing elit ok.", 
-								"lp" 		: "https://m.kapanlagi.com?slide=9"
-							},
-							"slide-10" : {
-								"type" 	: "image", // video / image
-								"mediaSrc" 	: "http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 10",
-								"title" 	: "Lorem ipsum dolor sit amet consectetur adipisicing elit ok.", 
-								"lp" 		: "https://m.kapanlagi.com?slide=10"
-							},
-						}
-					}
+                    }
+                    .swiper-slide span#link-to-lp img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                </style>
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div id="brand-logo">
+                        <img src="https://novalufian.github.io/kly-ads/pf/logo.png" alt="">
+                    </div>
+                    <div class="swiper-wrapper">
+                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <script>
+                    var _adConfig_ = {
+                        "totalSlide" : 8,
+                        "videoPosition" : 1, // slide number
+                        "slides": {
+                            "slide-1" : {
+                                "type"  : "video", // video / image
+                                "mediaSrc"  : "https://novalufian.github.io/kly-ads/blank-page/Test%20VIdeo%201.mp4",
+                                "title"     : "Lorem ipsum dolor sit amet consectetur.", 
+                                "lp"        : "https://m.kapanlagi.com"
+                            },
+                            "slide-2" : {
+                                "type"  : "image", // video / image
+                                "mediaSrc"  : "https://novalufian.github.io/kly-ads/pf/Rectangle%2033slide-1.png",
+                                "title"     : "Mobil ini akan mengusung mesin bensin 4 silinder", 
+                                "lp"        : "https://m.kapanlagi.com?slide=2"
+                            },
+                            "slide-3" : {
+                                "type"  : "image", // video / image
+                                "mediaSrc"  : "https://novalufian.github.io/kly-ads/pf/Rectangle%2033slide-2.png",
+                                "title"     : "Didesain untuk menyesuaikan selera pasar", 
+                                "lp"        : "https://m.kapanlagi.com?slide=3"
+                            },
+                            "slide-4" : {
+                                "type"  : "video", // video / image
+                                "mediaSrc"  : "https://novalufian.github.io/kly-ads/blank-page/Test%20VIdeo%201.mp4",
+                                "title"     : "Lorem ipsum, dolor sit amet consectetur.", 
+                                "lp"        : "https://m.kapanlagi.com?slide=4"
+                            },
+                            "slide-5" : {
+                                "type"  : "image", // video / image
+                                "mediaSrc"  : "https://novalufian.github.io/kly-ads/pf/Rectangle%2033slide-3.png",
+                                "title"     : "Wagon R Smile merupakan kei car pintu geser", 
+                                "lp"        : "https://m.kapanlagi.com?slide=5"
+                            },
+                            "slide-6" : {
+                                "type"  : "image", // video / image
+                                "mediaSrc"  : "https://novalufian.github.io/kly-ads/pf/Rectangle%2033slide-4.png",
+                                "title"     : "Dioperasikan dengan transmisi otomatis", 
+                                "lp"        : "https://m.kapanlagi.com?slide=6"
+                            },
+                            "slide-7" : {
+                                "type"  : "image", // video / image
+                                "mediaSrc"  : "https://novalufian.github.io/kly-ads/pf/Rectangle%2033slide-5.png",
+                                "title"     : "Mobil yang pertama kali diluncurkan pada tahun 1969", 
+                                "lp"        : "https://m.kapanlagi.com?slide=7"
+                            },
+                            "slide-8" : {
+                                "type"  : "image", // video / image
+                                "mediaSrc"  : "https://novalufian.github.io/kly-ads/pf/Rectangle%2033slide-6.png",
+                                "title"     : "BMW secara resmi menghadirkan dua model Seri-3 330i", 
+                                "lp"        : "https://m.kapanlagi.com?slide=8"
+                            },
+                            "slide-9" : {
+                                "type"  : "image", // video / image
+                                "mediaSrc"  : "http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 9",
+                                "title"     : "Lorem ipsum dolor sit amet consectetur adipisicing elit ok.", 
+                                "lp"        : "https://m.kapanlagi.com?slide=9"
+                            },
+                            "slide-10" : {
+                                "type"  : "image", // video / image
+                                "mediaSrc"  : "http://via.placeholder.com/170x302/FF0075/000000?text=SLIDE 10",
+                                "title"     : "Lorem ipsum dolor sit amet consectetur adipisicing elit ok.", 
+                                "lp"        : "https://m.kapanlagi.com?slide=10"
+                            },
+                        }
+                    }
 
-					const _swiperWrapper_ = document.querySelector('.swiper-wrapper');
-					const _myswper_ = document.querySelector(".swiper.mySwiper")
-					var _swiperSlide_ = null;
-					_BOOTAD_();
+                    const _swiperWrapper_ = document.querySelector('.swiper-wrapper');
+                    const _myswper_ = document.querySelector(".swiper.mySwiper")
+                    var _swiperSlide_ = null;
+                    _BOOTAD_();
 
-					function _BOOTAD_() {
-						var _x_ = _myswper_.getBoundingClientRect();
-						_myswper_.style.marginLeft = `-${_x_.x}px`;
+                    function _BOOTAD_() {
+                        var _x_ = _myswper_.getBoundingClientRect();
+                        _myswper_.style.marginLeft = `-${_x_.x}px`;
 
-						var _index_ = 0;
-						Object.entries(_adConfig_.slides).forEach(function ([i, el]) {
-							if (_index_ == _adConfig_.totalSlide - 1) {
-								_swiperSlide_ = document.querySelectorAll('.swiper-slide.video');
-								_swiperWrapper_.addEventListener('scroll', _playPauseVIdeo);
-							}
+                        var _index_ = 0;
+                        Object.entries(_adConfig_.slides).forEach(function ([i, el]) {
+                            if (_index_ == _adConfig_.totalSlide - 1) {
+                                _swiperSlide_ = document.querySelectorAll('.swiper-slide.video');
+                                _swiperWrapper_.addEventListener('scroll', _playPauseVIdeo);
+                            }
 
-							if (_index_ > _adConfig_.totalSlide - 1) {
-								return;
-							}
+                            if (_index_ > _adConfig_.totalSlide - 1) {
+                                return;
+                            }
 
-							_generateSlide(el, i);
-							_index_++;
-						})
-					}
+                            _generateSlide(el, i);
+                            _index_++;
+                        })
+                    }
 
-					function _generateSlide(_obj_) {
-						console.log(_obj_)
-						var _RES_ = (_obj_.type == "video") ? _slideVideo_(_obj_) : _slideImage_(_obj_);
-						_swiperWrapper_.appendChild(_RES_)
-					}
+                    function _generateSlide(_obj_) {
+                        console.log(_obj_)
+                        var _RES_ = (_obj_.type == "video") ? _slideVideo_(_obj_) : _slideImage_(_obj_);
+                        _swiperWrapper_.appendChild(_RES_)
+                    }
 
-					function _slideImage_(_obj_) {
-						var _slideItem_ = document.createElement("div");
-						_slideItem_.setAttribute("class", "swiper-slide");
-						_slideItem_.setAttribute("data-landing-page", _obj_.lp);
-						_slideItem_.addEventListener("click", _gotoLP_);
+                    function _slideImage_(_obj_) {
+                        var _slideItem_ = document.createElement("div");
+                        _slideItem_.setAttribute("class", "swiper-slide");
+                        _slideItem_.setAttribute("data-landing-page", _obj_.lp);
+                        _slideItem_.addEventListener("click", _gotoLP_);
 
-						var _image_ = document.createElement("img");
-						_image_.setAttribute("src", _obj_.mediaSrc);
-						_slideItem_.appendChild(_image_);
-
-						var _title_ = document.createElement("span");
-						_title_.setAttribute("id", "title");
-						_title_.textContent = _obj_.title;	
-						_slideItem_.appendChild(_title_);
-
-						var _lp_ = document.createElement("span");
-						_lp_.setAttribute("id", "link-to-lp");
-						_slideItem_.appendChild(_lp_);
-
-						return _slideItem_;
-					}
-
-					function _slideVideo_(_obj_) {
-						var _slideItem_ = document.createElement("div");
-						_slideItem_.setAttribute("class", "swiper-slide video");
-						_slideItem_.setAttribute("data-landing-page", _obj_.lp);
-						_slideItem_.addEventListener("click", _gotoLP_);
-
-						var _videoTag_ = document.createElement("video");
-						_videoTag_.setAttribute("width", 170);
-						_videoTag_.setAttribute("height", 302);
-						_videoTag_.muted = true;
-						_videoTag_.autoplay = true;
-                        _videoTag_.loop = true;
-						_videoTag_.playsinline = true;
-						_slideItem_.appendChild(_videoTag_);
-
-						var _videoSource_ = document.createElement("source");
-						_videoSource_.setAttribute("src", _obj_.mediaSrc);
-						_videoSource_.setAttribute("type", "video/mp4");
-						_videoTag_.appendChild(_videoSource_);
+                        var _image_ = document.createElement("img");
+                        _image_.setAttribute("src", _obj_.mediaSrc);
+                        _slideItem_.appendChild(_image_);
 
                         var _title_ = document.createElement("span");
                         _title_.setAttribute("id", "title");
@@ -2848,26 +2820,58 @@
                         _lp_.setAttribute("id", "link-to-lp");
                         _slideItem_.appendChild(_lp_);
 
-						return _slideItem_;
-					}
+                        return _slideItem_;
+                    }
 
-					function _playPauseVIdeo() {
-						_swiperSlide_.forEach(function (el,i) {
-							var _video_ = el.querySelector("video");
-					    		var rect = el.getBoundingClientRect();
-							if (rect.left >= 50 - el.clientWidth) {
-								_video_.play();
-							}else{
-								_video_.pause();
-							}
-						})
-					}
+                    function _slideVideo_(_obj_) {
+                        var _slideItem_ = document.createElement("div");
+                        _slideItem_.setAttribute("class", "swiper-slide video");
+                        _slideItem_.setAttribute("data-landing-page", _obj_.lp);
+                        _slideItem_.addEventListener("click", _gotoLP_);
 
-					function _gotoLP_() {
-						var _lp_ = this.getAttribute("data-landing-page");
-						window.open( _lp_,"_blank");
-					}
-				</script>
+                        var _videoTag_ = document.createElement("video");
+                        _videoTag_.setAttribute("width", 170);
+                        _videoTag_.setAttribute("height", 302);
+                        _videoTag_.muted = true;
+                        _videoTag_.autoplay = true;
+                        _videoTag_.loop = true;
+                        _videoTag_.playsinline = true;
+                        _slideItem_.appendChild(_videoTag_);
+
+                        var _videoSource_ = document.createElement("source");
+                        _videoSource_.setAttribute("src", _obj_.mediaSrc);
+                        _videoSource_.setAttribute("type", "video/mp4");
+                        _videoTag_.appendChild(_videoSource_);
+
+                        var _title_ = document.createElement("span");
+                        _title_.setAttribute("id", "title");
+                        _title_.textContent = _obj_.title;  
+                        _slideItem_.appendChild(_title_);
+
+                        var _lp_ = document.createElement("span");
+                        _lp_.setAttribute("id", "link-to-lp");
+                        _slideItem_.appendChild(_lp_);
+
+                        return _slideItem_;
+                    }
+
+                    function _playPauseVIdeo() {
+                        _swiperSlide_.forEach(function (el,i) {
+                            var _video_ = el.querySelector("video");
+                                var rect = el.getBoundingClientRect();
+                            if (rect.left >= 50 - el.clientWidth) {
+                                _video_.play();
+                            }else{
+                                _video_.pause();
+                            }
+                        })
+                    }
+
+                    function _gotoLP_() {
+                        var _lp_ = this.getAttribute("data-landing-page");
+                        window.open( _lp_,"_blank");
+                    }
+                </script>
                             <div class="content-promotion" data-cache-key="https_liputan6.com:bump:Category#188::MSTM::697ce7f555cdf3d47e33a245e8d29c40" data-cache-ttl="5" data-component-name="mobile:content-promotion:mstm">
                                 <header class="content-promotion--header" data-component="mobile:content-promotion:header" data-position="MSTM" data-component-name="mobile:content-promotion:header">
                                     <h3 class="content-promotion--header__title"><a class="content-promotion--header__link" href="https://m.liputan6.com/tag/special-content?HouseAds&amp;campaign=SpecialContent_Home_MSTM" title="SPECIAL CONTENT">SPECIAL CONTENT</a></h3>
@@ -6099,18 +6103,18 @@
         $(document).ready(function() {
             if (window.kmklabs.pageType == "ReadPage") {
                 $('body').append(`
-		  <style id="#165115966">
-				.visual-story-widget {
-					 margin: 20px -15px;
-				}
-				.live--streaming {
-					margin-bottom: 20px;
-				}
-				.article-ad_ad-ba {
-					margin: 20px 0;
-				}
-			</style>
-		 `);
+          <style id="#165115966">
+                .visual-story-widget {
+                     margin: 20px -15px;
+                }
+                .live--streaming {
+                    margin-bottom: 20px;
+                }
+                .article-ad_ad-ba {
+                    margin: 20px 0;
+                }
+            </style>
+         `);
             }
         });
         /*** END of [#165115966] Mobile read ****/
