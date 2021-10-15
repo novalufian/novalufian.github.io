@@ -2643,6 +2643,7 @@
                         height: 100%;
                         position: relative;
                         object-fit: cover;
+                        border-radius: 15px;
                     }
 
                     .swiper-slide::before {
@@ -2835,7 +2836,7 @@
                         _videoTag_.muted = true;
                         _videoTag_.autoplay = true;
                         _videoTag_.loop = true;
-                        _videoTag_.playsinline = true;
+                        _videoTag_.playsInline = true;
                         _slideItem_.appendChild(_videoTag_);
 
                         var _videoSource_ = document.createElement("source");
