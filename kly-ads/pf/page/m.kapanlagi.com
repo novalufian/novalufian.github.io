@@ -1024,9 +1024,16 @@ function injectStickyStyleAndAnimation() {
     }
 </style>
 <div id="div-gpt-ad-topfrm-parallax-wrapper">
-    <div id="div-gpt-ad-kapanlagi-topfrm-oop" data-info="ad"></div>
-    <!-- Revive Adserver Asynchronous JS Tag - Generated with Revive Adserver v5.0.5 -->
-    <ins class="revive-ad-kapanlagi-topfrm" data-revive-zoneid="81" data-revive-id="826a5a6d8734276706a6e7f9fac6fabb"></ins>
+    <div id="div-gpt-ad-kapanlagi-topfrm-oop" data-info="ad">
+    
+    <script>
+    googletag.cmd.push(function() {
+        googletag.display('div-gpt-ad-kapanlagi-topfrm-oop');
+    });
+</script> 
+    </div>
+    <!-- Revive Adserver Asynchronous JS Tag - Generated with Revive Adserver v5.0.5 
+    <ins class="revive-ad-kapanlagi-topfrm" data-revive-zoneid="81" data-revive-id="826a5a6d8734276706a6e7f9fac6fabb"></ins>-->
 </div>
 <!-- END KLY TOPFRAME -->
 
