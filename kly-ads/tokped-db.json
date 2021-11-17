@@ -1,0 +1,905 @@
+// 20211117100320
+// https://raw.githubusercontent.com/novalufian/dummy-json/4dd779ebf20e03761327437ddffafc18034f5c7c/db.json
+
+[
+  {
+    "#": 1,
+    "Category": "Make Up",
+    "Product Name": "SASC Effortless Brow Definer",
+    "Product Price": 109500,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2020/3/4/27223927/27223927_10dcad10-5b3e-4425-a077-fbd5162e2cf6_2048_2048",
+    "Url landing page": "https://www.tokopedia.com/sasc-cosmetic/sasc-effortless-brow-definer-caramel?refined=true&whid=0",
+    "Rating (star)": 5
+  },
+  {
+    "#": 2,
+    "Category": "Make Up",
+    "Product Name": "MAKE OVER Hydrastay Radiant Finishing Powder 8 g - Bedak Tabur",
+    "Product Price": 120000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/1/11/5ce43b32-5fef-4bad-b078-a6d43d4fc714.jpg",
+    "Url landing page": "https://www.tokopedia.com/officialmakeover/make-over-hydrastay-radiant-finishing-powder-8-g-bedak-tabur",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 3,
+    "Category": "Make Up",
+    "Product Name": "SOMETHINC COPY PASTE BREATHABLE MESH CUSHION SPF 33 PA++",
+    "Product Price": 185900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/11/11/66a59cfb-e8e2-4cc5-8ed0-f2f7253fa7dd.jpg",
+    "Url landing page": "https://www.tokopedia.com/somethinc/somethinc-copy-paste-breathable-mesh-cushion-spf-33-pa-coco-bacf",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 4,
+    "Category": "Make Up",
+    "Product Name": "L'Oreal Paris Infallible 24H Matte Cover Foundation",
+    "Product Price": 180000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/13/75a452c3-258f-404f-b648-00f523b42708.jpg",
+    "Url landing page": "https://www.tokopedia.com/lorealparis/l-oreal-paris-infallible-24h-matte-cover-foundation-118-rose-linen?src=topads",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 5,
+    "Category": "Make Up",
+    "Product Name": "Wardah Colorfit Cream Blush 3 g - Blush on",
+    "Product Price": 50000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/9/30/33223643-bfc5-4567-a224-89f75f50e05c.jpg",
+    "Url landing page": "https://www.tokopedia.com/wardah-official/wardah-colorfit-cream-blush-3-g-blush-on-01-sand-coral?src=topads",
+    "Rating (star)": 5
+  },
+  {
+    "#": 6,
+    "Category": "Make Up",
+    "Product Name": "Maybelline Hypersharp Liquid Liner Make Up - Sharp Liner",
+    "Product Price": 129000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2020/2/17/55309831/55309831_9903482e-7212-49aa-b45c-3d8be8d9723d_1300_1300",
+    "Url landing page": "https://www.tokopedia.com/maybelline/maybelline-hypersharp-liquid-liner-make-up-sharp-liner",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 7,
+    "Category": "Make Up",
+    "Product Name": "Luxcrime Ultra Light Lip Stain",
+    "Product Price": 109000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/31/50df1d4d-5874-4e39-a666-f42429bacb3c.png",
+    "Url landing page": "https://www.tokopedia.com/luxcrime/luxcrime-ultra-light-lip-stain-amber",
+    "Rating (star)": 5
+  },
+  {
+    "#": 8,
+    "Category": "Make Up",
+    "Product Name": "Bulu Mata Elise - LP Classic 6545",
+    "Product Price": 25200,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/11/9/2b1bf0ae-6986-45e8-86e4-7abead673541.jpg",
+    "Url landing page": "https://www.tokopedia.com/eliselash/bulu-mata-elise-lp-classic-6545",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 9,
+    "Category": "Make Up",
+    "Product Name": "Ardell DUO 65696 2-in-1 brush on adhesive",
+    "Product Price": 169900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2020/2/3/35325001/35325001_d1a2cf9e-c8ce-427b-9e09-f9e3a1f6a3c7_1000_1000",
+    "Url landing page": "https://www.tokopedia.com/ardell-lashes/ardell-duo-65696-2-in-1-brush-on-adhesive?whid=0",
+    "Rating (star)": 5
+  },
+  {
+    "#": 10,
+    "Category": "Make up",
+    "Product Name": "Maybelline The Falsies Lash Lift Waterproof Very Black Mascara",
+    "Product Price": 139000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2020/8/25/55309831/55309831_5782587c-4eda-4e1d-aa10-59f1447ea0f1_1300_1300",
+    "Url landing page": "https://www.tokopedia.com/maybelline/maybelline-the-falsies-lash-lift-waterproof-very-black-mascara",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 11,
+    "Category": "Skin Care",
+    "Product Name": "Bioderma Sensibio H2O 500 ml - Micellar Water",
+    "Product Price": 377300,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/11/8/a6a57f55-e322-49ee-880d-5d0a20632cda.jpg",
+    "Url landing page": "https://www.tokopedia.com/biodermaofficial/bioderma-sensibio-h2o-500-ml-micellar-water",
+    "Rating (star)": 5
+  },
+  {
+    "#": 12,
+    "Category": "Skin Care",
+    "Product Name": "Studio Tropik Rescue RX - Antibacterial Face Mist",
+    "Product Price": 99000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/7/29/c054f726-e12e-4492-8239-01623a60d196.jpg",
+    "Url landing page": "https://www.tokopedia.com/studiotropik/studio-tropik-rescue-rx-antibacterial-face-mist",
+    "Rating (star)": 5
+  },
+  {
+    "#": 13,
+    "Category": "Skin Care",
+    "Product Name": "SENSITIVE CHAMOMILE-SOOTHING CLEANSING OIL 150ML BOTTLE",
+    "Product Price": 219000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/1/29/77f4eba9-8f05-43c7-9d9e-bb4feae22826.jpg",
+    "Url landing page": "https://www.tokopedia.com/yves-rocher/sensitive-chamomile-soothing-cleansing-oil-150ml-bottle?src=topads",
+    "Rating (star)": 4.8
+  },
+  {
+    "#": 14,
+    "Category": "Skin Care",
+    "Product Name": "SOMETHINC Glow Maker AHA BHA PHA Clarifying Treatment Toner",
+    "Product Price": 59000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/7/31/ed855aff-30d5-481f-af83-8ceeb977fcf5.jpg",
+    "Url landing page": "https://www.tokopedia.com/beautyhaulindo/somethinc-glow-maker-aha-bha-pha-clarifying-treatment-toner-40ml?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 15,
+    "Category": "Skin Care",
+    "Product Name": "Avoskin Perfect Hydrating Treatment Essence",
+    "Product Price": 299000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/29/52d43dc0-3d0b-4b9a-96bb-d1226166a7c2.png",
+    "Url landing page": "https://www.tokopedia.com/avoskin-jakarta/avoskin-perfect-hydrating-treatment-essence-lilac-100ml?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 16,
+    "Category": "Skin Care",
+    "Product Name": "Avoskin Miraculous Retinol Ampoule 30ml",
+    "Product Price": 249000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/11/9/74281e69-c8b7-4e78-8179-0b4d22b93a8e.jpg",
+    "Url landing page": "https://www.tokopedia.com/avoskinofficial/avoskin-miraculous-retinol-ampoule-30ml",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 17,
+    "Category": "Skin Care",
+    "Product Name": "CERAVE DAILY MOISTURISING LOTION 236ML",
+    "Product Price": 174000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/8/19/6014b76a-9058-4716-bec8-2f7a1f7c15fb.png",
+    "Url landing page": "https://www.tokopedia.com/theholytouch/original-cerave-daily-moisturising-lotion-236ml-87ml?src=topads",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 18,
+    "Category": "Skin Care",
+    "Product Name": "N'PURE Cica Beat The Sun POWDER",
+    "Product Price": 119000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/9/8/80618f09-f1a0-484d-bc05-9cd73af666fa.jpg",
+    "Url landing page": "https://www.tokopedia.com/npure/n-pure-cica-beat-the-sun-powder?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 19,
+    "Category": "Skin Care",
+    "Product Name": "Healing Facial Oil Serum Bio Beauty Lab",
+    "Product Price": 120000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/5/1/9bb17c72-e75e-4a44-ad8c-51e7d18ee61b.jpg",
+    "Url landing page": "https://www.tokopedia.com/biobeautylab/healing-facial-oil-serum-bio-beauty-lab-5ml?whid=0",
+    "Rating (star)": 5
+  },
+  {
+    "#": 20,
+    "Category": "Fashion",
+    "Product Name": "Shelby Top nude",
+    "Product Price": 159000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/9/20/3f5ef100-7002-4eb4-8356-6936e212607b.jpg",
+    "Url landing page": "https://www.tokopedia.com/shopmarra/shelby-top-nude",
+    "Rating (star)": 5
+  },
+  {
+    "#": 21,
+    "Category": "Fashion",
+    "Product Name": "THENBLANK | HIP CULOTTE BROKEN WHITE",
+    "Product Price": 199000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/7/7/9f07cc71-507a-42d2-aa85-c9d4bb075ddc.jpg",
+    "Url landing page": "https://www.tokopedia.com/thenblank/thenblank-hip-culotte-broken-white-s?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 22,
+    "Category": "Fashion",
+    "Product Name": "The Executive Dress Tencel Taupe",
+    "Product Price": 599900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/11/4/679a077f-4137-4015-87ca-11ac23e1ccb5.jpg",
+    "Url landing page": "https://www.tokopedia.com/theexecutiveid/the-executive-dress-tencel-taupe-5-dxwmst120e066-taupe-taupe-s",
+    "Rating (star)": 4.5
+  },
+  {
+    "#": 23,
+    "Category": "Fashion",
+    "Product Name": "YONGKI KOMALADI SANDAL HEELS TALI OL-YSL7050-21 LADIES",
+    "Product Price": 179000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/hDjmkQ/2021/10/27/feb9f4e8-1650-442b-84db-f4b15a3397f9.jpg",
+    "Url landing page": "https://www.tokopedia.com/yongki-komaladi/original-yongki-komaladi-sandal-heels-tali-ol-ysl7050-21-ladies-coklat-tua-36",
+    "Rating (star)": 5
+  },
+  {
+    "#": 24,
+    "Category": "Fashion",
+    "Product Name": "Dompet Wanita Flashy Crappy Hitam Polkadot",
+    "Product Price": 99000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/11/10/1b39bb57-93cd-4dfc-b19f-53cd66afc019.jpg",
+    "Url landing page": "https://www.tokopedia.com/flashyoffical/dompet-wanita-flashy-crappy-hitam-polkadot?src=topads",
+    "Rating (star)": 5
+  },
+  {
+    "#": 25,
+    "Category": "Fashion",
+    "Product Name": "Levi's 720 Hirise Super Skinny Ontario Skip",
+    "Product Price": 749900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/hDjmkQ/2021/10/18/27b0b1af-2a51-402f-be2c-c06ce20255a0.jpg",
+    "Url landing page": "https://www.tokopedia.com/levis-official/levi-s-720-hirise-super-skinny-ontario-skip-52797-0292-29",
+    "Rating (star)": 5
+  },
+  {
+    "#": 26,
+    "Category": "Fashion",
+    "Product Name": "Topi Baret Winter Wanita Dewasa Inggris Casual Fashion Import Baretta",
+    "Product Price": 25500,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2020/11/20/3334b47d-7883-4783-a050-69794b38ff41.jpg",
+    "Url landing page": "https://www.tokopedia.com/nomidestore/topi-baret-winter-wanita-dewasa-inggris-casual-fashion-import-baretta-zb1-hitam?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 27,
+    "Category": "Fashion",
+    "Product Name": "Baju tidur wanita tie dye piyama dewasa lengan pendek celana panjang",
+    "Product Price": 71000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/5/a45e6aff-d644-45d2-be6f-44fdcc67552e.jpg",
+    "Url landing page": "https://www.tokopedia.com/nina13/baju-tidur-wanita-tie-dye-piyama-dewasa-lengan-pendek-celana-panjang-cokelat?src=topads",
+    "Rating (star)": 4.8
+  },
+  {
+    "#": 28,
+    "Category": "Fashion",
+    "Product Name": "Baju Tidur Wanita / Piyama Wanita Motif Salur Lengan Pendek / SSS",
+    "Product Price": 35000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/11/4/e8906f6d-34e0-4e0b-b6a4-4f8da7982fe0.jpg",
+    "Url landing page": "https://www.tokopedia.com/agatha-fashion/baju-tidur-wanita-piyama-wanita-motif-salur-lengan-pendek-sss-guilen-coksu-l?whid=0",
+    "Rating (star)": 4.8
+  },
+  {
+    "#": 29,
+    "Category": "bahan baku bumbu masak",
+    "Product Name": "Bumbu Dasar Putih Munik",
+    "Product Price": 21700,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/attachment/2020/8/15/-1/-1_14e4f0f7-9cd6-4918-8c18-601d1e2ed7f2.jpg",
+    "Url landing page": "https://www.tokopedia.com/munik/bumbu-dasar-putih-munik-245-gr?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 30,
+    "Category": "bahan baku bumbu masak",
+    "Product Name": "Ikan Gurame Segar Fresh 1 Kg Isi 2-3",
+    "Product Price": 49000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/2/19/493e7d40-172d-430e-bcb4-6956fe807265.jpg",
+    "Url landing page": "https://www.tokopedia.com/kedaimartstore/ikan-gurame-segar-fresh-1-kg-isi-2-3",
+    "Rating (star)": 4.7
+  },
+  {
+    "#": 31,
+    "Category": "bahan baku bumbu masak",
+    "Product Name": "GOLDEN FIESTA PAKET STIKIE WITH SWEET CHILI SAUCE 500 GR",
+    "Product Price": 95000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2020/6/11/104542228/104542228_a0ace693-66d6-4221-a937-55d1c264769e_1181_1181",
+    "Url landing page": "https://www.tokopedia.com/merkfiesta/golden-fiesta-paket-stikie-with-sweet-chili-sauce-500-gr-2-pack",
+    "Rating (star)": 4.8
+  },
+  {
+    "#": 32,
+    "Category": "bahan baku bumbu masak",
+    "Product Name": "Kobe Tepung Ayam Kentucky Super Crispy 210gr",
+    "Product Price": 4850,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/hDjmkQ/2021/9/9/a0fb43fd-99ff-4eb8-bdd2-3e8434810359.jpg",
+    "Url landing page": "https://www.tokopedia.com/kobe-store/kobe-tepung-ayam-kentucky-super-crispy-210gr",
+    "Rating (star)": 5
+  },
+  {
+    "#": 33,
+    "Category": "bahan baku bumbu masak",
+    "Product Name": "Collata Fineza Button Chocolate 400gr",
+    "Product Price": 25900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/9/25/e5ff44cc-9876-4036-9677-19305c6f8cd2.jpg",
+    "Url landing page": "https://www.tokopedia.com/delta-k/collata-fineza-button-chocolate-400gr?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 34,
+    "Category": "bahan baku bumbu masak",
+    "Product Name": "Lychess in syrup /leci kaleng /lychee kaleng",
+    "Product Price": 27000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/21/c22358cd-c71f-449a-abdf-901b94c07de6.jpg",
+    "Url landing page": "https://www.tokopedia.com/lilith666/lychess-in-syrup-leci-kaleng-lychee-kaleng-longan?src=topads",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 35,
+    "Category": "bahan baku bumbu masak",
+    "Product Name": "(Sachet) Premium Gold 15 Rasa ( Bubuk Minuman / Bubble Drink Powder )",
+    "Product Price": 55000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2020/2/27/5515572/5515572_f6e1ad4b-80b2-435b-94d8-3e088fa853f4_700_700",
+    "Url landing page": "https://www.tokopedia.com/jagorista/sachet-premium-gold-15-rasa-bubuk-minuman-bubble-drink-powder?src=topads",
+    "Rating (star)": 4.8
+  },
+  {
+    "#": 36,
+    "Category": "bahan baku bumbu masak",
+    "Product Name": "WAGYU HOKUBEE SIRLOIN / STRIPLOIN BEEF STEAK MELTIQUE MELTIK 200gr",
+    "Product Price": 48000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/3/4/09b8e59e-8730-49ca-acbb-e5294dd5704e.jpg",
+    "Url landing page": "https://www.tokopedia.com/kukakukashop/wagyu-hokubee-sirloin-striploin-beef-steak-meltique-meltik-200gr?src=topads",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 37,
+    "Category": "bahan baku bumbu masak",
+    "Product Name": "BOBA / Bobatee / BUBBLE TEA / BOBA PEARL / BOBATEE / PEARL 1KG",
+    "Product Price": 20950,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/hDjmkQ/2021/8/21/b17dd0bf-c05c-43ba-8661-0b2ff9f92152.jpg",
+    "Url landing page": "https://www.tokopedia.com/panganmakmurjagakarsa/boba-bobatee-bubble-tea-boba-pearl-bobatee-pearl-1kg?src=topads",
+    "Rating (star)": 5
+  },
+  {
+    "#": 38,
+    "Category": "peralatan dapur",
+    "Product Name": "Carote Ice Cream Panci (Casserole) Anti Lengket dengan Tutup",
+    "Product Price": 355000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/8/17/6893ccfd-3a14-4562-83de-3862c86b1dfe.jpg",
+    "Url landing page": "https://www.tokopedia.com/caroteofficialstore/carote-ice-cream-panci-casserole-anti-lengket-dengan-tutup-20cm",
+    "Rating (star)": 5
+  },
+  {
+    "#": 39,
+    "Category": "peralatan dapur",
+    "Product Name": "Pisau Set 6 in 1 Stainless Ceramic Anti Lengket Pisau 1 Set isi 6",
+    "Product Price": 49500,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/19/2cf81a0e-3358-4eae-b294-915634717255.jpg",
+    "Url landing page": "https://www.tokopedia.com/lalulaku99/pisau-set-6-in-1-stainless-ceramic-anti-lengket-pisau-1-set-isi-6",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 40,
+    "Category": "peralatan dapur",
+    "Product Name": "Kangaroo Dispenser Bottom Load KG39H Hitam LED Water Storage Sensor",
+    "Product Price": 2146000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/1/4/ab8d677d-cda1-47b2-b9a0-648c57b65326.png",
+    "Url landing page": "https://www.tokopedia.com/kangaroo-store/kangaroo-dispenser-bottom-load-kg39h-hitam-led-water-storage-sensor",
+    "Rating (star)": 4
+  },
+  {
+    "#": 41,
+    "Category": "peralatan dapur",
+    "Product Name": "OXONE OX111PG Toaster Pop UP 2 Slices 500 W Pink Green/Pemangang Roti",
+    "Product Price": 601000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/hDjmkQ/2021/8/31/addc67fd-c2e3-4b40-97b1-05a383331924.jpg",
+    "Url landing page": "https://www.tokopedia.com/oxone-official/oxone-ox111pg-toaster-pop-up-2-slices-500-w-pink-green-pemangang-roti",
+    "Rating (star)": 5
+  },
+  {
+    "#": 42,
+    "Category": "peralatan dapur",
+    "Product Name": "Kulkas POLYTRON Belleza JUMBO Inverter 2 Pintu 260 Liter PRW 29VX",
+    "Product Price": 4099000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/4/29/28036ad5-04b4-4a9c-abf0-625af6bbfe14.jpg",
+    "Url landing page": "https://www.tokopedia.com/polytron-id/kulkas-polytron-belleza-jumbo-inverter-2-pintu-260-liter-prw-29vx",
+    "Rating (star)": 4.5
+  },
+  {
+    "#": 43,
+    "Category": "peralatan dapur",
+    "Product Name": "Philips Air Fryer HD9252/90 - Kapasitas 0.8kg",
+    "Product Price": 1700000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/7/aa734efe-e724-4dd1-97bf-af4647483950.jpg",
+    "Url landing page": "https://www.tokopedia.com/philips-estore/philips-air-fryer-hd9252-90-kapasitas-0-8kg-4-1l-free-knife-set",
+    "Rating (star)": 5
+  },
+  {
+    "#": 44,
+    "Category": "peralatan dapur",
+    "Product Name": "KIRIN Oven Toaster 10 Liter",
+    "Product Price": 349000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/2/24/fb7c8374-50ea-4260-ac1f-328021de93d9.jpg",
+    "Url landing page": "https://www.tokopedia.com/utama-electronic/kirin-oven-toaster-10-liter-kbo-100m-putih",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 45,
+    "Category": "peralatan dapur",
+    "Product Name": "freemir Piring Makan Wheat Straw Oval Plate Warna Warni Set 4 Pcs",
+    "Product Price": 30000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2020/8/26/70301949/70301949_9e9a9088-0027-428e-9dfe-827d152e5c85_800_800",
+    "Url landing page": "https://www.tokopedia.com/freemirofficial/freemir-piring-makan-wheat-straw-oval-plate-warna-warni-set-4-pcs",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 46,
+    "Category": "peralatan dapur",
+    "Product Name": "Gelas Tebal Gelas Minum Dua Warna Tahan Panas dan Elastis",
+    "Product Price": 8200,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2020/12/17/5af5da13-106f-4cfd-bfd1-ce482503755f.jpg",
+    "Url landing page": "https://www.tokopedia.com/h4rgakawan/gelas-tebal-gelas-minum-dua-warna-tahan-panas-dan-elastis-pink-ungu?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 47,
+    "Category": "peralatan dapur",
+    "Product Name": "QUIFIT - Botol Minum Motivasi 2LLX Green B Purple",
+    "Product Price": 285000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/21/a3a12cec-c118-43fb-9962-0890aadf5e78.jpg",
+    "Url landing page": "https://www.tokopedia.com/quifit-official/quifit-botol-minum-motivasi-2llx-green-b-purple-green-b-purple-2llx",
+    "Rating (star)": 5
+  },
+  {
+    "#": 48,
+    "Category": "peralatan dapur",
+    "Product Name": "MINISO Set Alat Makan 3 Pack Sendok+Garpu+Sumpit Anak Peralatan Makan - lemon",
+    "Product Price": 39900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/8/25/9d7a8304-b66a-4208-b114-2834a9bccc29.jpg",
+    "Url landing page": "https://www.tokopedia.com/miniso-official/miniso-set-alat-makan-3-pack-sendok-garpu-sumpit-anak-peralatan-makan-lemon?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 49,
+    "Category": "peralatan dapur",
+    "Product Name": "Lunch Box - Kotak Makan - Kotak Bekal 3 Sekat Yooyee 579",
+    "Product Price": 39900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2018/9/2/29801207/29801207_42baba10-3812-4489-878c-e7a4c3c267f3_700_700.png",
+    "Url landing page": "https://www.tokopedia.com/back2school/lunch-box-kotak-makan-kotak-bekal-3-sekat-yooyee-579-fuchsia?src=topads",
+    "Rating (star)": 5
+  },
+  {
+    "#": 50,
+    "Category": "peralatan dapur",
+    "Product Name": "RINNAI RI 302S Kompor Gas 2 Tungku RI 302 S",
+    "Product Price": 259000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2020/12/14/0f039185-7f05-4441-9704-7bb0dce0e106.jpg",
+    "Url landing page": "https://www.tokopedia.com/setia-mandiri/rinnai-ri-302s-kompor-gas-2-tungku-ri-302-s-tanpa-bubble?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 51,
+    "Category": "peralatan dapur",
+    "Product Name": "Multi grill pan",
+    "Product Price": 145000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2020/5/5/3b280f57-e708-4143-bb2c-3b086af2230b.jpg",
+    "Url landing page": "https://www.tokopedia.com/masak-masak/multi-grill-pan?src=topads",
+    "Rating (star)": 4.8
+  },
+  {
+    "#": 52,
+    "Category": "produk kesehatan",
+    "Product Name": "POKANA KN95 6-ply FASHION SERIES Earloop Surgical Face Mask FS",
+    "Product Price": 190000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/9/23/bbacb786-83e7-40b8-81ec-09f46e89602c.jpg",
+    "Url landing page": "https://www.tokopedia.com/pokana-shop/pokana-kn95-6-ply-fashion-series-earloop-surgical-face-mask-fs-burnt-flower",
+    "Rating (star)": 5
+  },
+  {
+    "#": 53,
+    "Category": "produk kesehatan",
+    "Product Name": "Blackmores Bio C 1000mg",
+    "Product Price": 3730000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/10/c87a80e9-4e65-4def-bc21-1f27705be086.jpg",
+    "Url landing page": "https://www.tokopedia.com/blackmores/blackmores-bio-c-1000mg-90",
+    "Rating (star)": 5
+  },
+  {
+    "#": 54,
+    "Category": "produk kesehatan",
+    "Product Name": "Paket Bundling 1 Sido Kliin Hand Gel + 2 Tolak Angin",
+    "Product Price": 95500,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2020/12/15/f545146e-0302-42a0-9b6e-6d1137ead952.jpg",
+    "Url landing page": "https://www.tokopedia.com/sidomunculstore/paket-bundling-1-sido-kliin-hand-gel-2-tolak-angin-isi-12-sachet",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 55,
+    "Category": "produk kesehatan",
+    "Product Name": "PANADOL CAPLET BLISTER 10 TABLE",
+    "Product Price": 10824,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/hDjmkQ/2021/8/26/80c3e04d-a9f7-48e4-a337-aef3c06f7f3b.jpg",
+    "Url landing page": "https://www.tokopedia.com/centlokelapagading/panadol-caplet-blister-10-tablet?src=topads",
+    "Rating (star)": 5
+  },
+  {
+    "#": 56,
+    "Category": "produk kesehatan",
+    "Product Name": "VOMETA FT 10MG 1 STRIP ISI 10 TABLET",
+    "Product Price": 42103,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2021/5/11/11259486/11259486_2b9b7f68-c5af-4663-afc9-e58656d1c471.png",
+    "Url landing page": "https://www.tokopedia.com/centgreengarden/vometa-ft-10mg-1-strip-isi-10-tablet?whid=0",
+    "Rating (star)": 5
+  },
+  {
+    "#": 57,
+    "Category": "perlengkapan bayi",
+    "Product Name": "Sweety Popok Bronze Comfort NB-S 44s",
+    "Product Price": 45500,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/3/2/f325986d-ef40-44a1-99af-aa4ab3ff0abb.jpg",
+    "Url landing page": "https://www.tokopedia.com/sweetyindonesia/sweety-popok-bronze-comfort-nb-s-44s?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 58,
+    "Category": "perlengkapan bayi",
+    "Product Name": "Nyonya Meneer Telon 60ml & 100ml",
+    "Product Price": 15147,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/8/6/a9cff405-15e3-45b9-af66-86f6f478b3c1.jpg",
+    "Url landing page": "https://www.tokopedia.com/tokocmart/nyonya-meneer-telon-60ml-100ml-nyonya-meneer-minyak-telon-cmart-men-telon-60?src=topads",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 59,
+    "Category": "perlengkapan bayi",
+    "Product Name": "Milna Bubur Bayi Wgain 9 Bl Ayam Manis Teriyaki",
+    "Product Price": 30000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/12/85820bb2-56ee-460b-b43f-1d736ebacd1e.jpg",
+    "Url landing page": "https://www.tokopedia.com/kalcare/milna-bubur-bayi-wgain-9-bl-ayam-manis-teriyaki-3x40-g",
+    "Rating (star)": 5
+  },
+  {
+    "#": 60,
+    "Category": "perlengkapan bayi",
+    "Product Name": "Paket 2 - SGM Eksplor 1 Plus Susu Pertumbuhan 1-3 Thn Vanila 900g",
+    "Product Price": 157100,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/1/8249bf86-7c42-4e83-9625-90fe8b65ea76.png",
+    "Url landing page": "https://www.tokopedia.com/sgmofficialstore/paket-2-sgm-eksplor-1-plus-susu-pertumbuhan-1-3-thn-vanila-900g",
+    "Rating (star)": 5
+  },
+  {
+    "#": 61,
+    "Category": "perlengkapan bayi",
+    "Product Name": "Bundling Yummy Bites Meal - STEP 1",
+    "Product Price": 120000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/8/6/657fff06-7a8e-411d-9238-92966eca1bd3.png",
+    "Url landing page": "https://www.tokopedia.com/yummybites/bundling-yummy-bites-meal-step-1?src=topads",
+    "Rating (star)": 5
+  },
+  {
+    "#": 62,
+    "Category": "perlengkapan bayi",
+    "Product Name": "Baby Shoes - Prewalker | Freddie the Frog | Martini Moccs - 3-6 Bulan",
+    "Product Price": 84000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/8/16/a454d5a7-1b08-4455-a420-7583c6d10ba5.jpg",
+    "Url landing page": "https://www.tokopedia.com/freddiethefrog/baby-shoes-prewalker-freddie-the-frog-martini-moccs-3-6-bulan?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 63,
+    "Category": "perlengkapan bayi",
+    "Product Name": "Baju bayi import stelan bayi karakter 0-1 tahun | setelan bayi lucu - Paus, 55",
+    "Product Price": 28000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/6/24/57d7a9b8-a6b8-48ba-b830-707d22bacf6a.jpg",
+    "Url landing page": "https://www.tokopedia.com/littlemomoko/baju-bayi-import-stelan-bayi-karakter-0-1-tahun-setelan-bayi-lucu-paus-55",
+    "Rating (star)": 4.8
+  },
+  {
+    "#": 64,
+    "Category": "perlengkapan bayi",
+    "Product Name": "Mainan Edukasi Anak Bayi Musikal / Play Gym Anak Bayi / Play Mat Baby - Merah Muda",
+    "Product Price": 136999,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/hDjmkQ/2021/8/26/fb21ce1d-4e18-405a-af25-216af337ca87.jpg",
+    "Url landing page": "https://www.tokopedia.com/toko-yoyo2/mainan-edukasi-anak-bayi-musikal-play-gym-anak-bayi-play-mat-baby-merah-muda",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 65,
+    "Category": "perlengkapan bayi",
+    "Product Name": "Baby Walker Space Baby 505 - Biru",
+    "Product Price": 294000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/15/0c486843-2edd-453e-a439-6bc8558cea87.jpg",
+    "Url landing page": "https://www.tokopedia.com/kinderstreet/baby-walker-space-baby-505-biru?src=topads",
+    "Rating (star)": 5
+  },
+  {
+    "#": 66,
+    "Category": "perlengkapan bayi",
+    "Product Name": "Celana Hamil Kerja Maternity Pants Celana Bumil Bahan Kantor Safari - Hitam, Pensil",
+    "Product Price": 98000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/3/28/6d1bb6e8-4cd1-4897-990e-6be160f1d970.jpg",
+    "Url landing page": "https://www.tokopedia.com/simplest/celana-hamil-kerja-maternity-pants-celana-bumil-bahan-kantor-safari-hitam-pensil?src=topads",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 67,
+    "Category": "perlengkapan bayi",
+    "Product Name": "Kiddy Forest Deer Medium Baby Bag/ Tas bayi",
+    "Product Price": 140000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/3/8/33257598-4628-4a32-a685-7b4ddf0fef39.jpg",
+    "Url landing page": "https://www.tokopedia.com/kiddyoff/kiddy-forest-deer-medium-baby-bag-tas-bayi-5039-abu-abu",
+    "Rating (star)": 4.6
+  },
+  {
+    "#": 68,
+    "Category": "perlengkapan bayi",
+    "Product Name": "MOOIMOM Maternity Belt Sabuk Penyangga Perut Ibu Hamil Menyusui",
+    "Product Price": 203000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2020/11/17/a9ccc613-11d7-4c99-ac31-2b5c65bebe9a.jpg",
+    "Url landing page": "https://www.tokopedia.com/mooimom/mooimom-maternity-belt-sabuk-penyangga-perut-ibu-hamil-menyusui-hitam?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 69,
+    "Category": "makanan dan minuman",
+    "Product Name": "Selamat Biscuit Black Van 102 g",
+    "Product Price": 10100,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2020/8/27/106307056/106307056_dfa749bd-da72-462f-972b-75c06a959549_2048_2047",
+    "Url landing page": "https://www.tokopedia.com/delfi-official/selamat-biscuit-black-van-102-g?whid=0",
+    "Rating (star)": 5
+  },
+  {
+    "#": 70,
+    "Category": "makanan dan minuman",
+    "Product Name": "SAMBAL JS PEDAS / SAMBAL IKAN ROA /CAKALANG / VARIANT RASA",
+    "Product Price": 21500,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2020/8/7/26aa4fdc-707f-4515-9003-b8e45731fcea.jpg",
+    "Url landing page": "https://www.tokopedia.com/gokdame/promo-sambal-js-pedas-sambal-ikan-roa-cakalang-variant-rasa-sambal-ikan-roa?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 71,
+    "Category": "makanan dan minuman",
+    "Product Name": "Covita - Healthy Protein Bar 40 gr Gluten Free - Peanut Butter",
+    "Product Price": 24900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/8/25/dd537ee9-2d73-4ffb-8507-ac75a83ee4ce.png",
+    "Url landing page": "https://www.tokopedia.com/hejo/covita-healthy-protein-bar-40-gr-gluten-free-peanut-butter?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 72,
+    "Category": "makanan dan minuman",
+    "Product Name": "Caffino Bold - Caffino Kopi Bold Pouch - Kopi Latte Premium - 30g/5sch - Bold",
+    "Product Price": 6990,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2020/10/14/7104974c-ec38-4fb8-b523-f31fd05eb8b3.jpg",
+    "Url landing page": "https://www.tokopedia.com/ardtoys/caffino-bold-caffino-kopi-bold-pouch-kopi-latte-premium-30g-5sch-bold?whid=0",
+    "Rating (star)": 5
+  },
+  {
+    "#": 73,
+    "Category": "makanan dan minuman",
+    "Product Name": "Lipton ice tea lemon dan peach 550g",
+    "Product Price": 16000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/13/702d95c6-f252-4357-9f39-1a0d401a3c90.jpg",
+    "Url landing page": "https://www.tokopedia.com/azizahmestor/lipton-ice-tea-lemon-dan-peach-550g?src=topads",
+    "Rating (star)": 5
+  },
+  {
+    "#": 74,
+    "Category": "makanan dan minuman",
+    "Product Name": "Kering Kentang Mustofa 1 kg",
+    "Product Price": 109900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/7/1/cc67ad2e-7860-4641-acf9-bdf9ebae75bf.jpg",
+    "Url landing page": "https://www.tokopedia.com/cemilannomello/kering-kentang-mustofa-1-kg-full-kentang-ep?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 75,
+    "Category": "makanan dan minuman",
+    "Product Name": "Biscuit lotus biscoff 250 gram",
+    "Product Price": 29500,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/5/30/7c0548ca-627b-47db-a476-d3f02a1daf14.png",
+    "Url landing page": "https://www.tokopedia.com/bakingstorejakartabarat/biscuit-lotus-biscoff-250-gram",
+    "Rating (star)": 5
+  },
+  {
+    "#": 76,
+    "Category": "makanan dan minuman",
+    "Product Name": "PAKET DETOX BASIC - LIVERA COLD PRESS JUICE",
+    "Product Price": 274400,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/2/17/8fd0541b-2b4e-4082-ba5b-fa5a6ae81f2b.jpg",
+    "Url landing page": "https://www.tokopedia.com/liveraindonesia/paket-detox-basic-livera-cold-press-juice?src=topads",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 77,
+    "Category": "makanan dan minuman",
+    "Product Name": "Cheetos snack Impor Amerika - Puffs Jumbo",
+    "Product Price": 80100,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/6/20/8eb76dce-1594-4f1e-8c83-74436ef94585.png",
+    "Url landing page": "https://www.tokopedia.com/eternaland23/cheetos-snack-impor-amerika-puffs-jumbo?whid=0",
+    "Rating (star)": 5
+  },
+  {
+    "#": 78,
+    "Category": "produk kebersihan rumah",
+    "Product Name": "Rinso Matic Powder Detergent Professional 1 KG",
+    "Product Price": 18250,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/hDjmkQ/2021/10/21/ff02dc04-d302-4277-8289-f2a073a6d1a0.jpg",
+    "Url landing page": "https://www.tokopedia.com/mesinlaundrycom/rinso-matic-powder-detergent-professional-1-kg?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 79,
+    "Category": "produk kebersihan rumah",
+    "Product Name": "YAMA KAKOI Detergent Laundry Storage Box Kotak Penyimpanan Detergen",
+    "Product Price": 35100,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/5/17/faeaad95-619d-417c-998c-e9b8d785455a.jpg",
+    "Url landing page": "https://www.tokopedia.com/yamaliving/yama-kakoi-detergent-laundry-storage-box-kotak-penyimpanan-detergen-medium?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 80,
+    "Category": "produk kebersihan rumah",
+    "Product Name": "Angola Broom Set Dustpan D09 Set Sapu Pengki Alat Pembersih",
+    "Product Price": 65000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/7/23/581b43ae-9d6c-4283-aa0a-d59abf9f5f0a.jpg",
+    "Url landing page": "https://www.tokopedia.com/angolaofficia/angola-broom-set-dustpan-d09-set-sapu-pengki-alat-pembersih-putih?src=topads",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 81,
+    "Category": "produk kebersihan rumah",
+    "Product Name": "BOLDe Super Mop Maxima",
+    "Product Price": 134900,
+    "Image Square (200x200)": "https://www.tokopedia.com/bolde-official/bolde-super-mop-maxima-cokelat?whid=0",
+    "Url landing page": "https://www.tokopedia.com/bolde-official/bolde-super-mop-maxima-cokelat?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 82,
+    "Category": "produk kebersihan rumah",
+    "Product Name": "Superpell Sabun Pel Pembersih Lantai Fresh Apple 1600M",
+    "Product Price": 25900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2018/12/21/16372625/16372625_75413568-b42e-4cd7-9285-d700ac014869_2048_2048.jpg",
+    "Url landing page": "https://www.tokopedia.com/unilever/superpell-sabun-pel-pembersih-lantai-fresh-apple-1600ml?src=topads",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 83,
+    "Category": "produk kebersihan rumah",
+    "Product Name": "WIPOL CAIRAN DISINFEKTAN LANTAI 5L",
+    "Product Price": 79900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/5/31/cc0efb28-a2e1-4710-969f-bfd4174871b2.jpg",
+    "Url landing page": "https://www.tokopedia.com/unileverprofessi/wipol-cairan-disinfektan-lantai-5l",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 84,
+    "Category": "produk kebersihan rumah",
+    "Product Name": "Kleaner Sikat Lantai dan Serokan Air Gagang Panjang 2 in 1",
+    "Product Price": 55000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/23/8c1bc764-4e43-4e0f-a006-6b92c3424b6e.jpg",
+    "Url landing page": "https://www.tokopedia.com/kleaner-official/kleaner-sikat-lantai-dan-serokan-air-gagang-panjang-2-in-1",
+    "Rating (star)": 5
+  },
+  {
+    "#": 85,
+    "Category": "produk kebersihan rumah",
+    "Product Name": "Ekonomi Sabun Cuci Piring Jeruk Nipis Botol 750 ml",
+    "Product Price": 12700,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/6/7/79012bab-216c-4d27-b5aa-7c09d614c028.png",
+    "Url landing page": "https://www.tokopedia.com/wingsofficial/ekonomi-sabun-cuci-piring-jeruk-nipis-botol-750-ml",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 86,
+    "Category": "produk kebersihan rumah",
+    "Product Name": "Sarung Tangan Karet Cuci Piring Latex Dotted Synott size L",
+    "Product Price": 9900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2020/8/20/88901272/88901272_aead11fd-f9b0-4094-b7b9-47faabe5e6e6_1280_1280",
+    "Url landing page": "https://www.tokopedia.com/sherlocktools/sarung-tangan-karet-cuci-piring-latex-dotted-synott-size-l",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 87,
+    "Category": "elektronik",
+    "Product Name": "ipad mini 4 2015 16GB Wifi Celluler",
+    "Product Price": 3045000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/9/5/9bc256d5-e3e3-43f2-a112-03f030e40cfb.png",
+    "Url landing page": "https://www.tokopedia.com/bedjostore/ipad-mini-4-2015-16gb-wifi-celluler-second?whid=0",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 88,
+    "Category": "elektronik",
+    "Product Name": "Samsung Galaxy A52s 5G 8/256 GB RAM 8 ROM 256GB Original Garansi SEIN",
+    "Product Price": 6070000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/9/13/1bd90839-ea60-48c3-a4a9-0ace7c802b5a.jpg",
+    "Url landing page": "https://www.tokopedia.com/promoguy/samsung-galaxy-a52s-5g-8-256-gb-ram-8-rom-256gb-original-garansi-sein-black?src=topads",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 89,
+    "Category": "elektronik",
+    "Product Name": "TCL 55 inch Android 11 TV 4KUHD-HDR10-HFVC 2.0-MEMC-HDMI 2.1-55A20",
+    "Product Price": 6499900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/11/5/d2eda872-22d0-42f2-b2f8-5fd49363168a.jpg",
+    "Url landing page": "https://www.tokopedia.com/tclofficialstore/tcl-55-inch-android-11-tv-4kuhd-hdr10-hfvc-2-0-memc-hdmi-2-1-55a20",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 90,
+    "Category": "elektronik",
+    "Product Name": "New MacBook Air 2020 13 inch M1 Chip 8 Core CPU/ 7 Core GPU/ 256GB SSD - INTER, 8/256gb Gold",
+    "Product Price": 14249000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/22/7973c03a-6077-4694-93d0-6aad6690a8a1.jpg",
+    "Url landing page": "https://www.tokopedia.com/applewatchstuff/new-macbook-air-2020-13-inch-m1-chip-8-core-cpu-7-core-gpu-256gb-ssd-inter-8-256gb-gold",
+    "Rating (star)": 5
+  },
+  {
+    "#": 91,
+    "Category": "elektronik",
+    "Product Name": "Harman Kardon Onyx Studio 5 / Onyx 5 Bluetooth Portable Speaker",
+    "Product Price": 2348000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/7/14/231d75a2-b120-4efc-9ca2-4c0ca3dd5ff9.jpg",
+    "Url landing page": "https://www.tokopedia.com/itoms/harman-kardon-onyx-studio-5-onyx-5-bluetooth-portable-speaker-hitam?whid=0",
+    "Rating (star)": 5
+  },
+  {
+    "#": 92,
+    "Category": "elektronik",
+    "Product Name": "PS5 Sony PlayStation Digital Edition Version Console PS Play Station 5",
+    "Product Price": 11100000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/1/30/93f2cafa-c153-4ed1-b60e-43f7d47f5677.jpg",
+    "Url landing page": "https://www.tokopedia.com/chocoapple/ps5-sony-playstation-digital-edition-version-console-ps-play-station-5?src=topads",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 93,
+    "Category": "elektronik",
+    "Product Name": "Apple iPhone 13 Pro Max Promax 128GB 256GB 512GB 1TB 128 256 512 1 TB - 128GB, GOLD",
+    "Product Price": 21500000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/9/16/70ce927c-11bb-4872-a5d8-477314637831.jpg",
+    "Url landing page": "https://www.tokopedia.com/chocoapple/apple-iphone-13-pro-max-promax-128gb-256gb-512gb-1tb-128-256-512-1-tb-128gb-gold?src=topads",
+    "Rating (star)": 5
+  },
+  {
+    "#": 94,
+    "Category": "elektronik",
+    "Product Name": "REMINGTON Pengering Rambut Jet Setter 2000 Hair Dryer D1500-AP",
+    "Product Price": 599000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2020/7/8/23924835/23924835_ab3a590d-1d78-4d52-bf09-53ad4bed4e36_2048_2047",
+    "Url landing page": "https://www.tokopedia.com/remington/remington-pengering-rambut-jet-setter-2000-hair-dryer-d1500-ap",
+    "Rating (star)": 4.9
+  },
+  {
+    "#": 95,
+    "Category": "elektronik",
+    "Product Name": "NEW!! Babyliss Ceramic Straightener Pro 230 - 2089U",
+    "Product Price": 700000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2019/1/14/37688441/37688441_97df8ddc-dd1b-4eb1-a00c-2fc6da39e9e8_800_800.jpg",
+    "Url landing page": "https://www.tokopedia.com/babylissparisid/new-babyliss-ceramic-straightener-pro-230-2089u?whid=0",
+    "Rating (star)": 5
+  },
+  {
+    "#": 96,
+    "Category": "elektronik",
+    "Product Name": "Panasonic Ion Hair Styler EH KE46 Penata Rambut",
+    "Product Price": 664300,
+    "Image Square (200x200)": "https://www.tokopedia.com/panasonicbeauty/panasonic-ion-hair-styler-eh-ke46-penata-rambut",
+    "Url landing page": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/1/17/0f28f67c-de13-496e-a900-8ed4384d0316.jpg",
+    "Rating (star)": 5
+  },
+  {
+    "#": 97,
+    "Category": "luxury product",
+    "Product Name": "Les Solitaire Earrings - Moissanite diamond Celesta by Her Jewellery",
+    "Product Price": 1395900,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/VqbcmM/2020/12/11/d40e8d55-2278-4066-86ad-2ada69e05cc2.jpg",
+    "Url landing page": "https://www.tokopedia.com/herjewellery/les-solitaire-earrings-moissanite-diamond-celesta-by-her-jewellery",
+    "Rating (star)": 5
+  },
+  {
+    "#": 98,
+    "Category": "luxury product",
+    "Product Name": "Jam Tangan Wanita Rip Curl Lola Slim Goldstone SS - A3117G-70",
+    "Product Price": 3114110,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/hDjmkQ/2021/9/9/852e3177-2b1a-49b8-b0ae-c0bbba9ee8ad.jpg",
+    "Url landing page": "https://www.tokopedia.com/urbaniconstore/jam-tangan-wanita-rip-curl-lola-slim-goldstone-ss-a3117g-70",
+    "Rating (star)": 4.8
+  },
+  {
+    "#": 99,
+    "Category": "luxury product",
+    "Product Name": "SINAR BERLIAN JEWELLERY - Kalung emas asli Italy Terbaru",
+    "Product Price": 1530000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2020/6/11/86983040/86983040_e2029fc1-8368-4a6e-bced-e43abc52c874_700_700",
+    "Url landing page": "https://www.tokopedia.com/sinar-berlian/sinar-berlian-jewellery-kalung-emas-asli-italy-terbaru-700-dua-gram?whid=0",
+    "Rating (star)": 5
+  },
+  {
+    "#": 100,
+    "Category": "luxury product",
+    "Product Name": "Dparis rantai kalung wanita silver",
+    "Product Price": 328000,
+    "Image Square (200x200)": "https://images.tokopedia.net/img/cache/900/product-1/2019/10/8/39148419/39148419_5d132bed-fcd0-4215-bf5c-0f3dbeae2957_1890_1890",
+    "Url landing page": "https://www.tokopedia.com/dparis-official/dparis-rantai-kalung-wanita-silver?whid=0",
+    "Rating (star)": 5
+  }
+]
