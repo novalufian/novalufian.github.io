@@ -771,12 +771,14 @@ dable('sendLogOnce');
 				if (e <= 0) {
 					setTimeout(function () {
 						t.style = "";
-					t.classList.add("hl-active-sticky");
-					if (!headlineStickyCounterStatus) {
-						removeStickyHeadline(t, !0);
-						headlineStickyCounterStatus = !0;
-					}
-					headlineStickyStatus = !0;
+						t.classList.add("hl-active-sticky");
+						if (!headlineStickyCounterStatus) {
+							setTimeout(function () {
+								removeStickyHeadline(t, !0);
+							 	headlineStickyCounterStatus = !0;
+							},100)
+						}
+						headlineStickyStatus = !0;
 					}, 500)
 				}
 			}
@@ -784,7 +786,7 @@ dable('sendLogOnce');
 
 		function removeStickyHeadline(t, e) {
 			console.log('remove')
-		    var n = setInterval(function() {
+		    	var n = setInterval(function() {
 		    	console.log(headlineStickyInterval)
 		    	if (!headlineStickyPaused) {
 		    		if (headlineStickyInterval <= 0){
