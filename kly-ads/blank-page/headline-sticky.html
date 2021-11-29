@@ -731,6 +731,7 @@ dable('sendLogOnce');
             var headlineStickyInterval = stickyDuration,
 		    headlineStickyStatus = !1,
 		    headlineStickyPaused = !1;
+		    headlineStickyCounterStatus = !1;
 
 		function headlineSticky(t) {
 		    null != t && (headlineStickyInterval = t);
@@ -748,9 +749,7 @@ dable('sendLogOnce');
 		        e = document.getElementById("div-gpt-ad-liputan6-hl-shadow").getBoundingClientRect().top,
 		        n = document.querySelector(".layout__nav-content");
 		    document.documentElement.scrollTop || document.body.scrollTop;
-		    console.log(e, headlineStickyStatus)
 		    if ( headlineStickyStatus){
-				console.log('if')
 				if (e <= 0){
 					if (n.classList.contains("layout__nav-content--no-hanging")){
 						t.classList.remove("hl-navbar-hanging");
@@ -772,7 +771,10 @@ dable('sendLogOnce');
 				if (e <= 0) {
 					t.classList.add("hl-active-sticky"), 
 					t.style = "", 
-					removeStickyHeadline(t, !0), 
+					if (!headlineStickyCounterStatus) {
+						removeStickyHeadline(t, !0), 
+						headlineStickyCounterStatus = !0;
+					}
 					headlineStickyStatus = !0;
 				}
 			}
