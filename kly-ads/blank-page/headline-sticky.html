@@ -769,11 +769,12 @@ dable('sendLogOnce');
 			}else {
 				console.log('else', e)
 				if (e <= 0) {
-					console.log('oooooooooooooooooooooooooi')
+					console.log(t.style = "")
 					t.style = "";
 					t.classList.add("hl-active-sticky");
-					console.log(t)
+					console.log(t.classList.add("hl-active-sticky"))
 					if (!headlineStickyCounterStatus) {
+						console.log('remove')
 						removeStickyHeadline(t, !0);
 						headlineStickyCounterStatus = !0;
 					}
