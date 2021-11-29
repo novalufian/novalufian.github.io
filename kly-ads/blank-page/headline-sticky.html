@@ -774,7 +774,6 @@ dable('sendLogOnce');
 						t.classList.add("hl-active-sticky");
 						if (!headlineStickyCounterStatus) {
 							removeStickyHeadline(t, !0);
-							headlineStickyCounterStatus = !0;
 						}
 						headlineStickyStatus = !0;
 					}, 500)
@@ -785,6 +784,8 @@ dable('sendLogOnce');
 		function removeStickyHeadline(t, e) {
 			console.log('remove')
 		    	var n = setInterval(function() {
+			headlineStickyCounterStatus = !0;
+
 		    	console.log(headlineStickyInterval)
 		    	if (!headlineStickyPaused) {
 		    		if (headlineStickyInterval <= 0){
