@@ -757,20 +757,24 @@ dable('sendLogOnce');
 					}else {
 						t.classList.add("hl-navbar-hanging");
 					};
+		    			headlineStickyPaused = !1;
+
 				}else {
 					// removeStickyHeadline(t, !1);
 					t.classList.remove("hl-active-sticky");
 					t.classList.remove("hl-navbar-hanging");
 					t.style.margin = "10px 0";
-					headlineStickyPaused = 1;
+					headlineStickyPaused = !0;
 					headlineStickyStatus = !1;
 				};
 			}else {
-				console.log('else')
-				e <= 0 && (t.classList.add("hl-active-sticky"), 
+				console.log('else', e)
+				if (e <= 0) {
+					t.classList.add("hl-active-sticky"), 
 					t.style = "", 
 					removeStickyHeadline(t, !0), 
-					headlineStickyStatus = !0);
+					headlineStickyStatus = !0;
+				}
 			}
 		}
 
