@@ -776,7 +776,7 @@ dable('sendLogOnce');
 
 		function removeStickyHeadline(t, e) {
 		    var n = setInterval(function() {
-		    	console.log(t)
+		    	console.log(headlineStickyInterval)
 		    	if (!headlineStickyPaused) {
 		    		if (headlineStickyInterval <= 0){
 					t.classList.remove("hl-active-sticky");
