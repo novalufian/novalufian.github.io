@@ -773,10 +773,11 @@ dable('sendLogOnce');
 						t.style = "";
 						t.classList.add("hl-active-sticky");
 						if (!headlineStickyCounterStatus) {
+							headlineStickyCounterStatus = !0;
 							removeStickyHeadline(t, !0);
 						}
 						headlineStickyStatus = !0;
-					}, 500)
+					}, 700)
 				}
 			}
 		}
@@ -784,7 +785,6 @@ dable('sendLogOnce');
 		function removeStickyHeadline(t, e) {
 			console.log('remove')
 		    	var n = setInterval(function() {
-			headlineStickyCounterStatus = !0;
 
 		    	console.log(headlineStickyInterval)
 		    	if (!headlineStickyPaused) {
