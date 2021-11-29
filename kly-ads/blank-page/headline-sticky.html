@@ -769,21 +769,21 @@ dable('sendLogOnce');
 			}else {
 				console.log('else', e)
 				if (e <= 0) {
-					console.log(t.style = "")
-					t.style = "";
+					setTimeout(function () {
+						t.style = "";
 					t.classList.add("hl-active-sticky");
-					console.log(t.classList.add("hl-active-sticky"))
 					if (!headlineStickyCounterStatus) {
-						console.log('remove')
 						removeStickyHeadline(t, !0);
 						headlineStickyCounterStatus = !0;
 					}
 					headlineStickyStatus = !0;
+					}, 500)
 				}
 			}
 		}
 
 		function removeStickyHeadline(t, e) {
+			console.log('remove')
 		    var n = setInterval(function() {
 		    	console.log(headlineStickyInterval)
 		    	if (!headlineStickyPaused) {
