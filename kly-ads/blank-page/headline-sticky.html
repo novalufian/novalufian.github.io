@@ -772,12 +772,12 @@ dable('sendLogOnce');
 					setTimeout(function () {
 						t.style = "";
 						t.classList.add("hl-active-sticky");
-							 	removeStickyHeadline(t, !1);
-						// if (!headlineStickyCounterStatus) {
+						if (!headlineStickyCounterStatus) {
+							removeStickyHeadline(t, !1);
 						// 	setTimeout(function () {
 						// 		headlineStickyCounterStatus = !0;
 						// 	}, 500)
-						// }
+						}
 						headlineStickyStatus = !0;
 					}, 500)
 				}
