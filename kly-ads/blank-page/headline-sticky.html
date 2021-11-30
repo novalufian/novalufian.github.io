@@ -770,13 +770,11 @@ dable('sendLogOnce');
 				console.log('else', e)
 				if (e <= 0) {
 					setTimeout(function () {
-						t.style = "";
+						// t.style = "";
 						t.classList.add("hl-active-sticky");
 						if (!headlineStickyCounterStatus) {
 							headlineStickyCounterStatus = !0;
 							removeStickyHeadline(t, !1);
-						// 	setTimeout(function () {
-						// 	}, 500)
 						}
 						headlineStickyStatus = !0;
 					}, 500)
