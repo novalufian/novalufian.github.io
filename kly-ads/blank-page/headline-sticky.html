@@ -784,30 +784,30 @@ dable('sendLogOnce');
 
 		function removeStickyHeadline(t, e) {
 			console.log('remove')
+			n;
 		    	var n = setInterval(function() {
+			    	console.log(headlineStickyInterval)
+			    	if (!headlineStickyPaused) {
+			    		if (headlineStickyInterval <= 0){
+						t.classList.remove("hl-active-sticky");
+						t.classList.remove("hl-navbar-hanging");
+						t.style.margin = "10px 0";
+						clearInterval(n);
+						window.removeEventListener("scroll", headlineStickyScrollEevent);
+					}else {
+						headlineStickyInterval--;
+					}
+			    	}
+			    }, 1000);
 
-		    	console.log(headlineStickyInterval)
-		    	if (!headlineStickyPaused) {
-		    		if (headlineStickyInterval <= 0){
-					t.classList.remove("hl-active-sticky");
-					t.classList.remove("hl-navbar-hanging");
-					t.style.margin = "10px 0";
-					clearInterval(n);
-					window.removeEventListener("scroll", headlineStickyScrollEevent);
-				}else {
-					headlineStickyInterval--;
-				}
-		    	}
-		    }, 1e3);
-
-		    if (!headlineStickyPaused) {
-		    	if (e) {
-		    		clearInterval(n);
-		    		t.classList.remove("hl-active-sticky");
-		    		t.classList.remove("hl-navbar-hanging");
-		    		t.style.margin = "10px 0";
-		    	}
-		    }
+			    if (!headlineStickyPaused) {
+			    	if (e) {
+			    		clearInterval(n);
+			    		t.classList.remove("hl-active-sticky");
+			    		t.classList.remove("hl-navbar-hanging");
+			    		t.style.margin = "10px 0";
+			    	}
+			    }
 		}
 
 		function injectStickyStyleAndAnimation() {
