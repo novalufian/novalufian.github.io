@@ -1,0 +1,115 @@
+<script>
+	var _title_Paging_target_ = document.querySelectorAll(".article-content-body__item-title");
+	var _baca_juga_target_ = document.querySelector(".baca-juga");
+
+	_bootad_();
+	function _bootad_() {
+		
+		var __DATA__ = null;
+		fetch('https://fakestoreapi.com/products')
+		.then(res=>res.json())
+		.then(json=>__DATA__= json)
+		.then(function () {
+			var index_ = null;
+			_title_Paging_target_.forEach(function (el, i) {
+				_createAdElement_(el, __DATA__[i])		
+				console.log(el)		
+				console.log(__DATA__)
+				index_ = i;
+			})
+			
+			_createAdElement_(_baca_juga_target_, __DATA__[index_+1])
+
+
+		})
+
+		_appendStyle_();
+
+	}
+
+	function _appendStyle_() {
+		var __STYLE__ = document.createElement("style");
+		__STYLE__.textContent = `
+		.in-read-native.main-wrapper { width: 310px; height: 100px; display: block; margin: 30px auto; position: relative; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.13); box-sizing: border-box; } .in-read-native.main-wrapper .content-wrapper { position: absolute; z-index: 1; top: 0; left: 2.5%; width: 95%; height: 100%; background: #ffffff; display: flex; flex-direction: row; justify-content: space-between; align-items: center; } .in-read-native.main-wrapper .preloading-wrapper { position: absolute; z-index: 2; width: 100%; height: 100%; background: white; box-sizing: border-box; padding: 5px; display: flex; justify-content: center; flex-direction: column; opacity: 1; transition: opacity .75s ease 1s; } .in-read-native.main-wrapper .preloading-wrapper.fadeout { opacity: 0; } .in-read-native.main-wrapper .preloading-wrapper .prealoadig-text { margin: 5px 0px; color:  #42B549; align-self: center; } .in-read-native.main-wrapper .preloading-wrapper .progress-bar { width: 80%; height: 10px; background: #F2F2F2; border-radius: 10px; align-self: center; position: relative; } .in-read-native.main-wrapper .preloading-wrapper .progress-bar::after { content: ""; width: 0; height: 100%; background: #42B549; position: absolute; left: 0; border-radius: 10px; transition: width .75s ease; } .in-read-native.main-wrapper .preloading-wrapper.active .progress-bar::after { width: 100%; } .in-read-native.main-wrapper .content-wrapper .thumbnail { position: relative; display: inline-block; opacity: 1 !important; width: 84px; height: 84px; flex: 84px 84px; border-radius: 10px; } .in-read-native.main-wrapper .content-wrapper .section-wrapper { width: calc(310px - 110px); display: flex; flex-direction: column; flex-wrap: wrap; flex-basis: auto; font-family: sans-serif; } .in-read-native.main-wrapper .content-wrapper .section-wrapper .price { font-weight: bold; font-size: 14px; } .in-read-native.main-wrapper .content-wrapper .section-wrapper .title { width: 100%; font-style: normal; font-weight: normal; font-size: 14px; } .in-read-native.main-wrapper .content-wrapper .section-wrapper .rating { position: relative; margin-left: 20px; } .in-read-native.main-wrapper .content-wrapper .section-wrapper .rating::before { content : ""; position: absolute; width: 14px; height: 14px; background: white url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC/SURBVHgBhZHBEYIwEEX/gtzpQFqgAMdQgcyAdzrAEqQD7cACPNgBDjRgCdgBd0bXzYCQIYzmspv9L3+TDWG2uIwDeF6JrgspurWm5sxhuJ4CcwB3lc0lGybO+4idLVVJLGf83o3XYMomlS548VNiA7xb4jotpazwf90d2lwjSYrfHJ81R+O2Tk7SN18gCwGPOpkeyPpeS6YYxzfBRFsDeRi5smGwGtwjaRvqKBNqZISmyYBW6UF+z7fr++ybfwA9mTpQakds2QAAAABJRU5ErkJggg=="); background-repeat: no-repeat; background-size: 14px; margin-left: -20px; } .in-read-native.main-wrapper .content-wrapper .section-wrapper .cta { position: absolute; bottom: 13px; right: 20px; border: none; background: #42B549; color: #ffffff; line-height: 13px; font-size: 12px; padding: 10px 12px; border-radius: 15px; }
+		`;
+		parent.document.querySelector("body").appendChild(__STYLE__);
+	}
+
+	function _createAdElement_(_target_, _data_) {
+		var __parentTarget__ = _target_.parentElement;
+
+		var __wrapper__ = document.createElement("div");
+		__wrapper__.classList.add("in-read-native", "main-wrapper");
+
+		// preloading
+		var __prelaoding__ = document.createElement("div");
+		__wrapper__.appendChild(__prelaoding__);
+		__prelaoding__.addEventListener("click", __showContent__)
+		__prelaoding__.classList.add("in-read-native", "preloading-wrapper");
+
+		//preloading text
+		var __preloadingText__ = document.createElement("p");
+		__prelaoding__.appendChild(__preloadingText__);
+		__preloadingText__.classList.add("in-read-native", "prealoadig-text");
+		__preloadingText__.textContent = "Special di Tokopedia hari ini.";
+
+		// preloading progessbar
+		var __progressbar__ = document.createElement("span");
+		__progressbar__.classList.add("in-read-native", "progress-bar");
+		__prelaoding__.appendChild(__progressbar__);
+
+		//content
+		var __content__ = document.createElement("div");
+		__content__.addEventListener("click", __gotolandingPage__);
+		__content__.setAttribute("data-link", "https://m.kapanlagi.com?lp="+_data_.title);
+		__content__.classList.add("in-read-native", "content-wrapper");
+		__wrapper__.appendChild(__content__);
+
+		var __thumb__ = document.createElement("img");
+		__thumb__.setAttribute("scr", _data_.image);
+		// __thumb__.setAttribute("scr", "https://via.placeholder.com/100x100/F7FD04/000000?text=IMG");
+		__thumb__.classList.add("in-read-native", "thumbnail");
+		__content__.appendChild(__thumb__);
+
+		var __sectionWrapper__ = document.createElement("div");
+		__sectionWrapper__.classList.add("in-read-native", "section-wrapper");
+		__content__.appendChild(__sectionWrapper__);
+
+		var __title__ = document.createElement("span");
+		__title__.classList.add("in-read-native", "title");
+		__title__.textContent = _data_.title;
+		__sectionWrapper__.appendChild(__title__);
+
+		var __price__ = document.createElement("span");
+		__price__.classList.add("in-read-native", "price");
+		__price__.textContent = _data_.price;
+		__sectionWrapper__.appendChild(__price__);
+
+		var __rating__ = document.createElement("span");
+		__rating__.classList.add("in-read-native", "rating");
+		__rating__.textContent = _data_.rating.rate;
+		__sectionWrapper__.appendChild(__rating__);
+
+		var __cta__ = document.createElement("button");
+		__cta__.classList.add("in-read-native", "cta");
+		__cta__.textContent = "Beli di Tokopedia";
+		__sectionWrapper__.appendChild(__cta__);
+
+		__parentTarget__.insertBefore(__wrapper__, _target_)
+	}
+
+	function __showContent__() {
+		var _el_ = this;
+		_el_.classList.add("active");
+		_el_.classList.add("fadeout");
+		setTimeout(function () {
+			_el_.remove();
+		}, 600)
+	}
+
+	function __gotolandingPage__() {
+		var _el_ = this;
+		var _link_ = _el_.getAttribute("data-link");
+		window.open(_link_, "_blank")
+	}
+</script>
