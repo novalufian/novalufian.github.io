@@ -773,9 +773,9 @@ dable('sendLogOnce');
 						t.style = "";
 						t.classList.add("hl-active-sticky");
 						if (!headlineStickyCounterStatus) {
+							headlineStickyCounterStatus = !0;
 							removeStickyHeadline(t, !1);
 						// 	setTimeout(function () {
-						// 		headlineStickyCounterStatus = !0;
 						// 	}, 500)
 						}
 						headlineStickyStatus = !0;
