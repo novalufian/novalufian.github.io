@@ -773,18 +773,19 @@ dable('sendLogOnce');
 						t.style = "";
 						t.classList.add("hl-active-sticky");
 						if (!headlineStickyCounterStatus) {
-							headlineStickyCounterStatus = !0;
-							removeStickyHeadline(t, !0);
+							setTimeout(function () {
+								headlineStickyCounterStatus = !0;
+							 	removeStickyHeadline(t, !0);
+							}, 500)
 						}
 						headlineStickyStatus = !0;
-					}, 700)
+					}, 500)
 				}
 			}
 		}
 
 		function removeStickyHeadline(t, e) {
 			console.log('remove')
-			n;
 		    	var n = setInterval(function() {
 			    	console.log(headlineStickyInterval)
 			    	if (!headlineStickyPaused) {
