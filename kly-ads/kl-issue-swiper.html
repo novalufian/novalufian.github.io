@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link
+	rel="stylesheet"
+	href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+	/>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.swiper {
+			width: 100%;
+			height: 200vh;
+		}
+
+		.header{
+			width: 100%;
+			height: 30vh;
+			background: blue;
+		}
+
+		#fixed{
+			width: 70%;
+			height: 100px;
+			background: lime;
+			position: fixed;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		/*overwrite*/
+		.swiper-wrapper {
+			transform: none !important;
+			transition: left .5s ease;
+		}
+	</style>
+</head>
+<body>
+	<!-- Slider main container -->
+	<div class="header"></div>
+	<div class="swiper">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide" style="background: red;">Slide 1
+				<div id="fixed"></div>
+			</div>
+			<div class="swiper-slide" style="background: yellow;">Slide 2</div>
+		</div>
+		<!-- If we need pagination -->
+	</div>
+
+
+	<script>
+		const swiper = new Swiper('.swiper', {
+			direction: 'horizontal',
+			loop: false
+		});
+
+		swiper.on('slideChange', function () {
+  			var _target_ = swiper.$wrapperEl[0];
+  			var _I_ = swiper.activeIndex;
+  			if (_I_ === 1) {
+  				_target_.style.left = '-100vw';
+  			}else if(_I_ === 0){
+  				_target_.style.left = '0vw';
+  			}
+		});
+
+
+	</script>
+
+</body>
+</html>
