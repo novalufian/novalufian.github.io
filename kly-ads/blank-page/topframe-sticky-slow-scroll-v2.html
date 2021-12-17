@@ -847,11 +847,12 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
 	
 	function _TOPFRAME_STICKY_SCROLL_() {
 		var _scrolltop_ = document.documentElement.scrollTop;
+		console.log(_scrolltop_)
 		if (_scrolltop_ >=0 && !_TOPFRAME_STICKY_) {
 			_TOPFRAME_STICKY_ = true;
 			_TOPFRAME_PARENT_WRAPPER_.classList.add("sticky");
 			_TOPFRAME_WRAPPER_.classList.add("sticky");
-			
+
 			_TOPFRAME_STICKY_COUNTDOWN_(7)
 			document.removeEventListener("scroll", _TOPFRAME_STICKY_SCROLL_)
 			document.querySelector("#back-to-top").classList.add("topframe_is_sticky");
@@ -861,6 +862,8 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
 	}
 
 	function _TOPFRAME_STICKY_COUNTDOWN_(_time_) {
+		console.log(document.documentElement.scrollTop)
+		_TOPFRAME_STICKY_LAST_SCROLL_ = document.documentElement.scrollTop;
 		var _start_ = 0;
 		var countdown = setInterval(function () {
 			if (_time_ == _start_) {
@@ -914,9 +917,9 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
 	};
 
 	moveItItem.prototype.update = function(scrollTop){
-		_TOPFRAME_STICKY_LAST_SCROLL = scrollTop / this.speed;
-		this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
-		_TOPFRAME_PARENT_WRAPPER_.style.transform = 'translateY(' + (scrollTop / this.speed) + 'px)';
+		// _TOPFRAME_STICKY_LAST_SCROLL = scrollTop / this.speed;
+		this.el.css('transform', 'translateY(' + -( _TOPFRAME_STICKY_LAST_SCROLL_ + ( scrollTop / this.speed)) + 'px)');
+		_TOPFRAME_PARENT_WRAPPER_.style.transform = 'translateY(' + ( _TOPFRAME_STICKY_LAST_SCROLL_ + ( scrollTop / this.speed)) + 'px)';
 
 	};
 
