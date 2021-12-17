@@ -844,6 +844,7 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
 
 
 	document.addEventListener("scroll", _TOPFRAME_STICKY_SCROLL_)
+	_TOPFRAME_STICKY_STYLE_();
 	
 	function _TOPFRAME_STICKY_SCROLL_() {
 		var _scrolltop_ = document.documentElement.scrollTop;
@@ -857,7 +858,6 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
 			document.removeEventListener("scroll", _TOPFRAME_STICKY_SCROLL_)
 			document.querySelector("#back-to-top").classList.add("topframe_is_sticky");
 			$('.layout.topframe_is_sticky').moveIt();
-			_TOPFRAME_STICKY_STYLE_();
 		}
 	}
 
