@@ -839,6 +839,7 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
 	var _TOPFRAME_STICKY_ = false;
 	var _TOPFRAME_STICKY_END_ = false;
 	var _TOPFRAME_STICKY_LAST_SCROLL_ = 0;
+	var _TOPFRAME_STICKY_LAST_SCROLL_END_ = 0;
 	var _TOPFRAME_STICKY_SCROLL_SPEED_ = 50;
 
 	var _TOPFRAME_STICKY_CUSTOM_STYLE_ = document.createElement("style");
@@ -878,7 +879,7 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
 					document.querySelector("body").style = ''
 					document.querySelector("#back-to-top").style = '';
 					_TOPFRAME_PARENT_WRAPPER_.style = '';
-					document.documentElement.scrollTo(0,_TOPFRAME_STICKY_LAST_SCROLL);
+					document.documentElement.scrollTo(0,_TOPFRAME_STICKY_LAST_SCROLL_END_);
 				}, 200)
 			}
 			_start_++;
@@ -920,8 +921,10 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
 
 	moveItItem.prototype.update = function(scrollTop){
 		// _TOPFRAME_STICKY_LAST_SCROLL = scrollTop / this.speed;
-		this.el.css('transform', 'translateY(' + -( _TOPFRAME_STICKY_LAST_SCROLL_ + ( scrollTop / (this.speed / 4))) + 'px)');
-		_TOPFRAME_PARENT_WRAPPER_.style.transform = 'translateY(' + ( _TOPFRAME_STICKY_LAST_SCROLL_ + ( scrollTop / (this.speed / 4))) + 'px)';
+		_TOPFRAME_STICKY_LAST_SCROLL_END_ = _TOPFRAME_STICKY_LAST_SCROLL_ + ( scrollTop / (this.speed / 4));
+		this.el.css('transform', 'translateY(' + -( _TOPFRAME_STICKY_LAST_SCROLL_END_ ) + 'px)');
+		_TOPFRAME_PARENT_WRAPPER_.style.transform = 'translateY(' + ( _TOPFRAME_STICKY_LAST_SCROLL_END_) + 'px)';
+		console.log(_TOPFRAME_STICKY_LAST_SCROLL_END_)
 
 	};
 
