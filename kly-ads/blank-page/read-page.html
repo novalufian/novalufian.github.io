@@ -828,78 +828,7 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
 		}
 	</style>
 	<style>
-		.layout__ads{
-			transition: all 2s ease;
-		}
-		.layout__ads.sticky {
-			position: fixed;
-			z-index: 99;
-			height: calc(100vw *(267 / 414) + 25px );
-		}
-
-		.layout__ads.sticky::after ,
-		.layout__ads.sticky::before {
-			position: fixed;
-			height: 25px;
-			width: 100vw;
-			left: 0;
-		}
-
-		.layout__ads.sticky::after {
-			content: "";
-			top: calc(100vw *(267 / 414) );
-			background: #0072FF;
-			z-index: 100;
-			animation: progress-bar 7s forwards linear;
-		}
-
-		.layout__ads.sticky::before {
-			content: "Scroll untuk melanjutkan membaca (7)";
-			top: calc((100vw *(267 / 414) ) + 8px);
-			color : #fff;
-			line-height : 14px;
-			z-index: 101;
-			animation: progress-count 7s forwards linear;
-		}
-
-		div#div-gpt-ad-topfrm-parallax-wrapper,
-		div#div-gpt-ad-topfrm-parallax-wrapper.sticky #div-gpt-ad-liputan6-topfrm-oop iframe {
-			transition: all .3s ease;
-		}
-
-		div#div-gpt-ad-topfrm-parallax-wrapper.sticky {
-			height: calc(100vw *(267 / 414)) !important;
-			position: relative !important;
-			top: 0px;
-		}
-
-		div#div-gpt-ad-topfrm-parallax-wrapper.sticky #div-gpt-ad-liputan6-topfrm-oop iframe {
-			transform: scale(.55);
-			top: calc((-110.41666666666667vw * .42) / 2) !important;
-		}
-
-		@keyframes progress-bar{
-			from {width: 0px;}
-			to{width: 100vw;}
-		}
-
-		@keyframes progress-count{
-			0%{content: "Scroll untuk melanjutkan membaca (7)";}
-			14.18%{content: "Scroll untuk melanjutkan membaca (7)";}
-			14.28%{content: "Scroll untuk melanjutkan membaca (6)";}
-			28.47%{content: "Scroll untuk melanjutkan membaca (6)";}
-			28.57%{content: "Scroll untuk melanjutkan membaca (5)";}
-			42.75%{content: "Scroll untuk melanjutkan membaca (5)";}
-			42.85%{content: "Scroll untuk melanjutkan membaca (4)";}
-			57.04%{content: "Scroll untuk melanjutkan membaca (4)";}
-			57.14%{content: "Scroll untuk melanjutkan membaca (3)";}
-			71.32%{content: "Scroll untuk melanjutkan membaca (3)";}
-			71.42%{content: "Scroll untuk melanjutkan membaca (2)";}
-			85.61%{content: "Scroll untuk melanjutkan membaca (2)";}
-			85.71%{content: "Scroll untuk melanjutkan membaca (1)";}
-			99.80%{content: "Scroll untuk melanjutkan membaca (1)";}
-			100%{content: "Scroll untuk melanjutkan membaca (0)";}
-		}
+		
 
 	</style>
 	<div id="div-gpt-ad-topfrm-parallax-wrapper">
@@ -1017,7 +946,78 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
 	        		body{height: ${(_H_ * _TOPFRAME_STICKY_SCROLL_SPEED_ )}px}
 	        		.layout.topframe_is_sticky::before {content: "";position: relative;height: calc(100vw *(267 / 414)) !important;display: block;}
 	        		.layout.topframe_is_sticky{position:fixed ; top : 0px; left:0px;transition: all 1.5s ease;}
-	        	}
+	        		.layout__ads{
+			transition: all 2s ease;
+		}
+		.layout__ads.sticky {
+			position: fixed;
+			z-index: 99;
+			height: calc(100vw *(267 / 414) + 25px );
+		}
+
+		.layout__ads.sticky::after ,
+		.layout__ads.sticky::before {
+			position: fixed;
+			height: 25px;
+			width: 100vw;
+			left: 0;
+		}
+
+		.layout__ads.sticky::after {
+			content: "";
+			top: calc(100vw *(267 / 414) );
+			background: #0072FF;
+			z-index: 100;
+			animation: progress-bar 7s forwards linear;
+		}
+
+		.layout__ads.sticky::before {
+			content: "Scroll untuk melanjutkan membaca (7)";
+			top: calc((100vw *(267 / 414) ) + 8px);
+			color : #fff;
+			line-height : 14px;
+			z-index: 101;
+			animation: progress-count 7s forwards linear;
+		}
+
+		div#div-gpt-ad-topfrm-parallax-wrapper,
+		div#div-gpt-ad-topfrm-parallax-wrapper.sticky #div-gpt-ad-liputan6-topfrm-oop iframe {
+			transition: all .3s ease;
+		}
+
+		div#div-gpt-ad-topfrm-parallax-wrapper.sticky {
+			height: calc(100vw *(267 / 414)) !important;
+			position: relative !important;
+			top: 0px;
+		}
+
+		div#div-gpt-ad-topfrm-parallax-wrapper.sticky #div-gpt-ad-liputan6-topfrm-oop iframe {
+			transform: scale(.55);
+			top: calc((-110.41666666666667vw * .42) / 2) !important;
+		}
+
+		@keyframes progress-bar{
+			from {width: 0px;}
+			to{width: 100vw;}
+		}
+
+		@keyframes progress-count{
+			0%{content: "Scroll untuk melanjutkan membaca (7)";}
+			14.18%{content: "Scroll untuk melanjutkan membaca (7)";}
+			14.28%{content: "Scroll untuk melanjutkan membaca (6)";}
+			28.47%{content: "Scroll untuk melanjutkan membaca (6)";}
+			28.57%{content: "Scroll untuk melanjutkan membaca (5)";}
+			42.75%{content: "Scroll untuk melanjutkan membaca (5)";}
+			42.85%{content: "Scroll untuk melanjutkan membaca (4)";}
+			57.04%{content: "Scroll untuk melanjutkan membaca (4)";}
+			57.14%{content: "Scroll untuk melanjutkan membaca (3)";}
+			71.32%{content: "Scroll untuk melanjutkan membaca (3)";}
+			71.42%{content: "Scroll untuk melanjutkan membaca (2)";}
+			85.61%{content: "Scroll untuk melanjutkan membaca (2)";}
+			85.71%{content: "Scroll untuk melanjutkan membaca (1)";}
+			99.80%{content: "Scroll untuk melanjutkan membaca (1)";}
+			100%{content: "Scroll untuk melanjutkan membaca (0)";}
+		}
 	        	`
 	        	document.querySelector("#back-to-top").appendChild(_TOPFRAME_STICKY_CUSTOM_STYLE_);
 
