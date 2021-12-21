@@ -841,10 +841,10 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
 		</div>
 
         <!-- Revive Adserver Asynchronous JS Tag - Generated with Revive Adserver v5.0.5 
-        	<ins class="revive-ad-liputan6-topfrm" data-revive-zoneid="75" data-revive-id="826a5a6d8734276706a6e7f9fac6fabb"></ins> -->
+        	<ins class="revive-ad-liputan6-topfrm" data-revive-zoneid="75" data-revive-id="826a5a6d8734276706a6e7f9fac6fabb"></ins>
+ -->
 
         </div>
-
         <script>
         	var _TOPFRAME_PARENT_WRAPPER_ = document.querySelector(".layout__ads");
         	var _TOPFRAME_WRAPPER_ = document.querySelector("#div-gpt-ad-topfrm-parallax-wrapper");
@@ -852,7 +852,7 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
         	var _TOPFRAME_STICKY_END_ = false;
         	var _TOPFRAME_STICKY_LAST_SCROLL_ = 0;
         	var _TOPFRAME_STICKY_LAST_SCROLL_END_ = 0;
-        	var _TOPFRAME_STICKY_SCROLL_SPEED_ = 50;
+        	var _TOPFRAME_STICKY_SCROLL_SPEED_ = 10;
 
         	var _TOPFRAME_STICKY_CUSTOM_STYLE_ = document.createElement("style");
 
@@ -942,12 +942,12 @@ var headlineStickyInterval=7,headlineStickyStatus=!1,headlineStickyPaused=!1;hea
         	function _TOPFRAME_STICKY_STYLE_() {
         		var _H_ = document.querySelector("body").clientHeight;
         		console.log(_H_)
+	        		// .layout.topframe_is_sticky::before {content: "";position: relative;height: calc(100vw *(267 / 414)) !important;display: block;}
         		_TOPFRAME_STICKY_CUSTOM_STYLE_.textContent = `
-	        		body{height: ${(_H_ * _TOPFRAME_STICKY_SCROLL_SPEED_ )}px}
-	        		.layout.topframe_is_sticky::before {content: "";position: relative;height: calc(100vw *(267 / 414)) !important;display: block;}
-	        		.layout.topframe_is_sticky{position:fixed ; top : 0px; left:0px;transition: all 1.5s ease;}
+	        		body{height: ${(_H_ * 20 )}px}
+	        		.layout.topframe_is_sticky{position:fixed ; top : 0px; left:0px;transition: all 1s ease;}
 	        		.layout__ads{
-			transition: all 2s ease;
+			transition: all 1s ease;
 		}
 		.layout__ads.sticky {
 			position: fixed;
