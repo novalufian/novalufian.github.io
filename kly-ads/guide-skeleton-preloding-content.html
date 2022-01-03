@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kapanlagi</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://d.kapanlaginetwork.com/banner/preview/2018/12/15/guide/prism.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <br>
+        <br>
+        <h1 class="col-md-12 text-center text-danger">Skeleton preloading styleeffect</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#liputan6">liputan6</a></li>
+            <li ><a data-toggle="tab" href="#kapanlagi">kapanlagi</a></li>
+            <li><a data-toggle="tab" href="#merdeka">merdeka</a></li>
+            <li><a data-toggle="tab" href="#otosia">otosia</a></li>
+            <li><a data-toggle="tab" href="#fimela">fimela</a></li>
+            <li><a data-toggle="tab" href="#bolacom">bolacom</a></li>
+            <li><a data-toggle="tab" href="#bolanet">bolanet</a></li>
+            <li><a data-toggle="tab" href="#dream">dream</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="liputan6" class="tab-pane fade in active">
+                <h3>liputan6</h3>
+                <div class="alert alert-danger">
+                    <h2>Publishing</h2>
+                    <p>style css</p>
+                </div>
+                <script type="text/plain" class="language-markup">
+                    <style>
+                        div.preloading{
+                            overflow: hidden;
+                            border-radius: 10px;
+                            margin: 2.5%;
+                            box-sizing: border-box; 
+                        }
+                        
+                        .preloading::after{
+                            content: "";
+                            z-index: 5;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background: #fff;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .preloading::before{
+                            z-index: 9;
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-image: linear-gradient(to right, transparent, #eeeeee, transparent);
+                            width: 70%;
+                            height: 100%;
+                            animation: ltr .8s infinite linear;
+                        }
+
+                        @keyframes ltr {
+                            from {left: -100vw }
+                            to {left: 100vw}
+                        }
+                    </style>
+                </script>
+                <div class="alert alert-info">
+                    <h2>note</h2>
+                    <p>untuk penambahan class <strong>preloading</strong> bisa disesuaikan </p>
+                    <p>berikut contoh pada read page dipasang pada target element yang ingin diberikan efek skeleton</p>
+                </div>
+                <script type="text/plain" class="language-markup">
+                    pada breaking news
+                    <div class="breaking-news preloading" data-component="mobile:breaking-news" .... ></div>
+
+                    pada header
+                    <a href="https://m.liputan6.com" class="nav-main__logo-link preloading"> 
+                        .....
+                    </a>
+
+                    pada title content 
+                    <div class="article-header preloading" data-component="mobile:article-header" .... ></div>
+
+                    pada main image
+                    <div class="article-photo-gallery--item__content preloading">
+                        ....
+                    </div>
+                </script>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="alert alert-success">
+            hasil : <code><a href="http://klios.kapanlagi.com/banner/preview/2018/12/15/dev/foto2/foto-dev2.html">http://klios.kapanlagi.com/banner/preview/2018/12/15/dev/foto2/foto-dev2.html</a></code>
+        </div>
+
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script src="https://d.kapanlaginetwork.com/banner/preview/2018/12/15/guide/prism.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
