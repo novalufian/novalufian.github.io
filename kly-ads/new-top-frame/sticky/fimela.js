@@ -166,6 +166,12 @@
             z-index: 100;
             animation: progress-bar 7s forwards linear;
         }
+        .layout__ads.sticky::before {
+            content: "";
+            top: calc(100vw *(267 / 414) );
+            background: #212121;
+            z-index: 99;
+        }
         .layout__ads.sticky .topframe-sticky-counter {
             display : block;
             top: calc((100vw *(267 / 414) ) + 8px);
