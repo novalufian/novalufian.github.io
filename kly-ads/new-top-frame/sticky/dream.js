@@ -13,7 +13,9 @@ var _PARENT_BODY_ = null;
 
     var _TOPFRAME_STICKY_CUSTOM_STYLE_ = document.createElement("style");
 
-    document.addEventListener("DOMContentLoaded", _INIT_STICKY_TOPFRAME_);
+    if (kly.gtm.subCategory.toLowerCase() == 'culinary') {
+        document.addEventListener("DOMContentLoaded", _INIT_STICKY_TOPFRAME_);
+    }
 
     function _INIT_STICKY_TOPFRAME_() {
         _PARENT_BODY_ = document.querySelector("body");
@@ -48,7 +50,7 @@ var _PARENT_BODY_ = null;
             _TOPFRAME_STICKY_COUNTDOWN_(7);
             document.removeEventListener("scroll", _TOPFRAME_STICKY_SCROLL_);
             _PARENT_BODY_TARGET_.classList.add("topframe_is_sticky");
-            $('.topframe_is_sticky').moveIt();
+            document.querySelectorAll('.topframe_is_sticky').moveIt();
         }
     }
 
@@ -103,35 +105,35 @@ var _PARENT_BODY_ = null;
         return event.deltaY < 0;
     }
 
-    $.fn.moveIt = function(){
+    Object.prototype.moveIt = function(){
         if (_TOPFRAME_STICKY_END_) {
             return;
         }
-        var $window = $(window);
         var instances = [];
 
-        $(this).each(function(){
-            instances.push(new moveItItem($(this)));
+        this.forEach(function(el){
+            instances.push(new moveItItem(el));
         });
 
         window.addEventListener('scroll', function(){
             if (!_TOPFRAME_STICKY_END_) {
-                var scrollTop = $window.scrollTop();
+                var scrollTop = document.documentElement.scrollTop;
                 instances.forEach(function(inst){
                     inst.update(scrollTop);
                 });
             }
         }, {passive: true});
     };
+    
 
     var moveItItem = function(el){
-        this.el = $(el);
+        this.el = el;
         this.speed = parseInt(_TOPFRAME_STICKY_SCROLL_SPEED_);
     };
 
     moveItItem.prototype.update = function(scrollTop){
         _TOPFRAME_STICKY_LAST_SCROLL_END_ = _TOPFRAME_STICKY_LAST_SCROLL_ + ( scrollTop / (this.speed / 4));
-        this.el.css('transform', 'translateY(' + -( _TOPFRAME_STICKY_LAST_SCROLL_END_ ) + 'px)');
+        this.el.style.transform = 'translateY(' + -( _TOPFRAME_STICKY_LAST_SCROLL_END_ ) + 'px)';
     };
 
     function _TOPFRAME_STICKY_STYLE_() {
