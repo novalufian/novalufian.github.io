@@ -7,6 +7,8 @@ var _PARENT_BODY_ = null;
     var _TOPFRAME_STICKY_LAST_SCROLL_ = 0;
     var _TOPFRAME_STICKY_LAST_SCROLL_END_ = 0;
     var _TOPFRAME_STICKY_SCROLL_SPEED_ = 10;
+    var _TOPFRAME_STICKY_IS_READY_ = false;
+
     var _turnOff_ = false;
     var _IS_IOS_ = parent.window.navigator.platform.match(/iPhone|iPod|iPad/);
     var _ORINETATION_ = (_IS_IOS_) ? parent.window.orientation : parent.screen.orientation.angle;
@@ -26,6 +28,8 @@ var _PARENT_BODY_ = null;
         document.addEventListener("scroll", _TOPFRAME_STICKY_SCROLL_);
         _TOPFRAME_STICKY_STYLE_();
         _TOPFRAME_STICKY_TWEAK_();
+         _TOPFRAME_STICKY_IS_READY_ = true;
+
     }
 
     window.addEventListener("orientationchange", _ORIENTATION_CHANGE_);
