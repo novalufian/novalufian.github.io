@@ -82,7 +82,7 @@ var _PARENT_BODY_ = null;
         var _target_ = document.querySelector(".topframe-sticky-counter");
         var countdown = setInterval(function () {
 
-            _target_.textContent = `Penawaran sponsor berakhir setelah (${_time_})`;
+            _target_.textContent = 'Penawaran sponsor berakhir setelah ('+_time_+')';
             if (_time_ <= 0 || _turnOff_) {
                 _TOPFRAME_PARENT_WRAPPER_.style.top = '-100vh';
                 _TOPFRAME_PARENT_WRAPPER_.style.transition = 'top .5s ease';
@@ -142,72 +142,7 @@ var _PARENT_BODY_ = null;
         _P_.textContent = "Penawaran sponsor berakhir setelah (7)";
         _TOPFRAME_PARENT_WRAPPER_.appendChild(_P_)
         var _H_ = document.querySelector("body").clientHeight;
-        _TOPFRAME_STICKY_CUSTOM_STYLE_.textContent = `
-            body{height: ${(_H_ * 20 )}px;scroll-behavior: smooth;width : 100vw}
-                    .topframe_is_sticky::before {content: "";position: relative;height: 110.41666666666667vw !important;display: block;}
-                    .topframe_is_sticky{position:fixed ; top : 0px; left:0px;transition: all 1s ease; width: 100vw;}
-                    .layout__ads{
-            transition: all 1s ease;
-        }
-        .topframe-sticky-counter {display : none;}
-        .layout__ads.sticky {
-            position: fixed;
-            z-index: 99;
-            height: calc(100vw *(267 / 414) + 25px );
-        }
-        #div-gpt-ad-topfrm-parallax-wrapper.sticky::after ,
-        #div-gpt-ad-topfrm-parallax-wrapper.sticky::before {
-            position: absolute;
-            height: 25px;
-            width: 100vw;
-            left: 0;
-        }
-        #div-gpt-ad-topfrm-parallax-wrapper.sticky::after {
-            content: "";
-            top: calc(100vw *(267 / 414) );
-            background: #0072FF;
-            z-index: 100;
-            animation: progress-bar 7s forwards linear;
-        }
-        #div-gpt-ad-topfrm-parallax-wrapper.sticky::before {
-            content: "";
-            top: calc(100vw *(267 / 414) );
-            background: #212121;
-            z-index: 99;
-        }
-        .sticky .topframe-sticky-counter {
-            display : block;
-            top: calc((100vw *(267 / 414) ) + 8px);
-            color : #fff;
-            line-height : 14px;
-            z-index: 101;
-            -webkit-animation: webkit-progress-count 7s forwards linear;
-            animation: progress-count 7s forwards linear;
-            width: 100%;
-            margin: 0px;
-            position: absolute;
-            text-align: center;
-            font-family: sans-serif;
-        }
-        div#div-gpt-ad-topfrm-parallax-wrapper,
-        div#div-gpt-ad-topfrm-parallax-wrapper.sticky #div-gpt-ad-dream-topfrm-oop iframe {
-            transition: all .3s ease;
-        }
-        div#div-gpt-ad-topfrm-parallax-wrapper.sticky {
-            height: calc(100vw *(267 / 414)) !important;
-            position: fixed !important;
-            top: 0px;
-            z-index : 9;
-        }
-        div#div-gpt-ad-topfrm-parallax-wrapper.sticky #div-gpt-ad-dream-topfrm-oop iframe {
-            transform: scale(.55);
-            top: calc((-110.41666666666667vw * .42) / 2) !important;
-        }
-        @keyframes progress-bar{
-            from {width: 0px;}
-            to{width: 100vw;}
-        }
-        `;
+        _TOPFRAME_STICKY_CUSTOM_STYLE_.textContent = 'body{height: '+(_H_ * 20 )+'px;scroll-behavior: smooth;width : 100vw} .topframe_is_sticky::before {content: "";position: relative;height: 110.41666666666667vw !important;display: block;} .topframe_is_sticky{position:fixed ; top : 0px; left:0px;transition: all 1s ease; width: 100vw;} .layout__ads{ transition: all 1s ease; } .topframe-sticky-counter {display : none;} .layout__ads.sticky { position: fixed; z-index: 99; height: calc(100vw *(267 / 414) + 25px ); } #div-gpt-ad-topfrm-parallax-wrapper.sticky::after , #div-gpt-ad-topfrm-parallax-wrapper.sticky::before { position: absolute; height: 25px; width: 100vw; left: 0; } #div-gpt-ad-topfrm-parallax-wrapper.sticky::after { content: ""; top: calc(100vw *(267 / 414) ); background: #0072FF; z-index: 100; animation: progress-bar 7s forwards linear; } #div-gpt-ad-topfrm-parallax-wrapper.sticky::before { content: ""; top: calc(100vw *(267 / 414) ); background: #212121; z-index: 99; } .sticky .topframe-sticky-counter { display : block; top: calc((100vw *(267 / 414) ) + 8px); color : #fff; line-height : 14px; z-index: 101; -webkit-animation: webkit-progress-count 7s forwards linear; animation: progress-count 7s forwards linear; width: 100%; margin: 0px; position: absolute; text-align: center; font-family: sans-serif; } div#div-gpt-ad-topfrm-parallax-wrapper, div#div-gpt-ad-topfrm-parallax-wrapper.sticky #div-gpt-ad-dream-topfrm-oop iframe { transition: all .3s ease; } div#div-gpt-ad-topfrm-parallax-wrapper.sticky { height: calc(100vw *(267 / 414)) !important; position: fixed !important; top: 0px; z-index : 9; } div#div-gpt-ad-topfrm-parallax-wrapper.sticky #div-gpt-ad-dream-topfrm-oop iframe { transform: scale(.55); top: calc((-110.41666666666667vw * .42) / 2) !important; } @keyframes progress-bar{ from {width: 0px;} to{width: 100vw;} }';
         _PARENT_BODY_TARGET_.appendChild(_TOPFRAME_STICKY_CUSTOM_STYLE_);
 
     }
