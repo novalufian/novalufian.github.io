@@ -1,4 +1,4 @@
-var _PARENT_BODY_ = null;
+    var _PARENT_BODY_ = null;
     var _PARENT_BODY_TARGET_ = null;
     var _TOPFRAME_PARENT_WRAPPER_ = null;
     var _TOPFRAME_WRAPPER_ = null;
@@ -15,16 +15,21 @@ var _PARENT_BODY_ = null;
     var _TOPFRAME_STICKY_CUSTOM_STYLE_ = document.createElement("style");
 
     if (kly.gtm.subSubCategory == 'italia') {
-        document.addEventListener("DOMContentLoaded", _INIT_STICKY_TOPFRAME_);
+        if (kly.pageType.toLowerCase() != 'channelpage') {
+            document.addEventListener("DOMContentLoaded", _INIT_STICKY_TOPFRAME_);
+        }
     }
 
     function _INIT_STICKY_TOPFRAME_() {
+        //edit start 
         _PARENT_BODY_ = document.querySelector("body");
         _PARENT_BODY_TARGET_ = document.querySelector(".a2");
         _TOPFRAME_PARENT_WRAPPER_ = document.querySelector("#div-gpt-ad-topfrm-parallax-wrapper");
         _TOPFRAME_WRAPPER_ = document.querySelector("#div-gpt-ad-topfrm-parallax-wrapper");
+        //edit end
         _PARENT_BODY_TARGET_.style = '';
         document.addEventListener("scroll", _TOPFRAME_STICKY_SCROLL_);
+        document.addEventListener("scroll", _UPDATE_SCROLL_);
         _TOPFRAME_STICKY_STYLE_();
         _TOPFRAME_STICKY_TWEAK_();
         _TOPFRAME_STICKY_IS_READY_ = true;
@@ -52,7 +57,6 @@ var _PARENT_BODY_ = null;
             _TOPFRAME_STICKY_COUNTDOWN_(7);
             document.removeEventListener("scroll", _TOPFRAME_STICKY_SCROLL_);
             _PARENT_BODY_TARGET_.classList.add("topframe_is_sticky");
-            document.querySelectorAll('.topframe_is_sticky').moveIt();
         }
     }
 
@@ -100,42 +104,13 @@ var _PARENT_BODY_ = null;
 
     }
 
-    function checkScrollDirectionIsUp(event) {
-        if (event.wheelDelta) {
-            return event.wheelDelta > 0;
+    function _UPDATE_SCROLL_(){
+        console.log('scrollll')
+        if (!_TOPFRAME_STICKY_END_) {
+            var scrollTop = document.documentElement.scrollTop;
+            _TOPFRAME_STICKY_LAST_SCROLL_END_ = _TOPFRAME_STICKY_LAST_SCROLL_ + ( scrollTop / (_TOPFRAME_STICKY_SCROLL_SPEED_ / 4));
+            document.querySelector('.topframe_is_sticky').style.transform = 'translateY(' + -( _TOPFRAME_STICKY_LAST_SCROLL_END_ ) + 'px)';
         }
-        return event.deltaY < 0;
-    }
-
-    Object.prototype.moveIt = function(){
-        if (_TOPFRAME_STICKY_END_) {
-            return;
-        }
-        var instances = [];
-
-        this.forEach(function(el){
-            instances.push(new moveItItem(el));
-        });
-
-        window.addEventListener('scroll', function(){
-            if (!_TOPFRAME_STICKY_END_) {
-                var scrollTop = document.documentElement.scrollTop;
-                instances.forEach(function(inst){
-                    inst.update(scrollTop);
-                });
-            }
-        }, {passive: true});
-    };
-    
-
-    var moveItItem = function(el){
-        this.el = el;
-        this.speed = parseInt(_TOPFRAME_STICKY_SCROLL_SPEED_);
-    };
-
-    moveItItem.prototype.update = function(scrollTop){
-        _TOPFRAME_STICKY_LAST_SCROLL_END_ = _TOPFRAME_STICKY_LAST_SCROLL_ + ( scrollTop / (this.speed / 4));
-        this.el.style.transform = 'translateY(' + -( _TOPFRAME_STICKY_LAST_SCROLL_END_ ) + 'px)';
     };
 
     function _TOPFRAME_STICKY_STYLE_() {
@@ -144,12 +119,16 @@ var _PARENT_BODY_ = null;
         _P_.textContent = "Penawaran sponsor berakhir setelah (7)";
         _TOPFRAME_PARENT_WRAPPER_.appendChild(_P_)
         var _H_ = document.querySelector("body").clientHeight;
-        _TOPFRAME_STICKY_CUSTOM_STYLE_.textContent = 'body{height: '+(_H_ * 20 )+'px;scroll-behavior: smooth;width : 100vw} .topframe_is_sticky::before {content: "";position: relative;height: 110.41666666666667vw !important;display: block;} .topframe_is_sticky{position:fixed ; top : 0px; left:0px;transition: all 1s ease; width: 100vw;} .layout__ads{ transition: all 1s ease; } .topframe-sticky-counter {display : none;} .layout__ads.sticky { position: fixed; z-index: 99; height: calc(100vw *(267 / 414) + 25px ); } #div-gpt-ad-topfrm-parallax-wrapper.sticky::after , #div-gpt-ad-topfrm-parallax-wrapper.sticky::before { position: absolute; height: 25px; width: 100vw; left: 0; } #div-gpt-ad-topfrm-parallax-wrapper.sticky::after { content: ""; top: calc(100vw *(267 / 414) ); background: #0072FF; z-index: 100; animation: progress-bar 7s forwards linear; } #div-gpt-ad-topfrm-parallax-wrapper.sticky::before { content: ""; top: calc(100vw *(267 / 414) ); background: #212121; z-index: 99; } .sticky .topframe-sticky-counter { display : block; top: calc((100vw *(267 / 414) ) + 8px); color : #fff; line-height : 14px; z-index: 101; -webkit-animation: webkit-progress-count 7s forwards linear; animation: progress-count 7s forwards linear; width: 100%; margin: 0px; position: absolute; text-align: center; font-family: sans-serif; } div#div-gpt-ad-topfrm-parallax-wrapper, div#div-gpt-ad-topfrm-parallax-wrapper.sticky #div-gpt-ad-bola-topfrm-oop iframe { transition: all .3s ease; } div#div-gpt-ad-topfrm-parallax-wrapper.sticky { height: calc(100vw *(267 / 414)) !important; position: fixed !important; top: 0px; z-index : 9; } div#div-gpt-ad-topfrm-parallax-wrapper.sticky #div-gpt-ad-bola-topfrm-oop iframe { transform: scale(.55); top: calc((-110.41666666666667vw * .42) / 2) !important; } @keyframes progress-bar{ from {width: 0px;} to{width: 100vw;} }';
+        // edit start
+         _TOPFRAME_STICKY_CUSTOM_STYLE_.textContent = 'body{height: '+(_H_ * 20 )+'px;scroll-behavior: smooth;width : 100vw} .topframe_is_sticky::before {content: "";position: relative;height: 110.41666666666667vw !important;display: block;} .topframe_is_sticky{position:fixed ; top : 0px; left:0px;transition: all 1s ease; width: 100vw;} .layout__ads{ transition: all 1s ease; } .topframe-sticky-counter {display : none;} .layout__ads.sticky { position: fixed; z-index: 99; height: calc(100vw *(267 / 414) + 25px ); } #div-gpt-ad-topfrm-parallax-wrapper.sticky::after , #div-gpt-ad-topfrm-parallax-wrapper.sticky::before { position: absolute; height: 25px; width: 100vw; left: 0; } #div-gpt-ad-topfrm-parallax-wrapper.sticky::after { content: ""; top: calc(100vw *(267 / 414) ); background: #0072FF; z-index: 100; animation: progress-bar 7s forwards linear; } #div-gpt-ad-topfrm-parallax-wrapper.sticky::before { content: ""; top: calc(100vw *(267 / 414) ); background: #212121; z-index: 99; } .sticky .topframe-sticky-counter { display : block; top: calc((100vw *(267 / 414) ) + 8px); color : #fff; line-height : 14px; z-index: 101; -webkit-animation: webkit-progress-count 7s forwards linear; animation: progress-count 7s forwards linear; width: 100%; margin: 0px; position: absolute; text-align: center; font-family: sans-serif; } div#div-gpt-ad-topfrm-parallax-wrapper, div#div-gpt-ad-topfrm-parallax-wrapper.sticky #div-gpt-ad-bola-topfrm-oop iframe { transition: all .3s ease; } div#div-gpt-ad-topfrm-parallax-wrapper.sticky { height: calc(100vw *(267 / 414)) !important; position: fixed !important; top: 0px; z-index : 9; } div#div-gpt-ad-topfrm-parallax-wrapper.sticky #div-gpt-ad-bola-topfrm-oop iframe { transform: scale(.55); top: calc((-110.41666666666667vw * .42) / 2) !important; } @keyframes progress-bar{ from {width: 0px;} to{width: 100vw;} }';
+        // edit end
+
         _PARENT_BODY_TARGET_.appendChild(_TOPFRAME_STICKY_CUSTOM_STYLE_);
 
     }
 
     function _TOPFRAME_STICKY_TWEAK_() {
+        // edit start
         if (kly.channel.id == 17) {
             var _WRAPPER_ = document.querySelector(".main");
             document.querySelector(".header .header_top .header_top-center").style.marginTop = '40px';
@@ -158,4 +137,5 @@ var _PARENT_BODY_ = null;
         }else{
             document.querySelector(".a2").insertBefore(document.querySelector("#main_top"), document.querySelector(".a2").querySelector(".a3"));
         }
+        // edit end
     }
