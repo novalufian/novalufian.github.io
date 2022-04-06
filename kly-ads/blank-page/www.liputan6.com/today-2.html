@@ -301,7 +301,7 @@
 
                 function injectStickyStyleAndAnimation() {
                         var t = document.createElement("style");
-                        t.textContent = ".hl-active-sticky {position: fixed;top: -100%;z-index: 9999;left: 50%;transform: translateX(-50%);margin: 0;transition : margin-top .5s ease;animation: hlSlideDown .5s forwards;}.hl-navbar-hanging{margin-top : 50px !important;}@keyframes hlSlideDown{0%{top : -100px;}100%{top : 0px;}}.headline_ad__box {display: flex;justify-content: center;align-items: center;}.sticky-btn-close{display : none;}.hl-active-sticky .sticky-btn-close{background: red; float: right; display : block;}", document.head.appendChild(t)
+                        t.textContent = ".hl-active-sticky {width: 3320px;position: fixed;top: -100%;z-index: 9999;left: 50%;transform: translateX(-50%);margin: 0;transition : margin-top .5s ease;animation: hlSlideDown .5s forwards;}.hl-navbar-hanging{margin-top : 50px !important;}@keyframes hlSlideDown{0%{top : -100px;}100%{top : 0px;}}.headline_ad__box {display: flex;justify-content: center;align-items: center;}.sticky-btn-close{display : none;}.hl-active-sticky .sticky-btn-close{background: red; float: right; display : block;width: 60px;}", document.head.appendChild(t)
                 }
 
                 function stickyAddButtonClose(target) {
