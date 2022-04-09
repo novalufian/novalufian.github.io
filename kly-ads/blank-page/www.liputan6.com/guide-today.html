@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <link rel="stylesheet" href="https://kly-arkhabmaulana.github.io/sample-preview/pojoaque.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <script src="https://kly-arkhabmaulana.github.io/sample-preview/highlight.pack.js"></script>
+        <script>
+                hljs.initHighlightingOnLoad();
+                hljs.highlightAll();
+        </script>
+</head>
+<body>
+        <div class="container">
+                <hr>
+                <h2>GUIDANCE PEMASANGAN ADVERTORIAL HEADLINE</h1>
+                        <p>Preview :  <a href="https://novalufian.github.io/kly-ads/blank-page/www.liputan6.com/today-2.html" target="_blank">https://novalufian.github.io/kly-ads/blank-page/www.liputan6.com/today-2.html</a> </p>
+                        <pre>
+                                <code class="language-html">   
+                                        /** GPT - ADOPS **/
+                                        
+                                        &lt;script&gt;
+                                        ....
+                                        googletag.cmd.push(function() {
+                                                ....
+                                                ....
+                                                ....
+                                                ....
+                                                
+                                                
+                                                googletag.pubads().enableSingleRequest();
+                                                googletag.enableServices();
+                                                
+                                                googletag.pubads().addEventListener('slotResponseReceived', function(event) {
+                                                        var dfp_slotDelivered = event.slot.getResponseInformation() ? 'block' : 'none'; /* check wheter there is ads or not*/
+                                                        var dfp_slotAdUnitPath = event.slot.getSlotId().getAdUnitPath(); /* get adunit path */
+                                                        /*check delivering ads slot*/
+                                                        if (dfp_slotDelivered == 'block')
+                                                        {
+                                                                if (dfp_slotAdUnitPath == "/36504930/KLY/TODAY/LIPUTAN6.COM/HEADLINE") {
+                                                                        console.log("headline sticky init")
+                                                                        var urlParams = new URLSearchParams(window.location.search);
+                                                                        var myParam = JSON.parse(urlParams.get('interval'));
+                                                                        headlineSticky(myParam);
+                                                                }
+                                                        }
+                                                });
+                                                
+                                        });
+                                &lt;/script&gt;
+                                
+                        </code>
+                </pre>
+                <hr>
+                <br>
+                
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+© 2022 GitHub, Inc.
