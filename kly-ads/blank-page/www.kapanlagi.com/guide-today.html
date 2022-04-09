@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <link rel="stylesheet" href="https://kly-arkhabmaulana.github.io/sample-preview/pojoaque.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <script src="https://kly-arkhabmaulana.github.io/sample-preview/highlight.pack.js"></script>
+        <script>
+                hljs.initHighlightingOnLoad();
+                hljs.highlightAll();
+        </script>
+</head>
+<body>
+        <div class="container">
+                <hr>
+                <h2>GUIDANCE PEMASANGAN ADVERTORIAL HEADLINE</h1>
+                        <p>Preview :  <a href="https://novalufian.github.io/kly-ads/blank-page/www.kapanlagi.com/today.html" target="_blank">https://novalufian.github.io/kly-ads/blank-page/www.kapanlagi.com/today.html</a> </p>
+                        <pre>
+                                <code class="language-html">   
+                                        /** GPT - ADOPS **/
+                                        
+                                        &lt;script&gt;
+                                        ....
+                                        googletag.cmd.push(function() {
+                                                ....
+                                                ....
+                                                ....
+                                                ....
+                                                
+                                                
+                                                googletag.pubads().enableSingleRequest();
+                                                googletag.enableServices();
+                                                
+                                                googletag.pubads().addEventListener('slotResponseReceived', function(event) {
+                                                        var dfp_slotDelivered = event.slot.getResponseInformation() ? 'block' : 'none'; /* check wheter there is ads or not*/
+                                                        var dfp_slotAdUnitPath = event.slot.getSlotId().getAdUnitPath(); /* get adunit path */
+                                                        /*check delivering ads slot*/
+                                                        if (dfp_slotDelivered == 'block')
+                                                        {
+                                                                if (dfp_slotAdUnitPath == "/36504930/KLY/TODAY/KAPANLAGI.COM/HEADLINE") {
+                                                                        console.log("headline sticky init")
+                                                                        var urlParams = new URLSearchParams(window.location.search);
+                                                                        var myParam = JSON.parse(urlParams.get('interval'));
+                                                                        headlineSticky(myParam);
+                                                                }
+                                                        }
+                                                });
+                                                
+                                        });
+                                        &lt;/script&gt;
+                                        &lt;script&gt;
+                                        var stickyDuration = 6;
+                                        var headlineStickyInterval = stickyDuration,
+                                        headlineStickyStatus = !1,
+                                        headlineStickyPaused = !1,
+                                        isHeadlineStickybtnInjected = !1,
+                                        headlineStickyCounterStatus = !1;
+                                        
+                                        function headlineSticky(t) {
+                                                null != t && (headlineStickyInterval = t);
+                                                var e = document.getElementById("div-gpt-ad-headline"),
+                                                n = document.createElement("div");
+                                                n.setAttribute("id", "div-gpt-ad-headline-shadow"), 
+                                                e.parentElement.insertBefore(n, e), 
+                                                injectStickyStyleAndAnimation(),
+                                                window.addEventListener("scroll", headlineStickyScrollEevent)
+                                        }
+                                        
+                                        function headlineStickyScrollEevent() {
+                                                var t = document.getElementById("div-gpt-ad-headline").firstElementChild,
+                                                e = document.getElementById("div-gpt-ad-headline-shadow").getBoundingClientRect().top,
+                                                n = document.querySelector(".layout__nav-content");
+                                                document.documentElement.scrollTop || document.body.scrollTop;
+                                                if ( headlineStickyStatus){
+                                                        if (e <= 0){
+                                                                if (n) {
+                                                                        
+                                                                        if (n.classList.contains("layout__nav-content--no-hanging")){
+                                                                                t.classList.remove("hl-navbar-hanging");
+                                                                        }else {
+                                                                                t.classList.add("hl-navbar-hanging");
+                                                                        };
+                                                                }
+                                                                headlineStickyPaused = !1;
+                                                                
+                                                        }else {
+                                                                t.classList.remove("hl-active-sticky");
+                                                                t.classList.remove("hl-navbar-hanging");
+                                                                t.style.margin = "10px 0";
+                                                                headlineStickyPaused = !0;
+                                                                headlineStickyStatus = !1;
+                                                        };
+                                                }else {
+                                                        if (e <= 0) {
+                                                                stickyAddButtonClose(t)
+                                                                isHeadlineStickybtnInjected = !0;
+                                                                t.classList.add("hl-active-sticky");
+                                                                if (!headlineStickyCounterStatus) {
+                                                                        headlineStickyCounterStatus = !0;
+                                                                        removeStickyHeadline(t, !1);
+                                                                }
+                                                                headlineStickyStatus = !0;
+                                                                
+                                                        }
+                                                }
+                                                
+                                                function removeStickyHeadline(t, e) {
+                                                        console.log('close')
+                                                        var n = setInterval(function() {
+                                                                if (!headlineStickyPaused) {
+                                                                        if (headlineStickyInterval <= 0){
+                                                                                t.classList.remove("hl-active-sticky");
+                                                                                t.classList.remove("hl-navbar-hanging");
+                                                                                t.style.margin = "10px 0";
+                                                                                clearInterval(n);
+                                                                                window.removeEventListener("scroll", headlineStickyScrollEevent);
+                                                                        }else {
+                                                                                headlineStickyInterval--;
+                                                                        }
+                                                                }
+                                                        }, 1000);
+                                                        
+                                                        if (!headlineStickyPaused) {
+                                                                if (e) {
+                                                                        headlineStickyInterval = 0
+                                                                        clearInterval(n);
+                                                                        t.classList.remove("hl-active-sticky");
+                                                                        t.classList.remove("hl-navbar-hanging");
+                                                                }
+                                                        }
+                                                }
+                                                
+                                                function injectStickyStyleAndAnimation() {
+                                                        var t = document.createElement("style");
+                                                        t.textContent = ".hl-active-sticky {width: 320px;position: fixed;top: -100%;z-index: 9999;left: 50%;transform: translateX(-50%);margin: 0;transition : margin-top .5s ease;animation: hlSlideDown .5s forwards;}.hl-navbar-hanging{margin-top : 50px !important;}@keyframes hlSlideDown{0%{top : -100px;}100%{top : 0px;}}.headline_ad__box {display: flex;justify-content: center;align-items: center;}.sticky-btn-close{display : none;width: 60px; background: red; color: white; float: right; font-family: sans-serif; font-size: 12px; line-height: 12px; padding: 4px 2px 2px; text-align: center;}.hl-active-sticky .sticky-btn-close{ display : block;} .sticky-btn-close img { height: 9px; width: 9px; margin-left: 5px; }", document.head.appendChild(t)
+                                                }
+                                                
+                                                function stickyAddButtonClose(target) {
+                                                        if (isHeadlineStickybtnInjected) {
+                                                                return
+                                                        }
+                                                        var _close_ = document.createElement("div");
+                                                        _close_.setAttribute("class", "sticky-btn-close");
+                                                        _close_.textContent = "CLOSE"
+                                                        var _img_ = document.createElement("img");
+                                                        _img_.setAttribute("src", "https://novalufian.github.io/kly-ads/blank-page/Vector@2x.png");
+                                                        //note : lana ini minta bantuan url img-nya ganti img ke cdn yak :D 
+                                                        _close_.appendChild(_img_)
+                                                        target.appendChild(_close_)
+                                                        _img_.addEventListener("click", function () {
+                                                                removeStickyHeadline(target, !0)
+                                                        })
+                                                }
+                                                &lt;/script&gt;
+                                                
+                                                
+                                        </code>
+                                </pre>
+                                <hr>
+                                
+                                <br>
+                                
+                        </div>
+                        
+                        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                </body>
+                </html>
+                © 2022 GitHub, Inc.
