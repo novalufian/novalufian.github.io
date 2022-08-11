@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <link rel="stylesheet" href="https://kly-arkhabmaulana.github.io/sample-preview/pojoaque.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <script src="https://kly-arkhabmaulana.github.io/sample-preview/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+            hljs.highlightAll();
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <hr>
+            <h2>GUIDANCE PEMASANGAN ADVERTORIAL HEADLINE</h1>
+            <p>Preview :  <a href="https://novalufian.github.io/kly-ads/blank-page/m.liputan6.com/index-adv-headline.html?google_preview=kdKQl1h6C7cY7omPkgYw7qXEmQaIAYCAgOCY1NWsggE&iu=36504930&gdfp_req=1&lineItemId=5585879210&creativeId=138386819095" target="_blank">https://novalufian.github.io/kly-ads/blank-page/m.liputan6.com/index-adv-headline.html</a> </p>
+            <pre>
+            <code class="language-html">   
+                /** GPT - ADOPS **/
+                
+                &lt;script&gt;
+                    ....
+                    window.GAMLibrary.advHeadline1 =     googletag.defineOutOfPageSlot('/36504930/KLY/MOBILE/BOLA.COM/ADVERTORIAL_HEADLINE_1', 'div-gpt-ad-bolacom-advertorial-headline1').addService(googletag.pubads());
+                    window.GAMLibrary.advHeadline2 =     googletag.defineOutOfPageSlot('/36504930/KLY/MOBILE/BOLA.COM/ADVERTORIAL_HEADLINE_2', 'div-gpt-ad-bolacom-advertorial-headline2').addService(googletag.pubads());
+                    ....
+                    ....
+                    googletag.pubads().refresh([...., window.GAMLibrary.advHeadline1, window.GAMLibrary.advHeadline2]);
+                    ....
+                &lt;/script&gt;
+
+            </code>
+            </pre>
+            <hr>
+            <br>
+            <h3>BOTTOM FRAME</h3>
+            <pre>
+            <code class="language-html">   
+                &lt;!-- BOTTOM FRAME SEBELUM--&gt;
+                &lt;div id="dfp-bframe-cont-transparent" style=" position: fixed; bottom: 0; min-height: 50px; background-color: #ECECEC70; width: 100%; text-align: center;display:none; z-index: 999999"&gt;
+                    &lt;div id='div-gpt-ad-fimela-bottomfrm' style="text-align: center; margin: 0 auto; width: 320px;"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+            </pre>
+
+            <p>menghilangkan display none</p>
+            <pre>
+                <code class="language-html">   
+                    &lt;!-- BOTTOM FRAME PERBAIKAN--&gt;
+                    &lt;div id="dfp-bframe-cont-transparent" style=" position: fixed; bottom: 0; min-height: 50px; background-color: #ECECEC70; width: 100%; text-align: center; z-index: 999999"&gt;
+                        &lt;div id='div-gpt-ad-fimela-bottomfrm' style="text-align: center; margin: 0 auto; width: 320px;"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+            
+            <hr>
+            <br>
+
+            <br>
+            <h3>HEADLINE</h3>
+            <pre>
+            <code class="language-html">   
+            
+                &lt;div class="box box--banner box--banner-top -mx-4 py-4"&gt;
+                    &lt;div :id="banner.name" x-bind="banner" class="banner" id="headline-page-2" name="headline-page-2" container="div-gpt-ad-headline-page-2" type="display" size="320x100,320x50" adunit="HEADLINE" src="https://preview-kly.akamaized.net/fimela/gallery-photo/assets/Headline.png" data-google-query-id="" style="width: auto;" iat-insr="0"&gt;
+                
+                        
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            </code>
+            </pre>
+
+            <br>
+            <br>
+            <h3>STYLE HEADLINE, SEAMLESS , SC </h3>
+            <pre>
+            <code class="language-html">   
+            
+                &lt;style&gt;
+                #headline-page-2 {
+                    position: relative;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    min-height: 220px;
+                }
+
+                .box.box--banner-top {
+                    margin-bottom: 0;
+                    background-color: var(--color-border);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .banner {
+                    background-color: var(--color-border);
+                    color: var(--color-gray);
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 100%;
+                    display: flex;
+                }
+
+                #headline-page-2 {
+                    position: relative;
+                    overflow: hidden;
+                    margin: 0 auto;
+                }
+
+                div#exposer-page-4 {
+                    min-height: 620px;
+                }
+                &lt;/style&gt;
+
+
+
+            </code>
+            </pre>
+            <br>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
