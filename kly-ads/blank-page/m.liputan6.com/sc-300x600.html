@@ -1381,6 +1381,22 @@
     <!-- MOBILE LIPUTAN6 ARTICLE -->
     <script type="text/javascript" id="dfp-ads-script">
         /*PROTOTYPE CUSTOM FILTERING*/
+        function _SCFlyingCarpetEffect_(event) {
+            var _domId_ = event.slot.getSlotId().getDomId();
+
+            console.log("NOVA--", _domId_)
+            if(_domId_.includes("sc")){
+                console.log("NOVA--", event)
+            }
+            var _domTarget_ = document.getElementById(_domId_)
+            var _is300x600_ = JSON.stringify(event.size) == '[300,600]'
+            if(_is300x600_ && _domId_.includes("sc")){
+                console.log("NOVA-- SET FLYING CARPET EFFECT")
+                _domTarget_.classList.add("flying-carpet")
+                _domTarget_.querySelector("div").classList.add("ad-content")
+            }
+        }
+        // var _novaObject_ = null
         String.prototype.klyFiltering = function(delimiter) {
             return this.trim().split(delimiter).map(function(t) {
                 return t.trim().toLowerCase()
@@ -2511,6 +2527,9 @@
             /* END - SEND IMPRESSION DATA TO CDP */
 
             googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+                // console.log("NOVA--",event)
+                // _novaObject_ = event
+                _SCFlyingCarpetEffect_(event)
                 var containerId = event.slot.getSlotElementId();
                 var containerEl = document.getElementById(containerId);
 
@@ -2923,25 +2942,29 @@
 <body class="mobile js-has-tb category-hot" itemscope="itemscope" itemtype="http://schema.org/WebPage"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSWX5MT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <style>
-        #div-gpt-ad-sc-paging-placeholder,
-        div#div-gpt-ad-sc-placeholder.parallax {
+        #gpt-ad-sc-paging-placeholder {
+            max-height: 270px;
+            overflow: hidden;
+        }
+
+        #div-gpt-ad-sc-placeholder div[id*="liputan6-sc"].flying-carpet,
+        #div-gpt-ad-sc-paging-placeholder div[id*="liputan6-sc"].flying-carpet{
             position: relative;
             clear: both;
             overflow: hidden;
             clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%) !important;
-        }
-
-        #div-gpt-ad-sc-paging-placeholder div[id*="liputan6-sc"],
-        div#div-gpt-ad-sc-placeholder.parallax div[id*="liputan6-sc"] {
-            top: 0;
-            position: fixed;
-            width: 100vw;
-            left: 0;
-            z-index: 2;
-            height: 100vh;
+            min-height: 270px;
+            width: 100%;
             display: flex;
             justify-content: center;
-            align-items: center;
+        }
+
+        #div-gpt-ad-sc-paging-placeholder div[id*="liputan6-sc"].flying-carpet .ad-content,
+        #div-gpt-ad-sc-placeholder div[id*="liputan6-sc"].flying-carpet .ad-content {
+            top: 50%;
+            transform: translateY(-50%);
+            position: fixed;
+            z-index: 2;
         }
     </style>
     <div id="fb-root"></div>
