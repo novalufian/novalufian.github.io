@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Island Headline</title>
+    <style>
+        .island-wrapper{
+            width: 70px;
+            height : 70px;
+            max-width: 320px;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 100px;
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            background-color: #000000;
+            box-shadow: 0px 10px 15px -5px #21212160;
+            overflow: hidden;
+            transition:all .35s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;
+            backdrop-filter: blur(5px);
+
+        }
+
+        .island-wrapper.active{
+            top: 15px;
+        }
+
+        .island-wrapper .icon-wrapper {
+            width: 45px;
+            height: 45px;
+            margin: 12.5px;
+            border-radius: 100px;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .island-wrapper .icon-wrapper .bedge{
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: lime;
+            top: 0;
+            right: 0;
+            border-radius: 100px;
+        }
+
+        .island-wrapper .icon-wrapper img{
+            object-fit: cover;
+            width: 100%;
+            border-radius: 100px;
+        }
+
+        .island-wrapper .content-wrapper{
+            height: 70px;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: all .35s cubic-bezier(0.215, 0.610, 0.355, 1) ;
+        }
+
+        .island-wrapper .content-wrapper .content-item{
+            /* height: 40px; */
+            height: 70px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .island-wrapper .content-wrapper .content-item img{
+            height: 100%;
+        }
+
+        #landing-page img{
+            transition: all .2s ease-in-out;
+        }
+
+        #landing-page.active img{
+            width: 70%;
+            height: 70%;
+            margin: 16%;
+        }
+
+        #landing-page svg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45px;
+            height: 45px;
+            transform: rotateY(-180deg) rotateZ(-90deg);
+        }
+
+        #landing-page svg circle {
+            stroke-dasharray: 130px;
+            stroke-dashoffset: 0px;
+            stroke-linecap: round;
+            stroke-width: 2px;
+            stroke: white;
+            fill: none;
+        }
+
+        #landing-page.active svg circle{
+            animation: countdown 5s linear forwards;
+        }
+
+        @keyframes countdown {
+            from {
+                stroke-dashoffset: 0px;
+            }
+            to {
+                stroke-dashoffset: 130px;
+            }
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <img src="liputan6.png" style="width: 100%; " alt="">
+
+    <div class="island-wrapper">
+        <div class="icon-wrapper">
+            <!-- <img src="https://seeklogo.com/images/T/tokopedia-logo-5340B636F6-seeklogo.com.png" alt=""> -->
+            <img src="https://images.tokopedia.net/img/cache/215-square/GAnVPX/2021/8/27/314a575c-4794-4fbc-916a-9566020083c1.png" alt="">
+            <span class="bedge"></span>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="content-item">
+                <img src="gopay.png" alt="">
+            </div>
+
+            <div class="content-item">
+                <img src="kebut.png" alt="">
+            </div>
+            <div class="content-item">
+                <img src="cashback.png" alt="">
+            </div>
+
+            <div class="content-item">
+                <div id="landing-page" class="icon-wrapper">
+                    <img src="linkout.png" alt="">
+                    <svg><circle r="21" cx="22" cy="22"></circle></svg>
+                </div>
+            </div>
+            
+            
+        </div>
+
+    </div>
+
+    <script>
+        var _island = document.querySelector(".island-wrapper")
+        var _itemsWrapper = document.querySelector(".content-wrapper")
+        var _contentItems = _itemsWrapper.querySelectorAll(".content-item")
+
+        var _activeSlide = 0;
+
+        window.addEventListener("scroll", _trigger_)
+
+        function _trigger_() {
+            var _scrolltop = window.document.scrollingElement.scrollTop;
+            if(_scrolltop > 1200){
+                window.removeEventListener("scroll", _trigger_)
+                _boot_()
+            }
+        }
+
+        
+
+        function _boot_() {
+            setTimeout(() => {
+
+                _island.classList.add("active")
+                setTimeout(() => {
+                    _updateIslandWidth_(_contentItems[_activeSlide].clientWidth)
+                    _activeSlide++
+                    _slideUp()
+                }, 500);
+                
+            }, 1000);
+        }
+
+        function _updateIslandWidth_(w) {
+            _island.style.width = (70 + w) +'px'
+        }
+
+        function _slideUp() {
+            var _iniSlide = setInterval(() => {
+                console.log(_activeSlide, 70 * _activeSlide)
+
+                if(_activeSlide >= 3){
+                    console.log("break", _contentItems[_activeSlide].firstElementChild)
+                    var _lp = _contentItems[_activeSlide].firstElementChild
+                    clearInterval(_iniSlide)
+                    setTimeout(() => {
+                        _lp.classList.add("active")
+                        _closeIsland()
+                    }, 500);
+                    // _activeSlide = 0
+                    // _slideUp()
+                }
+                _itemsWrapper.style.transform = `translateY(-${70 * _activeSlide}px)`
+                _updateIslandWidth_(_contentItems[_activeSlide].clientWidth)
+                _activeSlide++
+            }, 1750);
+        }
+
+
+        function _closeIsland() {
+            setTimeout(() => {
+                _updateIslandWidth_(0)
+                setTimeout(() => {
+                    _island.classList.remove("active")
+                }, 500);
+            }, 5000);
+        }
+        
+    </script>
+    
+</body>
+</html>
