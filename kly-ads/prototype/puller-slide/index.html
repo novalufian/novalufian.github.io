@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .puller-slide-wrapper{
+            position: fixed;
+            width: 320px;
+            height: 270px;
+            left: 50%;
+            bottom: -100vh;
+            transform: translateX(-50%);
+            overflow: hidden;
+            border-radius: 25px;
+            transition: all .5s ease-in-out;
+        }
+
+        .puller-slide-wrapper.active{
+            bottom: 25px;
+        }
+
+        .puller-slide-wrapper .footer{
+            height: 50px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color: #00000090;
+            backdrop-filter: blur(5px);
+        }
+
+        .puller-slide-wrapper.active .close-btn {
+            position: absolute;
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+            background: black;
+            border-radius: 25px;
+            right: 10px;
+            top: 10px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: fantasy;
+            font-size: 30px;
+        }
+
+        .puller-slide-wrapper .slider {
+            position: relative;
+            top: 0;
+            left : 0;
+            height: 100%;
+            display: flex;
+            transition: all .25s ease-in-out;
+        }
+
+        .puller-slide-wrapper .slider .slide-item {
+            position: relative;
+            height: 100%;
+        }
+
+        .puller-slide-wrapper .slider .slide-item  img{
+            position: relative;
+            width: 320px;
+        }
+
+        .puller-slide-wrapper .footer span.progress-bar {
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: #ffffff;
+            left: 0;
+            top: 0;
+        }
+
+        .puller-slide-wrapper.active .footer span.progress-bar.active {
+            animation: progress 2.5s infinite linear;
+        }
+        
+        @keyframes progress {
+            0%{ width: 0%;}
+            50%{ width: 70%;}
+            95%{ width: 100%;}
+            100%{ width: 100%;}
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="puller-slide-wrapper">
+        <div class="close-btn">x</div>
+        <div class="slider">
+            <div class="slide-item">
+                <img src="https://via.placeholder.com/320x220/E0144C/FFFFFF?text=SLIDE 1" alt="">
+            </div>
+            <div class="slide-item">
+                <img src="cars.png" alt="">
+            </div>
+            <div class="slide-item">
+                <img src="https://via.placeholder.com/320x220/F0FF42/FFFFFF?text=SLIDE 3" alt="">
+            </div>
+        </div>
+        <div class="footer">
+            <span class="progress-bar"></span>
+        </div>
+    </div>
+
+    <script>
+        var _PULLER_MAIN_WRAPPER_ = document.querySelector(".puller-slide-wrapper")
+        var _SLIDERCONTAINER_ = document.querySelector(".slider")
+        var _CLSOE_PULLER_ = _PULLER_MAIN_WRAPPER_.querySelector(".close-btn")
+        var _SLIDER_INDEX_ = 0
+
+        window.addEventListener("scroll", _DOSCROLL_)
+        _CLSOE_PULLER_.addEventListener("click", _DOCLOSE_)
+
+        function _DOCLOSE_() {
+            _PULLER_MAIN_WRAPPER_.style.bottom ="-100vh"
+            setTimeout(() => {
+                _PULLER_MAIN_WRAPPER_.classList.remove("active")
+            }, 550);
+            
+        }
+        function _DOSCROLL_() {
+            var _scrolltop = document.documentElement.scrollTop
+            if(_scrolltop >1000){
+                window.removeEventListener("scroll", _DOSCROLL_)
+                _PULLER_MAIN_WRAPPER_.classList.add("active")
+                setTimeout(() => {
+                    _PULLER_MAIN_WRAPPER_.querySelector("span.progress-bar").classList.add("active")
+                    _GOSLIDE_() 
+                }, 500);
+            }
+        }
+
+        function _GOSLIDE_() {
+            _SLIDER_INDEX_++
+
+            setTimeout(() => {
+                if (_SLIDER_INDEX_ > 2) {
+                    _SLIDER_INDEX_ = 0
+                }
+                _SLIDERCONTAINER_.style.left = `-${320* _SLIDER_INDEX_}px` ;
+                _GOSLIDE_()
+            }, 2500);
+        }
+        
+    </script>
+
+    <script>
+        var _body = document.querySelector("body")
+
+        for (let index = 0; index < 70; index++) {
+            insertDummyContent()
+        }
+
+        function insertDummyContent() {
+            var _txt_ = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, iste tempore? Aperiam error tempore ratione dolorum placeat recusandae quos autem, delectus blanditiis reiciendis aspernatur, voluptas nisi quod, mollitia incidunt provident. "
+            _body.append(_txt_)            
+        }
+    </script>
+</body>
+</html>
