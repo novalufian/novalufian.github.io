@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .kly-bf-scroller{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 100px;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .kly-bf-scroller .container img{
+            transition: all .1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="kly-bf-scroller">
+        <div class="container">
+            <img src="bf-scroller.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        var _SCROLLER_IMG_ = document.querySelector(".kly-bf-scroller .container img")
+        var _SCROLL_TOP_ = 0
+
+
+        window.addEventListener("scroll", _DO_SCROLLER_)
+
+        function _DO_SCROLLER_() {
+            _SCROLL_TOP_ = document.documentElement.scrollTop
+            var _MAX_SCROLL_ = _SCROLLER_IMG_.clientWidth - window.screen.width
+            var _SCROLLING_ =  _SCROLL_TOP_ / 3      
+            console.log(_SCROLL_TOP_, _MAX_SCROLL_)
+
+            if(_SCROLLING_ > _MAX_SCROLL_){
+                return
+            }
+
+            _SCROLLER_IMG_.style.transform = `translateX(-${_SCROLLING_}px)`
+        }
+    </script>
+
+
+    <script>
+        var _body = document.querySelector("body")
+
+        for (let index = 0; index < 70; index++) {
+            insertDummyContent()
+        }
+
+        function insertDummyContent() {
+            var _txt_ = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, iste tempore? Aperiam error tempore ratione dolorum placeat recusandae quos autem, delectus blanditiis reiciendis aspernatur, voluptas nisi quod, mollitia incidunt provident. "
+            _body.append(_txt_)            
+        }
+    </script>
+</body>
+</html>
